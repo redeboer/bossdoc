@@ -45,6 +45,7 @@
         "besiii",
         "bossdoc",
         "markdownlint",
+        "rtfd",
         "venv"
     ]
 }
