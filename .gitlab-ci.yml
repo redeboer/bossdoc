@@ -1,0 +1,40 @@
+variables:
+  GIT_STRATEGY: clone
+
+.only-default: &only-default
+  only:
+    - merge_requests
+    - master
+
+.print-system-info: &print-system-info
+  - lsb_release -a
+  - pwd
+  - python3 --version
+  - which python3
+
+.activate-venv: &activate-venv
+  - python3 -m venv venv
+  - source venv/bin/activate
+  - python3 -m pip install --upgrade pip
+  - python3 -m pip install wheel
+  - which python3
+
+Documentation:
+  <<: *only-default
+  before_script:
+    - *print-system-info
+    - *activate-venv
+    - python3 -m pip install .[doc]
+  script:
+    - jupyter-book build src
+
+Style:
+  <<: *only-default
+  before_script:
+    - *print-system-info
+    - *activate-venv
+    - python3 -m pip install .[dev]
+  script:
+    - cspell $(git ls-files)
+    - markdownlint .
+    - pre-commit run -a

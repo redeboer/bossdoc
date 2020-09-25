@@ -1,0 +1,41 @@
+{
+    "version": "0.1",
+    "enableFiletypes": [
+        "git-commit",
+        "ini",
+        "yaml",
+        "xml"
+    ],
+    "flagWords": [
+        "colour",
+        "comparision",
+        "favour",
+        "flavour",
+        "hte",
+        "optimise",
+        "paramater",
+        "parmater"
+    ],
+    "ignorePaths": [
+        "*.ipynb",
+        ".github/**",
+        ".gitignore",
+        ".pre-commit-config.yaml",
+        ".vscode/*",
+        "cspell.json",
+        "pyproject.toml",
+        "setup.cfg",
+        "tox.ini"
+    ],
+    "language": "en-US",
+    "words": [
+        "conda",
+        "jupyter"
+    ],
+    "ignoreWords": [
+        "besiii",
+        "bossdoc",
+        "markdownlint",
+        "venv"
+    ]
+}

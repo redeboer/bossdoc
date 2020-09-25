@@ -1,0 +1,8 @@
+{
+  "include": ["doc/conf.py", "setup.py", "src"],
+  "exclude": [".git", ".tox"],
+  "ignore": [],
+  "reportGeneralTypeIssues": false,
+  "reportUnboundVariable": false,
+  "stubPath": ""
+}
