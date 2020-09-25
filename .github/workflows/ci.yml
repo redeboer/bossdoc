@@ -24,7 +24,7 @@ jobs:
           pip install .[doc]
           sudo apt-get -y install pandoc
       - name: Build HTML-pages
-        run: jupyter-book build src
+        run: make html
 
   style:
     name: Style checks
