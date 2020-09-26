@@ -25,6 +25,7 @@ extensions = [
     "sphinx.ext.autosectionlabel",
     "sphinx.ext.intersphinx",
     "sphinx.ext.mathjax",
+    "sphinx.ext.todo",
     "sphinx_copybutton",
     "sphinx_togglebutton",
     "sphinxcontrib.bibtex",
@@ -36,6 +37,9 @@ exclude_patterns = [
     "Thumbs.db",
     "build",
 ]
+
+# Todo-list
+todo_include_todos = True
 
 # General sphinx settings
 html_copy_source = True  # needed for download notebook button
@@ -72,7 +76,12 @@ autosectionlabel_prefix_document = True
 
 # Settings for linkcheck
 linkcheck_anchors = False
-linkcheck_ignore = []
+linkcheck_ignore = [
+    "http://code.ihep.ac.cn/redeboer/IniSelect",
+    "https://github.com/redeboer/BOSS_IniSelect_ORIGINAL",
+    r"http://[A-Za-z0-9]+\.ihep\.ac\.cn",
+    r"http://[A-Za-z0-9]+\.ihep\.cas\.cn",
+]
 
 # Settings for myst-parser
 myst_update_mathjax = False

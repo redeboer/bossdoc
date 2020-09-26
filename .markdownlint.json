@@ -1,6 +1,9 @@
 {
-  "MD026": { "punctuation": ".,;:!。，；：！" },
+  "MD026": {
+    "punctuation": ".,;:!。，；：！"
+  },
   "MD033": {
     "allowed_elements": ["br"]
-  }
+  },
+  "ignore-path": ["**/*build"]
 }

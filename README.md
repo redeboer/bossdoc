@@ -1,6 +1,6 @@
 # BOSS Documentation
 
-[![Documentation build status](https://readthedocs.org/projects/bes3boss/badge/?version=latest)](https://bes3boss.readthedocs.io/en/latest/)
+[![Documentation build status](https://readthedocs.org/projects/bes3/badge/?version=latest)](https://bes3.readthedocs.io/en/latest/)
 [![GPLv3+ license](https://img.shields.io/badge/License-GPLv3+-blue.svg)](https://www.gnu.org/licenses/gpl-3.0-standalone.html)
 <br>
 [![CI status](https://github.com/redeboer/bossdoc/workflows/CI/badge.svg)](https://github.com/redeboer/bossdoc/actions?query=branch%3Amaster+workflow%3ACI)
@@ -9,4 +9,4 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 This repository contains the source code for the
-[bes3boss.rtfd.io](https://bes3boss.readthedocs.io/en/latest/) pages.
+[bes3.rtfd.io](https://bes3.readthedocs.io/en/latest/) pages.

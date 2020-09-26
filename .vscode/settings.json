@@ -11,6 +11,14 @@
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[restructuredtext]": {
+    "editor.detectIndentation": false,
+    "editor.renderIndentGuides": true,
+    "editor.rulers": [],
+    "editor.wordWrap": "bounded",
+    "editor.wordWrapColumn": 80,
+    "editor.wrappingIndent": "same"
+  },
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -26,12 +34,11 @@
   "gitlens.advanced.telemetry.enabled": false,
   "python.formatting.provider": "black",
   "python.linting.enabled": false,
+  "python.testing.nosetestsEnabled": false,
   "python.testing.pytestEnabled": false,
   "python.testing.unittestEnabled": false,
-  "python.testing.nosetestsEnabled": false,
   "restructuredtext.builtDocumentationPath": "${workspaceFolder}/build/html",
   "restructuredtext.confPath": "",
-  "rewrap.wrappingColumn": 79,
   "telemetry.enableCrashReporter": false,
   "telemetry.enableTelemetry": false
 }

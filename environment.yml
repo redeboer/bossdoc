@@ -1,4 +1,4 @@
-name: bossdoc
+name: bes3
 channels:
   - conda-forge
   - defaults
