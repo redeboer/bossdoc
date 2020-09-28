@@ -11,14 +11,6 @@
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[restructuredtext]": {
-    "editor.detectIndentation": false,
-    "editor.renderIndentGuides": true,
-    "editor.rulers": [],
-    "editor.wordWrap": "bounded",
-    "editor.wordWrapColumn": 80,
-    "editor.wrappingIndent": "same"
-  },
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },

@@ -5,7 +5,8 @@ Inclusive Monte Carlo samples
 Reconstructed :math:`J/\psi` samples
 ------------------------------------
 
-The latest :math:`J/\psi` samples have been reconstructed with **BOSS 6.6.4**. They are located here:
+The latest :math:`J/\psi` samples have been reconstructed with **BOSS 6.6.4**.
+They are located here:
 
 .. code-block:: bash
 

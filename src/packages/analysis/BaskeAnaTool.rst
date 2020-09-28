@@ -5,12 +5,18 @@
 BaskeAnaTool
 ============
 
-"BaskeAnaTool" means a basket of ana useful tools. You can use it to submit jobs to the computer servers, also generate simulation jobs, check the jobs status, check the whether the jobs is successful according to the job log files.
+"BaskeAnaTool" means a basket of ana useful tools. You can use it to submit
+jobs to the computer servers, also generate simulation jobs, check the jobs
+status, check the whether the jobs is successful according to the job log
+files.
 
-The package based on Python works independent of BOSS, but facilitates for instance MC simulation. The package can be obtained from GitHub: |br|
-`https://github.com/xxmawhu/BaskeAnaTool <https://github.com/xxmawhu/BaskeAnaTool>`_
+The package based on Python works independent of BOSS, but facilitates for
+instance MC simulation. The package can be obtained from GitHub: |br|
+`https://github.com/xxmawhu/BaskeAnaTool
+<https://github.com/xxmawhu/BaskeAnaTool>`_
 
-Before using the package, I suggest you to read the "Readme" carefully. The Chinese version of "Readme" is also available now.
+Before using the package, I suggest you to read the "Readme" carefully. The
+Chinese version of "Readme" is also available now.
 
 How to install
 --------------
@@ -19,70 +25,71 @@ First, you need to clone the repository from "github.com"
 
 .. code-block:: bash
 
-   git clone https://github.com/xxmawhu/BaskeAnaTool.git
+  git clone https://github.com/xxmawhu/BaskeAnaTool.git
 
-The environment configuration is set well in the "setup.sh", you need to source it.
-
-.. code-block:: bash
-
-      source BaskeAnaTool/setup.sh
-
-For the shell with tcsh users, there is one "setup.csh" file achieving same effect.
+The environment configuration is set well in the "setup.sh", you need to source
+it.
 
 .. code-block:: bash
 
-      source BaskeAnaTool/setup.csh
+  source BaskeAnaTool/setup.sh
+
+For the shell with tcsh users, there is one "setup.csh" file achieving same
+effect.
+
+.. code-block:: bash
+
+  source BaskeAnaTool/setup.csh
 
 What does the basket contain?
 -----------------------------
-
 
 * submit jobs flexible
 
 ..
 
-   For example, assuming you are now at directory "jobs", after "ls", you find many jobs need to be submitted.
+  For example, assuming you are now at directory "jobs", after "ls", you find
+  many jobs need to be submitted.
 
-   .. code-block:: bash
+  .. code-block:: bash
 
-      jobs_ana_001.txt jobs_ana_004.txt jobs_ana_007.txt jobs_ana_010.txt
-      jobs_ana_002.txt jobs_ana_005.txt jobs_ana_008.txt jobs_ana_011.txt
-      jobs_ana_003.txt jobs_ana_006.txt jobs_ana_009.txt jobs_ana_012.txt
+    jobs_ana_001.txt jobs_ana_004.txt jobs_ana_007.txt jobs_ana_010.txt
+    jobs_ana_002.txt jobs_ana_005.txt jobs_ana_008.txt jobs_ana_011.txt
+    jobs_ana_003.txt jobs_ana_006.txt jobs_ana_009.txt jobs_ana_012.txt
 
-   Now, you only need one command
+  Now, you only need one command
 
-   .. code-block:: bash
+  .. code-block:: bash
 
-      Hepsub -txt *.txt
+    Hepsub -txt *.txt
 
-   If you find many jobs allocated in different directories at the "jobs". Also one command is enough
+  If you find many jobs allocated in different directories at the "jobs". Also one command is enough
 
-   .. code-block:: bash
+  .. code-block:: bash
 
-      Hepsub -txt -r .
+    Hepsub -txt -r .
 
-   Don't forget to ".", which denotes the current directory. You also can specify the file type, execute method, and submit way.
+  Don't forget to ".", which denotes the current directory. You also can specify the file type, execute method, and submit way.
 
-   .. code-block:: bash
+  .. code-block:: bash
 
-      Hepsub type="C, Cpp, cxx" exe="root -l -b -q" sub="hep_sub -g physics"
+    Hepsub type="C, Cpp, cxx" exe="root -l -b -q" sub="hep_sub -g physics"
 
-   Look into `https://github.com/xxmawhu/BaskeAnaTool <https://github.com/xxmawhu/BaskeAnaTool>`_ for more details.
+  Look into `https://github.com/xxmawhu/BaskeAnaTool <https://github.com/xxmawhu/BaskeAnaTool>`_ for more details.
 
 
 
-*
-  Do MC simulation flexible
+* Do MC simulation flexible
 
   ..
 
-     The following command is typically usage.
+    The following command is typically usage.
 
-     .. code-block:: bash
+    .. code-block:: bash
 
-        SimJpsi [decay.card] [number of events]
+      SimJpsi [decay.card] [number of events]
 
-     You can enjoy the physics and forget all dirty bash script!
+    You can enjoy the physics and forget all dirty bash script!
 
 
 ..
