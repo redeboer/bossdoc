@@ -4,7 +4,7 @@
 
 In papers from the BESIII Collaboration, you will usually encounter the
 following cuts. They are also listed
-`here <https://docbes3.ihep.ac.cn/~offlinesoftware/index.php/Recommend_cuts>`\_
+[here](https://docbes3.ihep.ac.cn/~offlinesoftware/index.php/Recommend_cuts)
 (requires login).
 
 ### Charged tracks

@@ -48,7 +48,7 @@ transfer---even synchronize---files up and down to your own computer.
 
   .. code-block::
 
-    :code:`hep_container shell SL6`
+    hep_container shell SL6
 
   where :code:`shell` can be replaced with your shell of choice.
 

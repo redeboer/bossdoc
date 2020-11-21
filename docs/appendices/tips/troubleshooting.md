@@ -16,7 +16,7 @@ aklog -d
 
 You should now be able to read-write in _all_ your sessions.
 
-## I'm sure my job is set up correctly, but it keeps resulting in:
+## I'm sure my job is set up correctly, but it keeps resulting this error
 
 ```text
 JobOptionsSvc       ERROR # =======> <package>/share/jobOptions_<package>.txt
