@@ -1,8 +1,11 @@
 {
-  "include": ["doc/conf.py", "setup.py", "src"],
-  "exclude": [".git", ".tox"],
-  "ignore": [],
+  "exclude": [".git", ".tox", "docs/_build"],
+  "include": ["docs", "src", "tests"],
   "reportGeneralTypeIssues": false,
   "reportUnboundVariable": false,
+  "reportUnusedClass": true,
+  "reportUnusedFunction": true,
+  "reportUnusedImport": true,
+  "reportUnusedVariable": true,
   "stubPath": ""
 }

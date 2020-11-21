@@ -21,6 +21,6 @@ template: |
 
   $CHANGES
 
-  ## Contributors since [$PREVIOUS_TAG](https://github.com/redeboer/redeboer/releases/tag/$PREVIOUS_TAG)
+  ## Contributors since [$PREVIOUS_TAG](https://github.com/redeboer/bossdoc/releases/tag/$PREVIOUS_TAG)
 
   $CONTRIBUTORS

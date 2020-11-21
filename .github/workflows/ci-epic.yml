@@ -1,22 +1,16 @@
-# cspell:ignore precommit
-
-name: CI
+name: CI for epics
 
 on:
   push:
-    branches: [master]
+    branches:
+      - epic/*
   pull_request:
-    branches: [master]
-    types:
-      - opened
-      - synchronize
-      - reopened
-      - ready_for_review
+    branches:
+      - epic/*
 
 jobs:
   documentation:
     name: Build documentation and run notebooks
-    if: github.event.pull_request.draft == false
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
@@ -28,14 +22,13 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install .[doc]
-          sudo apt-get -y install pandoc
+          sudo apt-get -y install pandoc graphviz
       - name: Build documentation and run notebooks
         working-directory: docs
         run: make html
 
   style:
     name: Style checks
-    if: github.event.pull_request.draft == false
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
@@ -46,13 +39,6 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install .[precommit]
-          sudo npm install -g cspell markdownlint-cli pyright
+          pip install .[ci]
       - name: Perform style checks
-        run: pre-commit run -a
-      - name: Check spelling
-        run: cspell $(git ls-files)
-      - name: Lint Markdown files
-        run: markdownlint .
-      - name: Run pyright
-        run: pyright
+        run: tox -e sty

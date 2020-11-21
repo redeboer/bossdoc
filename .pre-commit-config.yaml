@@ -9,7 +9,6 @@ repos:
     hooks:
       - id: check-ast
       - id: check-case-conflict
-      - id: check-docstring-first
       - id: check-json
       - id: check-merge-conflict
       - id: check-toml
@@ -25,25 +24,36 @@ repos:
       - id: mixed-line-ending
       - id: trailing-whitespace
 
-  - repo: https://github.com/psf/black
-    rev: 20.8b1
-    hooks:
-      - id: black
-
-  - repo: https://github.com/PyCQA/doc8
-    rev: 0.8.1
-    hooks:
-      - id: doc8
-        args: ["-q"]
-
-  - repo: https://github.com/prettier/prettier
-    rev: 2.1.2
+  - repo: https://github.com/pre-commit/mirrors-prettier
+    rev: v2.2.0
     hooks:
       - id: prettier
         language_version: 12.18.2 # prettier does not specify node correctly
 
   - repo: local
     hooks:
+      - id: black
+        name: black
+        entry: black
+        language: system
+        types:
+          - python
+
+      - id: doc8
+        name: doc8
+        entry: doc8
+        args:
+          - -q
+        language: system
+        files: \.(inc|rst)$
+
+      - id: isort
+        name: isort
+        entry: isort
+        language: system
+        types:
+          - python
+
       - id: rstcheck
         name: rstcheck
         entry: rstcheck

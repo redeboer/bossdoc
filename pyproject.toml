@@ -1,6 +1,6 @@
 [build-system]
 requires = [
-    "setuptools>=30.3.0",
+    "setuptools>=36.2.1", # environment markers
     "setuptools_scm",
     "wheel",
 ]
@@ -11,7 +11,6 @@ write_to = "version.py"
 [tool.black]
 line-length = 79
 target-version = [
-    'py35',
     'py36',
     'py37',
     'py38',
@@ -30,3 +29,8 @@ exclude = '''
   | dist
 )/
 '''
+
+[tool.isort]
+profile = "black"
+src_paths = ["src", "tests"]
+line_length = 79
