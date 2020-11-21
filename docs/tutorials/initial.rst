@@ -1,2 +1,0 @@
-Initial event selection
-=======================
