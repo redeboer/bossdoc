@@ -93,11 +93,6 @@ See for more information:
 * `LHCb on CMT <https://lhcb-comp.web.cern.ch/lhcb-comp/support/CMT/cmt.htm>`_
   (historical page)
 
-* `A presentation on BESIII Analysis by Shen Chengping
-  <http://www.hep.umn.edu/bes3/MN_BES3_files/BESIII_intro_shencp.pdf>`_ :
-  Includes (somewhat outdated) instructions on package management
-
-
 Concurrent Versions System (CVS)
 --------------------------------
 

@@ -56,10 +56,6 @@ The below list is not (yet) exhaustive
   - [BESIII TWiki](http://twiki.ihep.ac.cn/twiki/view/BES/BOSS/WebHome) (seems
     outdated)
 
-  - [A tutorial of BESIII Physics Analysis](http://www.hep.umn.edu/bes3/MN_BES3_files/BESIII_intro_shencp.pdf),
-    presentation by Shen Chengping Somewhat outdated, but introduces some key
-    vocabulary.
-
   - [BES environment installation](https://www.phys.hawaii.edu/~besdata/paper/BESinstall.pdf)
     (unofficial paper)
 
