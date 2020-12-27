@@ -1,4 +1,4 @@
-<!-- cspell:ignore aklog besvis kinit klog mlgpu Shuoping -->
+<!-- cspell:ignore aklog besvis kinit klog mccor mlgpu Shuoping -->
 
 <!-- Known issues and some solutions. -->
 
@@ -141,3 +141,18 @@ you probably logged in with an SSH key and even using {code}`ssh -Y` won't
 help. If you really need the graphical interfaces from {code}`lxslc` , you will
 need to remove your public key from the {code}`~/.ssh/authorized_keys` file
 (just open and edit, it's just a text file) and log in again.
+
+## My analysis BOSS packages end in a segmentation fault
+
+A common error is that you didn't book the `NTuple` or add the `NTuple::Item`s
+with `NTuple::Tuple::addItem`. This usually results in the following error.
+
+```text
+...
+DatabaseSvc: Connected to MySQL database
+mccor = 0
+
+ *** Break *** segmentation violation
+    __boot()
+    import sys, imp, os, os.path
+```
