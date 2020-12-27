@@ -15,7 +15,7 @@ of a package in CMT. After that, we can look into some tutorial packages.
 
 .. todo::
   The tutorial packages are to be developed soon, see the `BOSS_Tutorials
-  repository <https://github.com/redeboer/BOSS_Tutorials>`_. See Shanghai
+  repository <http://code.ihep.ac.cn/bes3/BOSS_Tutorials>`_. See Shanghai
   conference for updates on this matter.
 
 Structure of a default CMT package
@@ -370,6 +370,6 @@ initial event selection.
 
 .. tip::
   BOSS Tutorials are under development and can be found in the `BOSS_Tutorials
-  repository <https://github.com/redeboer/BOSS_Tutorials>`_.
+  repository <http://code.ihep.ac.cn/bes3/BOSS_Tutorials>`_.
 
   :doc:`/packages/analysis/examples/RhopiAlg`
