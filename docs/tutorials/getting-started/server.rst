@@ -68,7 +68,7 @@ following:
 * `Raw data files <https://docbes3.ihep.ac.cn/~offlinesoftware/index.php/Raw_Data>`_
 
   * :code:`/bes3fs/offline/data/raw`
-  * :code:`/besfs/offline/data/randomtrg` (random trigger data)
+  * :code:`/besfs5/offline/data/randomtrg` (random trigger data)
 
 * `Reconstructed data sets
   <https://docbes3.ihep.ac.cn/~offlinesoftware/index.php/Production>`_

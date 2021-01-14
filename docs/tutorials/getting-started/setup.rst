@@ -70,7 +70,7 @@ developing and your own BOSS packages (mainly code for event selection) in this
 you will have a file structure like this:
 
 
-* :file:`/besfs/users/$USER/boss/` (local install area)
+* :file:`/besfs5/users/$USER/boss/` (local install area)
 
   * :file:`cmthome` (manages access to BOSS)
   * :file:`workarea` (contains your analysis code)
@@ -81,7 +81,7 @@ you will have a file structure like this:
 
 .. note::
 
-  The above is equivalent to :code:`BOSS_INSTALL=/besfs/users/$USER/boss` , so
+  The above is equivalent to :code:`BOSS_INSTALL=/besfs5/users/$USER/boss` , so
   why the quotation marks (:code:`"..."`) and curly braces (:code:`{...}`)?
   It's just a good habit in :code:`bash` scripting to avoid bugs and improve
   readability. The quotation marks clarify that we are storing a string here
@@ -90,7 +90,7 @@ you will have a file structure like this:
 
 .. code-block:: bash
 
-  BOSS_INSTALL="/besfs/users/${USER}/boss"
+  BOSS_INSTALL="/besfs5/users/${USER}/boss"
 
 This variable points to the path that will contain your local 'install' of
 BOSS. You can change what is between the quotation marks by whatever folder you
@@ -159,7 +159,7 @@ case, it looks like this:
 
 .. code-block:: bash
 
-  macro WorkArea "/besfs/users/$USER/boss/workarea"
+  macro WorkArea "/besfs5/users/$USER/boss/workarea"
 
   path_remove CMTPATH "${WorkArea}"
   path_prepend CMTPATH "${WorkArea}"
@@ -194,7 +194,7 @@ If everything went well, it should print something like:
 
 .. code-block:: bash
 
-  /besfs/users/$USER/boss/workarea:/afs/ihep.ac.cn/bes3/offline/Boss/7.0.4:
+  /besfs5/users/$USER/boss/workarea:/afs/ihep.ac.cn/bes3/offline/Boss/7.0.4:
   /afs/ihep.ac.cn/bes3/offline/ExternalLib/SLC6/ExternalLib/gaudi/GAUDI_v23r9:
   /afs/ihep.ac.cn/bes3/offline/ExternalLib/SLC6/ExternalLib/LCGCMT/LCGCMT_65a
 
@@ -334,7 +334,7 @@ when you log in. In that file, you should add the following lines:
 .. code-block:: bash
   :caption: .bashrc
 
-  export BOSS_INSTALL="/besfs/users/${USER}/boss"
+  export BOSS_INSTALL="/besfs5/users/${USER}/boss"
   export BOSS_VERSION="7.0.4"
   CMTHOME="/afs/ihep.ac.cn/bes3/offline/Boss/cmthome/cmthome-${BOSS_VERSION}"
 
@@ -359,7 +359,7 @@ go through the sections above to understand what's going on here.
 
 .. code-block:: bash
 
-  BOSS_INSTALL=/besfs/users/$USER/boss
+  BOSS_INSTALL=/besfs5/users/$USER/boss
   BOSS_VERSION=7.0.4
   mkdir -p $BOSS_INSTALL/cmthome
   cd $BOSS_INSTALL/cmthome
@@ -367,7 +367,7 @@ go through the sections above to understand what's going on here.
   vi requirements
 
 Now uncomment and change the lines containing :code:`WorkArea` to
-:file:`/besfs/users/$USER/boss/workarea`. Then:
+:file:`/besfs5/users/$USER/boss/workarea`. Then:
 
 .. code-block:: bash
 
@@ -391,7 +391,7 @@ automatically each time you log in. In simple copy-paste commands:
 
   OUT_FILE=~/.bash_profile
   echo >> $OUT_FILE
-  echo "export BOSS_INSTALL=/besfs/users/$USER/boss" >> $OUT_FILE
+  echo "export BOSS_INSTALL=/besfs5/users/$USER/boss" >> $OUT_FILE
   echo "source \$BOSS_INSTALL/cmthome/setupCMT.sh"  >> $OUT_FILE
   echo "source \$BOSS_INSTALL/cmthome/setup.sh"  >> $OUT_FILE
   echo "source \$BOSS_INSTALL/workarea/TestRelease/TestRelease-*/cmt/setup.sh" >> $OUT_FILE

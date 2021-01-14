@@ -1,4 +1,4 @@
-.. cspell:ignore besfs guestpass offlinedb
+.. cspell:ignore guestpass offlinedb
 
 .. include:: /global.inc
 
@@ -39,12 +39,12 @@ pages (requires login):
 * `Reconstructed data <https://docbes3.ihep.ac.cn/~offlinesoftware/index.php/Production>`_
 
 In general, all data files are located on the BESIII file system
-(:code:`besfs`) folders on the :doc:`IHEP Server
+(:code:`besfs5`) folders on the :doc:`IHEP Server
 </tutorials/getting-started/server>`. There are a few different folders,
 because the files have been distributed to different servers.
 
 
-* :code:`besfs`: contains user files only
+* :code:`besfs5`: contains user files only
 
 * :code:`besfs2`: a symbolic link that points to
   :code:`/besfs3/offline/data/besfs2`. Contains inclusive Monte Carlo samples.

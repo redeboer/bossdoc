@@ -30,7 +30,7 @@ All versions of the package can be found here on :ref:`the IHEP server
 
 .. code-block:: text
 
-   /besfs/users/zhouxy/tools/topoana
+   /besfs5/users/zhouxy/tools/topoana
 
 Preparing initial event selection
 ---------------------------------
@@ -97,7 +97,7 @@ All versions of :code:`MctruthForTopo` can be found here on the IHEP server:
 
 .. code-block:: bash
 
-  /besfs/users/zhouxy/workarea/workarea-6.6.5/Analysis/Physics/MctruthForTopoAnaAlg
+  /besfs5/users/zhouxy/workarea/workarea-6.6.5/Analysis/Physics/MctruthForTopoAnaAlg
 
 You may choose a different version of BOSS than :code:`6.6.5` , the one used
 above. If you have sourced one of these versions (using :code:`bash

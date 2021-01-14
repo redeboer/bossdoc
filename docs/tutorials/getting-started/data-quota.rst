@@ -17,7 +17,7 @@ contain space that is assigned to your user account. Here is an overview:
     - 500 MB
     - NA
     - home (:code:`~`)
-  * - :code:`/besfs/users/$USER`
+  * - :code:`/besfs5/users/$USER`
     - 50 GB
     - 300,000
     -
