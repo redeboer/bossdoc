@@ -34,6 +34,11 @@ contain space that is assigned to your user account. Here is an overview:
     - NA
     - max. 2 weeks*
 
+.. margin::
+
+  .. note:: As of February 22nd, 2021, the old file system :code:`besfs` has
+    been superseded by :code:`besfs5` for both users and groups.
+
 
 * In practice, files remain on this server indefinitely. In fact,
   :code:`scratchfs` seems to follow a less strict policy then other folders.
