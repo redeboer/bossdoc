@@ -134,6 +134,7 @@ linkcheck_ignore = [
     "https://github.com/redeboer/BOSS_IniSelect_ORIGINAL",
     r"http://[A-Za-z0-9]+\.ihep\.ac\.cn",
     r"http://[A-Za-z0-9]+\.ihep\.cas\.cn",
+    r"http://[A-Za-z0-9]+\.ucas\.ac\.cn",
 ]
 
 # Settings for myst_nb
