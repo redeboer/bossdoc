@@ -135,6 +135,7 @@ linkcheck_ignore = [
     r"http://[A-Za-z0-9]+\.ihep\.ac\.cn",
     r"http://[A-Za-z0-9]+\.ihep\.cas\.cn",
     r"http://[A-Za-z0-9]+\.ucas\.ac\.cn",
+    r"https://[A-Za-z0-9]+\.ihep\.ac\.cn",
 ]
 
 # Settings for myst_nb
