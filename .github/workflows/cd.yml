@@ -1,4 +1,4 @@
-# cspell:ignore noreply precommit prereleased pypa
+# cspell:ignore bdist noreply prereleased sdist
 
 name: CD
 
@@ -9,61 +9,10 @@ on:
       - released
 
 jobs:
-  documentation:
-    name: Build documentation and run notebooks
-    if: startsWith(github.ref, 'refs/tags')
-    runs-on: ubuntu-18.04
-    steps:
-      - uses: actions/checkout@v2
-      - name: Set up Python 3.7
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.7
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install .[doc]
-          sudo apt-get -y install pandoc graphviz
-      - name: Build documentation and run notebooks
-        working-directory: docs
-        env:
-          EXECUTE_NB: YES
-        run: make html
-      - name: Test doctests in docstrings
-        working-directory: docs
-        run: make ignore-warnings=1 doctest
-
-  style:
-    name: Style checks
-    if: startsWith(github.ref, 'refs/tags')
-    runs-on: ubuntu-18.04
-    steps:
-      - uses: actions/checkout@v2
-      - name: Set up Python 3.7
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.7
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install .[precommit]
-          sudo npm install -g cspell markdownlint-cli pyright
-      - name: Perform style checks
-        run: pre-commit run -a
-      - name: Check spelling
-        run: cspell $(git ls-files)
-      - name: Lint Markdown files
-        run: markdownlint .
-      - name: Run pyright
-        run: pyright
-
   push:
     name: Push to stable branch
     if: startsWith(github.ref, 'refs/tags')
-    runs-on: ubuntu-18.04
-    needs:
-      - documentation
-      - style
+    runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@master
       - name: Push to stable branch
@@ -71,3 +20,26 @@ jobs:
           git config --global user.name "GitHub Action"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git push origin HEAD:refs/heads/stable -f
+
+  pypi:
+    name: Publish to PyPI
+    if: startsWith(github.ref, 'refs/tags')
+    needs: push
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install setuptools wheel twine
+      - name: Build and publish
+        env:
+          TWINE_USERNAME: __token__
+          TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
+        run: |
+          python setup.py sdist bdist_wheel
+          twine upload dist/*

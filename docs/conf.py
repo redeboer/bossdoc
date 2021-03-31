@@ -49,11 +49,10 @@ extensions = [
     "sphinx_togglebutton",
     "sphinxcontrib.bibtex",
 ]
-
 exclude_patterns = [
     "**.ipynb_checkpoints",
     "*build",
-    "adr*",
+    "adr/template.md",
     "tests",
 ]
 
@@ -73,6 +72,7 @@ autodoc_default_options = {
         ]
     ),
 }
+graphviz_output_format = "svg"
 html_copy_source = True  # needed for download notebook button
 html_favicon = "_static/favicon.ico"
 html_show_copyright = False
@@ -117,6 +117,12 @@ intersphinx_mapping = {
 # Settings for autosectionlabel
 autosectionlabel_prefix_document = True
 
+# Settings for bibtex
+bibtex_bibfiles = ["bibliography.bib"]
+suppress_warnings = [
+    "myst.domains",
+]
+
 # Settings for copybutton
 copybutton_prompt_is_regexp = True
 copybutton_prompt_text = r">>> |\.\.\. "  # doctest
@@ -128,6 +134,8 @@ linkcheck_ignore = [
     "https://github.com/redeboer/BOSS_IniSelect_ORIGINAL",
     r"http://[A-Za-z0-9]+\.ihep\.ac\.cn",
     r"http://[A-Za-z0-9]+\.ihep\.cas\.cn",
+    r"http://[A-Za-z0-9]+\.ucas\.ac\.cn",
+    r"https://[A-Za-z0-9]+\.ihep\.ac\.cn",
 ]
 
 # Settings for myst_nb
@@ -150,7 +158,12 @@ nb_render_priority = {
 nb_render_priority["doctest"] = nb_render_priority["html"]
 
 # Settings for myst-parser
-myst_admonition_enable = True
+myst_enable_extensions = [
+    "amsmath",
+    "colon_fence",
+    "dollarmath",
+    "smartquotes",
+]
 myst_update_mathjax = False
 
 # Settings for Thebe cell output

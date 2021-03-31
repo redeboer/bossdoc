@@ -91,9 +91,7 @@ Rapidity
   <description>
 
 RooFit
-  See homepage,
-  [RooFit in 20 minutes](https://ph-root-2.cern.ch/d/roofit-20-minutes.html)
-  and
+  See
   [tutorial scripts](https://root.cern.ch/root/html/tutorials/roofit/index.html).
 
 UCAS
