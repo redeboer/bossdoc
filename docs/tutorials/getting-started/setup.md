@@ -262,7 +262,7 @@ account needs to load the essential ones in order for you to be able to run the
 `TestRelease` package. This package helps you to load those essential packages.
 
 Copy the latest `TestRelease` package from the `$BesArea` (where the source
-code of the BOSS version you chose is located) to your `workarea` :
+code of the BOSS version you chose is located) to your `workarea`:
 
 ```bash
 cd $BOSS_INSTALL/workarea
@@ -295,7 +295,7 @@ It should result in a (trivial) error message like this:
               BOSS version: 7.0.4
 ************** BESIII Collaboration **************
 
-the jobOptions file is : jobOptions.txt
+the jobOptions file is: jobOptions.txt
 ERROR! the jobOptions file is empty!
 ```
 

@@ -22,7 +22,7 @@ tag" or "stag" which looks at the decay $D^0(\bar{D}^0) \to f$ where we include
 both $D^0$ and $\bar{D}^0$.
 
 Let's take the $K_{S}^{0} \pi^+ \pi^-$ decay, which `DTagTool` assigns the
-decay mode `"100"` :
+decay mode `"100"`:
 
 ```text
 EvtRecDTag * stag = dtagTool.findSTag(100);

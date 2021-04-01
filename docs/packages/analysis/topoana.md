@@ -168,7 +168,7 @@ $$
 The main takeaway is that `topoana` requires you to store the branch with
 "track index"
 {ref}`defined above <packages/analysis/topoana:Preparing initial event selection>`
-as **having an offset** : the first particle is to be the initial meson (e.g.
+as **having an offset**: the first particle is to be the initial meson (e.g.
 $J/\psi$) with track index `0`, so that you can use the mother index as an
 array index. So you need to subtract its original index from index of the the
 particles that come after. In addition, the selection of MC truth particles is

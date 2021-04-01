@@ -14,7 +14,7 @@ Many of the below fields still have to be tested and described.
 
 ### Maximum number of entries to be processed
 
-Speaks for itself :) Do not use scientific notations like `1e5` for $10^5$, but
+Speaks for itself:) Do not use scientific notations like `1e5` for $10^5$, but
 use `10000`.
 
 ### Maximum hierarchy of heading decay branches to be processed in each event
@@ -51,11 +51,11 @@ Initial decays (e.g. $e^+e^- \rightarrow J/\psi$) are not listed in the tables.
 
 The following columns are not written:
 
-- **Decay trees and their respective final states** : iDcyTr and iDcyFSt
+- **Decay trees and their respective final states**: iDcyTr and iDcyFSt
 
-- **Table Signal particles** : iSigP
+- **Table Signal particles**: iSigP
 
-- **Signal decay final states** : iSigDcyFSt2 and iDcyFSt
+- **Signal decay final states**: iSigDcyFSt2 and iDcyFSt
 
 ### Ignore gISR photons (Two options: Y and N. Default: Y)
 

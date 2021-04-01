@@ -111,7 +111,7 @@ If you receive the following error message:
               BOSS version: 7.0.4
 ************** BESIII Collaboration **************
 
-the jobOptions file is : jobOptions_sim.txt
+the jobOptions file is: jobOptions_sim.txt
 JobOptionsSvc       FATAL in sysInitialize(): standard std::exception is caught
 JobOptionsSvc       ERROR locale::facet::_S_create_c_locale name not valid
 ApplicationMgr      FATAL Error initializing JobOptionsS

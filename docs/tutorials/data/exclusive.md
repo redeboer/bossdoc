@@ -26,7 +26,7 @@ Enddecay
 ```
 
 Here, there are only two decay channels, but you can add more of course. Note
-that a decay card **has to end with the line** :
+that a decay card **has to end with the line**:
 
 ```text
 End
