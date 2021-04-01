@@ -5,10 +5,6 @@ black
 isort
 nbstripout
 
-# Lint documentation
-doc8
-rstcheck
-
 # Lint Python source code
 flake8  >= 3  # for per-file-ignores
 flake8-blind-except
