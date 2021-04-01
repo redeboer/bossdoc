@@ -124,7 +124,7 @@ directory, which contains all source code for BOSS, to your local install area
 
   mkdir -p "$BOSS_INSTALL/cmthome"
   cd "$BOSS_INSTALL/cmthome"
-  cp -Rf /cvmfs/bes3.ihep.ac.cn/bes3sw/Boss/cmthome/cmthome-$BOSS_VERSION/* .
+  cp -Rf /cvmfs/bes3.ihep.ac.cn/bes3sw/cmthome/cmthome-$BOSS_VERSION/* .
 
 Note from the :code:`cp` command that we have omitted the version from the
 original folder name. You can choose to keep that number as well, but here we
@@ -336,7 +336,7 @@ when you log in. In that file, you should add the following lines:
 
   export BOSS_INSTALL="/besfs5/users/${USER}/boss"
   export BOSS_VERSION="7.0.4"
-  CMTHOME="/cvmfs/bes3.ihep.ac.cn/bes3sw/Boss/cmthome/cmthome-${BOSS_VERSION}"
+  CMTHOME="/cvmfs/bes3.ihep.ac.cn/bes3sw/cmthome/cmthome-${BOSS_VERSION}"
 
   source "${BOSS_INSTALL}/cmthome/setupCMT.sh"
   source "${BOSS_INSTALL}/cmthome/setup.sh"
@@ -363,7 +363,7 @@ go through the sections above to understand what's going on here.
   BOSS_VERSION=7.0.4
   mkdir -p $BOSS_INSTALL/cmthome
   cd $BOSS_INSTALL/cmthome
-  cp -Rf /cvmfs/bes3.ihep.ac.cn/bes3sw/Boss/cmthome/cmthome-$BOSS_VERSION/* .
+  cp -Rf /cvmfs/bes3.ihep.ac.cn/bes3sw/cmthome/cmthome-$BOSS_VERSION/* .
   vi requirements
 
 Now uncomment and change the lines containing :code:`WorkArea` to
