@@ -17,8 +17,8 @@ categories:
 3. {doc}`Reconstruction <packages/reconstruction>`
 4. {doc}`Analysis <packages/analysis>`
 
-{doc}`/contributing` to these pages are vital, as there are continuous
-improvements to the BOSS analysis framework.
+{doc}`Contributions </contribute>` to these pages are vital, as there are
+continuous improvements to the BOSS analysis framework.
 
 ```{toctree}
 ---

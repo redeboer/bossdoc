@@ -13,7 +13,7 @@ GitBook](https://besiii.gitbook.io/boss).
 ```
 
 ```{note}
-Feedback on these pages is very welcome! See {doc}`contributing` for contact
+Feedback on these pages is very welcome! See {doc}`contribute` for contact
 details.
 ```
 
@@ -41,9 +41,8 @@ and improvement. More importantly, the more people contribute, the more these
 pages can become a source of reference and are more likely to remain
 up-to-date.
 
-So if you read this and like the idea, have a look at the
-{doc}`contributing page <contributing>`! Contributions from all levels is
-highly appreciated.
+So if you read this and like the idea, have a look at the {doc}`contribute`!
+Contributions from all levels is highly appreciated.
 
 ```{hint}
 If you do not have an IHEP networking account, it is better to check out the
@@ -99,5 +98,5 @@ tutorials
 packages
 physics
 appendices
-contributing
+contribute
 ```

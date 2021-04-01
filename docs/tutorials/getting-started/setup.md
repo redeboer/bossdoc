@@ -6,7 +6,7 @@
 
 In it's current version, this tutorial assumes you use a `bash` terminal. It
 should work for TC-shell as well, but if you experience problems, please visit
-{doc}`/contributing` or click the edit or issue buttons above!
+{doc}`/contribute` or click the edit or issue buttons above!
 
 :::
 

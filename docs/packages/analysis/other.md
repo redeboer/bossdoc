@@ -1,7 +1,7 @@
 # Other packages
 
 ```{warning}
-**Open for suggestions** <br> Please {doc}`contact </contributing>` if there
+**Open for suggestions** <br> Please {doc}`contact </contribute>` if there
 are other BOSS packages that you find useful for your research and would like
 to recommend to others.
 ```
