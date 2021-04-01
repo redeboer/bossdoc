@@ -109,9 +109,10 @@ nitpicky = True  # warn if cross-references are missing
 
 # Intersphinx settings
 intersphinx_mapping = {
-    "numpy": ("https://numpy.org/doc/stable/", None),
+    "pwa": ("https://pwa.readthedocs.io", None),
+    "numpy": ("https://numpy.org/doc/stable", None),
     "python": ("https://docs.python.org/3", None),
-    "tox": ("https://tox.readthedocs.io/en/latest/", None),
+    "tox": ("https://tox.readthedocs.io/en/latest", None),
 }
 
 # Settings for autosectionlabel
