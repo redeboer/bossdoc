@@ -29,7 +29,7 @@ alias {code}`alias condaenv="source <path_to_script>/conda_env.sh"` in your
 {code}`.bashrc`.
 
 Next, just run {code}`conda activate tensorflow-gpu` and you have
-{code}`python3` , {code}`ipython` and even {code}`import tensorflow` available!
+{code}`python3`, {code}`ipython` and even {code}`import tensorflow` available!
 (At the time of writing, TensorFlow is version 1.13.1 though.)
 
 Unfortunately, you don't have the rights to {code}`conda create` new
@@ -39,7 +39,7 @@ environments. To see which other environments are available, use
 ```{note}
 
 If you don't want to go through this whole hassle (it's quite slow indeed), and
-just want to use {code}`python3` , you could also just add
+just want to use {code}`python3`, you could also just add
 {code}`/cvmfs/mlgpu.ihep.ac.cn/anaconda3/envs/tensorflow/bin` to your
 {code}`PATH`. But keep in mind that you may run into trouble with certain
 Python libraries!

@@ -88,9 +88,9 @@ All versions of `MctruthForTopo` can be found here on the IHEP server:
 /besfs5/users/zhouxy/workarea/workarea-6.6.5/Analysis/Physics/MctruthForTopoAnaAlg
 ```
 
-You may choose a different version of BOSS than `6.6.5` , the one used above.
-If you have sourced one of these versions (using `bash cmt/setup`), you can run
-it by adding the following lines to your job options:
+You may choose a different version of BOSS than `6.6.5`, the one used above. If
+you have sourced one of these versions (using `bash cmt/setup`), you can run it
+by adding the following lines to your job options:
 
 ```text
 ApplicationMgr.DLLs += {"MctruthForTopoAnaAlg"};
@@ -98,7 +98,7 @@ ApplicationMgr.TopAlg += {"MctruthForTopoAna"};
 ```
 
 Note: Using `MctruthForTopoAna` is the quickest way to create a `TTree`
-containing the necessary data for `topoana` , but it does not allow you to
+containing the necessary data for `topoana`, but it does not allow you to
 perform cuts: **all the events** will be written to the `TTree` and no cut will
 be applied.
 
@@ -143,7 +143,7 @@ A few remarks about what we see here:
    Each particle is labeled by this index and if there is a mother particle, it
    is 'linked' to its daughter by its index.
 
-2. The decay chain starts with index `0` , a $Z^0$ boson that emerges right
+2. The decay chain starts with index `0`, a $Z^0$ boson that emerges right
    after the $e^+e^-$ collision, which then decays into a $c\bar{c}$ charm
    pair. In the simulation, this pair is taken to be a `cluster` (which has
    code `91`) or a `string` (which has code `92`).
@@ -152,7 +152,7 @@ A few remarks about what we see here:
    what happens after the formation of the cluster. This is where the meson is
    created to which the beam energy is tuned, in this case $J/\psi$. **We
    therefore only store particles that come after either particle code 91 or
-   92** , see `MctruthForTopoAna::execute`.
+   92**, see `MctruthForTopoAna::execute`.
 
 4. From the remainder of the table, we can see that the rest of the decay chain
    becomes (a rather rare if not impossible decay):
@@ -169,7 +169,7 @@ The main takeaway is that `topoana` requires you to store the branch with
 "track index"
 {ref}`defined above <packages/analysis/topoana:Preparing initial event selection>`
 as **having an offset** : the first particle is to be the initial meson (e.g.
-$J/\psi$) with track index `0` , so that you can use the mother index as an
+$J/\psi$) with track index `0`, so that you can use the mother index as an
 array index. So you need to subtract its original index from index of the the
 particles that come after. In addition, the selection of MC truth particles is
 only to contain:
@@ -247,7 +247,7 @@ card: {doc}`required </packages/analysis/topoana/required>` and
 
 _(From_ `topoana` _terminal output.)_
 
-1. Statistics of the topologies are summarized in three types files: `pdf` ,
+1. Statistics of the topologies are summarized in three types files: `pdf`,
    `tex` and `txt`. Although these are different formats, they contain the same
    information. The `pdf` file is the easiest to read. It has been converted
    from the `tex` file using the `pdflatex` command. If necessary, you can

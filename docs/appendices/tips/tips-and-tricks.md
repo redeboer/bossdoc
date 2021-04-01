@@ -67,17 +67,17 @@ mouse, VS Code has much to offer as well. (OK, if your are really hardcore
 keyboard only, just go for [vim](https://www.vim.org), but this really only
 offers advantages if you use it properly.)
 
-For working on {code}`lxslc` , you will need to install this handy
+For working on {code}`lxslc`, you will need to install this handy
 [SSH FS extension](https://marketplace.visualstudio.com/items?itemName=Kelvin.vscode-sshfs).
 This allows you to edit files in for instance your workarea and browse around
 in the file structure. There are a few steps that are useful to do at this
 stage:
 
 1. Create an SSH configuration. This specifies where the extension should find
-   {code}`lxslc` , your user name, the folder you want to access, etc. For
-   this, you can use the graphical interface that comes along with the
-   extension (have a look at the manual that comes along with it). You can
-   later edit these configurations in the JSON file of the global settings (use
+   {code}`lxslc`, your user name, the folder you want to access, etc. For this,
+   you can use the graphical interface that comes along with the extension
+   (have a look at the manual that comes along with it). You can later edit
+   these configurations in the JSON file of the global settings (use
    {code}`Ctrl+Shift+P` to search for and open "preferences open settings
    json"). You can also add a path to your SSH key file (see below) so that you
    won't have to enter your log in details each time.
@@ -92,7 +92,7 @@ stage:
 Unfortunately, this extension does not allow to use the full potential of
 VSCode, such as autocomplete and browsing through header files. VSCode has
 recently provided its own way of working through SSH, which does allow to use
-all functionality on the server. For now, it does not work for {code}`lxslc` ,
+all functionality on the server. For now, it does not work for {code}`lxslc`,
 but keep an eye on [Remote-SSH](https://code.visualstudio.com/docs/remote/ssh)
 for further developments.
 
@@ -107,8 +107,7 @@ for further developments.
 For compiling outside ROOT (that is, _not_ using the ROOT interpreter), you
 will need to use a compiler like {code}`g++`. The compiler needs to be told
 where the libraries for included ROOT header files are located. You can do this
-using flags that ROOT set during its installation. In case of {code}`g++` ,
-use:
+using flags that ROOT set during its installation. In case of {code}`g++`, use:
 
 ```text
 g++ YourCode.C -I$(root-config --incdir) $(root-config --libs --evelibs
@@ -171,7 +170,7 @@ for "Ubuntu"). After installing, search for "Ubuntu" in the start menu. This is
 a bash terminal that has full access to your windows system, but entirely
 through bash commands.
 
-As such, you have access to convenient commands like {code}`apt install` ,
+As such, you have access to convenient commands like {code}`apt install`,
 {code}`vi`, and {code}`g++`. Best of all is that you can use this to
 [install ROOT](https://root.cern/install/dependencies). If you are having
 trouble installing ROOT through bash, have a look

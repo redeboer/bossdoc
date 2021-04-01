@@ -109,7 +109,7 @@ output plots), you 'shield' them by creating a file called {code}`.gitignore`
 (note the dot) in the main directory of the repository. This is a text file
 contains relative paths of the files you want to ignore. Wildcards are allowed,
 see [here](https://help.github.com/en/articles/ignoring-files) for more
-information. Now, if you use {code}`git add .` , all new or modified files in
+information. Now, if you use {code}`git add .`, all new or modified files in
 the folder will be staged, but for the ones excluded by {code}`.gitignore`.
 ```
 
@@ -185,9 +185,9 @@ on the server, so you have to do this through the web interface.
 Go to [code.ihep.ac.cn](http://code.ihep.ac.cn) and click "New repository". Use
 {code}`TestRepo` as the " _Project_ name", then click "Customize repository
 name?" to ensure that the name of the repository is {code}`TestRepo` as well.
-(If you don't, it will be named {code}`testrepo` , while **the _repository_
-name should match the name of your directory**. As you see, the default option
-for a new repository is private, so only you can see it.
+(If you don't, it will be named {code}`testrepo`, while **the _repository_ name
+should match the name of your directory**. As you see, the default option for a
+new repository is private, so only you can see it.
 
 ### Step 8: Push your the first commit
 

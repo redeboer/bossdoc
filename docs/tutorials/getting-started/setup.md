@@ -144,7 +144,7 @@ refers to the latest stable version of BOSS.
 
 ### Step 3: Modify `requirements`
 
-In `cmthome*`, you now have to modify a file called `requirements` , so that it
+In `cmthome*`, you now have to modify a file called `requirements`, so that it
 handles your username properly. We'll use the `vi` editor here, but you can use
 whatever editor you prefer:
 

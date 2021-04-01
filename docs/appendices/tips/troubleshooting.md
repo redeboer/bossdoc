@@ -44,7 +44,7 @@ sed -i 's/\r$//' $fileName
 
 Check your {code}`requirements` file. Packages that you need should be declared
 here as well. For instance, if you want to use {code}`McTruth` packages such as
-{code}`McParticle.h` , you should add the line:
+{code}`McParticle.h`, you should add the line:
 
 ```text
 use McTruth     McTruth-*     Event
@@ -80,9 +80,9 @@ I cannot submit a job through {code}`boss.condor` or {code}`hep_sub` but see
 
 Two known causes:
 
-1. In the case of {code}`hep_sub` , you should submit an **executable** bash
+1. In the case of {code}`hep_sub`, you should submit an **executable** bash
    script. Make the {code}`sh` script executable using {code}`chmod +x`. Use
-   {code}`boss.condor` in exactly the same way as {code}`boss.exe` , that is,
+   {code}`boss.condor` in exactly the same way as {code}`boss.exe`, that is,
    feed it a job options file ({code}`txt`), not a bash script.
 
 2. You sourced a bash script that contained an {code}`export -f` statement
@@ -131,14 +131,14 @@ in Linux, the trick doesn't seem to work...
 ## I cannot use a graphical interface from {code}`lxslc`
 
 If, for instance, you cannot view a {code}`TBrowser` or cannot open the event
-display {code}`besvis.exe` , but instead see
+display {code}`besvis.exe`, but instead see
 
 ```text
 In case you run from a remote ssh session, reconnect with ssh -Y
 ```
 
 you probably logged in with an SSH key and even using {code}`ssh -Y` won't
-help. If you really need the graphical interfaces from {code}`lxslc` , you will
+help. If you really need the graphical interfaces from {code}`lxslc`, you will
 need to remove your public key from the {code}`~/.ssh/authorized_keys` file
 (just open and edit, it's just a text file) and log in again.
 

@@ -74,7 +74,7 @@ so-called 'queue'. For this, there are two options: either you submit them
 using the command `hep_sub` or using the command `boss.condor`. The latter is
 easiest: you can use it just like `boss.exe`.
 
-With `hep_sub` , however, you essentially forward a shell script to the queue,
+With `hep_sub`, however, you essentially forward a shell script to the queue,
 which then executes the commands in there. So you will **first put the command
 for your job in make a shell script** (`.sh`). Let's say, you make a shell
 script `test.sh` in the `run` folder that looks like this:
@@ -84,11 +84,11 @@ script `test.sh` in the `run` folder that looks like this:
 boss.exe jobOptions_sim.txt
 ```
 
-The first line clarifies that you use `bash` , the second does what you did
-when running a job: calling `boss.exe` , but of course, you can make this
-script to execute whatever `bash` commands you want.
+The first line clarifies that you use `bash`, the second does what you did when
+running a job: calling `boss.exe`, but of course, you can make this script to
+execute whatever `bash` commands you want.
 
-The 'queue' (`hep_sub`) executes bash scripts using `./` , not the command
+The 'queue' (`hep_sub`) executes bash scripts using `./`, not the command
 `bash`. You therefore have to make the script executable. This is done through
 `chmod +x <your_script>.sh` ('change mode to executable').
 
@@ -111,7 +111,7 @@ hep_q -u $USER
 Note that `hep_q` would list all jobs from all users. The first column of the
 table you see here (if you have submitted any jobs) is the job ID. If you have
 made some mistake in your analysis code, you can use this ID to **remove a
-job** , like this:
+job**, like this:
 
 ```bash
 hep_rm 26345898.0
@@ -133,7 +133,7 @@ You can do all this by hand, but it is much more convenient to generate these
 files with some script (whether C++, bash or `tcsh`) that can generate
 `jobOptions*.txt` files from a certain _template file_. In these, you for
 instance replace the specific paths and seed number you used by generic tokens
-like `INPUT_FILE` , `OUTPUT_FILE`, and `RANDOM_SEED`. You can then use the
+like `INPUT_FILE`, `OUTPUT_FILE`, and `RANDOM_SEED`. You can then use the
 script to replace these unique tokens by a path or a unique number. Have a look
 at the [`awk`](https://www.tldp.org/LDP/abs/html/awk.html) and
 [`sed`](https://www.gnu.org/software/sed/manual/sed.html) commands to get the

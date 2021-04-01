@@ -71,7 +71,7 @@ Within this folder, you see the core of a default CMT package:
     installation files of the package (for instance useful when you are moving
     to a new version).
 
-  - `cleanup.sh` <br> The same as `cleanup.csh` , but than in `bash` shell
+  - `cleanup.sh` <br> The same as `cleanup.csh`, but than in `bash` shell
     script format.
 
   - `Makefile` <br> A file that is necessary for compilation through `make` /
@@ -87,7 +87,7 @@ Within this folder, you see the core of a default CMT package:
   - `setup.csh` <br> Another important file. It is used when 'broadcasting'
     your package.
 
-  - `setup.sh` Same as `setup.csh` , but now in `bash` shell script format.
+  - `setup.sh` Same as `setup.csh`, but now in `bash` shell script format.
 
 - `src` <br> An empty folder that will hold your `c++` source code (`.cxx`
   files). Optionally, corresponding headers of these files are usually placed

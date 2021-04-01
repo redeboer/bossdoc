@@ -102,7 +102,7 @@ The `RhopiAlg` analyzes the decay of the $\rho(770)$ meson. As you can see in
 the in the
 [PDG listing for this meson](http://pdg.lbl.gov/2018/listings/rpp2018-list-rho-770.pdf),
 the $\rho(770)$ meson predominantly decays through $\rho\rightarrow\pi\pi$
-(almost $100\%$), whether it concerns a $\rho^+$ , $\rho^0$ , or $\rho^-$. This
+(almost $100\%$), whether it concerns a $\rho^+$, $\rho^0$, or $\rho^-$. This
 means that we can reconstruct this meson purely through this _2-particle decay
 mode_.
 
@@ -143,7 +143,7 @@ and {doc}`Running jobs </tutorials/getting-started/jobs>`. An
 [example of a analysis job option file for RhopiAlg](https://github.com/redeboer/BOSS_IniSelect_ORIGINAL/blob/b48291704f1b1df6a9953fd50689b9039f064815/workarea/TestRelease/TestRelease-00-00-00/run/jobOptions_ana_rhopi.txt)
 is found under `run` in the
 {ref}`TestRelease<tutorials/getting-started/setup-package:The TestRelease package>`
-package .
+package.
 
 The parameter `EventCnvSvc.digiRootInputFile` lists the input files. This is
 currently `rhopi.dst` (namely the output after running the `jobOptions_rec.txt`

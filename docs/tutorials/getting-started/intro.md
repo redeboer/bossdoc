@@ -46,7 +46,7 @@ An event selection program usually consists of three steps:
 Gaudi utilizes that idea in the form of
 [an `Algorithm` class](https://dayabay.bnl.gov/dox/GaudiKernel/html/classAlgorithm.html).
 Your analysis is defined by deriving from this class and specifying what you
-want to be performed in the `initialize` , `execute` , and `finalize` steps.
+want to be performed in the `initialize`, `execute`, and `finalize` steps.
 
 :::{note}
 
