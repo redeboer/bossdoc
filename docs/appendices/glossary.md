@@ -11,7 +11,7 @@ sorted:
 ---
 
 Argus background shape
-  For {code}`RooFit` object, see
+  For `RooFit` object, see
   [RooArgusBG](https://root.cern.ch/doc/master/classRooArgusBG.html).
 
 BEPC
@@ -74,8 +74,8 @@ Inclusive Monte Carlo simulation
 Semantic versioning
   See [here](https://semver.org). This is essentially a numbering scheme used
   for tagging versions of a package. Within BOSS, a package can for instance be
-  given tag {code}`Package-01-04-03`, where {code}`01` is the major ID,
-  {code}`04` the minor ID, and {code}`03` the patch ID.
+  given tag `Package-01-04-03`, where `01` is the major ID,
+  `04` the minor ID, and `03` the patch ID.
 
 Sideband plot
   <description>
@@ -84,7 +84,7 @@ Partial wave analysis
   <description>
 
 Polynomial background
-  For {code}`RooFit` object, see
+  For `RooFit` object, see
   [RooPolynomial](https://root.cern/doc/master/classRooPolynomial.html).
 
 Rapidity

@@ -86,7 +86,7 @@ more details.
 
 ````{dropdown} How to create DIY MC?
 
-Write the following into one file, for example {file}`doSim.py`
+Write the following into one file, for example `doSim.py`
 
 ```python
 #!/usr/env python
@@ -100,14 +100,14 @@ elif '-make' in util.getArv():
     svc.Make()
 ```
 
-The you can use {file}`doSim.py` now
+The you can use `doSim.py` now
 
 ```text
 python doSim.py [decay.card] [number of events]
 ```
 
 I also suggest you push <br> `alias SimDIY='python /path/to/doSim.py'` <br>
-into your configuration file, once you use {file}`doSim.py` frequently. Look
+into your configuration file, once you use `doSim.py` frequently. Look
 into BaskeAnaTool/SimAndRec/gen.py for simpler way to generate your DIY
 command.
 

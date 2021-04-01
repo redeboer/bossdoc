@@ -8,9 +8,9 @@ you are actually doing, so they can also be useful if you are not a beginner.
 
 ## Contents
 
-- {doc}`The role of the IHEP server <getting-started/server>` ({code}`lxslc`),
-  where we explain the structure of the IHEP server, how to access it, and go
-  through the directories that are most important to BOSS.
+- {doc}`The role of the IHEP server <getting-started/server>` (`lxslc`), where
+  we explain the structure of the IHEP server, how to access it, and go through
+  the directories that are most important to BOSS.
 
 - {doc}`What is BOSS? <getting-started/intro>` Here, we go through some of the
   key ingredients of the BOSS framework, such as CMT and Gaudi.
@@ -23,7 +23,7 @@ you are actually doing, so they can also be useful if you are not a beginner.
   package.
 
 - {doc}`Running jobs <getting-started/jobs>` In this part, we will explain the
-  {code}`boss.exe` mechanism, used to run an analysis package as a job.
+  `boss.exe` mechanism, used to run an analysis package as a job.
 
 - {doc}`Summary <getting-started/summary>` Finally, we will give a practical
   overview of the steps you usually go through when debugging an analysis

@@ -75,8 +75,8 @@ Here are shortcuts that you might want to take:
 
 2. {doc}`Major BOSS packages </packages>`. Here, you will find descriptions of
    some of the important BOSS packages used in initial event selection, most
-   notably, the {code}`RhopiAlg` package. This section is to serve as an
-   inventory of BOSS packages.
+   notably, the `RhopiAlg` package. This section is to serve as an inventory of
+   BOSS packages.
 
 3. {doc}`Physics at BESIII <physics>`. An inventory of important physics
    principles behind of data analysis at BESIII.

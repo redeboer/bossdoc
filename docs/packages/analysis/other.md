@@ -8,7 +8,7 @@ to recommend to others.
 
 ## DDecayAlg
 
-The {code}`DDecayAlg` can be found here.
+The `DDecayAlg` can be found here.
 
 ```text
 /cvmfs/bes3.ihep.ac.cn/bes3sw/Boss/7.0.4/BesExamples/DDecayAlg/

@@ -4,10 +4,10 @@
 
 # Troubleshooting
 
-## I lost read-write access in my {code}`afs` home folder
+## I lost read-write access in my `afs` home folder
 
-Formerly, this problem could be solved using the {code}`klog` command. Since
-August 2019, this command has become:
+Formerly, this problem could be solved using the `klog` command. Since August
+2019, this command has become:
 
 ```bash
 kinit $USER
@@ -27,14 +27,14 @@ ApplicationMgr      FATAL Error initializing JobOptionsSvc
 ```
 
 Yep, this is a weird one... So far, the cause was usually that the
-{code}`jobOptions_*.txt` ends in a comment. You can solve it by adding a new
-line to the file.
+`jobOptions_*.txt` ends in a comment. You can solve it by adding a new line to
+the file.
 
 ## I cannot run a bash script, but I'm sure it should work
 
-It could be that you wrote the {code}`.sh` script on Windows and the file
-wasn't stored with Linux line endings. You can change these line endings back
-to Linux using:
+It could be that you wrote the `.sh` script on Windows and the file wasn't
+stored with Linux line endings. You can change these line endings back to Linux
+using:
 
 ```bash
 sed -i 's/\r$//' $fileName
@@ -42,9 +42,9 @@ sed -i 's/\r$//' $fileName
 
 ## Some header files are not found when compiling my package
 
-Check your {code}`requirements` file. Packages that you need should be declared
-here as well. For instance, if you want to use {code}`McTruth` packages such as
-{code}`McParticle.h`, you should add the line:
+Check your `requirements` file. Packages that you need should be declared here
+as well. For instance, if you want to use `McTruth` packages such as
+`McParticle.h`, you should add the line:
 
 ```text
 use McTruth     McTruth-*     Event
@@ -61,7 +61,7 @@ hep_sub: error: argument -g/--group: invalid choice: 'physics'
 
 or something with different group names, it means you are in the wrong job
 submit group. Write an email to Ms. Wen Shuoping to ask to be put in the group
-{code}`physics` (or whatever group you need).
+`physics` (or whatever group you need).
 
 ### No resources in job submit group
 
@@ -71,28 +71,28 @@ If you receive the error message
 No resources in your group(s). So the job can not be submitted.
 ```
 
-you should ask to be put in a different group (probably {code}`physics`). Write
-an email to Ms. Wen Shuoping.
+you should ask to be put in a different group (probably `physics`). Write an
+email to Ms. Wen Shuoping.
 
-I cannot submit a job through {code}`boss.condor` or {code}`hep_sub` but see
+I cannot submit a job through `boss.condor` or `hep_sub` but see
 
-## {code}`ERROR: Failed to create new proc id` instead
+## `ERROR: Failed to create new proc id` instead
 
 Two known causes:
 
-1. In the case of {code}`hep_sub`, you should submit an **executable** bash
-   script. Make the {code}`sh` script executable using {code}`chmod +x`. Use
-   {code}`boss.condor` in exactly the same way as {code}`boss.exe`, that is,
-   feed it a job options file ({code}`txt`), not a bash script.
+1. In the case of `hep_sub`, you should submit an **executable** bash script.
+   Make the `sh` script executable using `chmod +x`. Use `boss.condor` in
+   exactly the same way as `boss.exe`, that is, feed it a job options file
+   (`txt`), not a bash script.
 
-2. You sourced a bash script that contained an {code}`export -f` statement
-   (exporting a bash {code}`function`). While this is correct way of exporting
-   a function, it somehow affects BOSS. Change this statement into
-   {code}`export` (omit the {code}`f` option) and the issue is fixed.
+2. You sourced a bash script that contained an `export -f` statement (exporting
+   a bash `function`). While this is correct way of exporting a function, it
+   somehow affects BOSS. Change this statement into `export` (omit the `f`
+   option) and the issue is fixed.
 
-## I cannot run {code}`boss.exe` without jobs
+## I cannot run `boss.exe` without jobs
 
-It should be possible to run {code}`boss.exe` without jobs (see
+It should be possible to run `boss.exe` without jobs (see
 {ref}`here <step-6>`). Does it result in the following error message?
 
 ```text
@@ -102,7 +102,7 @@ cannot open shared object file: No such file or directory
 
 If so, you probably forgot to {ref}`source TestRelease <step-5>`.
 
-## I get a message about {code}`sysInitialize()` when running a job
+## I get a message about `sysInitialize()` when running a job
 
 If you receive the following error message:
 
@@ -128,19 +128,19 @@ the problem might disappear. It's magic!
 in Linux, the trick doesn't seem to work...
 ```
 
-## I cannot use a graphical interface from {code}`lxslc`
+## I cannot use a graphical interface from `lxslc`
 
-If, for instance, you cannot view a {code}`TBrowser` or cannot open the event
-display {code}`besvis.exe`, but instead see
+If, for instance, you cannot view a `TBrowser` or cannot open the event display
+`besvis.exe`, but instead see
 
 ```text
 In case you run from a remote ssh session, reconnect with ssh -Y
 ```
 
-you probably logged in with an SSH key and even using {code}`ssh -Y` won't
-help. If you really need the graphical interfaces from {code}`lxslc`, you will
-need to remove your public key from the {code}`~/.ssh/authorized_keys` file
-(just open and edit, it's just a text file) and log in again.
+you probably logged in with an SSH key and even using `ssh -Y` won't help. If
+you really need the graphical interfaces from `lxslc`, you will need to remove
+your public key from the `~/.ssh/authorized_keys` file (just open and edit,
+it's just a text file) and log in again.
 
 ## My analysis BOSS packages end in a segmentation fault
 

@@ -37,7 +37,7 @@ The below list is not (yet) exhaustive
     (external)
 
   - [https://boss.ihep.ac.cn/~offlinesoftware/MdcPatRecDoc04/classes.html](https://boss.ihep.ac.cn/~offlinesoftware/MdcPatRecDoc04/classes.html)
-    ({code}`MdcPatRec` Class Index)
+    (`MdcPatRec` Class Index)
 
 - **Some introductions to BOSS:**
 
