@@ -124,7 +124,7 @@ directory, which contains all source code for BOSS, to your local install area
 
   mkdir -p "$BOSS_INSTALL/cmthome"
   cd "$BOSS_INSTALL/cmthome"
-  cp -Rf /cvmfs/bes3.ihep.ac.cn/bes3sw/Boss/cmthome/cmthome-$BOSS_VERSION/* .
+  cp -Rf /cvmfs/bes3.ihep.ac.cn/bes3sw/cmthome/cmthome-$BOSS_VERSION/* .
 
 Note from the :code:`cp` command that we have omitted the version from the
 original folder name. You can choose to keep that number as well, but here we
