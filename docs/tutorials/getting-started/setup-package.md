@@ -212,7 +212,7 @@ Congratulations, you have created an update of your package!
 
 #### Remark on `TestRelease`
 
-As mentioned in {ref}`Step 3`, when we were modifying the `requirements` of the
+As mentioned in {ref}`step-3`, when we were modifying the `requirements` of the
 BOSS environment, CMT will use the first occurrence of a package in the
 `$CMTPATH`. That's why we used `path_prepend` to add your _BOSS workarea_ to
 the `$CMTPATH`: in case of a name conflict with a package in the `$BesArea` and
@@ -337,7 +337,7 @@ boss.exe jobOptions_sim.txt
 
 which, in this case, will run a Monte Carlo simulation.
 
-Note that {ref}`when we set up the workarea <step7>`, we added
+Note that {ref}`when we set up the workarea <step-7>`, we added
 `source setup.sh` line to the `.bashrc` that ensures that the `TestRelease`
 package is loaded every time you log in, so you won't have to do this every
 time yourself.
