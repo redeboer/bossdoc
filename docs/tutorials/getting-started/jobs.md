@@ -21,8 +21,8 @@ there for three basic steps in running a Monte Carlo job on BOSS:
    reconstructed data file (`dst`).
 
 3. `ana`: you analyze the reconstructed tracks and generate a
-   [CERN ROOT](https://root.cern.ch/input-and-output) file containing trees
-   that describe event and track variables (`root`).
+   [CERN ROOT](https://root.cern.ch/root/htmldoc/guides/users-guide/InputOutput.html)
+   file containing trees that describe event and track variables (`root`).
 
 When you are analyzing measurement data, you won't have to perform steps 1 and
 2: the BESIII collaboration reconstructs all data samples whenever a new

@@ -132,7 +132,7 @@ directory, which contains all source code for BOSS, to your local install area
 ```bash
 mkdir -p "$BOSS_INSTALL/cmthome"
 cd "$BOSS_INSTALL/cmthome"
-cp -Rf /cvmfs/bes3.ihep.ac.cn/bes3sw/Boss/cmthome/cmthome-$BOSS_VERSION/* .
+cp -Rf /cvmfs/bes3.ihep.ac.cn/bes3sw/cmthome/cmthome-$BOSS_VERSION/* .
 ```
 
 Note from the `cp` command that we have omitted the version from the original
@@ -339,7 +339,7 @@ caption: .bashrc
 ---
 export BOSS_INSTALL="/besfs5/users/${USER}/boss"
 export BOSS_VERSION="7.0.4"
-CMTHOME="/cvmfs/bes3.ihep.ac.cn/bes3sw/Boss/cmthome/cmthome-${BOSS_VERSION}"
+CMTHOME="/cvmfs/bes3.ihep.ac.cn/bes3sw/cmthome/cmthome-${BOSS_VERSION}"
 
 source "${BOSS_INSTALL}/cmthome/setupCMT.sh"
 source "${BOSS_INSTALL}/cmthome/setup.sh"
@@ -364,7 +364,7 @@ BOSS_INSTALL=/besfs5/users/$USER/boss
 BOSS_VERSION=7.0.4
 mkdir -p $BOSS_INSTALL/cmthome
 cd $BOSS_INSTALL/cmthome
-cp -Rf /cvmfs/bes3.ihep.ac.cn/bes3sw/Boss/cmthome/cmthome-$BOSS_VERSION/* .
+cp -Rf /cvmfs/bes3.ihep.ac.cn/bes3sw/cmthome/cmthome-$BOSS_VERSION/* .
 vi requirements
 ```
 
