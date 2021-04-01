@@ -162,8 +162,8 @@ The file contains the following lines:
 ```
 
 Uncomment them (remove the hash `#`) and replace what is between the first
-quotation marks `"..."` with your the path to your workarea. In our case, it
-looks like this:
+quotation marks with the path to your workarea. In our case, it looks like
+this:
 
 ```bash
 macro WorkArea "/besfs5/users/$USER/boss/workarea"
