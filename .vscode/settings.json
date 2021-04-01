@@ -60,8 +60,6 @@
   "python.testing.pytestArgs": ["--color=no", "--no-cov"],
   "python.testing.pytestEnabled": false,
   "python.testing.unittestEnabled": false,
-  "restructuredtext.builtDocumentationPath": "${workspaceFolder}/docs/_build/html",
-  "restructuredtext.confPath": "${workspaceFolder}/docs",
   "rewrap.wrappingColumn": 79,
   "search.exclude": {
     "**/tests/**/__init__.py": true,
