@@ -293,7 +293,7 @@ The `TestRelease` package is used to run certain basic packages that are
 already available within BOSS. The original source code is located here:
 
 ```bash
-/afs/ihep.ac.cn/bes3/offline/Boss/$BOSS_VERSION/TestRelease
+/cvmfs/bes3.ihep.ac.cn/bes3sw/Boss/$BOSS_VERSION/TestRelease
 ```
 
 If you followed the {doc}`tutorial steps for installing BOSS <setup>`, you can

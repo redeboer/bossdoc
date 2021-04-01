@@ -11,5 +11,5 @@ to recommend to others.
 The {code}`DDecayAlg` can be found here.
 
 ```text
-/afs/ihep.ac.cn/bes3/offline/Boss/7.0.4/BesExamples/DDecayAlg/
+/cvmfs/bes3.ihep.ac.cn/bes3sw/Boss/7.0.4/BesExamples/DDecayAlg/
 ```

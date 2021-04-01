@@ -44,4 +44,4 @@ particles (including their physical widths) can be found in the file
 
 .. code-block:: text
 
-  /afs/ihep.ac.cn/bes3/offline/Boss/7.0.4/Generator/BesEvtGen/BesEvtGen-00-03-98/share
+  /cvmfs/bes3.ihep.ac.cn/bes3sw/Boss/7.0.4/Generator/BesEvtGen/BesEvtGen-00-03-98/share

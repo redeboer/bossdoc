@@ -25,7 +25,7 @@ BOSS has been built on several other external libraries. The source files and
 binaries can be found here on the `lxslc` server:
 
 ```text
-/afs/ihep.ac.cn/bes3/offline/ExternalLib/SLC6/ExternalLib
+/cvmfs/bes3.ihep.ac.cn/bes3sw/ExternalLib/SLC6/ExternalLib
 ```
 
 You can also have a look at the

@@ -62,7 +62,7 @@ following:
 * `BOSS Software directory
   <https://docbes3.ihep.ac.cn/~offlinesoftware/index.php/How_to_setup_BOSS_environment_on_lxslc>`_
 
-  * :code:`/afs/ihep.ac.cn/bes3/offline/Boss` (also referred to with
+  * :code:`/cvmfs/bes3.ihep.ac.cn/bes3sw/Boss` (also referred to with
     :code:`$BesArea`)
 
 * `Raw data files <https://docbes3.ihep.ac.cn/~offlinesoftware/index.php/Raw_Data>`_

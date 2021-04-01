@@ -124,7 +124,7 @@ directory, which contains all source code for BOSS, to your local install area
 
   mkdir -p "$BOSS_INSTALL/cmthome"
   cd "$BOSS_INSTALL/cmthome"
-  cp -Rf /afs/ihep.ac.cn/bes3/offline/Boss/cmthome/cmthome-$BOSS_VERSION/* .
+  cp -Rf /cvmfs/bes3.ihep.ac.cn/bes3sw/Boss/cmthome/cmthome-$BOSS_VERSION/* .
 
 Note from the :code:`cp` command that we have omitted the version from the
 original folder name. You can choose to keep that number as well, but here we
@@ -194,9 +194,9 @@ If everything went well, it should print something like:
 
 .. code-block:: bash
 
-  /besfs5/users/$USER/boss/workarea:/afs/ihep.ac.cn/bes3/offline/Boss/7.0.4:
-  /afs/ihep.ac.cn/bes3/offline/ExternalLib/SLC6/ExternalLib/gaudi/GAUDI_v23r9:
-  /afs/ihep.ac.cn/bes3/offline/ExternalLib/SLC6/ExternalLib/LCGCMT/LCGCMT_65a
+  /besfs5/users/$USER/boss/workarea:/cvmfs/bes3.ihep.ac.cn/bes3sw/Boss/7.0.4:
+  /cvmfs/bes3.ihep.ac.cn/bes3sw/ExternalLib/SLC6/ExternalLib/gaudi/GAUDI_v23r9:
+  /cvmfs/bes3.ihep.ac.cn/bes3sw/ExternalLib/SLC6/ExternalLib/LCGCMT/LCGCMT_65a
 
 The paths listed here (separated by :code:`:` columns) will be used to look for
 packages required by the :file:`requirements` files of packages (see
@@ -336,7 +336,7 @@ when you log in. In that file, you should add the following lines:
 
   export BOSS_INSTALL="/besfs5/users/${USER}/boss"
   export BOSS_VERSION="7.0.4"
-  CMTHOME="/afs/ihep.ac.cn/bes3/offline/Boss/cmthome/cmthome-${BOSS_VERSION}"
+  CMTHOME="/cvmfs/bes3.ihep.ac.cn/bes3sw/Boss/cmthome/cmthome-${BOSS_VERSION}"
 
   source "${BOSS_INSTALL}/cmthome/setupCMT.sh"
   source "${BOSS_INSTALL}/cmthome/setup.sh"
@@ -363,7 +363,7 @@ go through the sections above to understand what's going on here.
   BOSS_VERSION=7.0.4
   mkdir -p $BOSS_INSTALL/cmthome
   cd $BOSS_INSTALL/cmthome
-  cp -Rf /afs/ihep.ac.cn/bes3/offline/Boss/cmthome/cmthome-$BOSS_VERSION/* .
+  cp -Rf /cvmfs/bes3.ihep.ac.cn/bes3sw/Boss/cmthome/cmthome-$BOSS_VERSION/* .
   vi requirements
 
 Now uncomment and change the lines containing :code:`WorkArea` to

@@ -129,7 +129,7 @@ results in different widths.
 The original `RhopiAlg` package (version `0.0.23`) is located here,
 
 ```text
-/afs/ihep.ac.cn/bes3/offline/Boss/$BOSSVERSION/Analysis/Physics/RhopiAlg/RhopiAlg-00-00-23
+/cvmfs/bes3.ihep.ac.cn/bes3sw/Boss/$BOSSVERSION/Analysis/Physics/RhopiAlg/RhopiAlg-00-00-23
 ```
 
 You can also
