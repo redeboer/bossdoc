@@ -93,14 +93,14 @@ Two known causes:
 ## I cannot run {code}`boss.exe` without jobs
 
 It should be possible to run {code}`boss.exe` without jobs (see
-{ref}`here <Step 6>`). Does it result in the following error message?
+{ref}`here <step-6>`). Does it result in the following error message?
 
 ```text
 boss.exe: error while loading shared libraries: libReflex.so:
 cannot open shared object file: No such file or directory
 ```
 
-If so, you probably forgot to {ref}`source TestRelease <Step 5>`.
+If so, you probably forgot to {ref}`source TestRelease <step-5>`.
 
 ## I get a message about {code}`sysInitialize()` when running a job
 

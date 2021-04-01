@@ -19,11 +19,11 @@ generating an ssh key [here](https://www.ssh.com/ssh/keygen) and
    {code}`eval $(ssh-agent -s); ssh-add ~/.ssh/id_rsa`
 
 3. Copy the public key to the server using: <br>
-   {code}`ssh-copy-id -i ~/.ssh/id_rsa <your user name>@lxslc6.ihep.ac.cn` You
+   {code}`ssh-copy-id -i ~/.ssh/id_rsa <your user name>@lxslc7.ihep.ac.cn` You
    will be asked for your IHEP account password.
 
 4. Try to log in to the server with:
-   {code}`ssh -Y <your user name>@lxslc6.ihep.ac.cn` If all went correctly, you
+   {code}`ssh -Y <your user name>@lxslc7.ihep.ac.cn` If all went correctly, you
    don't have to enter your password anymore.
 
 ## Recommended software
