@@ -179,7 +179,7 @@ packages. Note that, when CMT searches for packages that you listed in the
 `requirements` file, it will use the first occurrence in the `$CMTPATH`. This
 is why you `prepend` it.
 
-#### **Step 4: Set references to BOSS**
+#### Step 4: Set references to BOSS
 
 Now you can use the scripts in `cmthome` to set all references to BOSS at once,
 using:
