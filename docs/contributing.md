@@ -24,7 +24,7 @@ For this, you will have to [create a GitHub account](https://github.com/join)
 (you will be redirected if you already have one). I can then add your account
 as a contributor. A [branch](https://help.github.com/articles/about-branches)
 will then be created for you in which you can change anything you want. If you
-would like to publish your changes to the master branch so that they become
+would like to publish your changes to the main branch so that they become
 accessible for all.
 
 See [here](https://guides.github.com/introduction/flow) for a short tutorial
