@@ -189,4 +189,8 @@ for definitions of cuts.
 
 ## Output `root` file
 
-.. warning:: General description of how to read the output ROOT file.
+:::{warning}
+
+General description of how to read the output ROOT file.
+
+:::

@@ -23,7 +23,7 @@ ssh -Y <your user name>@lxslc7.ihep.ac.cn
 Here, the option `-Y` ensures _X11 forwarding_ , allowing you to open graphical
 applications from the server.
 
-::: {note}
+:::{note}
 
 If you don't like having to enter your password every time you log in, have a
 look at the section

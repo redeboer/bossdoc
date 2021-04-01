@@ -36,5 +36,9 @@ Graphical editor for Windows: <br>
 [https://legacy.gitbook.com/editor](https://legacy.gitbook.com/editor) <br>
 Could be useful if you decide to contribute to the
 
-.. warning:: GitBook Editor is outdated and seems to be not fully compatible
-with the newest version of the browser-based GitBook!
+:::{warning}
+
+GitBook Editor is outdated and seems to be not fully compatible with the newest
+version of the browser-based GitBook!
+
+:::
