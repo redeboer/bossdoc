@@ -22,6 +22,15 @@ problems can be reported by opening an issue. In both cases, you will need to
 
 ## Developing these pages
 
+:::{tip}
+
+When developing, you have to implement changes through Git.
+[Pro Git](https://git-scm.com/book/en/v2) is the best resource to learn how to
+do this. Also have a look [here](https://guides.github.com/introduction/flow)
+for a short tutorial about the Git workflow.
+
+:::
+
 These pages are built with [Sphinx](https://www.sphinx-doc.org/en/master), for
 which you need to have [Python](https://www.python.org) installed. The pages
 are written in
@@ -30,18 +39,23 @@ extended form of [Markdown](https://en.wikipedia.org/wiki/Markdown).
 
 The easiest way to develop these pages is by using
 [Conda](https://conda.io/projects/conda/en/latest/user-guide/install/index.html)
-and [Visual Studio Code](https://code.visualstudio.com). Once you have those
-installed, it's simply a matter of running:
+and [Visual Studio Code](https://code.visualstudio.com). Conda manages
+[virtual environments](https://realpython.com/python-virtual-environments-a-primer),
+so that the Python packages that are required to work on the documentation can
+be easily removed or updated. Once you have those installed, it's simply a
+matter of running:
 
 ```bash
 git clone https://github.com/redeboer/bossdoc.git
 cd bossdoc
-conda env create
+conda env create  # install required packages
+conda activate bossdoc
+pre-commit install
 code .
 ```
 
-All the rest of the instructions will be shown once Visual Studio Code opens
-with the last command ;)
+The rest of the instructions will be shown once Visual Studio Code opens with
+the last command ;)
 
 Next, open a terminal (**Ctrl + `**) and run
 
@@ -54,4 +68,9 @@ tox -e doclive
 This will build the documentation and automatically update it while you edit
 the files in VSCode!
 
-For more explanation, see {doc}`pwa:develop`.
+:::{seealso}
+
+{doc}`pwa:develop` on the {doc}`PWA pages <pwa:index>`, which uses the same
+set-up.
+
+:::
