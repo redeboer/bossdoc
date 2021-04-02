@@ -10,50 +10,20 @@ should work for TC-shell as well, but if you experience problems, please visit
 
 :::
 
-:::{note}
+:::{tip}
 
 See
 {ref}`last section of this page <tutorials/getting-started/setup:Summary of commands>`
 for an overview of all commands. If you are in a very lazy mood, you can also
-download and run
-[this bash script](http://code.ihep.ac.cn/bes3/BOSS_StarterKit/-/tree/master/utilities/SetupBoss.sh):
+checkout the [BOSS Starter Kit](http://code.ihep.ac.cn/bes3/BOSS_StarterKit),
+which this whole set-up for you.
 
 :::
-
-```bash
-wget https://raw.githubusercontent.com/redeboer/BOSS_StarterKit/master/utilities/SetupBoss.sh
-bash SetupBoss.sh
-```
 
 In this section, you will learn how to 'install' BOSS. Since BOSS has already
 been compiled on the server, installing actually means that you set up _path
-variables_ in the `bash` shell. Shortly said, your user account then 'knows'
-where to locate BOSS and how to run it.
-
-There are two main directories that you will be using:
-
-1. a _local install area_, from which access to BOSS is managed and which
-   contains your own BOSS packages (mostly event selection), and
-
-2. an _analysis folder_, which contains scripts that you design yourself to
-   analyze output from BOSS (for example fitting histograms). You can decide to
-   have this folder locally on your own pc, because analyzes of this type
-   require less computing power.
-
-It is totally up to you where you place these folders. A common procedure is to
-put the _analysis folder_ in the `ihepbatch` folder. Have a look at the
-{doc}`organization of the IHEP server </tutorials/getting-started/server>` to
-decide if there is some other folder that meets your needs.
-
-:::{admonition} In case of large data
-
-If you work with large data samples, you may want to write your output to a
-different folder in
-{ref}`scratchfs <tutorials/getting-started/server:Important data paths>`. Take
-care to modify the paths your job option files accordingly! (See
-{doc}`running jobs </tutorials/getting-started/jobs>`.)
-
-:::
+variables_ in the `bash` shell. In short, your user account then 'knows' where
+to locate BOSS and how to run it.
 
 ## Set up the BOSS environment
 
@@ -61,14 +31,11 @@ care to modify the paths your job option files accordingly! (See
 
 ### Step 1: Define your local install folder
 
-For the sake of making this tutorial work in a general setting, we will first
-define a `bash` variable here (you can just execute this command in `bash`):
-
 In this part of the tutorial, we will do two things: (1) setup the necessary
 references to BOSS and (2) preparing your `workarea` folder. You will be
-developing and your own BOSS packages (mainly code for event selection) in this
+developing your own BOSS packages (mainly code for event selection) in this
 `workarea` folder. Next to your `workarea`, there will be a
-{ref}`tutorials/getting-started/intro:Configuration Management Tool (CMT)`
+{ref}`CMT <tutorials/getting-started/intro:Configuration Management Tool (CMT)>`
 folder (`cmthome`), which manages access to the BOSS installation. In the end
 you will have a file structure like this:
 
@@ -77,39 +44,49 @@ you will have a file structure like this:
   - `cmthome` (manages access to BOSS)
   - `workarea` (contains your analysis code)
 
-    - `TestRelease` (loads essential BOSS packages)
+    - `MyEventSelectionPackage` (could be several packages)
+    - `TestRelease` (loads and checks essential BOSS packages)
     - `InstallArea` (binaries and header files are collected here after
       compiling)
 
-:::{note}
-
-The above is equivalent to `BOSS_INSTALL=/besfs5/users/$USER/boss`, so why the
-quotation marks (`"..."`) and curly braces (`{...}`)? It's just a good habit in
-`bash` scripting to avoid bugs and improve readability. The quotation marks
-clarify that we are storing a string here and allow you to use spaces, while
-the curly braces clarify the extend of the variable name (`USER` in this case).
-
-:::
+For the sake of making this tutorial work in a general setting, we will first
+define a `bash` variable here (you can just execute this command in `bash`):
 
 ```bash
 BOSS_INSTALL="/besfs5/users/${USER}/boss"
 ```
 
+:::{toggle}
+
+The above is equivalent to
+
+```bash
+BOSS_INSTALL=/besfs5/users/$USER/boss
+```
+
+Why the quotation marks (`"..."`) and curly braces (`{...}`)? It's just a good
+habit in `bash` scripting to avoid bugs and improve readability. The quotation
+marks ensure that we are storing a string here and allow you to use spaces,
+while the curly braces clarify the extend of the variable name (`USER` in this
+case).
+
+:::
+
 This variable points to the path that will contain your local 'install' of
 BOSS. You can change what is between the quotation marks by whatever folder you
-prefer in case you want your local BOSS install to be placed in some other
+prefer, in case you want your local BOSS install to be placed in some other
 path, for instance by `/ihepbatch/bes/$USER`.
 
 At this stage, you'll have to decide which version of BOSS you have to use. At
-the time of writing, **version 7.0.4** is the latest stable version, though it
+the time of writing, **version 7.0.5** is the latest stable version, though it
 could be that for your analysis you have to use data sets that were
-reconstructed with older versions of BOSS. Here, we'll stick with `7.0.4`, but
+reconstructed with older versions of BOSS. Here, we'll stick with `7.0.5`, but
 you can replace this number with whatever version you need.
 
 For convenience, we'll again define the version number as a variable here.
 
 ```bash
-BOSS_VERSION="7.0.4"
+BOSS_VERSION="7.0.5"
 ```
 
 :::{tip}
@@ -126,8 +103,14 @@ An overview of all BOSS versions and their release notes can be found
 
 We first have to obtain some scripts that allow you to set up references to
 BOSS. This is done by copying the `cmthome` folder from the BOSS Software
-directory, which contains all source code for BOSS, to your local install area
-(option `-p` allows `mkdir` to work on arbitrary depth):
+directory (which contains all source code for BOSS) to your local install area
+
+:::{margin}
+
+Option `-p` makes `mkdir` work on arbitrary depth and ignores existing
+directories
+
+:::
 
 ```bash
 mkdir -p "$BOSS_INSTALL/cmthome"
@@ -135,10 +118,10 @@ cd "$BOSS_INSTALL/cmthome"
 cp -Rf /cvmfs/bes3.ihep.ac.cn/bes3sw/cmthome/cmthome-$BOSS_VERSION/* .
 ```
 
-Note from the `cp` command that we have omitted the version from the original
-folder name. You can choose to keep that number as well, but here we chose to
-use the convention is that `cmthome` and `workarea` without a version number
-refers to the latest stable version of BOSS.
+Note that we have omitted the version from the original folder name. You can
+choose to keep that number as well, but here we chose to use the convention
+that `cmthome` and `workarea` without a version number refers to the latest
+stable version of BOSS.
 
 (step-3)=
 
@@ -155,31 +138,38 @@ vi requirements
 The file contains the following lines:
 
 ```bash
-#macro WorkArea "/ihepbatch/bes/maqm/workarea"
-
-#path_remove CMTPATH "${WorkArea}"
-#path_prepend CMTPATH "${WorkArea}"
-```
-
-Uncomment them (remove the hash `#`) and replace what is between the first
-quotation marks with the path to your workarea. In our case, it looks like
-this:
-
-```bash
-macro WorkArea "/besfs5/users/$USER/boss/workarea"
+macro WorkArea "/ihepbatch/bes/maqm/workarea"
 
 path_remove CMTPATH "${WorkArea}"
 path_prepend CMTPATH "${WorkArea}"
 ```
 
+The first line needs to be modified so that the variable `${WorkArea}` points
+to your quotation marks with the path to your workarea. In our case, the first
+line becomes:
+
+```bash
+macro WorkArea "/besfs5/users/$USER/boss/workarea"
+```
+
+:::{dropdown} What is this `requirements` file actually?
+
+A `requirements` file is used by CMT and is written in a syntax that CMT
+understands. For instance, `path_remove` let's CMT removes the value of
+`"${WorkArea}"` from the variable `$CMTPATH` (a `:`-separated list!). Next,
+`path_prepend` prepends the value `"${WorkArea}"` back to that same `$CMTPATH`
+list.
+
 The `$CMTPATH` is an important variable for
 {ref}`CMT <tutorials/getting-started/intro:Configuration Management Tool (CMT)>`.
 It is comparable to `$PATH` in that it lists all directories that contain CMT
-packages. Note that, when CMT searches for packages that you listed in the
-`requirements` file, it will use the first occurrence in the `$CMTPATH`. This
-is why you `prepend` it.
+packages. When CMT searches, it will start by searching in the first directory
+listed under `$CMTPATH`. Since you want your own packages in your `$WorkArea`
+to supersede those of the BOSS installation, you `path_prepend` it.
 
-#### Step 4: Set references to BOSS
+:::
+
+### Step 4: Set references to BOSS
 
 Now you can use the scripts in `cmthome` to set all references to BOSS at once,
 using:
@@ -200,7 +190,8 @@ echo $CMTPATH
 If everything went well, it should print something like:
 
 ```bash
-/besfs5/users/$USER/boss/workarea:/cvmfs/bes3.ihep.ac.cn/bes3sw/Boss/7.0.4:
+/besfs5/users/$USER/boss/workarea:
+/cvmfs/bes3.ihep.ac.cn/bes3sw/Boss/7.0.5:
 /cvmfs/bes3.ihep.ac.cn/bes3sw/ExternalLib/SLC6/ExternalLib/gaudi/GAUDI_v23r9:
 /cvmfs/bes3.ihep.ac.cn/bes3sw/ExternalLib/SLC6/ExternalLib/LCGCMT/LCGCMT_65a
 ```
@@ -212,49 +203,25 @@ points to your `workarea`, the second to the BOSS version you use (also called
 `$BesArea`), and the rest point to external libraries such as
 [Gaudi](https://dayabay.bnl.gov/dox/GaudiKernel/html/annotated.html).
 
-(step-4)=
+(step-5)=
 
-### Step 4: Create a `workarea` sub-folder
+### Step 5: Create a `workarea` sub-folder
 
-As mentioned in the introduction
+As mentioned in
 {ref}`tutorials/getting-started/setup:Set up the BOSS environment`, the local
 install area contains a `workarea` folder next to the `cmthome` folder we have
-been using so far. In our case it will be:
+been using so far. In our case, it will be:
 
 ```bash
-mkdir -p "$BOSS_WORKAREA/workarea"
+mkdir -p "${BOSS_INSTALL}/workarea"
 ```
 
 We'll get back to the `workarea` folder when we
 {doc}`/tutorials/getting-started/setup-package`.
 
-:::{note}
+(step-6)=
 
-Your _BOSS workarea_ typically contains three folders (see
-[an example here](http://code.ihep.ac.cn/redeboer/IniSelect/-/tree/master/workarea)):
-
-1. [`Analysis`](http://code.ihep.ac.cn/redeboer/IniSelect/-/tree/master/workarea/Analysis),
-   which contains CMT packages that you use for your analysis
-
-2. [`InstallArea`](http://code.ihep.ac.cn/redeboer/IniSelect/-/tree/master/workarea/InstallArea),
-   which is created when you use `cmt config`
-
-3. [`TestRelease`](http://code.ihep.ac.cn/redeboer/IniSelect/-/tree/master/workarea/TestRelease),
-   which is used to run all packages
-
-The file structure of your _workarea_ follows that of the packages in
-`$BesArea` (use `ls $BesArea` to verify this), because,
-{ref}`as explained before <step-3>`, packages in your _workarea_ have priority
-over those in `$BesArea`. As such, you can expand your _workarea_ by copying
-certain packages from the `$BesArea` and modifying those. In the _BOSS
-Afterburner_, there is for instance
-[a modification of the BesEvtGen Monte Carlo generator](http://code.ihep.ac.cn/redeboer/IniSelect/-/tree/master/workarea/Generator).
-
-:::
-
-(step-5)=
-
-### Step 5: Implement the `TestRelease` package
+### Step 6: Implement the `TestRelease` package
 
 BOSS is built up of a large number of packages, such as `VertexFit`. Your local
 account needs to load the essential ones in order for you to be able to run the
@@ -279,9 +246,9 @@ cmt broadcast make # build executables
 source setup.sh    # set bash variables
 ```
 
-(step-6)=
+(step-7)=
 
-### Step 6: Test BOSS using `boss.exe`
+### Step 7: Test BOSS using `boss.exe`
 
 To test whether everything went correctly, you can try to run BOSS:
 
@@ -292,7 +259,7 @@ boss.exe
 It should result in a (trivial) error message like this:
 
 ```text
-              BOSS version: 7.0.4
+              BOSS version: 7.0.5
 ************** BESIII Collaboration **************
 
 the jobOptions file is: jobOptions.txt
@@ -302,29 +269,29 @@ ERROR! the jobOptions file is empty!
 If not, something went wrong and you should carefully recheck what you did in
 the above steps.
 
-(step-7)=
+(step-8)=
 
-### Step 7: Modify your `.bashrc`
+### Step 8: Modify your `.bashrc`
 
 In order to have the references to BOSS loaded automatically every time you log
 in on the server, we can add some of the steps we did above to your `bash`
 profile (`.bash_profile`) and _run commands_ file (`.bashrc`).
 
-:::{note}
+:::{margin}
+
+<!-- cspell:ignore ommands -->
 
 On a _login terminal_, the `.bash_profile` script is loaded every time you log
-in, while a _local terminal_ (like a Ubuntu install on your own pc) loads
-`.bashrc` (run commands). In the following, we therefore just 'forward' the
-loading of `.bash_profile` to `.bash_rc`.
-
-First, add the following lines to your bash profile (use `vi ~/.bash_profile`):
+in, while a _local terminal_ (like Ubuntu on your own pc) loads `.bashrc`
+(`r`un `c`ommands). Here, we therefore just 'forward' the loading of
+`.bash_profile` to `.bash_rc`.
 
 :::
 
-```bash
----
-caption: .bash_profile
----
+First, add the following lines to your bash profile (use `vi ~/.bash_profile`):
+
+```{code-block} bash
+:caption: .bash_profile
 if [[ -f ~/.bashrc ]]; then
   source ~/.bashrc
 fi
@@ -333,12 +300,10 @@ fi
 These lines force the server to source your `.bashrc` run commands file when
 you log in. In that file, you should add the following lines:
 
-```bash
----
-caption: .bashrc
----
+```{code-block} bash
+:caption: .bashrc
 export BOSS_INSTALL="/besfs5/users/${USER}/boss"
-export BOSS_VERSION="7.0.4"
+export BOSS_VERSION="7.0.5"
 CMTHOME="/cvmfs/bes3.ihep.ac.cn/bes3sw/cmthome/cmthome-${BOSS_VERSION}"
 
 source "${BOSS_INSTALL}/cmthome/setupCMT.sh"
@@ -361,7 +326,7 @@ sections above to understand what's going on here.
 
 ```bash
 BOSS_INSTALL=/besfs5/users/$USER/boss
-BOSS_VERSION=7.0.4
+BOSS_VERSION=7.0.5
 mkdir -p $BOSS_INSTALL/cmthome
 cd $BOSS_INSTALL/cmthome
 cp -Rf /cvmfs/bes3.ihep.ac.cn/bes3sw/cmthome/cmthome-$BOSS_VERSION/* .

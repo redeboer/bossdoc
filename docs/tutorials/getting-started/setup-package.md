@@ -337,10 +337,10 @@ boss.exe jobOptions_sim.txt
 
 which, in this case, will run a Monte Carlo simulation.
 
-Note that {ref}`when we set up the workarea <step-7>`, we added
-`source setup.sh` line to the `.bashrc` that ensures that the `TestRelease`
-package is loaded every time you log in, so you won't have to do this every
-time yourself.
+Note that, in {ref}`step-8` when we set up the workarea, we added a line
+`source setup.sh` to the `.bashrc`. This ensures that the `TestRelease` package
+is loaded every time you log in, so you won't have to do this every time
+yourself.
 
 ### BOSS Example Packages
 

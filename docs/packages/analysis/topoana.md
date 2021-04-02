@@ -268,9 +268,7 @@ useful if your data is extensive and you want to log out while the job is
 executed. Just write your command in a `bash` script like this:
 
 ```{code-block} bash
----
-caption: your_bash_file.sh
----
+:caption: your_bash_file.sh
 { topoana.exe your_topoana.card; } &> your_file.log
 ```
 

@@ -90,7 +90,7 @@ Two known causes:
    somehow affects BOSS. Change this statement into `export` (omit the `f`
    option) and the issue is fixed.
 
-## I cannot run `boss.exe` without jobs
+## I cannot try out `boss.exe` without jobs
 
 It should be possible to run `boss.exe` without jobs (see
 {ref}`here <step-6>`). Does it result in the following error message?

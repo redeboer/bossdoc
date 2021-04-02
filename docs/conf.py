@@ -162,6 +162,7 @@ nb_render_priority["doctest"] = nb_render_priority["html"]
 myst_enable_extensions = [
     "amsmath",
     "colon_fence",
+    "deflist",
     "dollarmath",
     "smartquotes",
 ]
