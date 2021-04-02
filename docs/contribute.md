@@ -1,4 +1,4 @@
-# About & Contributing
+# Contribute
 
 The BOSS GitBook has been set up not only to provide a set of **accessible**
 tutorial pages on the use of BOSS, but also a continuously updated **inventory
@@ -6,39 +6,52 @@ of the available packages**. For now, it serves as a central, informal location
 to collect information about BESIII, but the aim is to migrate its content to a
 formal, interactive BESIII platform as soon as that has been set up.
 
-**It is quite easy to contribute!** There are a two ways to do this:
+```{image} _static/edit-button.png
+:alt: fishy
+:class: bg-primary
+:width: 250px
+:align: right
+```
 
-- **Through GitBook** Using the GitBook web interface is the most convenient
-  method to collaborate on these tutorial pages: you can comment, discuss, work
-  with drafts, merge them, etc. You can get login details by emailing
-  [remco.de.boer@ihep.ac.cn](mailto:remco.de.boer@ihep.ac.cn).
+**It is quite easy to contribute!** First of all, if you spot some typos, just
+click the edit button in the top right of each page. That will lead you to the
+source code for the page in
+[this repository on GitHub](https://github.com/redeboer/bossdoc). Bigger
+problems can be reported by opening an issue. In both cases, you will need to
+[create a GitHub account](https://github.com/join).
 
-- **Through GitHub** Otherwise, you can always fork the underlying repository
-  ([github.com/redeboer/BOSS_GitBook](https://github.com/redeboer/BOSS_GitBook))
-  and add suggestions by
-  [submitting a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests).
+## Developing these pages
 
-## Contributing through Git
+These pages are built with [Sphinx](https://www.sphinx-doc.org/en/master), for
+which you need to have [Python](https://www.python.org) installed. The pages
+are written in
+[Markedly Structured Text (MyST)](https://myst-parser.readthedocs.io), an
+extended form of [Markdown](https://en.wikipedia.org/wiki/Markdown).
 
-For this, you will have to [create a GitHub account](https://github.com/join)
-(you will be redirected if you already have one). I can then add your account
-as a contributor. A [branch](https://help.github.com/articles/about-branches)
-will then be created for you in which you can change anything you want. If you
-would like to publish your changes to the main branch so that they become
-accessible for all.
+The easiest way to develop these pages is by using
+[Conda](https://conda.io/projects/conda/en/latest/user-guide/install/index.html)
+and [Visual Studio Code](https://code.visualstudio.com). Once you have those
+installed, it's simply a matter of running:
 
-See [here](https://guides.github.com/introduction/flow) for a short tutorial
-about the Git workflow.
+```bash
+git clone https://github.com/redeboer/bossdoc.git
+cd bossdoc
+conda env create
+code .
+```
 
-## GitBook Editor
+All the rest of the instructions will be shown once Visual Studio Code opens
+with the last command ;)
 
-Graphical editor for Windows: <br>
-[https://legacy.gitbook.com/editor](https://legacy.gitbook.com/editor) <br>
-Could be useful if you decide to contribute to the
+Next, open a terminal (**Ctrl + `**) and run
 
-:::{warning}
+<!-- cspell:ignore doclive -->
 
-GitBook Editor is outdated and seems to be not fully compatible with the newest
-version of the browser-based GitBook!
+```bash
+tox -e doclive
+```
 
-:::
+This will build the documentation and automatically update it while you edit
+the files in VSCode!
+
+For more explanation, see {doc}`pwa:develop`.
