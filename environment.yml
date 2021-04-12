@@ -2,8 +2,7 @@ name: bossdoc
 channels:
   - defaults
 dependencies:
-  - python==3.8.*
+  - python
   - pip
   - pip:
-      - -r reqs/3.8/requirements-dev.txt
-      - -e .
+      - -e .[dev]
