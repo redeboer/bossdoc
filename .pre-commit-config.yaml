@@ -30,6 +30,7 @@ repos:
       - id: check-dev-files
         args:
           - --allow-labels
+      - id: format-setup-cfg
 
   - repo: https://github.com/ComPWA/mirrors-cspell
     rev: v5.3.12
