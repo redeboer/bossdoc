@@ -127,6 +127,8 @@ From here on, you can develop a package from scratch. For the basics of how to
 follow the guidelines of the BOSS framework (which is based on Gaudi), see
 [this `Hello World` example for Gaudi](https://lhcb.github.io/developkit-lessons/first-development-steps/02a-gaudi-helloworld.html).
 
+:::
+
 ### Updating a package
 
 Whenever you are planning to modify the code in your package (particularly the
