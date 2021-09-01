@@ -65,8 +65,3 @@ repos:
     rev: v2.3.2
     hooks:
       - id: prettier
-
-  - repo: https://github.com/ComPWA/mirrors-pyright
-    rev: v1.1.164
-    hooks:
-      - id: pyright
