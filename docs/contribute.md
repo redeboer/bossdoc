@@ -70,7 +70,7 @@ the files in VSCode!
 
 :::{seealso}
 
-{doc}`pwa:develop` on the {doc}`PWA pages <pwa:index>`, which uses the same
-set-up.
+{doc}`compwa-org:develop` on the {doc}`ComPWA website <compwa-org:index>`,
+which uses the same set-up.
 
 :::

@@ -1,3 +1,10 @@
+ci:
+  autoupdate_commit_msg: "ci: autoupdate pre-commit hooks"
+  autoupdate_schedule: quarterly
+  skip:
+    # hooks that don't work on pre-commit.ci
+    - editorconfig-checker
+
 repos:
   - repo: meta
     hooks:
@@ -25,20 +32,25 @@ repos:
       - id: trailing-whitespace
 
   - repo: https://github.com/ComPWA/repo-maintenance
-    rev: 0.0.26
+    rev: 0.0.28
     hooks:
       - id: check-dev-files
         args:
           - --allow-labels
       - id: format-setup-cfg
 
+  - repo: https://github.com/psf/black
+    rev: 21.8b0
+    hooks:
+      - id: black
+
   - repo: https://github.com/ComPWA/mirrors-cspell
-    rev: v5.6.6
+    rev: v5.8.2
     hooks:
       - id: cspell
 
   - repo: https://github.com/editorconfig-checker/editorconfig-checker.python
-    rev: 2.3.5
+    rev: 2.3.54
     hooks:
       - id: editorconfig-checker
         exclude: >
@@ -46,8 +58,13 @@ repos:
             .*\.py
           )$
 
+  - repo: https://github.com/pycqa/isort
+    rev: 5.9.3
+    hooks:
+      - id: isort
+
   - repo: https://github.com/igorshubovych/markdownlint-cli
-    rev: v0.27.1
+    rev: v0.28.1
     hooks:
       - id: markdownlint
 
@@ -55,28 +72,3 @@ repos:
     rev: v2.3.2
     hooks:
       - id: prettier
-        language_version: 12.18.2 # prettier does not specify node correctly
-
-  - repo: https://github.com/ComPWA/mirrors-pyright
-    rev: v1.1.154
-    hooks:
-      - id: pyright
-
-  # The following tools have to be install locally, because they can also be
-  # used by code editors (e.g. linting and format-on-save).
-
-  - repo: local
-    hooks:
-      - id: black
-        name: black
-        entry: black
-        language: system
-        types:
-          - python
-
-      - id: isort
-        name: isort
-        entry: isort
-        language: system
-        types:
-          - python

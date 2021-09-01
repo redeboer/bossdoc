@@ -5,7 +5,7 @@
 ```
 
 [![GPLv3+ license](https://img.shields.io/badge/License-GPLv3+-blue.svg)](https://www.gnu.org/licenses/gpl-3.0-standalone.html)
-[![Documentation build status](https://readthedocs.org/projects/pwa/badge/?version=latest)](https://bes3.readthedocs.io)
+[![Documentation build status](https://readthedocs.org/projects/bes3/badge/?version=latest)](https://bes3.readthedocs.io)
 
 ```{warning}
 These pages and are **under development** and originate from [the BOSS
