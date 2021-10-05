@@ -32,11 +32,12 @@ repos:
       - id: trailing-whitespace
 
   - repo: https://github.com/ComPWA/repo-maintenance
-    rev: 0.0.43
+    rev: 0.0.44
     hooks:
       - id: check-dev-files
         args:
           - --allow-labels
+          - --ignore-author
       - id: format-setup-cfg
 
   - repo: https://github.com/psf/black
