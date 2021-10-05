@@ -32,20 +32,21 @@ repos:
       - id: trailing-whitespace
 
   - repo: https://github.com/ComPWA/repo-maintenance
-    rev: 0.0.28
+    rev: 0.0.44
     hooks:
       - id: check-dev-files
         args:
           - --allow-labels
+          - --ignore-author
       - id: format-setup-cfg
 
   - repo: https://github.com/psf/black
-    rev: 21.8b0
+    rev: 21.9b0
     hooks:
       - id: black
 
-  - repo: https://github.com/ComPWA/mirrors-cspell
-    rev: v5.8.2
+  - repo: https://github.com/streetsidesoftware/cspell-cli
+    rev: v5.6.9
     hooks:
       - id: cspell
 
@@ -64,11 +65,11 @@ repos:
       - id: isort
 
   - repo: https://github.com/igorshubovych/markdownlint-cli
-    rev: v0.28.1
+    rev: v0.29.0
     hooks:
       - id: markdownlint
 
   - repo: https://github.com/pre-commit/mirrors-prettier
-    rev: v2.3.2
+    rev: v2.4.1
     hooks:
       - id: prettier
