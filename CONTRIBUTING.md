@@ -1,3 +1,3 @@
 # How to contribute?
 
-See instructions at [bes3.readthedocs.io](https://bes3.readthedocs.io)!
+See instructions [here](https://bes3.readthedocs.io/contribute.html).
