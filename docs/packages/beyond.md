@@ -14,7 +14,3 @@ supports PROOF in very transparent way.
 
 For more information, see
 [here](https://docbes3.ihep.ac.cn/~offlinesoftware/index.php/BEAN).
-
-## BOSS Afterburner
-
-See its GitBook [here](https://redeboer.gitbook.io/boss_afterburner).

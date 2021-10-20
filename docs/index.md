@@ -17,8 +17,8 @@ Feedback on these pages is very welcome! See {doc}`contribute` for contact
 details.
 ```
 
-This GitBook describes the use of the BESIII Offline Software System (BOSS).
-These pages started as a collection of notes, but now aim to serve several
+This website describes the use of the BESIII Offline Software System (BOSS).
+The pages started as a collection of notes, but now aim to serve several
 purposes:
 
 - Provide accessible and up-to-date **tutorials** on working with BOSS. These
@@ -36,10 +36,9 @@ purposes:
   literature on BESIII.
 
 What goes for all of the above is that, whatever your background or level,
-**your feedback is vital**. These tutorial pages are quite new and need testing
-and improvement. More importantly, the more people contribute, the more these
-pages can become a source of reference and are more likely to remain
-up-to-date.
+**your feedback is vital**, because these tutorial pages need testing and
+improvement. More importantly, the more people contribute, the more these pages
+can become a source of reference and are more likely to remain up-to-date.
 
 So if you read this and like the idea, have a look at the {doc}`contribute`!
 Contributions from all levels is highly appreciated.
@@ -58,11 +57,6 @@ at the links in the section {doc}`appendices/z.references`.
 ```
 
 ## Contents of the tutorial pages
-
-This [GitBook](https://besiii.gitbook.io/boss) provides tutorials for using the
-BOSS Analysis Framework used in the BESIII collaboration. Currently, the pages
-have been written from the perspective of (light) hadron spectroscopy, but the
-tutorials can be useful for other forms of analysis as well.
 
 Here are shortcuts that you might want to take:
 
@@ -92,6 +86,7 @@ Here are shortcuts that you might want to take:
 ```{toctree}
 ---
 maxdepth: 1
+hidden: true
 ---
 bes3
 tutorials

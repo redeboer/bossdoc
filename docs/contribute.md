@@ -1,6 +1,6 @@
 # Contribute
 
-The BOSS GitBook has been set up not only to provide a set of **accessible**
+This website has been set up not only to provide a set of **accessible**
 tutorial pages on the use of BOSS, but also a continuously updated **inventory
 of the available packages**. For now, it serves as a central, informal location
 to collect information about BESIII, but the aim is to migrate its content to a
