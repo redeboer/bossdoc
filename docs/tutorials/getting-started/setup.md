@@ -308,7 +308,7 @@ CMTHOME="/cvmfs/bes3.ihep.ac.cn/bes3sw/cmthome/cmthome-${BOSS_VERSION}"
 
 source "${BOSS_INSTALL}/cmthome/setupCMT.sh"
 source "${BOSS_INSTALL}/cmthome/setup.sh"
-source "${BOSS_INSTALL}/workarea/TestRelease/TestRelease-*/cmt/setup.sh"
+source "${BOSS_INSTALL}/workarea/TestRelease/TestRelease-"*"/cmt/setup.sh"
 export PATH=$PATH:/afs/ihep.ac.cn/soft/common/sysgroup/hep_job/bin/
 ```
 

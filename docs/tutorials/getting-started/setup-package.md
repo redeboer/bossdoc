@@ -225,8 +225,8 @@ entire build-and-source procedure above in one go, using:
 
 ```bash
 cmt config
-make
 source setup.sh
+make
 ```
 
 BESIII has some documentation on working with CMT available
@@ -271,8 +271,8 @@ Whenever you have set up a package, set it up using:
 ```bash
 cd cmt          # navigate into its cmt folder
 cmt config      # OPTIONAL: reset the package
-make            # compile the source code
 source setup.sh # set bash variables for this package
+make            # compile the source code
 ```
 
 If this package is a Gaudi algorithm, you can
@@ -319,8 +319,8 @@ We can set up the `TestRelease` by going into `cmt` and 'broadcasting' to
 cd cmt
 cmt broadcast      # connect your workarea to BOSS
 cmt config         # perform setup and cleanup scripts
-cmt broadcast make # build and connect executables to BOSS
 source setup.sh    # set bash variables
+cmt broadcast make # build and connect executables to BOSS
 ```
 
 The term `broadcast` is important here: as opposed to `config`, `broadcast`
