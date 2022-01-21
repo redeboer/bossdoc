@@ -4,6 +4,8 @@
 
 # Troubleshooting
 
+(read-write-access)=
+
 ## I lost read-write access in my `afs` home folder
 
 Formerly, this problem could be solved using the `klog` command. Since August

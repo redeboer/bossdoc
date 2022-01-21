@@ -6,5 +6,5 @@ maxdepth: 1
 ---
 appendices/tips
 appendices/glossary
-appendices/z.references
+appendices/references
 ```
