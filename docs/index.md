@@ -53,7 +53,7 @@ account, which can be done
 
 BOSS can only be of use if you are a member of the BESIII collaboration and if
 you have access to the software of this collaboration. You can also have a look
-at the links in the section {doc}`appendices/z.references`.
+at the links in the section {doc}`appendices/references`.
 ```
 
 ## Contents of the tutorial pages
