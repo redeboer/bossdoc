@@ -78,9 +78,6 @@ The below list is not (yet) exhaustive
 - [Visual Studio Code](https://code.visualstudio.com), and some useful
   extensions:
 
-  - [SSH FS](https://marketplace.visualstudio.com/items?itemName=Kelvin.vscode-sshfs):
-    This is essential for using VSCode on the IHEP server!
-
   - [GitLens — Git supercharged](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
     ​
 
