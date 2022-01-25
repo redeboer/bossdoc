@@ -105,21 +105,21 @@ that you move the `.vscode-server` folder to a directory where you always have
 read-write access and then create a symbolic link to that folder in your actual
 home folder. Do this as follows:
 
-:::{tabbed} .vscode-server already exists
-
-```shell
-cd ~
-mv -f .vscode-server /besfs5/users/$USER/
-ln -s /besfs5/users/$USER/.vscode-server
-```
-
-:::
-
 :::{tabbed} .vscode-server does not yet exist
 
 ```shell
 cd ~
 mkdir /besfs5/users/$USER/.vscode-server
+ln -s /besfs5/users/$USER/.vscode-server
+```
+
+:::
+
+:::{tabbed} .vscode-server already exists
+
+```shell
+cd ~
+mv -f .vscode-server /besfs5/users/$USER/
 ln -s /besfs5/users/$USER/.vscode-server
 ```
 
