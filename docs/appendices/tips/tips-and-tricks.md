@@ -74,6 +74,28 @@ from any other VSCode extensions you installed. See
 [here](https://code.visualstudio.com/docs/remote/ssh-tutorial#_connect-using-ssh)
 for a tutorial on how to connect to a remote SSH server.
 
+There is one thing you need to change in your
+[VSCode settings](https://code.visualstudio.com/docs/getstarted/settings).
+Following
+[these instructions](https://code.visualstudio.com/docs/remote/troubleshooting#_troubleshooting-hanging-or-failing-connections),
+set the following options:
+
+```json
+  "remote.SSH.showLoginTerminal": true,
+  "remote.SSH.useLocalServer": false,
+```
+
+In addition, you may need to set the remote platform to `"linux"`:
+
+```json
+  "remote.SSH.remotePlatform": {
+    "lxslc7.ihep.ac.cn": "linux"
+  },
+```
+
+where `"lxslc7.ihep.ac.cn"` is the name of the host in your
+[SSH Config file](https://man7.org/linux/man-pages/man5/ssh_config.5.html).
+
 ::::{tip}
 
 VSCode Remote SSH installs some files into your home directory on the server,
@@ -83,21 +105,21 @@ that you move the `.vscode-server` folder to a directory where you always have
 read-write access and then create a symbolic link to that folder in your actual
 home folder. Do this as follows:
 
-:::{tabbed} .vscode-server already exists
-
-```shell
-cd ~
-mv -f .vscode-server /besfs5/users/$USER/
-ln -s /besfs5/users/$USER/.vscode-server
-```
-
-:::
-
 :::{tabbed} .vscode-server does not yet exist
 
 ```shell
 cd ~
 mkdir /besfs5/users/$USER/.vscode-server
+ln -s /besfs5/users/$USER/.vscode-server
+```
+
+:::
+
+:::{tabbed} .vscode-server already exists
+
+```shell
+cd ~
+mv -f .vscode-server /besfs5/users/$USER/
 ln -s /besfs5/users/$USER/.vscode-server
 ```
 
