@@ -29,7 +29,7 @@ When you have received your login credentials, log in to
 around. As you have probably noticed, there is a warning that you have to add
 an SSH key in order to pull and push to the server. The steps to create such a
 key are comparable to those for login in to the
-{ref}`IHEP server <appendices/tips/tips-and-tricks:Key generation for SSH>`.
+{ref}`IHEP server <appendices/tips:Key generation for SSH>`.
 
 1. Generate an SSH key with the command `ssh-keygen`. You can choose to leave
    the password empty.
@@ -146,7 +146,7 @@ your work.
 ### Step 6: Configure the Git repository
 
 If you have applied for an account and
-{ref}`added an SSH key <appendices/tips/gitlab:Pushing existing code to a new repository>`,
+{ref}`added an SSH key <appendices/gitlab:Pushing existing code to a new repository>`,
 you can push this new repository to [code.ihep.ac.cn](http://code.ihep.ac.cn).
 If you haven't already done so, set the user name and email address for this
 repository:
@@ -195,11 +195,11 @@ first commit to the master branch.
 **That's it, the connection has been established!**
 
 You can now edit and add files and then go through steps
-{ref}`3 (add) <appendices/tips/gitlab:Step 3: Add the files in the directory>`,
-{ref}`4 (commit) <appendices/tips/gitlab:Step 4: Commit the changes>`,
-{ref}`5 (status) <appendices/tips/gitlab:Step 5: Check the status of the repository>`,
-and {ref}`8 (push) <appendices/tips/gitlab:Step 8: Push your the first commit>`
-to track your files.
+{ref}`3 (add) <appendices/gitlab:Step 3: Add the files in the directory>`,
+{ref}`4 (commit) <appendices/gitlab:Step 4: Commit the changes>`,
+{ref}`5 (status) <appendices/gitlab:Step 5: Check the status of the repository>`,
+and {ref}`8 (push) <appendices/gitlab:Step 8: Push your the first commit>` to
+track your files.
 
 ```{note}
 If you work together with others, you can use `git pull` to get the

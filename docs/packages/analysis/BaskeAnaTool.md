@@ -11,8 +11,10 @@ The package based on Python works independent of BOSS, but facilitates for
 instance MC simulation. The package can be obtained from GitHub: <br>
 [github.com/xxmawhu/BaskeAnaTool](https://github.com/xxmawhu/BaskeAnaTool)
 
-Before using the package, I suggest you to read the "Readme" carefully. The
-Chinese version of "Readme" is also available now.
+Before using the package, have a look at
+[its `README`](https://github.com/xxmawhu/BaskeAnaTool/blob/master/README.md).
+There is also
+[a Chinese version](https://github.com/xxmawhu/BaskeAnaTool/blob/master/README_Chinese.md).
 
 ## How to install
 
@@ -106,7 +108,8 @@ The you can use `doSim.py` now
 python doSim.py [decay.card] [number of events]
 ```
 
-I also suggest you push <br> `alias SimDIY='python /path/to/doSim.py'` <br>
+It's also recommended to put
+<br> `alias SimDIY='python /path/to/doSim.py'` <br>
 into your configuration file, once you use `doSim.py` frequently. Look
 into BaskeAnaTool/SimAndRec/gen.py for simpler way to generate your DIY
 command.
