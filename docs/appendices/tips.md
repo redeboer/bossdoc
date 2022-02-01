@@ -27,9 +27,8 @@ generating an ssh key [here](https://www.ssh.com/ssh/keygen) and
 
 ## Recommended software
 
-Although I recognize that any programmer will and should develop her or his own
-habits, there are a few simple recommendations I would like to make, in
-particular for beginners.
+Although any programmer will and should develop her or his own habits, here are
+a few simple recommendations that are useful for beginners in particular.
 
 ### Installing ROOT
 
@@ -230,7 +229,7 @@ option `-o`). Note also that flags have been added for `RooFit`. For more
 information about ROOT flags, see
 [this page](https://root.cern/install/build_from_source/#all-build-options).
 
-I give three examples of commands here, one for compiling only (`rtcompile`),
+Here, we give three examples of commands, one for compiling only (`rtcompile`),
 one for compiling and executing if successful (`rtcompilerun`), and one for
 compiling with `fsanitize` activated
 ([rtdebugcompile](https://gcc.gnu.org/onlinedocs/gcc/Instrumentation-Options.html)).
@@ -241,17 +240,16 @@ there are many issues in root (like `TString`) that are identified by
 
 ### Compiling on Windows 10
 
-Although I highly recommend working on a Linux OS such as Ubuntu or Scientific
-Linux, there are still -certain advantages of working on Windows. As a
-developer, that brings problems, however, if you want to start compiling your
-code.
+Although it is highly recommended to on a Linux OS such as Ubuntu or CentOS,
+there are still -certain advantages of working on Windows. As a developer, that
+brings problems, however, if you want to start compiling your code.
 
-Since Windows 10, there exists an easy solution: the
-[Linux Subsystem](https://docs.microsoft.com/en-us/windows/wsl/install-win10).
-In the newest versions can be easily installed from the Windows Store (search
-for "Ubuntu"). After installing, search for "Ubuntu" in the start menu. This is
-a bash terminal that has full access to your windows system, but entirely
-through bash commands.
+Since Windows 10, there exists an easy solution:
+[Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install)
+(WSL). In the newest versions can be easily installed from the Windows Store
+(search for "Ubuntu"). After installing, search for "Ubuntu" in the start menu.
+This is a bash terminal that has full access to your windows system, but
+entirely through bash commands.
 
 As such, you have access to convenient commands like `apt install`, `vi`, and
 `g++`. Best of all is that you can use this to

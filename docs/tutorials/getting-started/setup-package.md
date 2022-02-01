@@ -259,8 +259,8 @@ and write out.
 
 :::{note}
 
-It seems special access rights are needed for this procedure, so I have
-currently not been able to test these procedures.
+It seems special access rights are needed for this procedure, so these
+procedures have not yet been tested.
 
 :::
 

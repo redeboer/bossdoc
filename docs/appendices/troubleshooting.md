@@ -76,8 +76,6 @@ No resources in your group(s). So the job can not be submitted.
 you should ask to be put in a different group (probably `physics`). Write an
 email to Ms. Wen Shuoping.
 
-I cannot submit a job through `boss.condor` or `hep_sub` but see
-
 ## `ERROR: Failed to create new proc id` instead
 
 Two known causes:
