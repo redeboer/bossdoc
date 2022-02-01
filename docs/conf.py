@@ -10,6 +10,7 @@ https://www.sphinx-doc.org/en/master/usage/configuration.html
 import os
 from typing import Dict
 
+import requests
 from sphinx.application import Sphinx
 
 # -- Project information -----------------------------------------------------
@@ -21,6 +22,28 @@ copyright = "2020, BESIII"
 if os.path.exists(f"../src/{package}/version.py"):
     __release = get_distribution(package).version
     version = ".".join(__release.split(".")[:3])
+
+
+# -- Fetch logo --------------------------------------------------------------
+def fetch_logo(url: str, output_path: str) -> None:
+    if os.path.exists(output_path):
+        return
+    online_content = requests.get(url, allow_redirects=True)
+    with open(output_path, "wb") as stream:
+        stream.write(online_content.content)
+
+
+LOGO_PATH = "_static/logo.jpg"
+try:
+    fetch_logo(
+        url="https://paluma.ruhr-uni-bochum.de/images/besIII/BES3_logo.jpg",
+        output_path=LOGO_PATH,
+    )
+except requests.exceptions.ConnectionError:
+    pass
+if os.path.exists(LOGO_PATH):
+    html_logo = LOGO_PATH
+
 
 # -- General configuration ---------------------------------------------------
 master_doc = "index.md"
