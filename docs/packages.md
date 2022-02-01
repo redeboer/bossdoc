@@ -28,5 +28,4 @@ packages/simulation
 packages/reconstruction
 packages/analysis
 packages/beyond
-packages/beyond/conda
 ```
