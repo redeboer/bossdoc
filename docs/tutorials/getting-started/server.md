@@ -26,8 +26,7 @@ applications from the server.
 :::{note}
 
 If you don't like having to enter your password every time you log in, have a
-look at the section
-{ref}`appendices/tips/tips-and-tricks:Key generation for SSH`.
+look at the section {ref}`appendices/tips:Key generation for SSH`.
 
 :::
 
