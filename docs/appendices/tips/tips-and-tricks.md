@@ -78,10 +78,18 @@ There is one thing you need to change in your
 [VSCode settings](https://code.visualstudio.com/docs/getstarted/settings).
 Following
 [these instructions](https://code.visualstudio.com/docs/remote/troubleshooting#_troubleshooting-hanging-or-failing-connections),
-set the following options:
+set the following option:
+
+:::{margin}
+
+VSCode also
+[recommends](https://code.visualstudio.com/docs/remote/troubleshooting#_troubleshooting-hanging-or-failing-connections)
+settings `"remote.SSH.showLoginTerminal": true`, but this seems not to be
+required to get VSCode to run on the IHEP server.
+
+:::
 
 ```json
-  "remote.SSH.showLoginTerminal": true,
   "remote.SSH.useLocalServer": false,
 ```
 
