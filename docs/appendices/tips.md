@@ -58,7 +58,7 @@ You will download around **1 GB** of source code.
 IDE that is regularly updated, is configurable with easy-to-access `json`
 files, and offers a growing number of user-developed extensions. In recent
 years, it is has become
-[the most widely used editor](https://insights.stackoverflow.com/survey/2021#collaboration-tools)
+[the most widely used editor](https://insights.stackoverflow.com/survey/2021#section-most-popular-technologies-integrated-development-environment)
 on the market.
 
 For working with VSCode on `lxslc`, you can use the
