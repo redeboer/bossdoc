@@ -20,6 +20,9 @@ source code for the page in
 problems can be reported by opening an issue. In both cases, you will need to
 [create a GitHub account](https://github.com/join).
 
+Alternatively, just directly highlight or make notes on these pages. With a
+[Hypothesis.is](https://hypothes.is) you can then post those notes as feedback.
+
 ## Developing these pages
 
 :::{tip}
