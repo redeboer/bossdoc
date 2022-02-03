@@ -56,7 +56,9 @@ you have access to the software of this collaboration. You can also have a look
 at the links in the section {doc}`appendices/references`.
 ```
 
-## Contents of the tutorial pages
+```{rubric} Contents of the tutorial pages
+
+```
 
 Here are shortcuts that you might want to take:
 
