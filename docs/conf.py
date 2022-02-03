@@ -196,7 +196,7 @@ myst_update_mathjax = False
 comments_config = {
     "hypothesis": True,
     "utterances": {
-        "repo": f"ComPWA/{REPO_NAME}",
+        "repo": f"redeboer/{REPO_NAME}",
         "issue-term": "pathname",
         "label": "📝 Docs",
     },
