@@ -16,7 +16,7 @@ from sphinx.application import Sphinx
 # -- Project information -----------------------------------------------------
 project = "BESIII Offline Software System"
 package = "bossdoc"
-repo_name = "bossdoc"
+REPO_NAME = "bossdoc"
 copyright = "2020, BESIII"
 
 if os.path.exists(f"../src/{package}/version.py"):
@@ -65,6 +65,7 @@ extensions = [
     "sphinx.ext.intersphinx",
     "sphinx.ext.mathjax",
     "sphinx.ext.todo",
+    "sphinx_comments",
     "sphinx_copybutton",
     "sphinx_math_dollar",
     "sphinx_panels",
@@ -104,7 +105,7 @@ html_show_sphinx = False
 html_sourcelink_suffix = ""
 html_theme = "sphinx_book_theme"
 html_theme_options = {
-    "repository_url": f"https://github.com/redeboer/{repo_name}",
+    "repository_url": f"https://github.com/redeboer/{REPO_NAME}",
     "repository_branch": "main",
     "path_to_docs": "docs",
     "use_download_button": True,
@@ -189,6 +190,16 @@ myst_enable_extensions = [
     "smartquotes",
 ]
 myst_update_mathjax = False
+
+# Settings for sphinx_comments
+comments_config = {
+    "hypothesis": True,
+    "utterances": {
+        "repo": f"ComPWA/{REPO_NAME}",
+        "issue-term": "pathname",
+        "label": "📝 Docs",
+    },
+}
 
 # Settings for Thebe cell output
 thebe_config = {
