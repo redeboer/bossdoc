@@ -120,6 +120,7 @@ html_theme_options = {
         "thebelab": True,
     },
     "show_navbar_depth": 2,
+    "show_toc_level": 2,
     "theme_dev_mode": True,
 }
 html_title = "BOSS Documentation"
@@ -195,7 +196,7 @@ myst_update_mathjax = False
 comments_config = {
     "hypothesis": True,
     "utterances": {
-        "repo": f"ComPWA/{REPO_NAME}",
+        "repo": f"redeboer/{REPO_NAME}",
         "issue-term": "pathname",
         "label": "📝 Docs",
     },
