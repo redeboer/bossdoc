@@ -54,18 +54,14 @@ You will download around **1 GB** of source code.
 
 ### Visual Studio Code
 
-[**Visual Studio Code**](https://code.visualstudio.com) **(VS Code).** Note the
-"Code" here—I am not referring to the infamous IDE version. Microsoft decided
-to strip Visual Studio of its compile capabilities and develop this editor in
-parallel. Since it has been made available _for free_ on all OS platforms, is
-regularly updated, is configurable with easy-to-access `json` files, offers a
-growing number of user-developed extensions, it is has become the most widely
-used editor on the market. Even for users who prefer not to touch the mouse, VS
-Code has much to offer as well. (OK, if your are really hardcore keyboard only,
-just go for [vim](https://www.vim.org), but this really only offers advantages
-if you use it properly.)
+**[Visual Studio Code](https://code.visualstudio.com) (VSCode)** is a popular
+IDE that is regularly updated, is configurable with easy-to-access `json`
+files, and offers a growing number of user-developed extensions. In recent
+years, it is has become
+[the most widely used editor](https://insights.stackoverflow.com/survey/2021#collaboration-tools)
+on the market.
 
-For working on `lxslc`, you can use the
+For working with VSCode on `lxslc`, you can use the
 [Remote - SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh)
 extension. This lets you with VSCode work on the server with full
 functionality, such as using the Source Control Manager and language navigation

@@ -14,7 +14,7 @@
 <!-- markdownlint-enable -->
 
 - See
-  [_Chinese Physics C_ Vol. 41, No. 1 (2017) 013001](https://iopscience.iop.org/article/10.1088/1674-1137/41/1/013001/meta)
+  [_Chinese Physics C_ Vol. 41, No. 1 (2017) 013001](http://cpc.ihep.ac.cn/article/doi/10.1088/1674-1137/41/1/013001)
   for the calculation of the number of $J/\psi$ events in the 2009 and 2012
   data samples. The total number for both is
   $N_{J/\psi} = (1310.6\pm7.0) \times 10^6$, which is $0.53\%$ systematic
