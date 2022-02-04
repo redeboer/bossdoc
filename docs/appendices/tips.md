@@ -169,6 +169,13 @@ following content:
 
 Note that you can change the version of BOSS here.
 
+:::{tip}
+
+For BOSS language navigation locally, have a look at
+[BOSS_ExternalLibs](https://code.ihep.ac.cn/bes3/BOSS_ExternalLibs).
+
+:::
+
 <!-- cspell:ignore condaenv cvmfs envs mlgpu -->
 
 ## Conda
