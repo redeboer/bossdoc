@@ -141,7 +141,10 @@ following content:
 
 <!-- cspell:ignore GDML Saxana geant -->
 
-```json
+```{code-block} json
+---
+class: full-width
+---
 {
   "configurations": [
     {
