@@ -139,6 +139,14 @@ folder in your
 [workspace](https://code.visualstudio.com/docs/editor/workspaces) with the
 following content:
 
+:::{note}
+
+Please [comment](../contribute.md) here if you still see squiggle lines under
+`#include` statements in your source code. It could be that the list of include
+paths has to be updated.
+
+:::
+
 <!-- cspell:ignore GDML Saxana geant -->
 
 ```{code-block} json
