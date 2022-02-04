@@ -156,8 +156,8 @@ class: full-width
 {
   "configurations": [
     {
-      "cStandard": "c11",
-      "cppStandard": "c++11",
+      "cStandard": "c99",
+      "cppStandard": "c++03",
       "includePath": [
         "${workspaceFolder}/**",
         "/cvmfs/bes3.ihep.ac.cn/bes3sw/Boss/7.0.9/InstallArea/include/**",
