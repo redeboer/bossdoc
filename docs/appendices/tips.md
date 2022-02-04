@@ -25,12 +25,7 @@ generating an ssh key [here](https://www.ssh.com/ssh/keygen) and
    `ssh -Y <your user name>@lxslc7.ihep.ac.cn` If all went correctly, you don't
    have to enter your password anymore.
 
-## Recommended software
-
-Although any programmer will and should develop her or his own habits, here are
-a few simple recommendations that are useful for beginners in particular.
-
-### Installing ROOT
+## Installing ROOT
 
 The BOSS Starter Kit comes with a
 [handy bash script](http://code.ihep.ac.cn/bes3/BOSS_StarterKit/-/tree/master/utilities/InstallCernRoot.sh)
@@ -52,7 +47,7 @@ For more information, see the official pages:
 You will download around **1 GB** of source code.
 ```
 
-### Visual Studio Code
+## Visual Studio Code
 
 **[Visual Studio Code](https://code.visualstudio.com) (VSCode)** is a popular
 IDE that is regularly updated, is configurable with easy-to-access `json`
@@ -60,6 +55,8 @@ files, and offers a growing number of user-developed extensions. In recent
 years, it is has become
 [the most widely used editor](https://insights.stackoverflow.com/survey/2021#section-most-popular-technologies-integrated-development-environment)
 on the market.
+
+### Remote SSH
 
 For working with VSCode on `lxslc`, you can use the
 [Remote - SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh)
@@ -130,9 +127,69 @@ ln -s /besfs5/users/$USER/.vscode-server
 
 ::::
 
+### Language navigation for BOSS
+
+It is highly recommended to install the
+[VS Code C++](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)
+extension when you are developing BOSS packages. One of its killer features is
+[intellisense](https://code.visualstudio.com/docs/cpp/configure-intellisense-crosscompilation),
+which gives language navigation on C++ libraries. To get full language
+navigation for BOSS, create a `c_cpp_properties.json` file under the `.vscode`
+folder in your
+[workspace](https://code.visualstudio.com/docs/editor/workspaces) with the
+following content:
+
+:::{note}
+
+Please [comment](../contribute.md) here if you still see squiggle lines under
+`#include` statements in your source code. It could be that the list of include
+paths has to be updated.
+
+:::
+
+<!-- cspell:ignore GDML Saxana geant -->
+
+```{code-block} json
+---
+class: full-width
+---
+{
+  "configurations": [
+    {
+      "cStandard": "c99",
+      "cppStandard": "c++03",
+      "includePath": [
+        "${workspaceFolder}/**",
+        "/cvmfs/bes3.ihep.ac.cn/bes3sw/Boss/7.0.9/InstallArea/include/**",
+        "/cvmfs/bes3.ihep.ac.cn/bes3sw/ExternalLib/SLC6/ExternalLib/external/BesGDML/2.8.0/x86_64-slc6-gcc46-opt/include",
+        "/cvmfs/bes3.ihep.ac.cn/bes3sw/ExternalLib/SLC6/ExternalLib/external/BesGDML/2.8.0/x86_64-slc6-gcc46-opt/include/Common/Saxana",
+        "/cvmfs/bes3.ihep.ac.cn/bes3sw/ExternalLib/SLC6/ExternalLib/external/BesGDML/2.8.0/x86_64-slc6-gcc46-opt/include/Common/Schema",
+        "/cvmfs/bes3.ihep.ac.cn/bes3sw/ExternalLib/SLC6/ExternalLib/external/BesGDML/2.8.0/x86_64-slc6-gcc46-opt/include/G4Binding/**",
+        "/cvmfs/bes3.ihep.ac.cn/bes3sw/ExternalLib/SLC6/ExternalLib/external/ROOT/5.34.09/x86_64-slc6-gcc46-opt/root/include",
+        "/cvmfs/bes3.ihep.ac.cn/bes3sw/ExternalLib/SLC6/ExternalLib/external/clhep/2.0.4.5/x86_64-slc6-gcc46-opt/include",
+        "/cvmfs/bes3.ihep.ac.cn/bes3sw/ExternalLib/SLC6/ExternalLib/external/geant4/10.4/include/**",
+        "/cvmfs/bes3.ihep.ac.cn/bes3sw/ExternalLib/SLC6/ExternalLib/gaudi/GAUDI_v23r9/InstallArea/x86_64-slc6-gcc46-opt/include",
+        "/usr/include/c++/4.8.2"
+      ],
+      "name": "Linux"
+    }
+  ],
+  "version": 4
+}
+```
+
+Note that you can change the version of BOSS here.
+
+:::{tip}
+
+For BOSS language navigation locally, have a look at
+[BOSS_ExternalLibs](https://code.ihep.ac.cn/bes3/BOSS_ExternalLibs).
+
+:::
+
 <!-- cspell:ignore condaenv cvmfs envs mlgpu -->
 
-### Conda
+## Conda
 
 The `lxslc` server has a very outdated version of Python. If you do want to use
 Python 3, you can work with Conda, which is available on the server. Just add
@@ -173,12 +230,6 @@ just want to use `python3`, you could also just add
 `PATH`. But keep in mind that you may run into trouble with certain
 Python libraries!
 ```
-
-### Other access to the IHEP server through SSH/SFTP
-
-- [**Xmanager**](https://www.netsarang.com/en/xmanager)
-- [**WinSCP**](https://winscp.net/eng/index.php)
-- [**PuTTY**](https://www.putty.org)
 
 ## Compiling
 
