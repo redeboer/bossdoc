@@ -56,6 +56,8 @@ years, it is has become
 [the most widely used editor](https://insights.stackoverflow.com/survey/2021#section-most-popular-technologies-integrated-development-environment)
 on the market.
 
+### Remote SSH
+
 For working with VSCode on `lxslc`, you can use the
 [Remote - SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh)
 extension. This lets you with VSCode work on the server with full
@@ -124,6 +126,48 @@ ln -s /besfs5/users/$USER/.vscode-server
 :::
 
 ::::
+
+### Language navigation for BOSS
+
+It is highly recommended to install the
+[VS Code C++](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)
+extension when you are developing BOSS packages. One of its killer features is
+[intellisense](https://code.visualstudio.com/docs/cpp/configure-intellisense-crosscompilation),
+which gives language navigation on C++ libraries. To get full language
+navigation for BOSS, create a `c_cpp_properties.json` file under the `.vscode`
+folder in your
+[workspace](https://code.visualstudio.com/docs/editor/workspaces) with the
+following content:
+
+<!-- cspell:ignore GDML Saxana geant -->
+
+```json
+{
+  "configurations": [
+    {
+      "cStandard": "c11",
+      "cppStandard": "c++11",
+      "includePath": [
+        "${workspaceFolder}/**",
+        "/cvmfs/bes3.ihep.ac.cn/bes3sw/Boss/7.0.9/InstallArea/include/**",
+        "/cvmfs/bes3.ihep.ac.cn/bes3sw/ExternalLib/SLC6/ExternalLib/external/BesGDML/2.8.0/x86_64-slc6-gcc46-opt/include",
+        "/cvmfs/bes3.ihep.ac.cn/bes3sw/ExternalLib/SLC6/ExternalLib/external/BesGDML/2.8.0/x86_64-slc6-gcc46-opt/include/Common/Saxana/Saxana",
+        "/cvmfs/bes3.ihep.ac.cn/bes3sw/ExternalLib/SLC6/ExternalLib/external/BesGDML/2.8.0/x86_64-slc6-gcc46-opt/include/Common/Schema/Schema",
+        "/cvmfs/bes3.ihep.ac.cn/bes3sw/ExternalLib/SLC6/ExternalLib/external/ROOT/5.34.09/x86_64-slc6-gcc46-opt/root/include",
+        "/cvmfs/bes3.ihep.ac.cn/bes3sw/ExternalLib/SLC6/ExternalLib/external/ROOT/5.34.09/x86_64-slc6-gcc46-opt/root/include/Reflex",
+        "/cvmfs/bes3.ihep.ac.cn/bes3sw/ExternalLib/SLC6/ExternalLib/external/clhep/2.0.4.5/x86_64-slc6-gcc46-opt/include",
+        "/cvmfs/bes3.ihep.ac.cn/bes3sw/ExternalLib/SLC6/ExternalLib/external/geant4/10.4/include",
+        "/cvmfs/bes3.ihep.ac.cn/bes3sw/ExternalLib/SLC6/ExternalLib/gaudi/GAUDI_v23r9/InstallArea/x86_64-slc6-gcc46-opt/include",
+        "/usr/include/c++/4.8.2"
+      ],
+      "name": "Linux"
+    }
+  ],
+  "version": 4
+}
+```
+
+Note that you can change the version of BOSS here.
 
 <!-- cspell:ignore condaenv cvmfs envs mlgpu -->
 
