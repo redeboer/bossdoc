@@ -25,12 +25,7 @@ generating an ssh key [here](https://www.ssh.com/ssh/keygen) and
    `ssh -Y <your user name>@lxslc7.ihep.ac.cn` If all went correctly, you don't
    have to enter your password anymore.
 
-## Recommended software
-
-Although any programmer will and should develop her or his own habits, here are
-a few simple recommendations that are useful for beginners in particular.
-
-### Installing ROOT
+## Installing ROOT
 
 The BOSS Starter Kit comes with a
 [handy bash script](http://code.ihep.ac.cn/bes3/BOSS_StarterKit/-/tree/master/utilities/InstallCernRoot.sh)
@@ -52,7 +47,7 @@ For more information, see the official pages:
 You will download around **1 GB** of source code.
 ```
 
-### Visual Studio Code
+## Visual Studio Code
 
 **[Visual Studio Code](https://code.visualstudio.com) (VSCode)** is a popular
 IDE that is regularly updated, is configurable with easy-to-access `json`
@@ -132,7 +127,7 @@ ln -s /besfs5/users/$USER/.vscode-server
 
 <!-- cspell:ignore condaenv cvmfs envs mlgpu -->
 
-### Conda
+## Conda
 
 The `lxslc` server has a very outdated version of Python. If you do want to use
 Python 3, you can work with Conda, which is available on the server. Just add
