@@ -174,12 +174,6 @@ just want to use `python3`, you could also just add
 Python libraries!
 ```
 
-### Other access to the IHEP server through SSH/SFTP
-
-- [**Xmanager**](https://www.netsarang.com/en/xmanager)
-- [**WinSCP**](https://winscp.net/eng/index.php)
-- [**PuTTY**](https://www.putty.org)
-
 ## Compiling
 
 For compiling outside ROOT (that is, _not_ using the ROOT interpreter), you
