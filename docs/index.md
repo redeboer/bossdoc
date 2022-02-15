@@ -7,15 +7,21 @@
 [![GPLv3+ license](https://img.shields.io/badge/License-GPLv3+-blue.svg)](https://www.gnu.org/licenses/gpl-3.0-standalone.html)
 [![Documentation build status](https://readthedocs.org/projects/bes3/badge/?version=latest)](https://bes3.readthedocs.io)
 
-```{warning}
-These pages and are **under development** and originate from [the BOSS
-GitBook](https://besiii.gitbook.io/boss).
-```
+:::{warning}
 
-```{note}
-Feedback on these pages is very welcome! See {doc}`contribute` for contact
+These pages and are **under development** and originate from
+[the BOSS GitBook](https://besiii.gitbook.io/boss). Official documentation for
+BOSS can be found
+[here](https://docbes3.ihep.ac.cn/~offlinesoftware/index.php/Main_Page).
+
+:::
+
+:::{note}
+
+Feedback on these pages is very welcome! See {doc}`contribute` for more
 details.
-```
+
+:::
 
 This website describes the use of the BESIII Offline Software System (BOSS).
 The pages started as a collection of notes, but now aim to serve several
