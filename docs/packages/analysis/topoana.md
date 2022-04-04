@@ -158,11 +158,12 @@ A few remarks about what we see here:
    becomes (a rather rare if not impossible decay):
 
 $$
-J/\psi \rightarrow D^0 \phi \
-D^0 \rightarrow K^-\eta \
-\phi \rightarrow K^+K^- \
-K^+ \rightarrow \mu^+\nu_\mu \
-\mu^+ \rightarrow e^+\nu *e\bar{\nu}* \mu
+J/\psi
+\rightarrow D^0 \phi D^0
+\rightarrow K^-\eta \phi
+\rightarrow K^+K^-K^+
+\rightarrow \mu^+\nu_\mu\mu^+
+\rightarrow e^+\nu e\bar{\nu}\mu
 $$
 
 The main takeaway is that `topoana` requires you to store the branch with
