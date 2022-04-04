@@ -42,7 +42,7 @@ The `RhopiAlg` is the starting point for beginners using BOSS. It teaches:
   [KalmanKinematicFit](http://bes3.to.infn.it/Boss/7.0.2/html/classKalmanKinematicFit.html).
 
 - Computing invariant masses using
-  [HepLorentzVector](https://www-zeuthen.desy.de/geant4/clhep-2.0.4.3/classCLHEP_1_1HepLorentzVector.html)
+  [`HepLorentzVector`](https://proj-clhep.web.cern.ch/proj-clhep/doc/CLHEP_2_2_0_4/html/classCLHEP_1_1HepLorentzVector.html)
   from the CLHEP library.
 
 - Computing the angle between a photon and a pion.
