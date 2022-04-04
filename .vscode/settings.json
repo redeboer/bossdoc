@@ -40,6 +40,10 @@
     "**/.tox/**": true
   },
   "git.rebaseWhenSync": true,
+  "github-actions.workflows.pinned.workflows": [
+    ".github/workflows/linkcheck.yml",
+    ".github/workflows/ci-docs.yml"
+  ],
   "githubPullRequests.telemetry.enabled": false,
   "gitlens.advanced.telemetry.enabled": false,
   "python.formatting.provider": "black",
