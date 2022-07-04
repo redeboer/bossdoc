@@ -46,15 +46,14 @@ The below list is not (yet) exhaustive
     subgroups.
 
   - [Offline Software Group website](https://docbes3.ihep.ac.cn/~offlinesoftware/index.php/Main_Page)
-    This is the official and most elaborate source on BOSS currently available.
-    It can be somewhat outdated and concise, but it does provide some overview
-    of the packages and functionality that BOSS offers.
+    This is the official and most elaborate source on BOSS currently available. It can
+    be somewhat outdated and concise, but it does provide some overview of the packages
+    and functionality that BOSS offers.
 
   - [HyperNews Software Updates](https://hnbes3.ihep.ac.cn//HyperNews/get/software.html)
     [login required]
 
-  - [BESIII TWiki](http://twiki.ihep.ac.cn/twiki/view/BES/BOSS/WebHome) (seems
-    outdated)
+  - [BESIII TWiki](http://twiki.ihep.ac.cn/twiki/view/BES/BOSS/WebHome) (seems outdated)
 
   - [BES environment installation](https://www.phys.hawaii.edu/~besdata/paper/BESinstall.pdf)
     (unofficial paper)
@@ -75,8 +74,7 @@ The below list is not (yet) exhaustive
 ## Tools
 
 - [Doxygen manual](http://www.doxygen.nl/manual/index.html) ​
-- [Visual Studio Code](https://code.visualstudio.com), and some useful
-  extensions:
+- [Visual Studio Code](https://code.visualstudio.com), and some useful extensions:
 
   - [GitLens — Git supercharged](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
     ​
@@ -87,11 +85,9 @@ The below list is not (yet) exhaustive
   - [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
     ​
 
-  - [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
-    ​
+  - [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) ​
 
-  - [Alignment](https://marketplace.visualstudio.com/items?itemName=annsk.alignment)
-    ​
+  - [Alignment](https://marketplace.visualstudio.com/items?itemName=annsk.alignment) ​
 
   - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
     ​

@@ -2,10 +2,9 @@
 
 :::{todo}
 
-Write summary of the steps you go through when updating and performing an
-analysis job. As opposed to
-:doc:`Key aspects of analysis at BESIII </tutorials/final>`, this summary is to
-be a more practical step-by-step guide.
+Write summary of the steps you go through when updating and performing an analysis job.
+As opposed to :doc:`Key aspects of analysis at BESIII </tutorials/final>`, this summary
+is to be a more practical step-by-step guide.
 
 :::
 
@@ -17,5 +16,5 @@ be a more practical step-by-step guide.
 
 4. Submit to the 'queue'
 
-5. Perform your final event selection and/or analysis of the output of the
-   initial event selection
+5. Perform your final event selection and/or analysis of the output of the initial event
+   selection

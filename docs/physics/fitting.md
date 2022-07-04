@@ -2,8 +2,8 @@
 
 ## Fitting meson resonances
 
-Best overview of types of fits and theoretical motivations for each of those
-can be found in section
+Best overview of types of fits and theoretical motivations for each of those can be
+found in section
 ["Resonances" of the _PDG_](http://pdg.lbl.gov/2018/reviews/rpp2018-rev-resonances.pdf).
 
 - BESIII is a _formation experiment_.
@@ -17,8 +17,7 @@ Characterization of detector resolution(s).
 
 ### Breit-Wigner parametrization
 
-- Only works in case of _narrow structure_ and if there are no other resonances
-  nearby
+- Only works in case of _narrow structure_ and if there are no other resonances nearby
 
 - Can be used to extract _pole parameters_ such as particle width
 
@@ -36,11 +35,9 @@ Characterization of detector resolution(s).
 
 - [Polynomial](https://root.cern/doc/master/classRooPolynomial.html) ​
 
-- ​[Chebychev polynomial](https://root.cern.ch/doc/master/classRooChebychev.html)
-  ​
+- ​[Chebychev polynomial](https://root.cern.ch/doc/master/classRooChebychev.html) ​
 
-- ​[Argus background shape](https://root.cern/doc/master/classRooArgusBG.html)
-  ​
+- ​[Argus background shape](https://root.cern/doc/master/classRooArgusBG.html) ​
 
 ## Other literature
 
