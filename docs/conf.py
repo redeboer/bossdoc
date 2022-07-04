@@ -195,15 +195,11 @@ thebe_config = {
 
 # Add roles to simplify external linnks
 def setup(app: Sphinx):
-    app.add_role(
-        "wiki", autolink("https://en.wikipedia.org/wiki/%s", {"_": " "})
-    )
+    app.add_role("wiki", autolink("https://en.wikipedia.org/wiki/%s", {"_": " "}))
 
 
 def autolink(pattern: str, replace_mapping: Dict[str, str]):
-    def role(
-        name, rawtext, text: str, lineno, inliner, options={}, content=[]
-    ):
+    def role(name, rawtext, text: str, lineno, inliner, options={}, content=[]):
         output_text = text
         for search, replace in replace_mapping.items():
             output_text = output_text.replace(search, replace)
@@ -268,9 +264,7 @@ class MyStyle(UnsrtStyle):
         super().__init__(abbreviate_names=True)
 
     def format_names(self, role, as_sentence=True):
-        formatted_names = names(
-            role, sep=", ", sep2=" and ", last_sep=", and "
-        )
+        formatted_names = names(role, sep=", ", sep2=" and ", last_sep=", and ")
         if as_sentence:
             return sentence[formatted_names]
         else:

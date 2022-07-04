@@ -25,7 +25,7 @@
   },
   "cSpell.enabled": true,
   "editor.formatOnSave": true,
-  "editor.rulers": [80],
+  "editor.rulers": [88],
   "files.watcherExclude": {
     "**/*_cache/**": true,
     "**/.eggs/**": true,
