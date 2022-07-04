@@ -164,8 +164,14 @@ linkcheck_ignore = [
 
 # Settings for myst_nb
 nb_execution_timeout = -1
-nb_execution_mode = "force"
 nb_output_stderr = "remove"
+
+nb_execution_mode = "off"
+EXECUTE_NB = False
+if "EXECUTE_NB" in os.environ:
+    print("\033[93;1mWill run Jupyter notebooks!\033[0m")
+    EXECUTE_NB = True
+    nb_execution_mode = "cache"
 
 # Settings for myst-parser
 myst_enable_extensions = [
