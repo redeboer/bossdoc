@@ -12,8 +12,8 @@ Some useful documents:
 - [The Physics of the B Factories](http://link.springer.com/10.1140/epjc/s10052-014-3026-9)
   Bevan, A.J., Golob, B., Mannel, T. et al. Eur. Phys. J. C (2014) 74: 3026.
 
-- Physics Accomplishments and Future Prospects of the BES Experiments at the
-  BEPC Collider (2016) [[here]](https://arxiv.org/abs/1603.09431)
+- Physics Accomplishments and Future Prospects of the BES Experiments at the BEPC
+  Collider (2016) [[here]](https://arxiv.org/abs/1603.09431)
 
 - [Physics at BESIII](https://arxiv.org/abs/0809.1869) (2009)
 

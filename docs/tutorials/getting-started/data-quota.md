@@ -1,16 +1,16 @@
 # Data quota
 
-When you have logged into the server, you usually start in your home (`~`)
-folder. Move to the root of the server (`cd /`) and you'll see that is a large
-number of other directories. A few of these directories contain space that is
-assigned to your user account. Here is an overview:
+When you have logged into the server, you usually start in your home (`~`) folder. Move
+to the root of the server (`cd /`) and you'll see that is a large number of other
+directories. A few of these directories contain space that is assigned to your user
+account. Here is an overview:
 
 ::::{margin}
 
 :::{note}
 
-As of February 22nd, 2021, the old file system `besfs` has been superseded by
-`besfs5` for both users and groups.
+As of February 22nd, 2021, the old file system `besfs` has been superseded by `besfs5`
+for both users and groups.
 
 As of April 1st, 2021, `workfs` has been renamed to `workfs2`.
 
@@ -31,14 +31,14 @@ As of April 1st, 2021, `workfs` has been renamed to `workfs2`.
 
 <!-- markdownlint-enable -->
 
-In practice, files remain on this server indefinitely. In fact, `scratchfs`
-seems to follow a less strict policy then other folders.
+In practice, files remain on this server indefinitely. In fact, `scratchfs` seems to
+follow a less strict policy then other folders.
 
 :::{warning}
 
-**Do not exceed these quotas!** If you do, the folder of which you are
-exceeding its quota will be locked by the Computing Center after a few weeks
-and it is quite a hassle to regain access.
+**Do not exceed these quotas!** If you do, the folder of which you are exceeding its
+quota will be locked by the Computing Center after a few weeks and it is quite a hassle
+to regain access.
 
 :::
 

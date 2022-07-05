@@ -22,17 +22,13 @@ The `RhopiAlg` is the starting point for beginners using BOSS. It teaches:
   [NTuple::Tuple::addItem](https://dayabay.bnl.gov/dox/GaudiKernel/html/classNTuple_1_1Tuple.html#a78033967fbd89f7f18e7d6d7d43f41ac).
 
 - Accessing data of charged tracks and neutral tracks in the using data from
-  [EvtRecEvent](http://bes3.to.infn.it/Boss/7.0.2/html/classEvtRecEvent.html)
-  and
-  [EvtRecTrack](http://bes3.to.infn.it/Boss/7.0.2/html/classEvtRecTrack.html)
-  classes.
+  [EvtRecEvent](http://bes3.to.infn.it/Boss/7.0.2/html/classEvtRecEvent.html) and
+  [EvtRecTrack](http://bes3.to.infn.it/Boss/7.0.2/html/classEvtRecTrack.html) classes.
 
 - Identifying particles (PID) using the
-  [ParticleID](http://bes3.to.infn.it/Boss/7.0.2/html/classParticleID.html)
-  class.
+  [ParticleID](http://bes3.to.infn.it/Boss/7.0.2/html/classParticleID.html) class.
 
-- Making a selection of these tracks (using iterators) over which you loop
-  again later.
+- Making a selection of these tracks (using iterators) over which you loop again later.
 
 - Applying a Kalman kinematic fit with
   [constraints](http://bes3.to.infn.it/Boss/7.0.2/html/classTrackPool.html#5ecaf22a24d60b2979d0ccd3b0c1df10)
@@ -47,8 +43,8 @@ The `RhopiAlg` is the starting point for beginners using BOSS. It teaches:
 
 - Computing the angle between a photon and a pion.
 
-- Reconstructed data from the detectors is accessed through the classes in the
-  below table. This package only makes use of the MDC, EMC, and TOF detectors.
+- Reconstructed data from the detectors is accessed through the classes in the below
+  table. This package only makes use of the MDC, EMC, and TOF detectors.
 
 ```{list-table}
 ---
@@ -90,39 +86,33 @@ header-rows: 1
 
 ## Introduction
 
-One of the basic physics analysis packages that is already provided in BOSS is
-the `RhopiAlg` package. Within BESIII, almost everyone knows it, because it is
-used as the starting point for developing your own initial event selection
-packages. `RhopiAlg` is an illustration of a typical procedure in particle
-physics: reconstructing a decayed particle. For this, you will have to make
-apply cuts on measured parameters and this package is an illustration of this
-procedure.
+One of the basic physics analysis packages that is already provided in BOSS is the
+`RhopiAlg` package. Within BESIII, almost everyone knows it, because it is used as the
+starting point for developing your own initial event selection packages. `RhopiAlg` is
+an illustration of a typical procedure in particle physics: reconstructing a decayed
+particle. For this, you will have to make apply cuts on measured parameters and this
+package is an illustration of this procedure.
 
-The `RhopiAlg` analyzes the decay of the $\rho(770)$ meson. As you can see in
-the in the
+The `RhopiAlg` analyzes the decay of the $\rho(770)$ meson. As you can see in the in the
 [PDG listing for this meson](http://pdg.lbl.gov/2018/listings/rpp2018-list-rho-770.pdf),
-the $\rho(770)$ meson predominantly decays through $\rho\rightarrow\pi\pi$
-(almost $100\%$), whether it concerns a $\rho^+$, $\rho^0$, or $\rho^-$. This
-means that we can reconstruct this meson purely through this _2-particle decay
-mode_.
+the $\rho(770)$ meson predominantly decays through $\rho\rightarrow\pi\pi$ (almost
+$100\%$), whether it concerns a $\rho^+$, $\rho^0$, or $\rho^-$. This means that we can
+reconstruct this meson purely through this _2-particle decay mode_.
 
-Additionally, when we consider the charged $\rho^\pm$ mesons, one of the decay
-products is the neutral pion: $\rho^\pm \rightarrow \pi^\pm\pi^0$. This meson
-is again neutral and cannot be detected, so has to be reconstructed. But here
-again, there is one dominant decay mode: $\pi^0 \rightarrow
-\gamma\gamma$
-($98.823 \pm 0.034 \%$, see
-[its PDG listing](http://pdg.lbl.gov/2018/listings/rpp2018-list-pi-zero.pdf)).
-This means that we can reconstruct the $\rho^\pm$ meson almost exclusively
-through its $\rho^\pm \rightarrow \pi^\pm\pi^0 \rightarrow \pi^\pm\gamma\gamma$
-decay channel.
+Additionally, when we consider the charged $\rho^\pm$ mesons, one of the decay products
+is the neutral pion: $\rho^\pm \rightarrow \pi^\pm\pi^0$. This meson is again neutral
+and cannot be detected, so has to be reconstructed. But here again, there is one
+dominant decay mode: $\pi^0 \rightarrow
+\gamma\gamma$ ($98.823 \pm 0.034 \%$, see
+[its PDG listing](http://pdg.lbl.gov/2018/listings/rpp2018-list-pi-zero.pdf)). This
+means that we can reconstruct the $\rho^\pm$ meson almost exclusively through its
+$\rho^\pm \rightarrow \pi^\pm\pi^0 \rightarrow \pi^\pm\gamma\gamma$ decay channel.
 
-In reconstructing $\pi^0$ and $\rho^0$, you will run into another common
-phenomenon in hadron research: the width of the decaying particle. The width of
-$\rho^0$ is much wider than $\pi^0$ and therefore results in interesting
-differences in the eventual invariant mass spectra. In the final event
-selection, you will for instance see that a fit of the invariant mass peaks
-results in different widths.
+In reconstructing $\pi^0$ and $\rho^0$, you will run into another common phenomenon in
+hadron research: the width of the decaying particle. The width of $\rho^0$ is much wider
+than $\pi^0$ and therefore results in interesting differences in the eventual invariant
+mass spectra. In the final event selection, you will for instance see that a fit of the
+invariant mass peaks results in different widths.
 
 ## Where to find it?
 
@@ -145,10 +135,9 @@ is found under `run` in the
 {ref}`TestRelease<tutorials/getting-started/setup-package:The TestRelease package>`
 package.
 
-The parameter `EventCnvSvc.digiRootInputFile` lists the input files. This is
-currently `rhopi.dst` (namely the output after running the `jobOptions_rec.txt`
-job), but you can also feed it other DST files, such as the ones reconstructed
-from BESIII
+The parameter `EventCnvSvc.digiRootInputFile` lists the input files. This is currently
+`rhopi.dst` (namely the output after running the `jobOptions_rec.txt` job), but you can
+also feed it other DST files, such as the ones reconstructed from BESIII
 {ref}`data or MC samples <tutorials/getting-started/server:Important data paths>`.
 
 ## Description of source code
@@ -175,15 +164,15 @@ for definitions of cuts.
 ### Kalman kinematic $n$-constraints fit procedure
 
 - `fit4c` refers to the 4-constraints coming from the original
-  $\pi^0 \rightarrow \gamma\gamma$ meson (or other mesons, depending on the
-  collision energy), namely, the 4-momentum of the system (collision energy and
-  sum of the 3-momenta). Note that the $\chi^2_\text{red}$ of the fit is the
-  same for any combination, as the for constraints are the same in each event.
+  $\pi^0 \rightarrow \gamma\gamma$ meson (or other mesons, depending on the collision
+  energy), namely, the 4-momentum of the system (collision energy and sum of the
+  3-momenta). Note that the $\chi^2_\text{red}$ of the fit is the same for any
+  combination, as the for constraints are the same in each event.
 
-- `fit5c` is used when an additional constraint is applied. In the `RhopiAlg`
-  package, this fifth constraint refers to the constraint reconstruction of
-  $\rho^\pm \rightarrow \pi^\pm\pi^0 \rightarrow \pi^\pm\gamma\gamma$, namely
-  the mass of the pion.
+- `fit5c` is used when an additional constraint is applied. In the `RhopiAlg` package,
+  this fifth constraint refers to the constraint reconstruction of
+  $\rho^\pm \rightarrow \pi^\pm\pi^0 \rightarrow \pi^\pm\gamma\gamma$, namely the mass
+  of the pion.
 
 ### Cut flow
 

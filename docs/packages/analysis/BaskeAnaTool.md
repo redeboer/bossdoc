@@ -2,18 +2,17 @@
 
 # BaskeAnaTool
 
-"BaskeAnaTool" means a basket of ana useful tools. You can use it to submit
-jobs to the computer servers, also generate simulation jobs, check the jobs
-status, check the whether the jobs is successful according to the job log
-files.
+"BaskeAnaTool" means a basket of ana useful tools. You can use it to submit jobs to the
+computer servers, also generate simulation jobs, check the jobs status, check the
+whether the jobs is successful according to the job log files.
 
-The package based on Python works independent of BOSS, but facilitates for
-instance MC simulation. The package can be obtained from GitHub: <br>
+The package based on Python works independent of BOSS, but facilitates for instance MC
+simulation. The package can be obtained from GitHub: <br>
 [github.com/xxmawhu/BaskeAnaTool](https://github.com/xxmawhu/BaskeAnaTool)
 
 Before using the package, have a look at
-[its `README`](https://github.com/xxmawhu/BaskeAnaTool/blob/master/README.md).
-There is also
+[its `README`](https://github.com/xxmawhu/BaskeAnaTool/blob/master/README.md). There is
+also
 [a Chinese version](https://github.com/xxmawhu/BaskeAnaTool/blob/master/README_Chinese.md).
 
 ## How to install
@@ -24,15 +23,13 @@ First, you need to clone the repository from "github.com"
 git clone https://github.com/xxmawhu/BaskeAnaTool.git
 ```
 
-The environment configuration is set well in the "setup.sh", you need to source
-it.
+The environment configuration is set well in the "setup.sh", you need to source it.
 
 ```bash
 source BaskeAnaTool/setup.sh
 ```
 
-For the shell with tcsh users, there is one "setup.csh" file achieving same
-effect.
+For the shell with tcsh users, there is one "setup.csh" file achieving same effect.
 
 ```bash
 source BaskeAnaTool/setup.csh
@@ -44,8 +41,8 @@ source BaskeAnaTool/setup.csh
 
 ..
 
-For example, assuming you are now at directory "jobs", after "ls", you find
-many jobs need to be submitted.
+For example, assuming you are now at directory "jobs", after "ls", you find many jobs
+need to be submitted.
 
 ```bash
 jobs_ana_001.txt jobs_ana_004.txt jobs_ana_007.txt jobs_ana_010.txt
@@ -59,26 +56,24 @@ Now, you only need one command
 Hepsub -txt *.txt
 ```
 
-If you find many jobs allocated in different directories at the "jobs". Also
-one command is enough
+If you find many jobs allocated in different directories at the "jobs". Also one command
+is enough
 
 ```bash
 Hepsub -txt -r .
 ```
 
-Don't forget to ".", which denotes the current directory. You also can specify
-the file type, execute method, and submit way.
+Don't forget to ".", which denotes the current directory. You also can specify the file
+type, execute method, and submit way.
 
 ```bash
 Hepsub type="C, Cpp, cxx" exe="root -l -b -q" sub="hep_sub -g physics"
 ```
 
-Look into
-[github.com/xxmawhu/BaskeAnaTool](https://github.com/xxmawhu/BaskeAnaTool) for
+Look into [github.com/xxmawhu/BaskeAnaTool](https://github.com/xxmawhu/BaskeAnaTool) for
 more details.
 
-- Doing MC simulation is quite flexible. The following command is typical
-  usage:
+- Doing MC simulation is quite flexible. The following command is typical usage:
 
   ```bash
   SimJpsi [decay.card] [number of events]

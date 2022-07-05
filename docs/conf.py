@@ -163,23 +163,15 @@ linkcheck_ignore = [
 ]
 
 # Settings for myst_nb
-execution_timeout = -1
-jupyter_execute_notebooks = "force"
+nb_execution_timeout = -1
 nb_output_stderr = "remove"
-nb_render_priority = {
-    "html": (
-        "application/vnd.jupyter.widget-view+json",
-        "application/javascript",
-        "text/html",
-        "image/svg+xml",
-        "image/png",
-        "image/jpeg",
-        "text/markdown",
-        "text/latex",
-        "text/plain",
-    )
-}
-nb_render_priority["doctest"] = nb_render_priority["html"]
+
+nb_execution_mode = "off"
+EXECUTE_NB = False
+if "EXECUTE_NB" in os.environ:
+    print("\033[93;1mWill run Jupyter notebooks!\033[0m")
+    EXECUTE_NB = True
+    nb_execution_mode = "cache"
 
 # Settings for myst-parser
 myst_enable_extensions = [
@@ -209,15 +201,11 @@ thebe_config = {
 
 # Add roles to simplify external linnks
 def setup(app: Sphinx):
-    app.add_role(
-        "wiki", autolink("https://en.wikipedia.org/wiki/%s", {"_": " "})
-    )
+    app.add_role("wiki", autolink("https://en.wikipedia.org/wiki/%s", {"_": " "}))
 
 
 def autolink(pattern: str, replace_mapping: Dict[str, str]):
-    def role(
-        name, rawtext, text: str, lineno, inliner, options={}, content=[]
-    ):
+    def role(name, rawtext, text: str, lineno, inliner, options={}, content=[]):
         output_text = text
         for search, replace in replace_mapping.items():
             output_text = output_text.replace(search, replace)
@@ -282,9 +270,7 @@ class MyStyle(UnsrtStyle):
         super().__init__(abbreviate_names=True)
 
     def format_names(self, role, as_sentence=True):
-        formatted_names = names(
-            role, sep=", ", sep2=" and ", last_sep=", and "
-        )
+        formatted_names = names(role, sep=", ", sep2=" and ", last_sep=", and ")
         if as_sentence:
             return sentence[formatted_names]
         else:

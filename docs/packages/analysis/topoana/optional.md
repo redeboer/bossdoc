@@ -14,8 +14,8 @@ Many of the below fields still have to be tested and described.
 
 ### Maximum number of entries to be processed
 
-Speaks for itself:) Do not use scientific notations like `1e5` for $10^5$, but
-use `10000`.
+Speaks for itself:) Do not use scientific notations like `1e5` for $10^5$, but use
+`10000`.
 
 ### Maximum hierarchy of heading decay branches to be processed in each event
 
@@ -31,15 +31,15 @@ use `10000`.
 
 ### Cut to select entries
 
-This field only supports one line. The syntax should be the same as when you
-apply a cut selection for in the
+This field only supports one line. The syntax should be the same as when you apply a cut
+selection for in the
 [TTree::Draw](https://root.cern.ch/doc/master/classTTree.html#a73450649dc6e54b5b94516c468523e45)
 method.
 
 ### Method to apply cut to array variables (Two options: T and F. Default: F)
 
-Whether or not to apply the cut to the array variables as well. Set to true
-(`T`) if you want to apply the cut there as well.
+Whether or not to apply the cut to the array variables as well. Set to true (`T`) if you
+want to apply the cut there as well.
 
 ## Ignore fields
 
@@ -63,49 +63,48 @@ The following columns are not written:
 
 ### Ignore the decay of the following particles
 
-This field allows you to filter away certain **mother** particles. The decays
-will _not be listed in any table_.
+This field allows you to filter away certain **mother** particles. The decays will _not
+be listed in any table_.
 
 ### Ignore the decay of the daughters of the following particles
 
-This field allows you to filter away certain **daughter** particles. The decays
-will _not be listed in any table_.
+This field allows you to filter away certain **daughter** particles. The decays will
+_not be listed in any table_.
 
 ## What to perform
 
 ### Process charge conjugate objects together (Two options: Y and N. Default: N)
 
-Adds two additional columns: nCcEtrs and nTotEtrs, where conjugate particles
-are counted together.
+Adds two additional columns: nCcEtrs and nTotEtrs, where conjugate particles are counted
+together.
 
 Skip the topology analysis of decay trees and decay final states (Two options:
 
 ### Y and N. Default: N)
 
-Set this field to `Y` if you do not want to generate the tables that list _all_
-decay topologies. **It is important to set this field if you are dealing with
-large data** and are only interested in certain inclusive decays! In this case,
-you should also make use of the signal fields.
+Set this field to `Y` if you do not want to generate the tables that list _all_ decay
+topologies. **It is important to set this field if you are dealing with large data** and
+are only interested in certain inclusive decays! In this case, you should also make use
+of the signal fields.
 
 Perform the topology analysis of the decay branches begun with the following
 
 ### particles
 
-For each particle you list here, a table of decays where this particle was the
-mother particle. No table is created if the particle does not decay in any of
-the events. You can limit the number of rows by adding a number on the same
-line, separated with some white-spaces. The remainder will then be collected
-into a final "rest" row of $\text{particle} \rightarrow \text{others}$.
+For each particle you list here, a table of decays where this particle was the mother
+particle. No table is created if the particle does not decay in any of the events. You
+can limit the number of rows by adding a number on the same line, separated with some
+white-spaces. The remainder will then be collected into a final "rest" row of
+$\text{particle} \rightarrow \text{others}$.
 
 Perform the topology analysis of the exclusive decay branches matched with the
 
 ### following inclusive decay branches
 
-This field allows you to generate separate tables of decays involving a certain
-process. The lines should be numbered. The first line represents the initial
-state in a certain process, the following lines list the decay products you
-want to limit yourself to. The string $+ \text{anything}$ will be added
-automatically (see terminal output). See
+This field allows you to generate separate tables of decays involving a certain process.
+The lines should be numbered. The first line represents the initial state in a certain
+process, the following lines list the decay products you want to limit yourself to. The
+string $+ \text{anything}$ will be added automatically (see terminal output). See
 [here](http://code.ihep.ac.cn/redeboer/IniSelect/-/tree/master/workarea/Analysis/TopoAna/v1.6.9/tutorials/ta3_extensions/ta32/ta322/ccbar_topoana.card)
 for an example of syntax.
 
@@ -113,24 +112,21 @@ for an example of syntax.
 
 ### Signal particles
 
-If this field is filled, an additional table is generated with **counts of the
-signal particles** you specified. List the particles using line breaks (do not
-use commas).
+If this field is filled, an additional table is generated with **counts of the signal
+particles** you specified. List the particles using line breaks (do not use commas).
 
 ### Signal inclusive decay branches
 
-Here you can list the final state(s) of the signal decay(s) that you are
-looking for. Naturally, the order of the decay particles does not matter. The
-syntax is as follows:
+Here you can list the final state(s) of the signal decay(s) that you are looking for.
+Naturally, the order of the decay particles does not matter. The syntax is as follows:
 
-- Start a line with a number (starting with `0`), then in the same line add a
-  space or tab, and name list the decay particle according to the PDG plain
-  name (e.g. $pi+$ for $\pi^+$).
+- Start a line with a number (starting with `0`), then in the same line add a space or
+  tab, and name list the decay particle according to the PDG plain name (e.g. $pi+$ for
+  $\pi^+$).
 
 - Continue the next line of the same state description with a `1` and so forth.
 
-- You can name several inclusive decay states by starting each series with a
-  `0` again.
+- You can name several inclusive decay states by starting each series with a `0` again.
 
 - See an example for the syntax
   [here](http://code.ihep.ac.cn/redeboer/IniSelect/-/tree/master/workarea/Analysis/TopoAna/v1.6.9/tutorials/ta4_signals/ta42_sig_inc_evt_brs/ta423/uubar_topoana.card).
@@ -156,8 +152,8 @@ for an example of syntax.
 
 See
 [here](http://code.ihep.ac.cn/redeboer/IniSelect/-/tree/master/workarea/Analysis/TopoAna/v1.6.9/tutorials/ta4_signals/ta46_sig_inc_or_ira_seq_evt_brs/ta463_2/mixed_topoana.card)
-for an example of syntax. The asterisk (`*`) can be used as a short version of
-the word "anything" in order to simplify your input.
+for an example of syntax. The asterisk (`*`) can be used as a short version of the word
+"anything" in order to simplify your input.
 
 ### Signal decay trees
 

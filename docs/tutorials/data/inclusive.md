@@ -2,8 +2,8 @@
 
 ## Reconstructed $J/\psi$ samples
 
-The latest $J/\psi$ samples have been reconstructed with **BOSS 6.6.4**. They
-are located here:
+The latest $J/\psi$ samples have been reconstructed with **BOSS 6.6.4**. They are
+located here:
 
 ```bash
 InclJpsi="/besfs3/offline/data/besfs2/offline/data/664-1/jpsi/"
