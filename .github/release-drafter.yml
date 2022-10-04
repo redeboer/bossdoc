@@ -10,9 +10,11 @@ categories:
     label: 📖 Software
   - title: 🔨 Internals
     labels:
-      - 🖱️ DX
-      - 💡 Enhancement
+      - ⚙️ Enhancement
+      - ⚠️ Interface
+      - ❗ Behavior
       - 🔨 Maintenance
+      - 🖱️ DX
 
 change-template: |
   <details>
@@ -27,9 +29,10 @@ replacers:
     replace: <summary>$2</summary>
 
 sort-direction: ascending
+
 template: |
   # Release $NEXT_PATCH_VERSION
 
-  See all documentation for this version [here](https://bes3.rtfd.io/en/$NEXT_PATCH_VERSION).
+  See all documentation [here](https://bes3.rtfd.io).
 
   $CHANGES
