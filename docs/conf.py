@@ -199,6 +199,7 @@ thebe_config = {
     "repository_branch": html_theme_options["repository_branch"],
 }
 
+
 # Add roles to simplify external linnks
 def setup(app: Sphinx):
     app.add_role("wiki", autolink("https://en.wikipedia.org/wiki/%s", {"_": " "}))
