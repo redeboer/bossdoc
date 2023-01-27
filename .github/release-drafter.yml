@@ -1,38 +1,39 @@
 name-template: BOSS Documentation $NEXT_PATCH_VERSION
 tag-template: $NEXT_PATCH_VERSION
 
+references:
+  - main
+  - epic/*
+
 categories:
-  - title: 📖 Theory
-    label: 📖 Theory
-  - title: 📖 Analysis
-    label: 📖 Analysis
-  - title: 📖 Software
-    label: 📖 Software
-  - title: 🔨 Internals
-    labels:
-      - ⚙️ Enhancement
-      - ⚠️ Interface
-      - ❗ Behavior
-      - 🔨 Maintenance
-      - 🖱️ DX
+  - title: ✨ New features
+    label: 💡 Feature
+  - title: ⚠️ Enhancements and optimizations
+    label: ⚙️ Enhancement
+  - title: ⚠️ API changes
+    label: ⚠️ Interface
+  - title: ⚠️ Changes that may affect behavior
+    label: ❗ Behavior
+  - title: 🐛 Bug fixes
+    label: 🐛 Bug
+  - title: 📝 Documentation
+    label: 📝 Docs
+  - title: 🔨 Maintenance
+    label: 🔨 Maintenance
+  - title: 🖱️ Developer Experience
+    label: 🖱️ DX
 
-change-template: |
-  <details>
-  <summary>$TITLE (#$NUMBER)</summary>
-
-  $BODY
-
-  </details>
+change-template: "- $TITLE (#$NUMBER)"
 
 replacers:
-  - search: /<summary>([a-z]+!?:\s*)(.*)</summary>/g
-    replace: <summary>$2</summary>
+  - search: /([A-Z]+!?:\s*)(.*)/g
+    replace: $2
 
 sort-direction: ascending
 
 template: |
-  # Release $NEXT_PATCH_VERSION
-
-  See all documentation [here](https://bes3.rtfd.io).
+  _See all documentation for this version [here](https://bossdoc.rtfd.io/en/$NEXT_PATCH_VERSION)._
 
   $CHANGES
+
+  _The full changelog as commits can be found [here](https://github.com/ComPWA/bossdoc/compare/$PREVIOUS_TAG...$NEXT_PATCH_VERSION)._

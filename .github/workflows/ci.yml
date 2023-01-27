@@ -1,0 +1,30 @@
+name: CI
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  PYTHONHASHSEED: "0"
+
+on:
+  push:
+    branches:
+      - main
+      - epic/*
+  pull_request:
+    branches:
+      - main
+      - epic/*
+  workflow_dispatch:
+    inputs:
+      specific-pip-packages:
+        description: Run CI with specific pip packages
+        required: false
+        type: string
+
+jobs:
+  doc:
+    uses: ComPWA/actions/.github/workflows/ci-docs.yml@dev
+    with:
+      specific-pip-packages: ${{ inputs.specific-pip-packages }}
