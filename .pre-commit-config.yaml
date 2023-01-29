@@ -1,9 +1,6 @@
 ci:
   autoupdate_commit_msg: "MAINT: autoupdate pre-commit hooks"
   autoupdate_schedule: quarterly
-  skip:
-    # hooks that don't work on pre-commit.ci
-    - editorconfig-checker
 
 repos:
   - repo: meta
@@ -32,12 +29,14 @@ repos:
       - id: trailing-whitespace
 
   - repo: https://github.com/ComPWA/repo-maintenance
-    rev: 0.0.161
+    rev: 0.0.166
     hooks:
       - id: check-dev-files
         args:
           - --allow-labels
           - --ignore-author
+          - --repo-name=bossdoc
+          - --repo-title=BOSS Documentation
       - id: format-setup-cfg
 
   - repo: https://github.com/psf/black
