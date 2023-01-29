@@ -25,6 +25,6 @@ on:
 
 jobs:
   doc:
-    uses: ComPWA/actions/.github/workflows/ci-docs.yml@dev
+    uses: ComPWA/actions/.github/workflows/ci-docs.yml@v1
     with:
       specific-pip-packages: ${{ inputs.specific-pip-packages }}
