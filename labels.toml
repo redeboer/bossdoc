@@ -23,9 +23,9 @@ color = "88506B"
 name = "❔ Question"
 description = "Discuss this matter in the team"
 
-["💡 Feature"]
+["✨ Feature"]
 color = "c2e0c6"
-name = "💡 Feature"
+name = "✨ Feature"
 description = "New feature added to the package"
 
 ["💫 Good first issue"]
