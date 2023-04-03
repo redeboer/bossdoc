@@ -33,6 +33,7 @@
     "**/.tox/**": true
   },
   "git.rebaseWhenSync": true,
+  "livePreview.defaultPreviewPath": "docs/_build/html",
   "python.formatting.provider": "black",
   "python.linting.banditEnabled": false,
   "python.linting.enabled": false,
@@ -50,6 +51,5 @@
     "**/tests/**/__init__.py": true,
     "*/tox.ini": true,
     "reqs/3.*/*.txt": true
-  },
-  "telemetry.telemetryLevel": "off"
+  }
 }

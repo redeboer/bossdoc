@@ -2,6 +2,9 @@ ci:
   autoupdate_commit_msg: "MAINT: autoupdate pre-commit hooks"
   autoupdate_schedule: quarterly
 
+  skip:
+    - taplo
+
 repos:
   - repo: meta
     hooks:
@@ -50,10 +53,12 @@ repos:
       - id: cspell
 
   - repo: https://github.com/editorconfig-checker/editorconfig-checker.python
-    rev: 2.7.1
+    rev: "2.7.1"
     hooks:
       - id: editorconfig-checker
-        exclude: >
+        name: editorconfig
+        alias: ec
+        exclude: >-
           (?x)^(
             .*\.py
           )$
@@ -79,3 +84,8 @@ repos:
       - id: pyupgrade
         args:
           - --py36-plus
+
+  - repo: https://github.com/ComPWA/mirrors-taplo
+    rev: v0.8.0
+    hooks:
+      - id: taplo
