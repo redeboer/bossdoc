@@ -25,11 +25,11 @@ exclude = '''
 include = '\.pyi?$'
 preview = true
 target-version = [
+    'py310',
     'py36',
     'py37',
     'py38',
     'py39',
-    'py310',
 ]
 
 [tool.isort]
