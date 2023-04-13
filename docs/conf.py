@@ -156,6 +156,7 @@ linkcheck_anchors = False
 linkcheck_ignore = [
     "http://code.ihep.ac.cn/redeboer/IniSelect",
     "https://github.com/redeboer/BOSS_IniSelect_ORIGINAL",
+    "https://scientificlinux.org",
     r"http://[A-Za-z0-9]+\.ihep\.ac\.cn",
     r"http://[A-Za-z0-9]+\.ihep\.cas\.cn",
     r"http://[A-Za-z0-9]+\.ucas\.ac\.cn",
