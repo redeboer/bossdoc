@@ -33,6 +33,7 @@
     "**/.tox/**": true
   },
   "git.rebaseWhenSync": true,
+  "github-actions.workflows.pinned.workflows": [".github/workflows/ci.yml"],
   "livePreview.defaultPreviewPath": "docs/_build/html",
   "python.formatting.provider": "black",
   "python.linting.banditEnabled": false,
