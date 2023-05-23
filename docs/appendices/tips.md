@@ -121,6 +121,10 @@ ln -s /besfs5/users/$USER/.vscode-server
 
 :::
 
+Another major advantage of this set-up is that you won't have problems with
+[data quota](../tutorials/getting-started/data-quota.md) when the
+`.vscode-server` grows over time.
+
 ::::
 
 ### Language navigation for BOSS
