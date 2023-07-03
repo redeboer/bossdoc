@@ -33,6 +33,63 @@ target-version = [
     'py39',
 ]
 
-[tool.isort]
-profile = "black"
-src_paths = ["src", "tests"]
+[tool.pyright]
+exclude = [
+    ".git",
+    ".tox",
+    "docs/_build",
+]
+include = [
+    "docs/conf.py",
+    "src",
+    "tests",
+]
+reportGeneralTypeIssues = false
+reportUnboundVariable = false
+reportUnusedClass = true
+reportUnusedFunction = true
+reportUnusedImport = true
+reportUnusedVariable = true
+typeCheckingMode = "strict"
+
+[tool.ruff]
+extend-select = [
+    "A",
+    "B",
+    "BLE",
+    "C4",
+    "C90",
+    "D",
+    "EM",
+    "ERA",
+    "I",
+    "ICN",
+    "INP",
+    "ISC",
+    "N",
+    "NPY",
+    "PGH",
+    "PIE",
+    "PL",
+    "Q",
+    "RET",
+    "RSE",
+    "RUF",
+    "S",
+    "SIM",
+    "T20",
+    "TCH",
+    "TID",
+    "TRY",
+    "UP",
+    "YTT",
+]
+show-fixes = true
+target-version = "py37"
+task-tags = ["cspell"]
+
+[tool.ruff.per-file-ignores]
+"setup.py" = ["D100"]
+
+[tool.ruff.pydocstyle]
+convention = "google"

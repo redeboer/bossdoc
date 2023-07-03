@@ -48,6 +48,8 @@
   "python.testing.pytestEnabled": false,
   "python.testing.unittestEnabled": false,
   "rewrap.wrappingColumn": 79,
+  "ruff.enable": true,
+  "ruff.organizeImports": true,
   "search.exclude": {
     "**/tests/**/__init__.py": true,
     "*/tox.ini": true,

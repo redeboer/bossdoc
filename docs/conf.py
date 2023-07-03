@@ -222,16 +222,8 @@ def autolink(pattern: str, replace_mapping: Dict[str, str]):
 from pybtex.plugin import register_plugin
 from pybtex.richtext import Tag, Text
 from pybtex.style.formatting.unsrt import Style as UnsrtStyle
-from pybtex.style.template import (
-    FieldIsMissing,
-    _format_list,
-    field,
-    href,
-    join,
-    node,
-    sentence,
-    words,
-)
+from pybtex.style.template import (FieldIsMissing, _format_list, field, href,
+                                   join, node, sentence, words)
 
 
 @node
