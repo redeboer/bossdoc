@@ -2,6 +2,7 @@ ci:
   autoupdate_commit_msg: "MAINT: autoupdate pre-commit hooks"
   autoupdate_schedule: quarterly
   skip:
+    - pyright
     - taplo
 
 repos:
@@ -71,6 +72,11 @@ repos:
     rev: v3.0.0
     hooks:
       - id: prettier
+
+  - repo: https://github.com/ComPWA/mirrors-pyright
+    rev: v1.1.316
+    hooks:
+      - id: pyright
 
   - repo: https://github.com/asottile/pyupgrade
     rev: v3.9.0

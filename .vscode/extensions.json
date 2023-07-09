@@ -23,6 +23,7 @@
     "bungcip.better-toml",
     "ms-python.flake8",
     "ms-python.isort",
+    "ms-python.mypy-type-checker",
     "ms-python.pylint",
     "travisillig.vscode-json-stable-stringify"
   ]

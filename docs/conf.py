@@ -1,5 +1,3 @@
-# type: ignore
-
 """Configuration file for the Sphinx documentation builder.
 
 This file only contains a selection of the most common options. For a full
@@ -7,10 +5,25 @@ list see the documentation:
 https://www.sphinx-doc.org/en/master/usage/configuration.html
 """
 
+import contextlib
 import os
 from typing import Dict
 
 import requests
+from docutils import nodes
+from pybtex.plugin import register_plugin
+from pybtex.richtext import Tag, Text
+from pybtex.style.formatting.unsrt import Style as UnsrtStyle
+from pybtex.style.template import (
+    FieldIsMissing,
+    _format_list,  # pyright: ignore[reportPrivateUsage]
+    field,
+    href,
+    join,
+    node,
+    sentence,
+    words,
+)
 from sphinx.application import Sphinx
 
 # -- Project information -----------------------------------------------------
@@ -18,10 +31,6 @@ project = "BESIII Offline Software System"
 package = "bossdoc"
 REPO_NAME = "bossdoc"
 copyright = "2020, BESIII"
-
-if os.path.exists(f"../src/{package}/version.py"):
-    __release = get_distribution(package).version
-    version = ".".join(__release.split(".")[:3])
 
 
 # -- Fetch logo --------------------------------------------------------------
@@ -34,13 +43,11 @@ def fetch_logo(url: str, output_path: str) -> None:
 
 
 LOGO_PATH = "_static/logo.jpg"
-try:
+with contextlib.suppress(requests.exceptions.ConnectionError):
     fetch_logo(
         url="https://paluma.ruhr-uni-bochum.de/images/besIII/BES3_logo.jpg",
         output_path=LOGO_PATH,
     )
-except requests.exceptions.ConnectionError:
-    pass
 if os.path.exists(LOGO_PATH):
     html_logo = LOGO_PATH
 
@@ -171,7 +178,7 @@ nb_execution_mode = "off"
 EXECUTE_NB = False
 if "EXECUTE_NB" in os.environ:
     print("\033[93;1mWill run Jupyter notebooks!\033[0m")
-    EXECUTE_NB = True
+    EXECUTE_NB = True  # pyright: ignore[reportConstantRedefinition]
     nb_execution_mode = "cache"
 
 # Settings for myst-parser
@@ -219,13 +226,6 @@ def autolink(pattern: str, replace_mapping: Dict[str, str]):
 
 
 # Specify bibliography style
-from pybtex.plugin import register_plugin
-from pybtex.richtext import Tag, Text
-from pybtex.style.formatting.unsrt import Style as UnsrtStyle
-from pybtex.style.template import (FieldIsMissing, _format_list, field, href,
-                                   join, node, sentence, words)
-
-
 @node
 def et_al(children, data, sep="", sep2=None, last_sep=None):
     if sep2 is None:
@@ -235,12 +235,11 @@ def et_al(children, data, sep="", sep2=None, last_sep=None):
     parts = [part for part in _format_list(children, data) if part]
     if len(parts) <= 1:
         return Text(*parts)
-    elif len(parts) == 2:
+    if len(parts) == 2:  # noqa: PLR2004
         return Text(sep2).join(parts)
-    elif len(parts) == 3:
+    if len(parts) == 3:  # noqa: PLR2004
         return Text(last_sep).join([Text(sep).join(parts[:-1]), parts[-1]])
-    else:
-        return Text(parts[0], Tag("em", " et al"))
+    return Text(parts[0], Tag("em", " et al"))
 
 
 @node
@@ -250,8 +249,7 @@ def names(children, context, role, **kwargs):
     try:
         persons = context["entry"].persons[role]
     except KeyError:
-        raise FieldIsMissing(role, context["entry"])
-
+        raise FieldIsMissing(role, context["entry"]) from None
     style = context["style"]
     formatted_names = [
         style.format_name(person, style.abbreviate_names) for person in persons
@@ -267,8 +265,7 @@ class MyStyle(UnsrtStyle):
         formatted_names = names(role, sep=", ", sep2=" and ", last_sep=", and ")
         if as_sentence:
             return sentence[formatted_names]
-        else:
-            return formatted_names
+        return formatted_names
 
     def format_url(self, e):
         return words[

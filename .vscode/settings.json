@@ -52,7 +52,6 @@
   "ruff.organizeImports": true,
   "search.exclude": {
     "**/tests/**/__init__.py": true,
-    "*/tox.ini": true,
-    "reqs/3.*/*.txt": true
+    "*/tox.ini": true
   }
 }
