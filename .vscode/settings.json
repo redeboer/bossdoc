@@ -42,15 +42,15 @@
   "python.linting.mypyEnabled": false,
   "python.linting.pydocstyleEnabled": false,
   "python.linting.pylamaEnabled": false,
-  "python.linting.pylintCategorySeverity.refactor": "Information",
   "python.linting.pylintEnabled": false,
   "python.testing.pytestArgs": ["--color=no", "--no-cov"],
   "python.testing.pytestEnabled": false,
   "python.testing.unittestEnabled": false,
   "rewrap.wrappingColumn": 79,
+  "ruff.enable": true,
+  "ruff.organizeImports": true,
   "search.exclude": {
     "**/tests/**/__init__.py": true,
-    "*/tox.ini": true,
-    "reqs/3.*/*.txt": true
+    "*/tox.ini": true
   }
 }
