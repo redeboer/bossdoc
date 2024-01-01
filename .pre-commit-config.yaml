@@ -2,6 +2,7 @@ ci:
   autoupdate_commit_msg: "MAINT: autoupdate pre-commit hooks"
   autoupdate_schedule: quarterly
   skip:
+    - prettier
     - pyright
     - taplo
 
@@ -10,6 +11,20 @@ repos:
     hooks:
       - id: check-hooks-apply
       - id: check-useless-excludes
+
+  - repo: https://github.com/ComPWA/repo-maintenance
+    rev: 0.1.11
+    hooks:
+      - id: check-dev-files
+        args:
+          - --allow-labels
+          - --ignore-author
+          - --keep-issue-templates
+          - --no-notebooks
+          - --no-prettierrc
+          - --repo-name=bossdoc
+          - --repo-title=BOSS Documentation
+      - id: format-setup-cfg
 
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.5.0
@@ -31,22 +46,8 @@ repos:
       - id: mixed-line-ending
       - id: trailing-whitespace
 
-  - repo: https://github.com/ComPWA/repo-maintenance
-    rev: 0.1.11
-    hooks:
-      - id: check-dev-files
-        args:
-          - --allow-labels
-          - --ignore-author
-          - --keep-issue-templates
-          - --no-notebooks
-          - --no-prettierrc
-          - --repo-name=bossdoc
-          - --repo-title=BOSS Documentation
-      - id: format-setup-cfg
-
-  - repo: https://github.com/psf/black
-    rev: 23.12.1
+  - repo: https://github.com/psf/black-pre-commit-mirror
+    rev: PLEASE-UPDATE
     hooks:
       - id: black
 
@@ -75,13 +76,6 @@ repos:
     rev: v1.1.344
     hooks:
       - id: pyright
-
-  - repo: https://github.com/asottile/pyupgrade
-    rev: v3.15.0
-    hooks:
-      - id: pyupgrade
-        args:
-          - --py36-plus
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
     rev: v0.1.9

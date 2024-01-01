@@ -96,12 +96,10 @@ autodoc_default_options = {
     "members": True,
     "undoc-members": True,
     "show-inheritance": True,
-    "special-members": ", ".join(
-        [
-            "__call__",
-            "__eq__",
-        ]
-    ),
+    "special-members": ", ".join([
+        "__call__",
+        "__eq__",
+    ]),
 }
 graphviz_output_format = "svg"
 html_copy_source = True  # needed for download notebook button
