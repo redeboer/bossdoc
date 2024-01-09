@@ -160,6 +160,7 @@ copybutton_prompt_text = r">>> |\.\.\. "  # doctest
 linkcheck_anchors = False
 linkcheck_ignore = [
     "http://code.ihep.ac.cn/redeboer/IniSelect",
+    "http://www.cmtsite.net",
     "https://github.com/redeboer/BOSS_IniSelect_ORIGINAL",
     "https://scientificlinux.org",
     r"http://[A-Za-z0-9]+\.ihep\.ac\.cn",
