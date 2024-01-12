@@ -1,6 +1,11 @@
 {
   "version": "0.2",
-  "enableFiletypes": ["git-commit", "julia", "jupyter"],
+  "enableFiletypes": [
+    "git-commit",
+    "github-actions-workflow",
+    "julia",
+    "jupyter"
+  ],
   "flagWords": [
     "analyse",
     "colour",
@@ -16,6 +21,7 @@
   ],
   "ignorePaths": [
     "**/*.bib",
+    "**/*.rst_t",
     "**/.cspell.json",
     ".editorconfig",
     ".gitignore",

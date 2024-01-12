@@ -96,12 +96,10 @@ autodoc_default_options = {
     "members": True,
     "undoc-members": True,
     "show-inheritance": True,
-    "special-members": ", ".join(
-        [
-            "__call__",
-            "__eq__",
-        ]
-    ),
+    "special-members": ", ".join([
+        "__call__",
+        "__eq__",
+    ]),
 }
 graphviz_output_format = "svg"
 html_copy_source = True  # needed for download notebook button
@@ -142,7 +140,7 @@ nitpicky = True  # warn if cross-references are missing
 
 # Intersphinx settings
 intersphinx_mapping = {
-    "compwa-org": ("https://compwa-org.readthedocs.io/en/stable", None),
+    "compwa-org": ("https://compwa-org.readthedocs.io", None),
 }
 
 # Settings for autosectionlabel
@@ -162,6 +160,7 @@ copybutton_prompt_text = r">>> |\.\.\. "  # doctest
 linkcheck_anchors = False
 linkcheck_ignore = [
     "http://code.ihep.ac.cn/redeboer/IniSelect",
+    "http://www.cmtsite.net",
     "https://github.com/redeboer/BOSS_IniSelect_ORIGINAL",
     "https://scientificlinux.org",
     r"http://[A-Za-z0-9]+\.ihep\.ac\.cn",

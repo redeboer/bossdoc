@@ -120,6 +120,7 @@ task-tags = ["cspell"]
 "docs/conf.py" = [
     "A00",
     "B006",
+    "D100",
     "PLR0913",
 ]
 "setup.py" = ["D100"]
