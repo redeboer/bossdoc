@@ -1,15 +1,6 @@
-"""Configuration file for the Sphinx documentation builder.
-
-This file only contains a selection of the most common options. For a full
-list see the documentation:
-https://www.sphinx-doc.org/en/master/usage/configuration.html
-"""
-
-import contextlib
 import os
 from typing import Dict
 
-import requests
 from docutils import nodes
 from pybtex.plugin import register_plugin
 from pybtex.richtext import Tag, Text
@@ -31,25 +22,6 @@ project = "BESIII Offline Software System"
 package = "bossdoc"
 REPO_NAME = "bossdoc"
 copyright = "2020, BESIII"
-
-
-# -- Fetch logo --------------------------------------------------------------
-def fetch_logo(url: str, output_path: str) -> None:
-    if os.path.exists(output_path):
-        return
-    online_content = requests.get(url, allow_redirects=True)
-    with open(output_path, "wb") as stream:
-        stream.write(online_content.content)
-
-
-LOGO_PATH = "_static/logo.jpg"
-with contextlib.suppress(requests.exceptions.ConnectionError):
-    fetch_logo(
-        url="https://paluma.ruhr-uni-bochum.de/images/besIII/BES3_logo.jpg",
-        output_path=LOGO_PATH,
-    )
-if os.path.exists(LOGO_PATH):
-    html_logo = LOGO_PATH
 
 
 # -- General configuration ---------------------------------------------------
@@ -104,6 +76,7 @@ autodoc_default_options = {
 graphviz_output_format = "svg"
 html_copy_source = True  # needed for download notebook button
 html_favicon = "_static/favicon.ico"
+html_logo = "https://github.com/redeboer/bossdoc/assets/29308176/71ae5632-3aa9-4756-b4bb-8af397c62951"
 html_show_copyright = False
 html_show_sourcelink = False
 html_show_sphinx = False
