@@ -16,6 +16,7 @@ classifiers = [
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.7",
     "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
@@ -50,7 +51,7 @@ doc = [
     "Sphinx >=3",
     "ipywidgets",
     "matplotlib",
-    "myst-nb >=0.11", # myst_enable_extensions
+    "myst-nb",
     "sphinx-api-relink",
     "sphinx-book-theme",
     "sphinx-comments",
@@ -109,6 +110,7 @@ preview = true
 target-version = [
     "py310",
     "py311",
+    "py312",
     "py37",
     "py38",
     "py39",

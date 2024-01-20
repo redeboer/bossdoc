@@ -78,6 +78,7 @@ linkcheck_ignore = [
     "http://www.cmtsite.net",
     "https://github.com/redeboer/BOSS_IniSelect_ORIGINAL",
     "https://scientificlinux.org",
+    "https://www.putty.org",
     r"http://[A-Za-z0-9]+\.ihep\.ac\.cn",
     r"http://[A-Za-z0-9]+\.ihep\.cas\.cn",
     r"http://[A-Za-z0-9]+\.ucas\.ac\.cn",
