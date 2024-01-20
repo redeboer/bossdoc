@@ -50,7 +50,7 @@ doc = [
     "Sphinx >=3",
     "ipywidgets",
     "matplotlib",
-    "myst-nb >=0.11", # myst_enable_extensions
+    "myst-nb",
     "sphinx-api-relink",
     "sphinx-book-theme",
     "sphinx-comments",
