@@ -102,6 +102,7 @@ common) problem: {ref}`read-write-access`. It is therefore recommended that you 
 create a symbolic link to that folder in your actual home folder. Do this as follows:
 
 ::::{tab-set}
+
 :::{tab-item} `.vscode-server` does not yet exist
 
 ```shell

@@ -55,7 +55,6 @@ doc = [
     "sphinx-book-theme",
     "sphinx-comments",
     "sphinx-copybutton",
-    "sphinx-math-dollar",
     "sphinx-panels",
     "sphinx-thebe",
     "sphinx-togglebutton",
