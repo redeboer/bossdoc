@@ -12,20 +12,6 @@ repos:
       - id: check-hooks-apply
       - id: check-useless-excludes
 
-  - repo: https://github.com/ComPWA/policy
-    rev: 0.2.0
-    hooks:
-      - id: check-dev-files
-        args:
-          - --allow-labels
-          - --ignore-author
-          - --keep-issue-templates
-          - --no-notebooks
-          - --no-prettierrc
-          - --repo-name=bossdoc
-          - --repo-title=BOSS Documentation
-      - id: format-setup-cfg
-
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.5.0
     hooks:
@@ -51,6 +37,18 @@ repos:
     hooks:
       - id: black
 
+  - repo: https://github.com/ComPWA/policy
+    rev: 0.2.0
+    hooks:
+      - id: check-dev-files
+        args:
+          - --allow-labels
+          - --ignore-author
+          - --keep-issue-templates
+          - --no-notebooks
+          - --no-prettierrc
+          - --repo-name=bossdoc
+          - --repo-title=BOSS Documentation
   - repo: https://github.com/streetsidesoftware/cspell-cli
     rev: v8.3.0
     hooks:

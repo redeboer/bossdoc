@@ -1,5 +1,7 @@
+from __future__ import annotations
+
 import os
-from typing import Dict
+from typing import TYPE_CHECKING
 
 from docutils import nodes
 from pybtex.plugin import register_plugin
@@ -15,7 +17,9 @@ from pybtex.style.template import (
     sentence,
     words,
 )
-from sphinx.application import Sphinx
+
+if TYPE_CHECKING:
+    from sphinx.application import Sphinx
 
 # -- Project information -----------------------------------------------------
 project = "BESIII Offline Software System"
@@ -185,7 +189,7 @@ def setup(app: Sphinx):
     app.add_role("wiki", autolink("https://en.wikipedia.org/wiki/%s", {"_": " "}))
 
 
-def autolink(pattern: str, replace_mapping: Dict[str, str]):
+def autolink(pattern: str, replace_mapping: dict[str, str]):
     def role(name, rawtext, text: str, lineno, inliner, options={}, content=[]):
         output_text = text
         for search, replace in replace_mapping.items():
