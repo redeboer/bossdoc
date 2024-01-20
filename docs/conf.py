@@ -1,7 +1,11 @@
 from __future__ import annotations
 
 from sphinx_api_relink.helpers import get_execution_mode
+from sphinx_api_relink.linkcode import (
+    _get_commit_sha,  # pyright:ignore[reportPrivateUsage]
+)
 
+BRANCH = _get_commit_sha()
 REPO_NAME = "bossdoc"
 
 autosectionlabel_prefix_document = True
@@ -40,12 +44,9 @@ exclude_patterns = [
     "adr/template.md",
     "tests",
 ]
-html_copy_source = True  # needed for download notebook button
 html_favicon = "_static/favicon.ico"
 html_logo = "https://github.com/redeboer/bossdoc/assets/29308176/71ae5632-3aa9-4756-b4bb-8af397c62951"
 html_show_copyright = False
-html_show_sourcelink = False
-html_show_sphinx = False
 html_sourcelink_suffix = ""
 html_theme = "sphinx_book_theme"
 html_theme_options = {
@@ -58,13 +59,14 @@ html_theme_options = {
     },
     "path_to_docs": "docs",
     "repository_url": f"https://github.com/redeboer/{REPO_NAME}",
-    "repository_branch": "main",
+    "repository_branch": BRANCH,
     "show_navbar_depth": 2,
     "show_toc_level": 2,
-    "use_download_button": True,
+    "use_download_button": False,
     "use_edit_page_button": True,
     "use_issues_button": True,
     "use_repository_button": True,
+    "use_source_button": True,
 }
 html_title = "BOSS Documentation"
 intersphinx_mapping = {
@@ -102,7 +104,6 @@ thebe_config = {
     "repository_branch": html_theme_options["repository_branch"],
 }
 todo_include_todos = True
-viewcode_follow_imported_members = True
 suppress_warnings = [
     "myst.domains",
 ]
