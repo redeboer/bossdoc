@@ -21,7 +21,6 @@
   ],
   "ignorePaths": [
     "**/*.bib",
-    "**/*.rst_t",
     "**/.cspell.json",
     ".editorconfig",
     ".gitignore",
@@ -30,7 +29,6 @@
     ".prettierignore",
     ".readthedocs.yml",
     ".vscode/*",
-    "docs/_templates/*",
     "docs/conf.py",
     "labels.toml",
     "pyproject.toml",

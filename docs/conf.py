@@ -25,6 +25,7 @@ extensions = [
     "sphinx.ext.intersphinx",
     "sphinx.ext.mathjax",
     "sphinx.ext.todo",
+    "sphinx_api_relink",
     "sphinx_comments",
     "sphinx_copybutton",
     "sphinx_design",
