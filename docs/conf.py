@@ -117,7 +117,7 @@ nitpicky = True  # warn if cross-references are missing
 
 # Intersphinx settings
 intersphinx_mapping = {
-    "compwa-org": ("https://compwa-org.readthedocs.io", None),
+    "compwa": ("https://compwa.github.io", None),
 }
 
 # Settings for autosectionlabel
