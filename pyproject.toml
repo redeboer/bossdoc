@@ -64,6 +64,7 @@ format = [
 ]
 lint = [
     "ruff",
+    "sphinx-api-relink",
 ]
 sty = [
     "Sphinx",
