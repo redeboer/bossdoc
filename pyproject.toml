@@ -66,6 +66,7 @@ format = [
 ]
 lint = [
     "ruff",
+    "sphinx-api-relink",
 ]
 sty = [
     "bossdoc[format]",
