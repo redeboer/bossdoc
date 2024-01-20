@@ -51,10 +51,12 @@ doc = [
     "ipywidgets",
     "matplotlib",
     "myst-nb >=0.11", # myst_enable_extensions
+    "sphinx-api-relink",
     "sphinx-book-theme",
     "sphinx-comments",
     "sphinx-copybutton",
     "sphinx-design",
+    "sphinx-pybtex-etal-style",
     "sphinx-thebe",
     "sphinx-togglebutton",
     "sphinxcontrib-bibtex >=2",
@@ -67,12 +69,9 @@ lint = [
     "sphinx-api-relink",
 ]
 sty = [
-    "Sphinx",
     "bossdoc[format]",
     "bossdoc[lint]",
-    "docutils",
     "pre-commit >=1.4.0",
-    "pybtex",
 ]
 
 [project.readme]
