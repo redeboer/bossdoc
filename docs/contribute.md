@@ -70,7 +70,7 @@ in VSCode!
 
 :::{seealso}
 
-{doc}`compwa-org:develop` on the {doc}`ComPWA website <compwa-org:index>`, which uses
-the same set-up.
+{doc}`compwa:develop` on the {doc}`ComPWA website <compwa:index>`, which uses the same
+set-up.
 
 :::
