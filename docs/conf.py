@@ -17,27 +17,32 @@ from pybtex.style.template import (
 )
 from sphinx.application import Sphinx
 
-# -- Project information -----------------------------------------------------
-project = "BESIII Offline Software System"
-package = "bossdoc"
+
+def get_execution_mode() -> str:
+    if "EXECUTE_NB" in os.environ:
+        print("\033[93;1mWill run Jupyter notebooks!\033[0m")
+        return "cache"
+    return "off"
+
+
+PACKAGE_NAME = "bossdoc"
 REPO_NAME = "bossdoc"
-copyright = "2020, BESIII"
 
 
-# -- General configuration ---------------------------------------------------
-master_doc = "index.md"
-source_suffix = {
-    ".ipynb": "myst-nb",
-    ".md": "myst-nb",
-    ".rst": "restructuredtext",
+autosectionlabel_prefix_document = True
+bibtex_bibfiles = ["bibliography.bib"]
+comments_config = {
+    "hypothesis": True,
+    "utterances": {
+        "repo": f"redeboer/{REPO_NAME}",
+        "issue-term": "pathname",
+        "label": "📝 Docs",
+    },
 }
-
-# The master toctree document.
-master_doc = "index"
-modindex_common_prefix = [
-    f"{package}.",
-]
-
+copybutton_prompt_is_regexp = True
+copybutton_prompt_text = r">>> |\.\.\. "
+copyright = "2020, BESIII"
+default_role = "py:obj"
 extensions = [
     "myst_nb",
     "sphinx.ext.autosectionlabel",
@@ -58,22 +63,6 @@ exclude_patterns = [
     "adr/template.md",
     "tests",
 ]
-
-# Todo-list
-todo_include_todos = True
-
-# General sphinx settings
-add_module_names = False
-autodoc_default_options = {
-    "members": True,
-    "undoc-members": True,
-    "show-inheritance": True,
-    "special-members": ", ".join([
-        "__call__",
-        "__eq__",
-    ]),
-}
-graphviz_output_format = "svg"
 html_copy_source = True  # needed for download notebook button
 html_favicon = "_static/favicon.ico"
 html_logo = "https://github.com/redeboer/bossdoc/assets/29308176/71ae5632-3aa9-4756-b4bb-8af397c62951"
@@ -101,35 +90,9 @@ html_theme_options = {
     "show_toc_level": 2,
 }
 html_title = "BOSS Documentation"
-panels_add_bootstrap_css = False  # remove panels css to get wider main content
-pygments_style = "sphinx"
-todo_include_todos = False
-viewcode_follow_imported_members = True
-
-# Cross-referencing configuration
-default_role = "py:obj"
-primary_domain = "py"
-nitpicky = True  # warn if cross-references are missing
-
-# Intersphinx settings
 intersphinx_mapping = {
     "compwa-org": ("https://compwa-org.readthedocs.io", None),
 }
-
-# Settings for autosectionlabel
-autosectionlabel_prefix_document = True
-
-# Settings for bibtex
-bibtex_bibfiles = ["bibliography.bib"]
-suppress_warnings = [
-    "myst.domains",
-]
-
-# Settings for copybutton
-copybutton_prompt_is_regexp = True
-copybutton_prompt_text = r">>> |\.\.\. "  # doctest
-
-# Settings for linkcheck
 linkcheck_anchors = False
 linkcheck_ignore = [
     "http://code.ihep.ac.cn/redeboer/IniSelect",
@@ -141,19 +104,6 @@ linkcheck_ignore = [
     r"http://[A-Za-z0-9]+\.ucas\.ac\.cn",
     r"https://[A-Za-z0-9]+\.ihep\.ac\.cn",
 ]
-
-# Settings for myst_nb
-nb_execution_timeout = -1
-nb_output_stderr = "remove"
-
-nb_execution_mode = "off"
-EXECUTE_NB = False
-if "EXECUTE_NB" in os.environ:
-    print("\033[93;1mWill run Jupyter notebooks!\033[0m")
-    EXECUTE_NB = True  # pyright: ignore[reportConstantRedefinition]
-    nb_execution_mode = "cache"
-
-# Settings for myst-parser
 myst_enable_extensions = [
     "amsmath",
     "colon_fence",
@@ -162,22 +112,28 @@ myst_enable_extensions = [
     "smartquotes",
 ]
 myst_update_mathjax = False
-
-# Settings for sphinx_comments
-comments_config = {
-    "hypothesis": True,
-    "utterances": {
-        "repo": f"redeboer/{REPO_NAME}",
-        "issue-term": "pathname",
-        "label": "📝 Docs",
-    },
+nb_execution_mode = get_execution_mode()
+nb_execution_timeout = -1
+nb_output_stderr = "remove"
+nitpicky = True  # warn if cross-references are missing
+panels_add_bootstrap_css = False  # remove panels css to get wider main content
+primary_domain = "py"
+project = "BESIII Offline Software System"
+pygments_style = "sphinx"
+source_suffix = {
+    ".ipynb": "myst-nb",
+    ".md": "myst-nb",
+    ".rst": "restructuredtext",
 }
-
-# Settings for Thebe cell output
 thebe_config = {
     "repository_url": html_theme_options["repository_url"],
     "repository_branch": html_theme_options["repository_branch"],
 }
+todo_include_todos = True
+viewcode_follow_imported_members = True
+suppress_warnings = [
+    "myst.domains",
+]
 
 
 # Add roles to simplify external linnks
