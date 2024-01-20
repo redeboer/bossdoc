@@ -48,13 +48,6 @@ html_show_sphinx = False
 html_sourcelink_suffix = ""
 html_theme = "sphinx_book_theme"
 html_theme_options = {
-    "repository_url": f"https://github.com/redeboer/{REPO_NAME}",
-    "repository_branch": "main",
-    "path_to_docs": "docs",
-    "use_download_button": True,
-    "use_edit_page_button": True,
-    "use_issues_button": True,
-    "use_repository_button": True,
     "launch_buttons": {
         "binderhub_url": "https://mybinder.org",
         "colab_url": "https://colab.research.google.com",
@@ -62,8 +55,15 @@ html_theme_options = {
         "thebe": True,
         "thebelab": True,
     },
+    "path_to_docs": "docs",
+    "repository_url": f"https://github.com/redeboer/{REPO_NAME}",
+    "repository_branch": "main",
     "show_navbar_depth": 2,
     "show_toc_level": 2,
+    "use_download_button": True,
+    "use_edit_page_button": True,
+    "use_issues_button": True,
+    "use_repository_button": True,
 }
 html_title = "BOSS Documentation"
 intersphinx_mapping = {
