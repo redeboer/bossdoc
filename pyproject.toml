@@ -58,7 +58,6 @@ doc = [
     "sphinx-thebe",
     "sphinx-togglebutton",
     "sphinxcontrib-bibtex >=2",
-    "sphobjinv",
 ]
 format = [
     "black",
