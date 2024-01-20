@@ -49,7 +49,6 @@ dev = [
 doc = [
     "Sphinx >=3",
     "ipywidgets",
-    "jupyter",
     "matplotlib",
     "myst-nb >=0.11", # myst_enable_extensions
     "sphinx-book-theme",
