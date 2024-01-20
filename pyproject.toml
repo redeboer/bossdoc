@@ -34,17 +34,17 @@ keywords = [
     "physics",
 ]
 license = {text = "GPLv3 or later"}
-name = "BOSS Documentation"
+name = "bossdoc"
 requires-python = ">=3.7"
 
 [project.optional-dependencies]
 dev = [
-    "BOSS Documentation[doc]",
-    "BOSS Documentation[sty]",
+    "bossdoc[doc]",
+    "bossdoc[sty]",
     "jupyterlab",
     "jupyterlab-code-formatter",
     "sphinx-autobuild",
-    "tox >=1.9", # for skip_install, use_develop
+    "tox >=1.9",
 ]
 doc = [
     "Sphinx >=3",
@@ -69,9 +69,9 @@ lint = [
     "ruff",
 ]
 sty = [
-    "BOSS Documentation[format]",
-    "BOSS Documentation[lint]",
     "Sphinx",
+    "bossdoc[format]",
+    "bossdoc[lint]",
     "docutils",
     "pre-commit >=1.4.0",
     "pybtex",
