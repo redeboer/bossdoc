@@ -1,9 +1,7 @@
 from __future__ import annotations
 
 import os
-from typing import TYPE_CHECKING
 
-from docutils import nodes
 from pybtex.plugin import register_plugin
 from pybtex.richtext import Tag, Text
 from pybtex.style.formatting.unsrt import Style as UnsrtStyle
@@ -17,9 +15,6 @@ from pybtex.style.template import (
     sentence,
     words,
 )
-
-if TYPE_CHECKING:
-    from sphinx.application import Sphinx
 
 
 def get_execution_mode() -> str:
@@ -137,23 +132,6 @@ viewcode_follow_imported_members = True
 suppress_warnings = [
     "myst.domains",
 ]
-
-
-# Add roles to simplify external linnks
-def setup(app: Sphinx):
-    app.add_role("wiki", autolink("https://en.wikipedia.org/wiki/%s", {"_": " "}))
-
-
-def autolink(pattern: str, replace_mapping: dict[str, str]):
-    def role(name, rawtext, text: str, lineno, inliner, options={}, content=[]):
-        output_text = text
-        for search, replace in replace_mapping.items():
-            output_text = output_text.replace(search, replace)
-        url = pattern % (text,)
-        node = nodes.reference(rawtext, output_text, refuri=url, **options)
-        return [node], []
-
-    return role
 
 
 # Specify bibliography style
