@@ -50,7 +50,6 @@ extensions = [
     "sphinx.ext.todo",
     "sphinx_comments",
     "sphinx_copybutton",
-    "sphinx_panels",
     "sphinx_thebe",
     "sphinx_togglebutton",
     "sphinxcontrib.bibtex",
