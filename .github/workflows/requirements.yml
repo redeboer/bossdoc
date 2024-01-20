@@ -1,0 +1,23 @@
+name: Requirements
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+on:
+  pull_request:
+    branches:
+      - main
+      - epic/*
+    paths:
+      - .pre-commit-config.yaml
+      - setup.cfg
+  schedule:
+    - cron: "0 3 7 */3 *"
+  workflow_dispatch:
+
+jobs:
+  requirements:
+    uses: ComPWA/actions/.github/workflows/requirements.yml@v1
+    secrets:
+      token: ${{ secrets.PAT }}
