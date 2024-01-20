@@ -1,6 +1,6 @@
 tasks:
   - init: pyenv local 3.9
-  - init: pip install -e .[dev]
+  - init: pip install -c .constraints/py3.9.txt -e .[dev]
 
 github:
   prebuilds:

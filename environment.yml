@@ -5,6 +5,6 @@ dependencies:
   - python==3.9.*
   - pip
   - pip:
-      - -e .[dev]
+      - -c .constraints/py3.9.txt -e .[dev]
 variables:
   PRETTIER_LEGACY_CLI: "1"
