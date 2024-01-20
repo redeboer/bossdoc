@@ -1,5 +1,5 @@
 tasks:
-  - init: pyenv local 3.8
+  - init: pyenv local 3.9
   - init: pip install -e .[dev]
 
 github:
