@@ -1,9 +1,91 @@
 [build-system]
+build-backend = "setuptools.build_meta"
 requires = [
-    "setuptools>=36.2.1", # environment markers
+    "setuptools>=61.2",
     "setuptools_scm",
-    "wheel",
 ]
+
+[project]
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python",
+    "Topic :: Scientific/Engineering :: Physics",
+    "Topic :: Scientific/Engineering",
+]
+description = "Documentation of the BESIII Offline Software System"
+dynamic = ["version"]
+keywords = [
+    "BESIII",
+    "HEP",
+    "IHEP",
+    "particle physics",
+    "particles",
+    "physics",
+]
+license = {text = "GPLv3 or later"}
+name = "bossdoc"
+requires-python = ">=3.7"
+
+[project.optional-dependencies]
+dev = [
+    "bossdoc[doc]",
+    "bossdoc[sty]",
+    "jupyterlab",
+    "jupyterlab-code-formatter",
+    "sphinx-autobuild",
+    "tox >=1.9",
+]
+doc = [
+    "Sphinx >=3",
+    "ipywidgets",
+    "matplotlib",
+    "myst-nb >=0.11", # myst_enable_extensions
+    "sphinx-book-theme",
+    "sphinx-comments",
+    "sphinx-copybutton",
+    "sphinx-design",
+    "sphinx-thebe",
+    "sphinx-togglebutton",
+    "sphinxcontrib-bibtex >=2",
+]
+format = [
+    "black",
+]
+lint = [
+    "ruff",
+]
+sty = [
+    "Sphinx",
+    "bossdoc[format]",
+    "bossdoc[lint]",
+    "docutils",
+    "pre-commit >=1.4.0",
+    "pybtex",
+]
+
+[project.readme]
+content-type = "text/markdown"
+file = "README.md"
+
+[project.urls]
+Changelog = "https://github.com/redeboer/bossdoc/releases"
+Documentation = "http://bes3.rtfd.io"
+Source = "https://github.com/redeboer/bossdoc"
+Tracker = "https://github.com/redeboer/bossdoc/issues"
+
+[tool.setuptools]
+include-package-data = false
 
 [tool.setuptools_scm]
 write_to = "version.py"
@@ -25,12 +107,11 @@ exclude = '''
 include = '\.pyi?$'
 preview = true
 target-version = [
-    'py310',
-    'py311',
-    'py36',
-    'py37',
-    'py38',
-    'py39',
+    "py310",
+    "py311",
+    "py37",
+    "py38",
+    "py39",
 ]
 
 [tool.pyright]
@@ -69,6 +150,7 @@ extend-select = [
     "D",
     "EM",
     "ERA",
+    "FA",
     "I",
     "ICN",
     "INP",
