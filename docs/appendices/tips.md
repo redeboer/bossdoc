@@ -93,7 +93,7 @@ In addition, you may need to set the remote platform to `"linux"`:
 where `"lxslc7.ihep.ac.cn"` is the name of the host in your
 [SSH Config file](https://man7.org/linux/man-pages/man5/ssh_config.5.html).
 
-::::{tip}
+:::::{tip}
 
 VSCode Remote SSH installs some files into your home directory on the server, in a
 folder called `.vscode-server`. This will not work if you experience this (rather
@@ -101,7 +101,8 @@ common) problem: {ref}`read-write-access`. It is therefore recommended that you 
 `.vscode-server` folder to a directory where you always have read-write access and then
 create a symbolic link to that folder in your actual home folder. Do this as follows:
 
-:::{tabbed} .vscode-server does not yet exist
+::::{tab-set}
+:::{tab-item} `.vscode-server` does not yet exist
 
 ```shell
 cd ~
@@ -111,7 +112,7 @@ ln -s /besfs5/users/$USER/.vscode-server
 
 :::
 
-:::{tabbed} .vscode-server already exists
+:::{tab-item} `.vscode-server` already exists
 
 ```shell
 cd ~
@@ -120,12 +121,12 @@ ln -s /besfs5/users/$USER/.vscode-server
 ```
 
 :::
+::::
 
 Another major advantage of this set-up is that you won't have problems with
 [data quota](../tutorials/getting-started/data-quota.md) when the
 `.vscode-server` grows over time.
-
-::::
+:::::
 
 ### Language navigation for BOSS
 
