@@ -86,7 +86,7 @@ nest-asyncio==1.5.9
 nodeenv==1.8.0
 notebook-shim==0.2.3
 numpy==1.26.3
-overrides==7.5.0
+overrides==7.6.0
 packaging==23.2
 pandocfilters==1.5.1
 parso==0.8.3
