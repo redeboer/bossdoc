@@ -12,7 +12,6 @@ attrs==23.2.0
 babel==2.14.0
 backcall==0.2.0
 beautifulsoup4==4.12.3
-black==24.2.0
 bleach==6.1.0
 cachetools==5.3.3
 certifi==2024.2.2
@@ -77,7 +76,6 @@ matplotlib-inline==0.1.6
 mdit-py-plugins==0.3.5
 mdurl==0.1.2
 mistune==3.0.2
-mypy-extensions==1.0.0
 myst-nb==0.17.2
 myst-parser==0.18.1
 nbclient==0.7.4
@@ -91,7 +89,6 @@ overrides==7.7.0
 packaging==24.0
 pandocfilters==1.5.1
 parso==0.8.3
-pathspec==0.12.1
 pexpect==4.9.0
 pickleshare==0.7.5
 pillow==10.2.0
