@@ -62,15 +62,13 @@ doc = [
     "sphinx-togglebutton",
     "sphinxcontrib-bibtex >=2",
 ]
-lint = [
-    "ruff",
-    "sphinx-api-relink",
-]
 sty = [
-    "bossdoc[format]",
-    "bossdoc[lint]",
+    "bossdoc[types]",
     "pre-commit >=1.4.0",
     "ruff",
+]
+types = [
+    "sphinx-api-relink",
 ]
 
 [project.readme]
