@@ -76,6 +76,7 @@ linkcheck_anchors = False
 linkcheck_ignore = [
     "http://code.ihep.ac.cn/redeboer/IniSelect",
     "http://www.cmtsite.net",
+    "https://dayabay.bnl.gov",
     "https://github.com/redeboer/BOSS_IniSelect_ORIGINAL",
     "https://scientificlinux.org",
     "https://www.putty.org",
