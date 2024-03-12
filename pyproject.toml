@@ -116,9 +116,13 @@ typeCheckingMode = "strict"
 
 [tool.ruff]
 extend-exclude = ["typings"]
+preview = true
 show-fixes = true
 target-version = "py37"
-preview = true
+
+[tool.ruff.format]
+docstring-code-format = true
+line-ending = "lf"
 
 [tool.ruff.lint]
 extend-select = [
@@ -171,6 +175,9 @@ ignore = [
 ]
 task-tags = ["cspell"]
 
+[tool.ruff.lint.isort]
+split-on-trailing-comma = false
+
 [tool.ruff.lint.per-file-ignores]
 "docs/*" = [
     "E402",
@@ -191,11 +198,6 @@ task-tags = ["cspell"]
 [tool.ruff.lint.pydocstyle]
 convention = "google"
 
-[tool.ruff.lint.isort]
-split-on-trailing-comma = false
-[tool.ruff.format]
-docstring-code-format = true
-line-ending = "lf"
 [tool.tomlsort]
 all = false
 ignore_case = true
