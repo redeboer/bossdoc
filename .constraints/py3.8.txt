@@ -43,7 +43,7 @@ identify==2.5.35
 idna==3.6
 imagesize==1.4.1
 importlib-metadata==7.0.2
-importlib-resources==6.2.0
+importlib-resources==6.3.0
 ipykernel==6.29.3
 ipython==8.12.3
 ipywidgets==8.1.2
