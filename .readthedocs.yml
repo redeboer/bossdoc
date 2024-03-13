@@ -15,5 +15,5 @@ build:
   jobs:
     post_install:
       - curl -LsSf https://astral.sh/uv/install.sh | sh
-      - /home/docs/.cargo/bin/uv pip install --system -c .constraints/py3.9.txt -e
-        .[doc]
+      - export PATH=/home/docs/.cargo/bin:$PATH
+      - uv pip install --system -c .constraints/py3.9.txt -e .[doc]
