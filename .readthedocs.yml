@@ -14,4 +14,6 @@ build:
     python: "3.9"
   jobs:
     post_install:
-      - pip install -c .constraints/py3.9.txt -e .[doc]
+      - curl -LsSf https://astral.sh/uv/install.sh | sh
+      - source $HOME/.cargo/env
+      - uv pip install --system -c .constraints/py3.9.txt -e .[doc]
