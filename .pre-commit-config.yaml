@@ -65,6 +65,7 @@ repos:
           - --keep-issue-templates
           - --no-notebooks
           - --no-prettierrc
+          - --pin-requirements=quarterly
           - --repo-name=bossdoc
           - --repo-title=BOSS Documentation
 
