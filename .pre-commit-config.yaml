@@ -12,6 +12,13 @@ repos:
       - id: check-hooks-apply
       - id: check-useless-excludes
 
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.3.2
+    hooks:
+      - id: ruff
+        args: [--fix]
+      - id: ruff-format
+
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.5.0
     hooks:
@@ -32,11 +39,6 @@ repos:
       - id: mixed-line-ending
       - id: trailing-whitespace
 
-  - repo: https://github.com/psf/black-pre-commit-mirror
-    rev: 23.12.1
-    hooks:
-      - id: black
-
   - repo: https://github.com/pre-commit/mirrors-prettier
     rev: v4.0.0-alpha.8
     hooks:
@@ -55,20 +57,20 @@ repos:
         exclude: (?x)^(labels.*\.toml)$
 
   - repo: https://github.com/ComPWA/policy
-    rev: 0.2.3
+    rev: 0.3.1
     hooks:
       - id: check-dev-files
         args:
           - --allow-labels
-          - --ignore-author
           - --keep-issue-templates
           - --no-notebooks
           - --no-prettierrc
+          - --pin-requirements=quarterly
           - --repo-name=bossdoc
           - --repo-title=BOSS Documentation
 
   - repo: https://github.com/streetsidesoftware/cspell-cli
-    rev: v8.3.0
+    rev: v8.6.0
     hooks:
       - id: cspell
 
@@ -84,13 +86,6 @@ repos:
           )$
 
   - repo: https://github.com/ComPWA/mirrors-pyright
-    rev: v1.1.345
+    rev: v1.1.353
     hooks:
       - id: pyright
-
-  - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.1.13
-    hooks:
-      - id: ruff
-        args:
-          - --fix
