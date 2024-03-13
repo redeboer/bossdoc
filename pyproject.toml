@@ -6,6 +6,9 @@ requires = [
 ]
 
 [project]
+authors = [
+    {name = "Common Partial Wave Analysis", email = "compwa-admin@ep1.rub.de"},
+]
 classifiers = [
     "Development Status :: 2 - Pre-Alpha",
     "Intended Audience :: Developers",
@@ -37,9 +40,6 @@ keywords = [
 license = {text = "GPLv3 or later"}
 name = "bossdoc"
 requires-python = ">=3.7"
-authors = [
-    {name = "Common Partial Wave Analysis",email = "compwa-admin@ep1.rub.de"},
-]
 
 [project.optional-dependencies]
 dev = [
