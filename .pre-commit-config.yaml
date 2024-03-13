@@ -62,7 +62,6 @@ repos:
       - id: check-dev-files
         args:
           - --allow-labels
-          - --ignore-author
           - --keep-issue-templates
           - --no-notebooks
           - --no-prettierrc
