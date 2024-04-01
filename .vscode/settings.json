@@ -3,11 +3,14 @@
     "editor.formatOnSave": false
   },
   "[git-commit]": {
-    "editor.rulers": [72],
+    "editor.rulers": [
+      72
+    ],
     "rewrap.wrappingColumn": 72
   },
   "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.wordWrap": "on"
   },
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -23,7 +26,9 @@
       "source.organizeImports": "explicit"
     },
     "editor.defaultFormatter": "charliermarsh.ruff",
-    "editor.rulers": [88]
+    "editor.rulers": [
+      88
+    ]
   },
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -38,7 +43,9 @@
     "**/.tox/**": true
   },
   "git.rebaseWhenSync": true,
-  "github-actions.workflows.pinned.workflows": [".github/workflows/ci.yml"],
+  "github-actions.workflows.pinned.workflows": [
+    ".github/workflows/ci.yml"
+  ],
   "gitlens.telemetry.enabled": false,
   "livePreview.defaultPreviewPath": "docs/_build/html",
   "multiDiffEditor.experimental.enabled": true,
@@ -46,7 +53,10 @@
     "notebook.source.organizeImports": "explicit"
   },
   "notebook.formatOnSave.enabled": true,
-  "python.testing.pytestArgs": ["--color=no", "--no-cov"],
+  "python.testing.pytestArgs": [
+    "--color=no",
+    "--no-cov"
+  ],
   "python.testing.pytestEnabled": false,
   "python.testing.unittestEnabled": false,
   "redhat.telemetry.enabled": false,
