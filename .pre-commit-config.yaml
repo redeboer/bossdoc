@@ -13,7 +13,7 @@ repos:
       - id: check-useless-excludes
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.3.2
+    rev: v0.3.5
     hooks:
       - id: ruff
         args: [--fix]
@@ -57,7 +57,7 @@ repos:
         exclude: (?x)^(labels.*\.toml)$
 
   - repo: https://github.com/ComPWA/policy
-    rev: 0.3.1
+    rev: 0.3.4
     hooks:
       - id: check-dev-files
         args:
@@ -65,12 +65,13 @@ repos:
           - --keep-issue-templates
           - --no-notebooks
           - --no-prettierrc
+          - --no-pypi
           - --pin-requirements=quarterly
           - --repo-name=bossdoc
           - --repo-title=BOSS Documentation
 
   - repo: https://github.com/streetsidesoftware/cspell-cli
-    rev: v8.6.0
+    rev: v8.6.1
     hooks:
       - id: cspell
 
@@ -86,6 +87,6 @@ repos:
           )$
 
   - repo: https://github.com/ComPWA/mirrors-pyright
-    rev: v1.1.353
+    rev: v1.1.357
     hooks:
       - id: pyright
