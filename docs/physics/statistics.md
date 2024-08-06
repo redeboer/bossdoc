@@ -5,6 +5,6 @@ Overview of systematic error studies in BESIII: <br>
 
 - By far, the most comprehensive overview of statistical procedures in an experiment
   comparable to BESIII is the document
-  [Recommended Statistical Procedures for BaBar](https://www.slac.stanford.edu/BFROOT/www/Statistics/Report/report.pdf).
+  [Recommended Statistical Procedures for BaBar](https://babar.heprc.uvic.ca/BFROOT/www/Statistics/Report/report.pdf).
 - For a more theoretical treatment of statistic in high-energy physics, see section
   ["39. Statistics" in the PDG (2018)](http://pdg.lbl.gov/2018/reviews/rpp2018-rev-statistics.pdf).
