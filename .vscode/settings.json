@@ -47,6 +47,7 @@
     "notebook.source.organizeImports": "explicit"
   },
   "notebook.formatOnSave.enabled": true,
+  "python.terminal.activateEnvironment": false,
   "python.testing.pytestArgs": ["--color=no", "--no-cov"],
   "python.testing.pytestEnabled": false,
   "python.testing.unittestEnabled": false,
