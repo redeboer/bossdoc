@@ -57,7 +57,7 @@ repos:
         exclude: (?x)^(labels.*\.toml)$
 
   - repo: https://github.com/ComPWA/policy
-    rev: 0.3.17
+    rev: 0.3.18
     hooks:
       - id: check-dev-files
         args:
