@@ -16,6 +16,7 @@ repos:
       - id: check-dev-files
         args:
           - --allow-labels
+          - --dev-python-version=3.12
           - --keep-issue-templates
           - --no-notebooks
           - --no-prettierrc

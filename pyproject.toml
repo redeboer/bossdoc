@@ -97,7 +97,7 @@ platforms = ["linux-64"]
 PRETTIER_LEGACY_CLI = "1"
 
 [tool.pixi.dependencies]
-python = "3.9.*"
+python = "3.12.*"
 
 [tool.pixi.environments]
 default = {features = [
