@@ -81,6 +81,7 @@ linkcheck_ignore = [
     "https://github.com/redeboer/BOSS_IniSelect_ORIGINAL",
     "https://scientificlinux.org",
     "https://www.putty.org",
+    "https://www.sciencedirect.com/science/article/pii/S0168900209023870",
     "https://www.tldp.org",
     r"http://[A-Za-z0-9]+\.ihep\.ac\.cn",
     r"http://[A-Za-z0-9]+\.ihep\.cas\.cn",
