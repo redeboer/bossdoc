@@ -8,6 +8,7 @@ from sphinx_api_relink.linkcode import (
 BRANCH = _get_commit_sha()
 REPO_NAME = "bossdoc"
 
+author = ""
 autosectionlabel_prefix_document = True
 bibtex_bibfiles = ["bibliography.bib"]
 bibtex_default_style = "unsrt_et_al"
