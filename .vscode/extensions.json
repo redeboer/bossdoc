@@ -8,6 +8,7 @@
     "executablebookproject.myst-highlight",
     "github.vscode-github-actions",
     "github.vscode-pull-request-github",
+    "mhutchie.git-graph",
     "ms-python.python",
     "ms-vscode.live-server",
     "redhat.vscode-yaml",

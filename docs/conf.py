@@ -8,6 +8,7 @@ from sphinx_api_relink.linkcode import (
 BRANCH = _get_commit_sha()
 REPO_NAME = "bossdoc"
 
+author = ""
 autosectionlabel_prefix_document = True
 bibtex_bibfiles = ["bibliography.bib"]
 bibtex_default_style = "unsrt_et_al"
@@ -80,6 +81,7 @@ linkcheck_ignore = [
     "https://github.com/redeboer/BOSS_IniSelect_ORIGINAL",
     "https://scientificlinux.org",
     "https://www.putty.org",
+    "https://www.sciencedirect.com/science/article/pii/S0168900209023870",
     "https://www.tldp.org",
     r"http://[A-Za-z0-9]+\.ihep\.ac\.cn",
     r"http://[A-Za-z0-9]+\.ihep\.cas\.cn",
