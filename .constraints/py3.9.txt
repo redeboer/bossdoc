@@ -121,7 +121,7 @@ snowballstemmer==2.2.0
 soupsieve==2.6
 sphinx==7.4.7
 sphinx-api-relink==0.0.9
-sphinx-autobuild==2024.9.17
+sphinx-autobuild==2024.9.18
 sphinx-book-theme==1.1.3
 sphinx-comments==0.0.3
 sphinx-copybutton==0.5.2
