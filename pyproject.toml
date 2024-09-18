@@ -113,10 +113,11 @@ depends_on = ["docnb", "linkcheck", "sty"]
 [tool.pixi.feature.dev.tasks.doc]
 cmd = """
 sphinx-build \
+    --builder dirhtml \
     --color \
+    --fail-on-warning \
     --keep-going \
-    -TW \
-    -b dirhtml \
+    --show-traceback \
     docs/ docs/_build/html
 """
 env = {PYTHONWARNINGS = ""}
@@ -124,11 +125,14 @@ env = {PYTHONWARNINGS = ""}
 [tool.pixi.feature.dev.tasks.doclive]
 cmd = """
 sphinx-autobuild \
+    --builder dirhtml \
     --open-browser \
-    --re-ignore .*/.ipynb_checkpoints/.* \
     --re-ignore .*/__pycache__/.* \
+    --re-ignore .*/.ipynb_checkpoints/.* \
     --re-ignore .*\\.gitignore \
     --re-ignore .*\\.tmp \
+    --re-ignore docs/_build/.* \
+    --re-ignore docs/_images/.* \
     --re-ignore docs/.*\\.csv \
     --re-ignore docs/.*\\.gif \
     --re-ignore docs/.*\\.gv \
@@ -139,12 +143,9 @@ sphinx-autobuild \
     --re-ignore docs/.*\\.svg \
     --re-ignore docs/.*\\.yaml \
     --re-ignore docs/.*\\.yml \
-    --re-ignore docs/_build/.* \
-    --re-ignore docs/_images/.* \
     --re-ignore docs/api/.* \
     --watch docs \
     --watch src \
-    -b dirhtml \
     docs/ docs/_build/html
 """
 env = {PYTHONWARNINGS = ""}
@@ -156,9 +157,9 @@ env = {EXECUTE_NB = "\"yes\""}
 [tool.pixi.feature.dev.tasks.linkcheck]
 cmd = """
 sphinx-build \
+    --builder linkcheck \
     --color \
-    -T \
-    -b linkcheck \
+    --show-traceback \
     docs/ docs/_build/linkcheck
 """
 env = {PYTHONWARNINGS = ""}
