@@ -91,8 +91,6 @@ control system comparable to Subversion and Git.
 
 More information:
 
-- [An accessible introduction to CVS](http://polywww.in2p3.fr/activites/physique/glast/workbook/pages/softwareOverview/cvsBasics.htm)
-
-- [Commonly used CVS commands](http://polywww.in2p3.fr/activites/physique/glast/workbook/pages/softwareOverview/commonCVScommands.htm)
-
+- [An accessible introduction to CVS](https://www.gnu.org/software/trans-coord/manual/cvs/html_node/index.html)
+- [Commonly used CVS commands](https://www.gnu.org/software/trans-coord/manual/cvs/html_node/CVS-commands.html)
 - [Wikipedia on CVS](https://en.wikipedia.org/wiki/Concurrent_Versions_System)
