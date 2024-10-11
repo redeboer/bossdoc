@@ -76,6 +76,7 @@ intersphinx_mapping = {
 linkcheck_anchors = False
 linkcheck_ignore = [
     "http://code.ihep.ac.cn/redeboer/IniSelect",
+    "http://polywww.in2p3.fr",
     "http://www.cmtsite.net",
     "https://dayabay.bnl.gov",
     "https://github.com/redeboer/BOSS_IniSelect_ORIGINAL",
