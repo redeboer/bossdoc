@@ -1,8 +1,9 @@
 ci:
-  autoupdate_commit_msg: "MAINT: update pip constraints and pre-commit"
+  autoupdate_commit_msg: "MAINT: update lock files"
   autoupdate_schedule: quarterly
   skip:
     - pyright
+    - uv-lock
 
 repos:
   - repo: meta
@@ -11,29 +12,26 @@ repos:
       - id: check-useless-excludes
 
   - repo: https://github.com/ComPWA/policy
-    rev: 0.4.0
+    rev: 0.5.0
     hooks:
       - id: check-dev-files
         args:
           - --allow-labels
-          - --dev-python-version=3.12
           - --keep-issue-templates
-          - --no-notebooks
-          - --no-prettierrc
+          - --no-cd
           - --no-pypi
-          - --pin-requirements=quarterly
           - --repo-name=bossdoc
           - --repo-title=BOSS Documentation
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.6.5
+    rev: v0.7.0
     hooks:
       - id: ruff
         args: [--fix]
       - id: ruff-format
 
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.6.0
+    rev: v5.0.0
     hooks:
       - id: check-ast
       - id: check-case-conflict
@@ -70,7 +68,7 @@ repos:
         exclude: (?x)^(labels.*\.toml)$
 
   - repo: https://github.com/streetsidesoftware/cspell-cli
-    rev: v8.13.3
+    rev: v8.15.2
     hooks:
       - id: cspell
 
@@ -85,7 +83,12 @@ repos:
             .*\.py
           )$
 
-  - repo: https://github.com/ComPWA/mirrors-pyright
-    rev: v1.1.380
+  - repo: https://github.com/ComPWA/pyright-pre-commit
+    rev: v1.1.385
     hooks:
       - id: pyright
+
+  - repo: https://github.com/astral-sh/uv-pre-commit
+    rev: 0.4.24
+    hooks:
+      - id: uv-lock

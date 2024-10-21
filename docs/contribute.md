@@ -38,18 +38,17 @@ need to have [Python](https://www.python.org) installed. The pages are written i
 [Markedly Structured Text (MyST)](https://myst-parser.readthedocs.io), an extended form
 of [Markdown](https://en.wikipedia.org/wiki/Markdown).
 
-The easiest way to develop these pages is by using
-[Conda](https://conda.io/projects/conda/en/latest/user-guide/install/index.html) and
-[Visual Studio Code](https://code.visualstudio.com). Conda manages
+The easiest way to develop these pages is by using [`uv`](https://docs.astral.sh/uv/) and
+[Visual Studio Code](https://code.visualstudio.com). `uv` manages
 [virtual environments](https://realpython.com/python-virtual-environments-a-primer), so
 that the Python packages that are required to work on the documentation can be easily
 removed or updated. Once you have those installed, it's simply a matter of running:
 
 ```bash
-git clone https://github.com/redeboer/bossdoc.git
+git clone https://github.com/redeboer/bossdoc
 cd bossdoc
-conda env create  # install required packages
-conda activate bossdoc
+uv sync --extra dev
+source .venv/bin/activate
 pre-commit install
 code .
 ```
