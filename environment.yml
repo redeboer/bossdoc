@@ -1,8 +1,0 @@
-name: bossdoc
-channels:
-  - defaults
-dependencies:
-  - python==3.12.*
-  - pip
-  - pip:
-      - -c .constraints/py3.12.txt -e .[dev]

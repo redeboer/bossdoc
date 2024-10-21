@@ -32,10 +32,6 @@
   "cSpell.enabled": true,
   "diffEditor.experimental.showMoves": true,
   "editor.formatOnSave": true,
-  "files.associations": {
-    "**/.constraints/py*.txt": "pip-requirements",
-    "**/pixi.lock": "yaml"
-  },
   "files.watcherExclude": {
     "**/*_cache/**": true,
     "**/.eggs/**": true,
@@ -61,9 +57,8 @@
   "ruff.importStrategy": "fromEnvironment",
   "ruff.organizeImports": true,
   "search.exclude": {
-    "**/.constraints/py*.txt": true,
     "**/tests/**/__init__.py": true,
-    "*/tox.ini": true
+    "**/uv.lock": true
   },
   "telemetry.telemetryLevel": "off"
 }
