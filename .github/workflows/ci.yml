@@ -28,7 +28,7 @@ on:
 
 jobs:
   doc:
-    uses: ComPWA/actions/.github/workflows/ci-docs.yml@v2
+    uses: ComPWA/actions/.github/workflows/ci-docs.yml@v2.1
     permissions:
       pages: write
       id-token: write
@@ -38,4 +38,4 @@ jobs:
     if: inputs.specific-pip-packages == ''
     secrets:
       token: ${{ secrets.PAT }}
-    uses: ComPWA/actions/.github/workflows/pre-commit.yml@v2
+    uses: ComPWA/actions/.github/workflows/pre-commit.yml@v2.1

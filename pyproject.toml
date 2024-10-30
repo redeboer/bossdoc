@@ -20,39 +20,6 @@ license = {text = "GPLv3 or later"}
 name = "bossdoc"
 requires-python = ">=3.12"
 
-[project.optional-dependencies]
-dev = [
-    "bossdoc[doc]",
-    "bossdoc[sty]",
-    "jupyterlab",
-    "jupyterlab-code-formatter",
-    "sphinx-autobuild",
-    "tox >=1.9",
-]
-doc = [
-    "Sphinx >=3",
-    "ipywidgets",
-    "matplotlib",
-    "myst-nb",
-    "sphinx-api-relink",
-    "sphinx-book-theme",
-    "sphinx-comments",
-    "sphinx-copybutton",
-    "sphinx-design",
-    "sphinx-pybtex-etal-style",
-    "sphinx-thebe",
-    "sphinx-togglebutton",
-    "sphinxcontrib-bibtex >=2",
-]
-sty = [
-    "bossdoc[types]",
-    "pre-commit-uv",
-    "ruff",
-]
-types = [
-    "sphinx-api-relink",
-]
-
 [project.readme]
 content-type = "text/markdown"
 file = "README.md"
@@ -62,6 +29,27 @@ Changelog = "https://github.com/redeboer/bossdoc/releases"
 Documentation = "http://bes3.rtfd.io"
 Source = "https://github.com/redeboer/bossdoc"
 Tracker = "https://github.com/redeboer/bossdoc/issues"
+
+[dependency-groups]
+dev = [
+    "ruff",
+    "sphinx-autobuild",
+    {include-group = "doc"},
+    {include-group = "style"},
+]
+doc = [
+    "myst-parser",
+    "sphinx",
+    "sphinx-api-relink",
+    "sphinx-book-theme",
+    "sphinx-comments",
+    "sphinx-copybutton",
+    "sphinx-design",
+    "sphinx-pybtex-etal-style",
+    "sphinx-togglebutton",
+    "sphinxcontrib-bibtex >=2",
+]
+style = ["sphinx-api-relink"]
 
 [tool.setuptools]
 include-package-data = false

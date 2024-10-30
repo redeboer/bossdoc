@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from sphinx_api_relink.helpers import get_execution_mode
 from sphinx_api_relink.linkcode import (
     _get_commit_sha,  # pyright:ignore[reportPrivateUsage]
 )
@@ -25,7 +24,7 @@ copybutton_prompt_text = r">>> |\.\.\. "
 copyright = "2020, BESIII"
 default_role = "py:obj"
 extensions = [
-    "myst_nb",
+    "myst_parser",
     "sphinx.ext.autosectionlabel",
     "sphinx.ext.intersphinx",
     "sphinx.ext.mathjax",
@@ -35,7 +34,6 @@ extensions = [
     "sphinx_copybutton",
     "sphinx_design",
     "sphinx_pybtex_etal_style",
-    "sphinx_thebe",
     "sphinx_togglebutton",
     "sphinxcontrib.bibtex",
 ]
@@ -51,13 +49,6 @@ html_show_copyright = False
 html_sourcelink_suffix = ""
 html_theme = "sphinx_book_theme"
 html_theme_options = {
-    "launch_buttons": {
-        "binderhub_url": "https://mybinder.org",
-        "colab_url": "https://colab.research.google.com",
-        "notebook_interface": "jupyterlab",
-        "thebe": True,
-        "thebelab": True,
-    },
     "path_to_docs": "docs",
     "repository_url": f"https://github.com/redeboer/{REPO_NAME}",
     "repository_branch": BRANCH,
@@ -97,18 +88,11 @@ myst_enable_extensions = [
     "smartquotes",
 ]
 myst_update_mathjax = False
-nb_execution_mode = get_execution_mode()
-nb_execution_timeout = -1
-nb_output_stderr = "remove"
 nitpicky = True  # warn if cross-references are missing
 panels_add_bootstrap_css = False  # remove panels css to get wider main content
 primary_domain = "py"
 project = "BESIII Offline Software System"
 pygments_style = "sphinx"
-thebe_config = {
-    "repository_url": html_theme_options["repository_url"],
-    "repository_branch": html_theme_options["repository_branch"],
-}
 todo_include_todos = True
 suppress_warnings = [
     "myst.domains",
