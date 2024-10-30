@@ -35,7 +35,6 @@ dev = [
     "ruff",
     "sphinx-autobuild",
     {include-group = "doc"},
-    {include-group = "jupyter"},
     {include-group = "style"},
 ]
 doc = [
@@ -50,14 +49,7 @@ doc = [
     "sphinx-thebe",
     "sphinx-togglebutton",
     "sphinxcontrib-bibtex >=2",
-    {include-group = "notebooks"},
 ]
-jupyter = [
-    "jupyterlab",
-    "jupyterlab-code-formatter",
-    {include-group = "notebooks"},
-]
-notebooks = ["matplotlib"]
 style = ["sphinx-api-relink"]
 
 [tool.setuptools]
