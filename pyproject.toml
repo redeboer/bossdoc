@@ -38,7 +38,7 @@ dev = [
     {include-group = "style"},
 ]
 doc = [
-    "myst-nb",
+    "myst-parser",
     "sphinx",
     "sphinx-api-relink",
     "sphinx-book-theme",

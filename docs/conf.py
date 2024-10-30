@@ -24,7 +24,7 @@ copybutton_prompt_text = r">>> |\.\.\. "
 copyright = "2020, BESIII"
 default_role = "py:obj"
 extensions = [
-    "myst_nb",
+    "myst_parser",
     "sphinx.ext.autosectionlabel",
     "sphinx.ext.intersphinx",
     "sphinx.ext.mathjax",
