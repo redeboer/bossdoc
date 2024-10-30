@@ -27,7 +27,6 @@ dev = [
     "jupyterlab",
     "jupyterlab-code-formatter",
     "sphinx-autobuild",
-    "tox >=1.9",
 ]
 doc = [
     "Sphinx >=3",
@@ -46,7 +45,6 @@ doc = [
 ]
 sty = [
     "bossdoc[types]",
-    "pre-commit-uv",
     "ruff",
 ]
 types = [
