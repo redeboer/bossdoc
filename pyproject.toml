@@ -46,7 +46,6 @@ doc = [
     "sphinx-copybutton",
     "sphinx-design",
     "sphinx-pybtex-etal-style",
-    "sphinx-thebe",
     "sphinx-togglebutton",
     "sphinxcontrib-bibtex >=2",
 ]

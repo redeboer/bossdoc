@@ -103,7 +103,6 @@ dev = [
     { name = "sphinx-copybutton" },
     { name = "sphinx-design" },
     { name = "sphinx-pybtex-etal-style" },
-    { name = "sphinx-thebe" },
     { name = "sphinx-togglebutton" },
     { name = "sphinxcontrib-bibtex" },
 ]
@@ -116,7 +115,6 @@ doc = [
     { name = "sphinx-copybutton" },
     { name = "sphinx-design" },
     { name = "sphinx-pybtex-etal-style" },
-    { name = "sphinx-thebe" },
     { name = "sphinx-togglebutton" },
     { name = "sphinxcontrib-bibtex" },
 ]
@@ -138,7 +136,6 @@ dev = [
     { name = "sphinx-copybutton" },
     { name = "sphinx-design" },
     { name = "sphinx-pybtex-etal-style" },
-    { name = "sphinx-thebe" },
     { name = "sphinx-togglebutton" },
     { name = "sphinxcontrib-bibtex", specifier = ">=2" },
 ]
@@ -151,7 +148,6 @@ doc = [
     { name = "sphinx-copybutton" },
     { name = "sphinx-design" },
     { name = "sphinx-pybtex-etal-style" },
-    { name = "sphinx-thebe" },
     { name = "sphinx-togglebutton" },
     { name = "sphinxcontrib-bibtex", specifier = ">=2" },
 ]
@@ -1200,18 +1196,6 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/f4/7e/cd4ed20410244e978ae28ec33f9085000224dbf336c3530a00afc46c05cb/sphinx-pybtex-etal-style-0.0.2.tar.gz", hash = "sha256:e77f540b6a63b61ec76e284e6a6f68a10e678c9f7dbb9d2d0e7732271744b236", size = 11393 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/2a/ec/eeea4ddb4d5e5610f7c991506a8e61db717a6d8cd38b86c040fc703d5aca/sphinx_pybtex_etal_style-0.0.2-py3-none-any.whl", hash = "sha256:a3d4bce1334ed85f54a303726fa3031e1083cf7760f1dd89a1ac598a7557d87f", size = 5761 },
-]
-
-[[package]]
-name = "sphinx-thebe"
-version = "0.3.1"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "sphinx" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/da/fd/926ba4af1eb2708b1ac0fa4376e4bfb11d9a32b2a00e3614137a569c1ddf/sphinx_thebe-0.3.1.tar.gz", hash = "sha256:576047f45560e82f64aa5f15200b1eb094dcfe1c5b8f531a8a65bd208e25a493", size = 20789 }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/ca/7c/a53bdb465fd364bc3d255d96d5d70e6ba5183cfb4e45b8aa91c59b099124/sphinx_thebe-0.3.1-py3-none-any.whl", hash = "sha256:e7e7edee9f0d601c76bc70156c471e114939484b111dd8e74fe47ac88baffc52", size = 9030 },
 ]
 
 [[package]]
