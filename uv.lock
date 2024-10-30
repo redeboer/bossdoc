@@ -159,9 +159,8 @@ name = "bossdoc"
 version = "0.0"
 source = { editable = "." }
 
-[package.optional-dependencies]
+[package.dependency-groups]
 dev = [
-    { name = "ipywidgets" },
     { name = "jupyterlab" },
     { name = "jupyterlab-code-formatter" },
     { name = "matplotlib" },
@@ -180,7 +179,6 @@ dev = [
     { name = "sphinxcontrib-bibtex" },
 ]
 doc = [
-    { name = "ipywidgets" },
     { name = "matplotlib" },
     { name = "myst-nb" },
     { name = "sphinx" },
@@ -194,38 +192,60 @@ doc = [
     { name = "sphinx-togglebutton" },
     { name = "sphinxcontrib-bibtex" },
 ]
-sty = [
-    { name = "ruff" },
-    { name = "sphinx-api-relink" },
+jupyter = [
+    { name = "jupyterlab" },
+    { name = "jupyterlab-code-formatter" },
+    { name = "matplotlib" },
 ]
-types = [
+notebooks = [
+    { name = "matplotlib" },
+]
+style = [
     { name = "sphinx-api-relink" },
 ]
 
 [package.metadata]
-requires-dist = [
-    { name = "bossdoc", extras = ["doc"], marker = "extra == 'dev'" },
-    { name = "bossdoc", extras = ["sty"], marker = "extra == 'dev'" },
-    { name = "bossdoc", extras = ["types"], marker = "extra == 'sty'" },
-    { name = "ipywidgets", marker = "extra == 'doc'" },
-    { name = "jupyterlab", marker = "extra == 'dev'" },
-    { name = "jupyterlab-code-formatter", marker = "extra == 'dev'" },
-    { name = "matplotlib", marker = "extra == 'doc'" },
-    { name = "myst-nb", marker = "extra == 'doc'" },
-    { name = "ruff", marker = "extra == 'sty'" },
-    { name = "sphinx", marker = "extra == 'doc'", specifier = ">=3" },
-    { name = "sphinx-api-relink", marker = "extra == 'doc'" },
-    { name = "sphinx-api-relink", marker = "extra == 'types'" },
-    { name = "sphinx-autobuild", marker = "extra == 'dev'" },
-    { name = "sphinx-book-theme", marker = "extra == 'doc'" },
-    { name = "sphinx-comments", marker = "extra == 'doc'" },
-    { name = "sphinx-copybutton", marker = "extra == 'doc'" },
-    { name = "sphinx-design", marker = "extra == 'doc'" },
-    { name = "sphinx-pybtex-etal-style", marker = "extra == 'doc'" },
-    { name = "sphinx-thebe", marker = "extra == 'doc'" },
-    { name = "sphinx-togglebutton", marker = "extra == 'doc'" },
-    { name = "sphinxcontrib-bibtex", marker = "extra == 'doc'", specifier = ">=2" },
+
+[package.metadata.dependency-groups]
+dev = [
+    { name = "jupyterlab" },
+    { name = "jupyterlab-code-formatter" },
+    { name = "matplotlib" },
+    { name = "myst-nb" },
+    { name = "ruff" },
+    { name = "sphinx" },
+    { name = "sphinx-api-relink" },
+    { name = "sphinx-autobuild" },
+    { name = "sphinx-book-theme" },
+    { name = "sphinx-comments" },
+    { name = "sphinx-copybutton" },
+    { name = "sphinx-design" },
+    { name = "sphinx-pybtex-etal-style" },
+    { name = "sphinx-thebe" },
+    { name = "sphinx-togglebutton" },
+    { name = "sphinxcontrib-bibtex", specifier = ">=2" },
 ]
+doc = [
+    { name = "matplotlib" },
+    { name = "myst-nb" },
+    { name = "sphinx" },
+    { name = "sphinx-api-relink" },
+    { name = "sphinx-book-theme" },
+    { name = "sphinx-comments" },
+    { name = "sphinx-copybutton" },
+    { name = "sphinx-design" },
+    { name = "sphinx-pybtex-etal-style" },
+    { name = "sphinx-thebe" },
+    { name = "sphinx-togglebutton" },
+    { name = "sphinxcontrib-bibtex", specifier = ">=2" },
+]
+jupyter = [
+    { name = "jupyterlab" },
+    { name = "jupyterlab-code-formatter" },
+    { name = "matplotlib" },
+]
+notebooks = [{ name = "matplotlib" }]
+style = [{ name = "sphinx-api-relink" }]
 
 [[package]]
 name = "certifi"
@@ -629,22 +649,6 @@ wheels = [
 ]
 
 [[package]]
-name = "ipywidgets"
-version = "8.1.5"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "comm" },
-    { name = "ipython" },
-    { name = "jupyterlab-widgets" },
-    { name = "traitlets" },
-    { name = "widgetsnbextension" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/c7/4c/dab2a281b07596a5fc220d49827fe6c794c66f1493d7a74f1df0640f2cc5/ipywidgets-8.1.5.tar.gz", hash = "sha256:870e43b1a35656a80c18c9503bbf2d16802db1cb487eec6fab27d683381dde17", size = 116723 }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/22/2d/9c0b76f2f9cc0ebede1b9371b6f317243028ed60b90705863d493bae622e/ipywidgets-8.1.5-py3-none-any.whl", hash = "sha256:3290f526f87ae6e77655555baba4f36681c555b8bdbbff430b70e52c34c86245", size = 139767 },
-]
-
-[[package]]
 name = "isoduration"
 version = "20.11.0"
 source = { registry = "https://pypi.org/simple" }
@@ -921,15 +925,6 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/0a/c9/a883ce65eb27905ce77ace410d83587c82ea64dc85a48d1f7ed52bcfa68d/jupyterlab_server-2.27.3.tar.gz", hash = "sha256:eb36caca59e74471988f0ae25c77945610b887f777255aa21f8065def9e51ed4", size = 76173 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/54/09/2032e7d15c544a0e3cd831c51d77a8ca57f7555b2e1b2922142eddb02a84/jupyterlab_server-2.27.3-py3-none-any.whl", hash = "sha256:e697488f66c3db49df675158a77b3b017520d772c6e1548c7d9bcc5df7944ee4", size = 59700 },
-]
-
-[[package]]
-name = "jupyterlab-widgets"
-version = "3.0.13"
-source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/59/73/fa26bbb747a9ea4fca6b01453aa22990d52ab62dd61384f1ac0dc9d4e7ba/jupyterlab_widgets-3.0.13.tar.gz", hash = "sha256:a2966d385328c1942b683a8cd96b89b8dd82c8b8f81dda902bb2bc06d46f5bed", size = 203556 }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/a9/93/858e87edc634d628e5d752ba944c2833133a28fa87bb093e6832ced36a3e/jupyterlab_widgets-3.0.13-py3-none-any.whl", hash = "sha256:e3cda2c233ce144192f1e29914ad522b2f4c40e77214b0cc97377ca3d323db54", size = 214392 },
 ]
 
 [[package]]
@@ -2249,15 +2244,6 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/b7/a0/95e9e962c5fd9da11c1e28aa4c0d8210ab277b1ada951d2aee336b505813/wheel-0.44.0.tar.gz", hash = "sha256:a29c3f2817e95ab89aa4660681ad547c0e9547f20e75b0562fe7723c9a2a9d49", size = 100733 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/1b/d1/9babe2ccaecff775992753d8686970b1e2755d21c8a63be73aba7a4e7d77/wheel-0.44.0-py3-none-any.whl", hash = "sha256:2376a90c98cc337d18623527a97c31797bd02bad0033d41547043a1cbfbe448f", size = 67059 },
-]
-
-[[package]]
-name = "widgetsnbextension"
-version = "4.0.13"
-source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/56/fc/238c424fd7f4ebb25f8b1da9a934a3ad7c848286732ae04263661eb0fc03/widgetsnbextension-4.0.13.tar.gz", hash = "sha256:ffcb67bc9febd10234a362795f643927f4e0c05d9342c727b65d2384f8feacb6", size = 1164730 }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/21/02/88b65cc394961a60c43c70517066b6b679738caf78506a5da7b88ffcb643/widgetsnbextension-4.0.13-py3-none-any.whl", hash = "sha256:74b2692e8500525cc38c2b877236ba51d34541e6385eeed5aec15a70f88a6c71", size = 2335872 },
 ]
 
 [[package]]
