@@ -126,5 +126,6 @@
     "venv",
     "workarea",
     "workfs"
-  ]
+  ],
+  "useGitignore": true
 }
