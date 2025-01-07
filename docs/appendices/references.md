@@ -33,11 +33,8 @@ The below list is not (yet) exhaustive
 
 - **Doxygen documentation:**
 
-  - [http://bes3.to.infn.it/Boss/7.0.2/html/classes.html](http://bes3.to.infn.it/Boss/7.0.2/html/classes.html)
-    (external)
-
-  - [https://boss.ihep.ac.cn/~offlinesoftware/MdcPatRecDoc04/classes.html](https://boss.ihep.ac.cn/~offlinesoftware/MdcPatRecDoc04/classes.html)
-    (`MdcPatRec` Class Index)
+  - [bes3.to.infn.it/Boss/7.0.2/html/classes.html](https://bes3.to.infn.it/Boss/7.0.2/html/classes.html) (external) <!-- cspell:ignore infn -->
+  - [boss.ihep.ac.cn/~offlinesoftware/MdcPatRecDoc04/classes.html](https://boss.ihep.ac.cn/~offlinesoftware/MdcPatRecDoc04/classes.html) (`MdcPatRec` Class Index) <!-- cspell:ignore offlinesoftware -->
 
 - **Some introductions to BOSS:**
 

@@ -78,7 +78,7 @@ documentation of `MctruthForTopo` for how these branches are typically called wi
 | `00-00-06` | $4,180$ MeV data                                        |
 
 See also
-[decayFromGenerator](http://bes3.to.infn.it/Boss/7.0.2/html/classEvent_1_1McParticle.html#675a3679ea082c13d4ca4ce1c5571b59)
+[decayFromGenerator](https://bes3.to.infn.it/Boss/7.0.2/html/classEvent_1_1McParticle.html#675a3679ea082c13d4ca4ce1c5571b59)
 
 All versions of `MctruthForTopo` can be found here on the IHEP server:
 
@@ -103,7 +103,7 @@ events** will be written to the `TTree` and no cut will be applied.
 
 The `TTree` containing Monte Carlo data that is needed for `topoana` is created by
 looping over the
-[Event::McParticleCol](http://bes3.to.infn.it/Boss/7.0.2/html/namespaceEvent.html#b6a28637c54f890ed93d8fd13d5021ed)
+[Event::McParticleCol](https://bes3.to.infn.it/Boss/7.0.2/html/namespaceEvent.html#b6a28637c54f890ed93d8fd13d5021ed)
 in each event and writing the branches described above. To gain a better understanding
 of what a package like `MctruthForTopo` does, let's have a look at the the contents of
 the MC truth particle collection in one event:
@@ -136,7 +136,7 @@ the MC truth particle collection in one event:
 A few remarks about what we see here:
 
 1. The structure of the decay chain is described by the index (see
-   [Event::McParticle::trackIndex](http://bes3.to.infn.it/Boss/7.0.2/html/classEvent_1_1McParticle.html#34dae94b0ed5f36b875f783e61f8efc9)).
+   [Event::McParticle::trackIndex](https://bes3.to.infn.it/Boss/7.0.2/html/classEvent_1_1McParticle.html#34dae94b0ed5f36b875f783e61f8efc9)).
    Each particle is labeled by this index and if there is a mother particle, it is
    'linked' to its daughter by its index.
 
@@ -176,13 +176,13 @@ addition, the selection of MC truth particles is only to contain:
 - Only particles that come from the generator. This means they are not background
   simulated in the detectors and that that they were included in the decay chain from
   the generator. (See
-  [Event::McParticle::decayFromGenerator](http://bes3.to.infn.it/Boss/7.0.2/html/classEvent_1_1McParticle.html#675a3679ea082c13d4ca4ce1c5571b59).)
+  [Event::McParticle::decayFromGenerator](https://bes3.to.infn.it/Boss/7.0.2/html/classEvent_1_1McParticle.html#675a3679ea082c13d4ca4ce1c5571b59).)
   In this case, this means that everything that comes after the decay of $D^0$ and
   $\phi$ is to be excluded, because the $\mu^+$ and $K^+$ decays take place outside the
   BESIII detector.
 
 - Only particles that have a mother particle (is not
-  [primaryParticle](http://bes3.to.infn.it/Boss/7.0.2/html/classEvent_1_1McParticle.html#f225ad5eb24b49e277349c3ec2dd297e)).
+  [primaryParticle](https://bes3.to.infn.it/Boss/7.0.2/html/classEvent_1_1McParticle.html#f225ad5eb24b49e277349c3ec2dd297e)).
 
 In table format, with these conventions, the result that should be stored for the
 `topoana` package would be:
