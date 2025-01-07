@@ -68,13 +68,7 @@ linkcheck_anchors = False
 linkcheck_ignore = [
     "http://polywww.in2p3.fr",
     "http://www.cmtsite.net",
-    "https://code.ihep.ac.cn/redeboer/IniSelect",
-    "https://dayabay.bnl.gov",
-    "https://github.com/redeboer/BOSS_IniSelect_ORIGINAL",
-    "https://scientificlinux.org",
-    "https://www.putty.org",
     "https://www.sciencedirect.com/science/article/pii/S0168900209023870",
-    "https://www.tldp.org",
     r"http://[A-Za-z0-9]+\.ihep\.ac\.cn",
     r"http://[A-Za-z0-9]+\.ihep\.cas\.cn",
     r"http://[A-Za-z0-9]+\.ucas\.ac\.cn",
