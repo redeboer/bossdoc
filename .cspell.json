@@ -1,5 +1,4 @@
 {
-  "version": "0.2",
   "enableFiletypes": [
     "git-commit",
     "github-actions-workflow",
@@ -35,33 +34,6 @@
     "pyproject.toml",
     "tox.ini",
     "typings"
-  ],
-  "language": "en-US",
-  "words": [
-    "arXiv",
-    "bepc",
-    "breit",
-    "cern",
-    "charmonium",
-    "chebychev",
-    "clhep",
-    "cmake",
-    "dalitz",
-    "doxygen",
-    "flatt",
-    "flatté",
-    "gitlab",
-    "ihep",
-    "INFN",
-    "jupyter",
-    "kalman",
-    "parametrizations",
-    "prepend",
-    "PyPA",
-    "PyPI",
-    "tensorflow",
-    "ucas",
-    "voigtian"
   ],
   "ignoreWords": [
     "BOSSVERSION",
@@ -130,5 +102,33 @@
     "workarea",
     "workfs"
   ],
-  "useGitignore": true
+  "language": "en-US",
+  "useGitignore": true,
+  "version": "0.2",
+  "words": [
+    "arXiv",
+    "bepc",
+    "breit",
+    "cern",
+    "charmonium",
+    "chebychev",
+    "clhep",
+    "cmake",
+    "dalitz",
+    "doxygen",
+    "flatt",
+    "flatté",
+    "gitlab",
+    "ihep",
+    "INFN",
+    "jupyter",
+    "kalman",
+    "parametrizations",
+    "prepend",
+    "PyPA",
+    "PyPI",
+    "tensorflow",
+    "ucas",
+    "voigtian"
+  ]
 }
