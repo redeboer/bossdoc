@@ -25,16 +25,16 @@ copyright = "2020, BESIII"
 default_role = "py:obj"
 extensions = [
     "myst_parser",
-    "sphinx.ext.autosectionlabel",
-    "sphinx.ext.intersphinx",
-    "sphinx.ext.mathjax",
-    "sphinx.ext.todo",
     "sphinx_api_relink",
     "sphinx_comments",
     "sphinx_copybutton",
     "sphinx_design",
     "sphinx_pybtex_etal_style",
     "sphinx_togglebutton",
+    "sphinx.ext.autosectionlabel",
+    "sphinx.ext.intersphinx",
+    "sphinx.ext.mathjax",
+    "sphinx.ext.todo",
     "sphinxcontrib.bibtex",
 ]
 exclude_patterns = [
@@ -93,7 +93,7 @@ panels_add_bootstrap_css = False  # remove panels css to get wider main content
 primary_domain = "py"
 project = "BESIII Offline Software System"
 pygments_style = "sphinx"
-todo_include_todos = True
 suppress_warnings = [
     "myst.domains",
 ]
+todo_include_todos = True
