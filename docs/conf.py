@@ -97,3 +97,4 @@ suppress_warnings = [
     "myst.domains",
 ]
 todo_include_todos = True
+tls_verify = False
