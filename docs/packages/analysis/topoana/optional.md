@@ -105,7 +105,7 @@ This field allows you to generate separate tables of decays involving a certain 
 The lines should be numbered. The first line represents the initial state in a certain
 process, the following lines list the decay products you want to limit yourself to. The
 string $+ \text{anything}$ will be added automatically (see terminal output). See
-[here](http://code.ihep.ac.cn/redeboer/IniSelect/-/tree/master/workarea/Analysis/TopoAna/v1.6.9/tutorials/ta3_extensions/ta32/ta322/ccbar_topoana.card)
+[here](https://code.ihep.ac.cn/redeboer/IniSelect/-/tree/master/workarea/Analysis/TopoAna/v1.6.9/tutorials/ta3_extensions/ta32/ta322/ccbar_topoana.card)
 for an example of syntax.
 
 ## Signal fields
@@ -129,40 +129,40 @@ Naturally, the order of the decay particles does not matter. The syntax is as fo
 - You can name several inclusive decay states by starting each series with a `0` again.
 
 - See an example for the syntax
-  [here](http://code.ihep.ac.cn/redeboer/IniSelect/-/tree/master/workarea/Analysis/TopoAna/v1.6.9/tutorials/ta4_signals/ta42_sig_inc_evt_brs/ta423/uubar_topoana.card).
+  [here](https://code.ihep.ac.cn/redeboer/IniSelect/-/tree/master/workarea/Analysis/TopoAna/v1.6.9/tutorials/ta4_signals/ta42_sig_inc_evt_brs/ta423/uubar_topoana.card).
 
 ### Signal sequential decay branches
 
 See
-[here](http://code.ihep.ac.cn/redeboer/IniSelect/-/tree/master/workarea/Analysis/TopoAna/v1.6.9/tutorials/ta4_signals/ta43_sig_seq_evt_brs/ta431_3_2/mixed_topoana.card)
+[here](https://code.ihep.ac.cn/redeboer/IniSelect/-/tree/master/workarea/Analysis/TopoAna/v1.6.9/tutorials/ta4_signals/ta43_sig_seq_evt_brs/ta431_3_2/mixed_topoana.card)
 for an example of syntax.
 
 ### Signal inclusive sequential decay branches
 
 See an example of syntax
-[here](http://code.ihep.ac.cn/redeboer/IniSelect/-/tree/master/workarea/Analysis/TopoAna/v1.6.9/tutorials/ta4_signals/ta44_sig_inc_seq_evt_brs/ta441/Dz2KsPiPi_topoana.card).
+[here](https://code.ihep.ac.cn/redeboer/IniSelect/-/tree/master/workarea/Analysis/TopoAna/v1.6.9/tutorials/ta4_signals/ta44_sig_inc_seq_evt_brs/ta441/Dz2KsPiPi_topoana.card).
 
 ### Signal intermediate-resonance-allowed decay branches
 
 See
-[here](http://code.ihep.ac.cn/redeboer/IniSelect/-/tree/master/workarea/Analysis/TopoAna/v1.6.9/tutorials/ta4_signals/ta45_sig_ira_evt_brs/ta451/mixed_topoana.card)
+[here](https://code.ihep.ac.cn/redeboer/IniSelect/-/tree/master/workarea/Analysis/TopoAna/v1.6.9/tutorials/ta4_signals/ta45_sig_ira_evt_brs/ta451/mixed_topoana.card)
 for an example of syntax.
 
 ### Signal inclusive or intermediate-resonance-allowed sequential decay branches
 
 See
-[here](http://code.ihep.ac.cn/redeboer/IniSelect/-/tree/master/workarea/Analysis/TopoAna/v1.6.9/tutorials/ta4_signals/ta46_sig_inc_or_ira_seq_evt_brs/ta463_2/mixed_topoana.card)
+[here](https://code.ihep.ac.cn/redeboer/IniSelect/-/tree/master/workarea/Analysis/TopoAna/v1.6.9/tutorials/ta4_signals/ta46_sig_inc_or_ira_seq_evt_brs/ta463_2/mixed_topoana.card)
 for an example of syntax. The asterisk (`*`) can be used as a short version of the word
 "anything" in order to simplify your input.
 
 ### Signal decay trees
 
 See
-[here](http://code.ihep.ac.cn/redeboer/IniSelect/-/tree/master/workarea/Analysis/TopoAna/v1.6.9/tutorials/ta4_signals/ta47_sig_evt_trs/ta462/mixed_topoana.card)
+[here](https://code.ihep.ac.cn/redeboer/IniSelect/-/tree/master/workarea/Analysis/TopoAna/v1.6.9/tutorials/ta4_signals/ta47_sig_evt_trs/ta462/mixed_topoana.card)
 for an example of syntax.
 
 ### Signal decay final states
 
 See
-[here](http://code.ihep.ac.cn/redeboer/IniSelect/-/tree/master/workarea/Analysis/TopoAna/v1.6.9/tutorials/ta4_signals/ta48_sig_evt_f_sts/ta472/mixed_topoana.card)
+[here](https://code.ihep.ac.cn/redeboer/IniSelect/-/tree/master/workarea/Analysis/TopoAna/v1.6.9/tutorials/ta4_signals/ta48_sig_evt_f_sts/ta472/mixed_topoana.card)
 for an example of syntax.

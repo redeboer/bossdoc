@@ -26,7 +26,7 @@ file = "README.md"
 
 [project.urls]
 Changelog = "https://github.com/redeboer/bossdoc/releases"
-Documentation = "http://bes3.rtfd.io"
+Documentation = "https://bes3.rtfd.io"
 Source = "https://github.com/redeboer/bossdoc"
 Tracker = "https://github.com/redeboer/bossdoc/issues"
 

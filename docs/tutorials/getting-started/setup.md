@@ -15,7 +15,7 @@ click the edit or issue buttons above!
 See
 {ref}`last section of this page <tutorials/getting-started/setup:Summary of commands>`
 for an overview of all commands. If you are in a very lazy mood, you can also checkout
-the [BOSS Starter Kit](http://code.ihep.ac.cn/bes3/BOSS_StarterKit), which this whole
+the [BOSS Starter Kit](https://code.ihep.ac.cn/bes3/BOSS_StarterKit), which this whole
 set-up for you.
 
 :::

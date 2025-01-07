@@ -123,7 +123,7 @@ The original `RhopiAlg` package (version `0.0.23`) is located here,
 ```
 
 You can also
-[find the RhopiAlg package in the BOSS Tutorials repository](http://code.ihep.ac.cn/bes3/BOSS_Tutorials/-/tree/master/RhopiAlg/RhopiAlg-00-00-23).
+[find the RhopiAlg package in the BOSS Tutorials repository](https://code.ihep.ac.cn/bes3/BOSS_Tutorials/-/tree/master/RhopiAlg/RhopiAlg-00-00-23).
 
 ## How to compile and run?
 

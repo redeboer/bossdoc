@@ -204,7 +204,7 @@ In table format, with these conventions, the result that should be stored for th
 ## Installing topoana
 
 Execute
-[setup.sh](http://code.ihep.ac.cn/redeboer/IniSelect/-/tree/master/workarea/Analysis/TopoAna/v1.6.9/setup.sh)
+[setup.sh](https://code.ihep.ac.cn/redeboer/IniSelect/-/tree/master/workarea/Analysis/TopoAna/v1.6.9/setup.sh)
 and see the instructions there on how to source it. If you have done this, you can use
 the command `topoana.exe` the output generated through the
 {ref}`previous step <packages/analysis/topoana:Preparing initial event selection>`.

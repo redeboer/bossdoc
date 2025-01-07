@@ -38,6 +38,7 @@
   ],
   "language": "en-US",
   "words": [
+    "arXiv",
     "bepc",
     "breit",
     "cern",
@@ -81,6 +82,7 @@
     "cvmfs",
     "dedx",
     "digi",
+    "docbes",
     "docnb",
     "docstrings",
     "ecms",
@@ -103,6 +105,7 @@
     "mctruth",
     "mkdir",
     "noreply",
+    "offlinesoftware",
     "pandoc",
     "pdflatex",
     "pipi",

@@ -1,7 +1,7 @@
 # Statistics
 
 Overview of systematic error studies in BESIII: <br>
-[https://docbes3.ihep.ac.cn/~offlinesoftware/index.php/Data_Quality/Software_Validation_related_reports](https://docbes3.ihep.ac.cn/~offlinesoftware/index.php/Data_Quality/Software_Validation_related_reports)
+[docbes3.ihep.ac.cn/~offlinesoftware/index.php/Data_Quality/Software_Validation_related_reports](https://docbes3.ihep.ac.cn/~offlinesoftware/index.php/Data_Quality/Software_Validation_related_reports)-->
 
 - By far, the most comprehensive overview of statistical procedures in an experiment
   comparable to BESIII is the document

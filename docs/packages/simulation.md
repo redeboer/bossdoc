@@ -9,7 +9,7 @@ This part of the tutorial is to be base on
 ```
 
 Documentation already existing (limited and required login): <br>
-[https://docbes3.ihep.ac.cn/~offlinesoftware/index.php/MC_truth](https://docbes3.ihep.ac.cn/~offlinesoftware/index.php/MC_truth)
+[docbes3.ihep.ac.cn/~offlinesoftware/index.php/MC_truth](https://docbes3.ihep.ac.cn/~offlinesoftware/index.php/MC_truth)
 
 See also class documentation for
 [McParticle](https://bes3.to.infn.it/Boss/7.0.2/html/classEvent_1_1McParticle.html)

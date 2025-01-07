@@ -5,7 +5,7 @@
 IHEP supplies a GitLab server, which allows you to put your analysis code in a `git`
 repository. You can then enjoy all the benefits of version control, different branches
 to collaborate as a team, a better overview through online access, etc. The IHEP GitLab
-server can be accessed through [code.ihep.ac.cn](http://code.ihep.ac.cn). Have a look
+server can be accessed through [code.ihep.ac.cn](https://code.ihep.ac.cn). Have a look
 [here](https://guides.github.com/introduction/git-handbook) at what `git` does, it's
 worth it!
 
@@ -24,7 +24,7 @@ to apply for an IHEP GitLab account. You can do this by sending an email to
 [fanrh@ihep.ac.cn](mailto:fanrh@ihep.ac.cn).
 
 When you have received your login credentials, log in to
-[code.ihep.ac.cn](http://code.ihep.ac.cn/profile/keys/132) and have a look around. As
+[code.ihep.ac.cn](https://code.ihep.ac.cn/profile/keys/132) and have a look around. As
 you have probably noticed, there is a warning that you have to add an SSH key in order
 to pull and push to the server. The steps to create such a key are comparable to those
 for login in to the {ref}`IHEP server <appendices/tips:Key generation for SSH>`.
@@ -38,7 +38,7 @@ for login in to the {ref}`IHEP server <appendices/tips:Key generation for SSH>`.
 3. Now, obtain the corresponding public key using: <br> `cat ~/.ssh/id_rsa.pub` <br> and
    copy all the text you see there (from `ssh-rsa` to `@ihep.ac.cn`).
 
-4. Go to [code.ihep.ac.cn/profile/keys](http://code.ihep.ac.cn/profile/keys), click "Add
+4. Go to [code.ihep.ac.cn/profile/keys](https://code.ihep.ac.cn/profile/keys), click "Add
    SSH Key", paste the code there, and "Add key".
 
 5. That's it!
@@ -48,7 +48,7 @@ See
 for more elaborate instructions.
 
 As a test, you can now create a new repository on the server. Just click
-["New project"](http://code.ihep.ac.cn/projects/new) and follow the instructions. This
+["New project"](https://code.ihep.ac.cn/projects/new) and follow the instructions. This
 is a nice way to start, as you will be immediately shown instructions on how to
 configure `git` locally (such as setting the user name).
 
@@ -145,7 +145,7 @@ your work.
 
 If you have applied for an account and
 {ref}`added an SSH key <appendices/gitlab:Pushing existing code to a new repository>`,
-you can push this new repository to [code.ihep.ac.cn](http://code.ihep.ac.cn). If you
+you can push this new repository to [code.ihep.ac.cn](https://code.ihep.ac.cn). If you
 haven't already done so, set the user name and email address for this repository:
 
 ```bash
@@ -170,7 +170,7 @@ is unique within your account.
 Unfortunately, access through SSH does not allow you to create a new repository on the
 server, so you have to do this through the web interface.
 
-Go to [code.ihep.ac.cn](http://code.ihep.ac.cn) and click "New repository". Use
+Go to [code.ihep.ac.cn](https://code.ihep.ac.cn) and click "New repository". Use
 `TestRepo` as the " _Project_ name", then click "Customize repository name?" to ensure
 that the name of the repository is `TestRepo` as well. (If you don't, it will be named
 `testrepo`, while **the _repository_ name should match the name of your directory**. As

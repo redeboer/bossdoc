@@ -10,16 +10,15 @@ The below list is not (yet) exhaustive
 
 - **BESIII**
 
-  - [http://bes3.ihep.ac.cn](http://bes3.ihep.ac.cn)
-  - [http://bes.ihep.ac.cn](http://bes.ihep.ac.cn)
+  - [bes.ihep.ac.cn](http://bes.ihep.ac.cn)
   - [BEPC & BEPCII](http://english.ihep.cas.cn/doc/259.html)
 
 - **IHEP**
 
   - [IHEP Computing Service Manual](http://afsapply.ihep.ac.cn/cchelp/en)
-  - [http://english.ihep.cas.cn](http://english.ihep.cas.cn) [English]
-  - [http://www.ihep.cas.cn](http://www.ihep.cas.cn) [Chinese]
-  - [http://web.ihep.ac.cn](http://web.ihep.ac.cn)
+  - [english.ihep.cas.cn](http://english.ihep.cas.cn) [English]
+  - [ihep.cas.cn](https://www.ihep.cas.cn) [Chinese]
+  - [web.ihep.ac.cn](http://web.ihep.ac.cn)
 
 ## The BOSS Analysis Framework
 
