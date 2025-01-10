@@ -12,7 +12,7 @@ repos:
       - id: check-useless-excludes
 
   - repo: https://github.com/ComPWA/policy
-    rev: 0.5.10
+    rev: 0.5.12
     hooks:
       - id: check-dev-files
         args:
@@ -24,7 +24,7 @@ repos:
           - --repo-title=BOSS Documentation
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.8.6
+    rev: v0.9.0
     hooks:
       - id: ruff
         args: [--fix]
