@@ -26,7 +26,7 @@ file = "README.md"
 
 [project.urls]
 Changelog = "https://github.com/redeboer/bossdoc/releases"
-Documentation = "http://bes3.rtfd.io"
+Documentation = "https://bes3.rtfd.io"
 Source = "https://github.com/redeboer/bossdoc"
 Tracker = "https://github.com/redeboer/bossdoc/issues"
 
@@ -158,72 +158,76 @@ sort_first = [
     "project",
     "tool.setuptools",
     "tool.setuptools_scm",
+    "tool.tox.env_run_base",
 ]
 spaces_indent_inline_array = 4
 trailing_comma_inline_array = true
 
 [tool.tox]
-legacy_tox_ini = """
-[tox]
-envlist =
-    doc,
-    linkcheck,
-    sty,
-skip_install = True
-skip_missing_interpreters = True
-skipsdist = True
+env_list = [
+    "doc",
+    "linkcheck",
+    "sty",
+]
+no_package = true
+requires = ["tox>=4.21.0"]
+skip_install = true
+skip_missing_interpreters = true
 
-[testenv]
-passenv = *
+[tool.tox.env_run_base]
+pass_env = ["*"]
 
-[testenv:doc]
-description = Build documentation through Sphinx
-allowlist_externals =
-    sphinx-build
-commands =
-    sphinx-build \
-        --builder=dirhtml \
-        --color \
-        --fail-on-warning \
-        --keep-going \
-        --show-traceback \
-        docs/ docs/_build/html
-setenv =
-    PYTHONWARNINGS =
+[tool.tox.env.doc]
+allowlist_externals = ["sphinx-build"]
+commands = [
+    [
+        "sphinx-build",
+        "--builder=dirhtml",
+        "--fail-on-warning",
+        "--keep-going",
+        "--show-traceback",
+        "docs/",
+        "docs/_build/html",
+    ],
+]
+description = "Build documentation through Sphinx"
+set_env = [
+    {PYTHONWARNINGS = ""},
+]
 
-[testenv:doclive]
-allowlist_externals =
-    sphinx-autobuild
-commands =
-    sphinx-autobuild \
-        --builder=dirhtml \
-        --ignore=docs/_build/ \
-        --open-browser \
-        --port=0 \
-        --re-ignore='.*/__pycache__/.*' \
-        --watch=docs \
-        docs/ docs/_build/html
-description = Set up a server to directly preview changes to the HTML pages
-setenv =
-    PYTHONWARNINGS =
+[tool.tox.env.doclive]
+allowlist_externals = ["sphinx-autobuild"]
+commands = [
+    [
+        "sphinx-autobuild",
+        "--builder=dirhtml",
+        "--ignore=docs/_build/",
+        "--open-browser",
+        "--port=0",
+        "--re-ignore='.*/__pycache__/.*'",
+        "--watch=docs",
+        "docs/",
+        "docs/_build/html",
+    ],
+]
+description = "Set up a server to directly preview changes to the HTML pages"
+set_env.PYTHONWARNINGS = ""
 
-[testenv:linkcheck]
-allowlist_externals =
-    sphinx-build
-commands =
-    sphinx-build \
-        --builder=linkcheck \
-        --color \
-        --show-traceback \
-        docs/ docs/_build/linkcheck
-description = Check external links in the documentation (requires internet connection)
-setenv =
-    PYTHONWARNINGS =
+[tool.tox.env.linkcheck]
+allowlist_externals = ["sphinx-build"]
+commands = [
+    [
+        "sphinx-build",
+        "--builder=linkcheck",
+        "--show-traceback",
+        "docs/",
+        "docs/_build/linkcheck",
+    ],
+]
+description = "Check external links in the documentation (requires internet connection)"
+set_env.PYTHONWARNINGS = ""
 
-[testenv:sty]
-allowlist_externals =
-    pre-commit
-commands =
-    pre-commit run --all-files {posargs}
-description = Perform all linting, formatting, and spelling checks
-"""
+[tool.tox.env.sty]
+allowlist_externals = ["pre-commit"]
+commands = [["pre-commit", "run", "--all-files", {replace = "posargs", extend = true}]]
+description = "Perform all linting, formatting, and spelling checks"

@@ -10,16 +10,15 @@ The below list is not (yet) exhaustive
 
 - **BESIII**
 
-  - [http://bes3.ihep.ac.cn](http://bes3.ihep.ac.cn)
-  - [http://bes.ihep.ac.cn](http://bes.ihep.ac.cn)
+  - [bes.ihep.ac.cn](http://bes.ihep.ac.cn)
   - [BEPC & BEPCII](http://english.ihep.cas.cn/doc/259.html)
 
 - **IHEP**
 
   - [IHEP Computing Service Manual](http://afsapply.ihep.ac.cn/cchelp/en)
-  - [http://english.ihep.cas.cn](http://english.ihep.cas.cn) [English]
-  - [http://www.ihep.cas.cn](http://www.ihep.cas.cn) [Chinese]
-  - [http://web.ihep.ac.cn](http://web.ihep.ac.cn)
+  - [english.ihep.cas.cn](http://english.ihep.cas.cn) [English]
+  - [ihep.cas.cn](https://www.ihep.cas.cn) [Chinese]
+  - [web.ihep.ac.cn](http://web.ihep.ac.cn)
 
 ## The BOSS Analysis Framework
 
@@ -33,11 +32,8 @@ The below list is not (yet) exhaustive
 
 - **Doxygen documentation:**
 
-  - [http://bes3.to.infn.it/Boss/7.0.2/html/classes.html](http://bes3.to.infn.it/Boss/7.0.2/html/classes.html)
-    (external)
-
-  - [https://boss.ihep.ac.cn/~offlinesoftware/MdcPatRecDoc04/classes.html](https://boss.ihep.ac.cn/~offlinesoftware/MdcPatRecDoc04/classes.html)
-    (`MdcPatRec` Class Index)
+  - [bes3.to.infn.it/Boss/7.0.2/html/classes.html](https://bes3.to.infn.it/Boss/7.0.2/html/classes.html) (external)
+  - [boss.ihep.ac.cn/~offlinesoftware/MdcPatRecDoc04/classes.html](https://boss.ihep.ac.cn/~offlinesoftware/MdcPatRecDoc04/classes.html) (`MdcPatRec` Class Index)
 
 - **Some introductions to BOSS:**
 

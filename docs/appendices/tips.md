@@ -27,7 +27,7 @@ ssh key [here](https://www.ssh.com/ssh/keygen) and
 ## Installing ROOT
 
 The BOSS Starter Kit comes with a
-[handy bash script](http://code.ihep.ac.cn/bes3/BOSS_StarterKit/-/tree/master/utilities/InstallCernRoot.sh)
+[handy bash script](https://code.ihep.ac.cn/bes3/BOSS_StarterKit/-/tree/master/utilities/InstallCernRoot.sh)
 to download and install CERN ROOT6 on a Ubuntu platform. It requires you to have `sudo`
 (admin) rights. The script can be run in one go using:
 

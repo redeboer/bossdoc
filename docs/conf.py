@@ -25,16 +25,16 @@ copyright = "2020, BESIII"
 default_role = "py:obj"
 extensions = [
     "myst_parser",
-    "sphinx.ext.autosectionlabel",
-    "sphinx.ext.intersphinx",
-    "sphinx.ext.mathjax",
-    "sphinx.ext.todo",
     "sphinx_api_relink",
     "sphinx_comments",
     "sphinx_copybutton",
     "sphinx_design",
     "sphinx_pybtex_etal_style",
     "sphinx_togglebutton",
+    "sphinx.ext.autosectionlabel",
+    "sphinx.ext.intersphinx",
+    "sphinx.ext.mathjax",
+    "sphinx.ext.todo",
     "sphinxcontrib.bibtex",
 ]
 exclude_patterns = [
@@ -66,15 +66,9 @@ intersphinx_mapping = {
 }
 linkcheck_anchors = False
 linkcheck_ignore = [
-    "http://code.ihep.ac.cn/redeboer/IniSelect",
     "http://polywww.in2p3.fr",
     "http://www.cmtsite.net",
-    "https://dayabay.bnl.gov",
-    "https://github.com/redeboer/BOSS_IniSelect_ORIGINAL",
-    "https://scientificlinux.org",
-    "https://www.putty.org",
     "https://www.sciencedirect.com/science/article/pii/S0168900209023870",
-    "https://www.tldp.org",
     r"http://[A-Za-z0-9]+\.ihep\.ac\.cn",
     r"http://[A-Za-z0-9]+\.ihep\.cas\.cn",
     r"http://[A-Za-z0-9]+\.ucas\.ac\.cn",
@@ -93,7 +87,8 @@ panels_add_bootstrap_css = False  # remove panels css to get wider main content
 primary_domain = "py"
 project = "BESIII Offline Software System"
 pygments_style = "sphinx"
-todo_include_todos = True
 suppress_warnings = [
     "myst.domains",
 ]
+todo_include_todos = True
+tls_verify = False

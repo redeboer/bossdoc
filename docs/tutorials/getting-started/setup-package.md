@@ -12,7 +12,7 @@ that, we can look into some tutorial packages.
 :::{todo}
 
 The tutorial packages are to be developed soon, see the `BOSS_Tutorials
-[repository](http://code.ihep.ac.cn/bes3/BOSS_Tutorials). See Shanghai conference for
+[repository](https://code.ihep.ac.cn/bes3/BOSS_Tutorials). See Shanghai conference for
 updates on this matter.
 
 :::
@@ -202,7 +202,7 @@ source setup.sh
 This sets certain `bash` variables so that BOSS will use your version of this package.
 One of these variables is called `$<PACKAGE_NAME>ROOT` and can be used to call your
 package in job options file (see for example `$RHOPIALGROOT` in
-[this template](http://code.ihep.ac.cn/redeboer/IniSelect/-/tree/master/jobs/templates/analysis.txt)).
+[this template](https://code.ihep.ac.cn/redeboer/IniSelect/-/tree/master/jobs/templates/analysis.txt)).
 
 Congratulations, you have created an update of your package!
 
@@ -274,10 +274,10 @@ If this package is a Gaudi algorithm, you can
 
 Within BOSS, there are already a few 'example' packages available. All of these are
 accessible through the so-called
-[TestRelease package](http://code.ihep.ac.cn/redeboer/IniSelect/-/tree/master/workarea/TestRelease),
+[TestRelease package](https://code.ihep.ac.cn/redeboer/IniSelect/-/tree/master/workarea/TestRelease),
 which will be described and set up first. We then focus on one of its main dependencies:
 the
-[RhopiAlg algorithm](http://code.ihep.ac.cn/redeboer/IniSelect/-/tree/master/workarea/Analysis/Physics/RhopiAlg).
+[RhopiAlg algorithm](https://code.ihep.ac.cn/redeboer/IniSelect/-/tree/master/workarea/Analysis/Physics/RhopiAlg).
 Within BESIII, this package is typically used as an example for selecting events and
 usually forms the start of your research.
 
@@ -342,7 +342,7 @@ examples for initial event selection.
 :::{tip}
 
 BOSS Tutorials are under development and can be found in the
-[BOSS_Tutorials repository](http://code.ihep.ac.cn/bes3/BOSS_Tutorials).
+[BOSS_Tutorials repository](https://code.ihep.ac.cn/bes3/BOSS_Tutorials).
 
 {doc}`/packages/analysis/examples/RhopiAlg`
 

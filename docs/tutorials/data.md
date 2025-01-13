@@ -70,14 +70,14 @@ For a reference of MySQL queries, see [here](https://dev.mysql.com/doc/refman/8.
 
 Note that there are a few BOSS packages that allow you to fetch data from the MySQL
 database from the C++ code. The main one is
-[DatabaseSvc](http://code.ihep.ac.cn/bes3/BOSS/tree/master/workarea/Database/DatabaseSvc).
+[DatabaseSvc](https://code.ihep.ac.cn/bes3/BOSS/tree/master/workarea/Database/DatabaseSvc).
 For fetching exact beam energy values, use
-[MeasuredEcmsSvc](http://code.ihep.ac.cn/bes3/BOSS/tree/master/workarea/Utilities/MeasuredEcmsSvc).
+[MeasuredEcmsSvc](https://code.ihep.ac.cn/bes3/BOSS/tree/master/workarea/Utilities/MeasuredEcmsSvc).
 
 ### Web interface
 
 Alternatively, you can have a look at this page
-<br>[http://bes3db.ihep.ac.cn/online/webserver/runinfo/runparams.php](http://bes3db.ihep.ac.cn/online/webserver/runinfo/runparams.php)
+<br>[bes3db.ihep.ac.cn/online/webserver/runinfo/runparams.php](http://bes3db.ihep.ac.cn/online/webserver/runinfo/runparams.php) <!-- cspell:ignore runinfo runparams -->
 <br>for an overview of run numbers et cetera.
 
 ```{toctree}

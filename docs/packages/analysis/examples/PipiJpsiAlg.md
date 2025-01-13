@@ -8,7 +8,7 @@ This example package analyzes $\psi' \rightarrow \pi\pi J/\psi \rightarrow \pi\p
 (di-lepton) events. In particular, it will teach you:
 
 - How to access Monte Carlo truth from a DST file using
-  [Event::McParticle](http://bes3.to.infn.it/Boss/7.0.2/html/classEvent_1_1McParticle.html).
+  [Event::McParticle](https://bes3.to.infn.it/Boss/7.0.2/html/classEvent_1_1McParticle.html).
 
 - How to store arrays to a `TTree` using
   [NTuple::Array](https://dayabay.bnl.gov/dox/GaudiKernel/html/classNTuple_1_1Array.html)
