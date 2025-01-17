@@ -59,7 +59,6 @@ wheels = [
 
 [[package]]
 name = "bossdoc"
-version = "0.0"
 source = { editable = "." }
 
 [package.dev-dependencies]
