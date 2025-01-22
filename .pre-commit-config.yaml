@@ -12,7 +12,7 @@ repos:
       - id: check-useless-excludes
 
   - repo: https://github.com/ComPWA/policy
-    rev: 0.5.15
+    rev: 0.5.18
     hooks:
       - id: check-dev-files
         args:
@@ -73,7 +73,7 @@ repos:
       - id: cspell
 
   - repo: https://github.com/editorconfig-checker/editorconfig-checker.python
-    rev: 3.0.3
+    rev: 3.1.2
     hooks:
       - id: editorconfig-checker
         name: editorconfig
@@ -89,6 +89,6 @@ repos:
       - id: pyright
 
   - repo: https://github.com/astral-sh/uv-pre-commit
-    rev: 0.5.20
+    rev: 0.5.22
     hooks:
       - id: uv-lock
