@@ -68,6 +68,7 @@ linkcheck_anchors = False
 linkcheck_ignore = [
     "http://polywww.in2p3.fr",
     "http://www.cmtsite.net",
+    "https://dev.mysql.com",
     "https://www.gnu.org",
     "https://www.sciencedirect.com/science/article/pii/S0168900209023870",
     r"http://[A-Za-z0-9]+\.ihep\.ac\.cn",
