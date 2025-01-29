@@ -32,12 +32,6 @@
   "cSpell.enabled": true,
   "diffEditor.experimental.showMoves": true,
   "editor.formatOnSave": true,
-  "files.watcherExclude": {
-    "**/*_cache/**": true,
-    "**/.eggs/**": true,
-    "**/.git/**": true,
-    "**/.tox/**": true
-  },
   "git.rebaseWhenSync": true,
   "github-actions.workflows.pinned.workflows": [".github/workflows/ci.yml"],
   "gitlens.telemetry.enabled": false,
@@ -47,6 +41,7 @@
     "notebook.source.organizeImports": "explicit"
   },
   "notebook.formatOnSave.enabled": true,
+  "python.defaultInterpreterPath": ".venv/bin/python",
   "python.terminal.activateEnvironment": false,
   "python.testing.pytestArgs": ["--color=no", "--no-cov"],
   "python.testing.pytestEnabled": false,
