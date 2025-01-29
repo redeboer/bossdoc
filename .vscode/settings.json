@@ -41,6 +41,7 @@
     "notebook.source.organizeImports": "explicit"
   },
   "notebook.formatOnSave.enabled": true,
+  "python.defaultInterpreterPath": ".venv/bin/python",
   "python.terminal.activateEnvironment": false,
   "python.testing.pytestArgs": ["--color=no", "--no-cov"],
   "python.testing.pytestEnabled": false,

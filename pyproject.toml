@@ -58,12 +58,6 @@ include-package-data = false
 write_to = "version.py"
 
 [tool.pyright]
-exclude = [
-    "**/.venv/",
-    ".git",
-    ".tox",
-    "docs/_build",
-]
 include = [
     "docs/conf.py",
     "src",
