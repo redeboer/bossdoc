@@ -12,7 +12,7 @@ repos:
       - id: check-useless-excludes
 
   - repo: https://github.com/ComPWA/policy
-    rev: 0.6.1
+    rev: 0.6.2
     hooks:
       - id: check-dev-files
         args:
@@ -24,7 +24,7 @@ repos:
           - --repo-title=BOSS Documentation
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.9.3
+    rev: v0.12.2
     hooks:
       - id: ruff
         args: [--fix]
@@ -68,12 +68,12 @@ repos:
         exclude: (?x)^(labels.*\.toml)$
 
   - repo: https://github.com/streetsidesoftware/cspell-cli
-    rev: v8.17.1
+    rev: v9.0.1
     hooks:
       - id: cspell
 
   - repo: https://github.com/editorconfig-checker/editorconfig-checker.python
-    rev: 3.2.0
+    rev: 3.2.1
     hooks:
       - id: editorconfig-checker
         name: editorconfig
@@ -84,11 +84,11 @@ repos:
           )$
 
   - repo: https://github.com/ComPWA/pyright-pre-commit
-    rev: v1.1.392
+    rev: v1.1.402
     hooks:
       - id: pyright
 
   - repo: https://github.com/astral-sh/uv-pre-commit
-    rev: 0.5.25
+    rev: 0.7.19
     hooks:
       - id: uv-lock
