@@ -32,6 +32,7 @@ Tracker = "https://github.com/redeboer/bossdoc/issues"
 
 [dependency-groups]
 dev = [
+    "poethepoet",
     "ruff",
     "sphinx-autobuild",
     {include-group = "doc"},
@@ -56,6 +57,81 @@ include-package-data = false
 
 [tool.setuptools_scm]
 write_to = "version.py"
+
+[tool.poe]
+executor.type = "uv"
+
+[tool.poe.tasks.all]
+help = "Run all continuous integration (CI) tasks locally"
+ignore_fail = "return_non_zero"
+sequence = [
+    "doc",
+    "linkcheck",
+    "style",
+]
+
+[tool.poe.tasks.doc]
+cmd = """
+sphinx-build \
+    --builder=html \
+    --fail-on-warning \
+    --keep-going \
+    --show-traceback \
+    docs/ \
+    docs/_build/html/
+"""
+env = {PYTHONWARNINGS = ""}
+help = "Build documentation and API"
+
+[tool.poe.tasks.doclive]
+cmd = """
+sphinx-autobuild \
+    --builder=html \
+    --port=0 \
+    --re-ignore=/__pycache__(/.*)?$ \
+    --re-ignore=/_build(/.*)?$ \
+    --re-ignore=/_images(/.*)?$ \
+    --re-ignore=/\\.cache(/.*)?$ \
+    --re-ignore=/\\.egg-info(/.*)?$ \
+    --re-ignore=/\\.ipynb_checkpoints(/.*)?$ \
+    --re-ignore=/\\.venv(/.*)?$ \
+    --re-ignore=/\\.virtual_documents(/.*)?$ \
+    --re-ignore=/api(/.*)?$ \
+    --re-ignore=/docs$ \
+    --re-ignore=/version\\.py$ \
+    --re-ignore=\\.csv$ \
+    --re-ignore=\\.egg-info(/.*)?$ \
+    --re-ignore=\\.gif$ \
+    --re-ignore=\\.gitignore$ \
+    --re-ignore=\\.gv$ \
+    --re-ignore=\\.inv$ \
+    --re-ignore=\\.json$ \
+    --re-ignore=\\.pickle$ \
+    --re-ignore=\\.pkl$ \
+    --re-ignore=\\.png$ \
+    --re-ignore=\\.root$ \
+    --re-ignore=\\.svg$ \
+    --re-ignore=\\.tmp$ \
+    --re-ignore=\\.ya?ml$ \
+    docs/ \
+    docs/_build/html/
+"""
+help = "Set up a server to directly preview changes to the HTML pages"
+
+[tool.poe.tasks.linkcheck]
+cmd = """
+sphinx-build \
+    --builder=linkcheck \
+    --show-traceback \
+    docs/ \
+    docs/_build/linkcheck/
+"""
+env = {PYTHONWARNINGS = ""}
+help = "Check external links in the documentation (requires internet connection)"
+
+[tool.poe.tasks.style]
+cmd = "uv run --group style --isolated --no-dev pre-commit run --all-files"
+help = "Perform all linting, formatting, and spelling checks"
 
 [tool.pyright]
 include = [
@@ -150,97 +226,6 @@ sort_first = [
     "project",
     "tool.setuptools",
     "tool.setuptools_scm",
-    "tool.tox.env_run_base",
 ]
 spaces_indent_inline_array = 4
 trailing_comma_inline_array = true
-
-[tool.tox]
-env_list = [
-    "doc",
-    "linkcheck",
-    "sty",
-]
-no_package = true
-requires = ["tox>=4.21.0"]
-skip_install = true
-skip_missing_interpreters = true
-
-[tool.tox.env_run_base]
-pass_env = ["*"]
-
-[tool.tox.env.doc]
-allowlist_externals = ["sphinx-build"]
-commands = [
-    [
-        "sphinx-build",
-        "--builder=dirhtml",
-        "--fail-on-warning",
-        "--keep-going",
-        "--show-traceback",
-        "docs/",
-        "docs/_build/html/",
-    ],
-]
-description = "Build documentation through Sphinx"
-set_env = [
-    {PYTHONWARNINGS = ""},
-]
-
-[tool.tox.env.doclive]
-allowlist_externals = ["sphinx-autobuild"]
-commands = [
-    [
-        "sphinx-autobuild",
-        "--port=0",
-        "--re-ignore=/__pycache__(/.*)?$",
-        "--re-ignore=/_build(/.*)?$",
-        "--re-ignore=/_images(/.*)?$",
-        "--re-ignore=/\\.cache(/.*)?$",
-        "--re-ignore=/\\.egg-info(/.*)?$",
-        "--re-ignore=/\\.ipynb_checkpoints(/.*)?$",
-        "--re-ignore=/\\.venv(/.*)?$",
-        "--re-ignore=/\\.virtual_documents(/.*)?$",
-        "--re-ignore=/api(/.*)?$",
-        "--re-ignore=/docs$",
-        "--re-ignore=/version\\.py$",
-        "--re-ignore=\\.csv$",
-        "--re-ignore=\\.csv$",
-        "--re-ignore=\\.egg-info(/.*)?$",
-        "--re-ignore=\\.gif$",
-        "--re-ignore=\\.gitignore$",
-        "--re-ignore=\\.gv$",
-        "--re-ignore=\\.inv$",
-        "--re-ignore=\\.json$",
-        "--re-ignore=\\.pickle$",
-        "--re-ignore=\\.pkl$",
-        "--re-ignore=\\.png$",
-        "--re-ignore=\\.root$",
-        "--re-ignore=\\.svg$",
-        "--re-ignore=\\.tmp$",
-        "--re-ignore=\\.ya?ml$",
-        "docs/",
-        "docs/_build/html/",
-    ],
-]
-description = "Set up a server to directly preview changes to the HTML pages"
-set_env.PYTHONWARNINGS = ""
-
-[tool.tox.env.linkcheck]
-allowlist_externals = ["sphinx-build"]
-commands = [
-    [
-        "sphinx-build",
-        "--builder=linkcheck",
-        "--show-traceback",
-        "docs/",
-        "docs/_build/linkcheck/",
-    ],
-]
-description = "Check external links in the documentation (requires internet connection)"
-set_env.PYTHONWARNINGS = ""
-
-[tool.tox.env.sty]
-allowlist_externals = ["pre-commit"]
-commands = [["pre-commit", "run", "--all-files", {replace = "posargs", extend = true}]]
-description = "Perform all linting, formatting, and spelling checks"
