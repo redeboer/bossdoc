@@ -33,7 +33,6 @@
     "docs/conf.py",
     "labels.toml",
     "pyproject.toml",
-    "tox.ini",
     "typings"
   ],
   "ignoreWords": [
