@@ -40,7 +40,7 @@ For more information, see the official pages:
 
 - [Installing the right prerequisite packages](https://root.cern/install/dependencies)
 - [Downloading ROOT](https://root.cern.ch/downloading-root)
-- [Building ROOT](https://root.cern.ch/building-root)
+- [Building ROOT](https://root.cern/install/build_from_source)
 
 ```{warning}
 You will download around **1 GB** of source code.
