@@ -18,7 +18,7 @@ keywords = [
 ]
 license = {text = "GPLv3 or later"}
 name = "bossdoc"
-requires-python = ">=3.13"
+requires-python = "~=3.13.0"
 
 [project.readme]
 content-type = "text/markdown"
