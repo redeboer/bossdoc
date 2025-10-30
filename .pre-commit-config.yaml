@@ -3,7 +3,6 @@ ci:
   autoupdate_commit_msg: "MAINT: upgrade lock files"
   autoupdate_schedule: quarterly
   skip:
-    - pyright
     - uv-lock
 
 repos:
@@ -13,35 +12,26 @@ repos:
       - id: check-useless-excludes
 
   - repo: https://github.com/ComPWA/policy
-    rev: 0.7.3
+    rev: 0.7.5
     hooks:
       - id: check-dev-files
         args:
           - --allow-labels
           - --keep-issue-templates
           - --no-cd
-          - --no-pypi
+          - --no-python
           - --repo-name=bossdoc
           - --repo-title=BOSS Documentation
-
-  - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.14.0
-    hooks:
-      - id: ruff-check
-        args: [--fix]
-      - id: ruff-format
 
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v6.0.0
     hooks:
-      - id: check-ast
       - id: check-case-conflict
       - id: check-json
       - id: check-merge-conflict
       - id: check-toml
       - id: check-vcs-permalinks
       - id: check-yaml
-      - id: debug-statements
       - id: end-of-file-fixer
         exclude: >
           (?x)^(
@@ -69,27 +59,18 @@ repos:
         exclude: (?x)^(labels.*\.toml)$
 
   - repo: https://github.com/streetsidesoftware/cspell-cli
-    rev: v9.2.0
+    rev: v9.2.1
     hooks:
       - id: cspell
 
   - repo: https://github.com/editorconfig-checker/editorconfig-checker.python
-    rev: 3.4.0
+    rev: 3.4.1
     hooks:
       - id: editorconfig-checker
         name: editorconfig
         alias: ec
-        exclude: >-
-          (?x)^(
-            .*\.py
-          )$
-
-  - repo: https://github.com/ComPWA/pyright-pre-commit
-    rev: v1.1.406
-    hooks:
-      - id: pyright
 
   - repo: https://github.com/astral-sh/uv-pre-commit
-    rev: 0.9.2
+    rev: 0.9.6
     hooks:
       - id: uv-lock

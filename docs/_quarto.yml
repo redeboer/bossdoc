@@ -1,0 +1,119 @@
+bibliography: bibliography.bib
+comments:
+  hypothesis:
+    theme: clean
+csl: ieee.csl
+draft-mode: visible
+format:
+  html:
+    code-copy: true
+    code-fold: true
+    respect-user-color-scheme: true
+    theme:
+      dark: darkly
+      light: flatly
+    toc: true
+glossary:
+  path: glossary.yml
+  popup: hover
+  show: true
+link-citations: true
+project:
+  output-dir: _build/html
+  type: website
+website:
+  favicon: favicon.ico
+  navbar:
+    logo: https://github.com/redeboer/bossdoc/assets/29308176/71ae5632-3aa9-4756-b4bb-8af397c62951
+    left:
+      - text: Tutorials
+        href: tutorials/index.qmd
+      - text: Packages
+        href: packages/index.qmd
+      - text: Physics
+        href: physics/index.qmd
+      - text: Appendices
+        href: appendices/index.qmd
+    right:
+      - text: Bibliography
+        href: references.qmd
+        icon: book
+    tools:
+      - href: https://github.com/redeboer/bossdoc
+        icon: github
+  page-navigation: true
+  repo-actions:
+    - edit
+    - issue
+    - source
+  repo-subdir: docs
+  repo-url: https://github.com/redeboer/bossdoc
+  sidebar:
+    - id: index
+      contents:
+        - bes3.qmd
+        - contribute.qmd
+        - references.qmd
+    - id: tutorials
+      title: BOSS tutorials
+      collapse-level: 2
+      contents:
+        - section: Getting started
+          file: tutorials/getting-started/index.qmd
+          contents:
+            - tutorials/getting-started/server.qmd
+            - tutorials/getting-started/data-quota.qmd
+            - tutorials/getting-started/intro.qmd
+            - tutorials/getting-started/setup.qmd
+            - tutorials/getting-started/setup-package.qmd
+            - tutorials/getting-started/jobs.qmd
+            - tutorials/getting-started/summary.qmd
+        - file: tutorials/data/index.qmd
+          contents:
+            - tutorials/data/measurements.qmd
+            - tutorials/data/inclusive.qmd
+            - tutorials/data/exclusive.qmd
+        - file: tutorials/final/index.qmd
+          contents:
+            - tutorials/final/background.qmd
+            - tutorials/final/errors.qmd
+            - tutorials/final/signal.qmd
+        - tutorials/initial.qmd
+    - id: packages
+      collapse-level: 3
+      contents:
+        - packages/generation.qmd
+        - packages/simulation.qmd
+        - packages/reconstruction.qmd+
+        - file: packages/analysis/index.qmd
+          contents:
+            - file: packages/analysis/examples/index.qmd
+              contents:
+                - packages/analysis/examples/RhopiAlg.qmd
+                - packages/analysis/examples/PipiJpsiAlg.qmd
+            - packages/analysis/other.qmd
+            - packages/analysis/FSFilter.qmd
+            - packages/analysis/DDecayAlg.qmd
+            - packages/analysis/BesDChain.qmd
+            - packages/analysis/BaskeAnaTool.qmd
+            - file: packages/analysis/topoana/index.qmd
+              contents:
+                - packages/analysis/topoana/required.qmd
+                - packages/analysis/topoana/optional.qmd
+        - packages/beyond.qmd
+    - id: physics
+      contents:
+        - physics/statistics.qmd
+        - physics/besiii.qmd
+        - physics/cuts.qmd
+        - physics/fitting.qmd
+        - physics/visualization.qmd
+        - physics/publication-procedure.qmd
+    - id: appendices
+      contents:
+        - appendices/troubleshooting.qmd
+        - appendices/tips.qmd
+        - appendices/gitlab.qmd
+        - appendices/references.qmd
+  site-url: https://bes3.readthedocs.io
+  title: BOSS Documentation

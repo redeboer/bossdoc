@@ -1,0 +1,15 @@
+---
+title: Other packages
+---
+
+:::{.callout-warning title="Open for suggestions"}
+Please [contact](/contribute.qmd) if there are other BOSS packages that you find useful for your research and would like to recommend to others.
+:::
+
+## DDecayAlg
+
+The `DDecayAlg` can be found here.
+
+```default
+/cvmfs/bes3.ihep.ac.cn/bes3sw/Boss/7.0.4/BesExamples/DDecayAlg/
+```

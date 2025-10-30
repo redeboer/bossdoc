@@ -1,0 +1,19 @@
+---
+title: Introduction to BESIII
+sidebar: index
+---
+
+The [Beijing Spectrometer (BESIII)](http://bes3.ihep.ac.cn) is a particle detector experiment situated at the [Beijing Electron-Positron Collider (BEPCII)](http://english.ihep.cas.cn/doc/1840.html). It is primarily designed to perform studies of charmonium and charm physics, light hadrons, determination of the tau mass, and $R$ scans at a center-of-mass energy of ranging between 2 to 5 GeV.
+
+:::{.callout-warning title="To do"}
+Elaborate or refer to official pages.
+:::
+
+See for instance:
+
+- "Physics Accomplishments and Future Prospects of the BES Experiments at the BEPC Collider"&nbsp;[@Briere:2016puj] <!-- cspell:ignore Briere -->
+- "Physics at BESIII"&nbsp;[@Asner:2008nq] <!-- cspell:ignore Asner -->
+- ["BESIII White Paper"](https://docbes3.ihep.ac.cn/cgi-bin/DocDB/ShowDocument?docid=759) (original memo, requires login)&nbsp;[@Lu:2019-WhitePaperFuture]
+- "Design and construction of the BESIII detector"&nbsp;[@BESIII:2009fln]
+
+Output of the detector is analyzed using the [BESIII Offline Software System (BOSS)](http://english.ihep.cas.cn/bes/doc/2247.html).
