@@ -4,7 +4,7 @@ title: BaskeAnaTool
 
 "BaskeAnaTool" means a basket of ana useful tools. You can use it to submit jobs to the computer servers, also generate simulation jobs, check the jobs status, check the whether the jobs is successful according to the job log files.
 
-The package based on Python works independent of BOSS, but facilitates for instance MC simulation. The package can be obtained from GitHub: <br> [github.com/xxmawhu/BaskeAnaTool](https://github.com/xxmawhu/BaskeAnaTool) <!-- cspell:ignore xxmawhu -->
+The package based on Python works independent of BOSS, but facilitates for instance MC simulation. The package can be obtained from GitHub: [github.com/xxmawhu/BaskeAnaTool](https://github.com/xxmawhu/BaskeAnaTool) <!-- cspell:ignore xxmawhu -->
 
 Before using the package, have a look at [its `README`](https://github.com/xxmawhu/BaskeAnaTool/blob/master/README.md). There is also [a Chinese version](https://github.com/xxmawhu/BaskeAnaTool/blob/master/README_Chinese.md).
 

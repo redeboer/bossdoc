@@ -7,10 +7,20 @@ title: Tips & Tricks
 If you do not like to keep having to enter your password, have a look at generating an ssh key [here](https://www.ssh.com/ssh/keygen) and [here](https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
 
 1. Generate a key with the command `ssh-keygen`. You can choose to leave the password empty.
-2. Add the SSH key to the `ssh-agent` and create a corresponding _public key_ with the commands: <br> `eval $(ssh-agent -s); ssh-add ~/.ssh/id_rsa`
-3. Copy the public key to the server using: <br>
-   `ssh-copy-id -i ~/.ssh/id_rsa <your user name>@lxslc7.ihep.ac.cn` You will be asked for your IHEP account password.
-4. Try to log in to the server with: `ssh -Y <your user name>@lxslc7.ihep.ac.cn` If all went correctly, you don't have to enter your password anymore.
+2. Add the SSH key to the `ssh-agent` and create a corresponding _public key_ with the commands:
+   ```bash
+   eval $(ssh-agent -s); ssh-add ~/.ssh/id_rsa
+   ```
+3. Copy the public key to the server using:
+   ```bash
+   ssh-copy-id -i ~/.ssh/id_rsa <your user name>@lxslc7.ihep.ac.cn
+   ```
+   You will be asked for your IHEP account password.
+4. Try to log in to the server with:
+   ```bash
+   ssh -Y <your user name>@lxslc7.ihep.ac.cn
+   ```
+   If all went correctly, you don't have to enter your password anymore.
 
 ## Installing ROOT
 
@@ -59,9 +69,8 @@ In addition, you may need to set the remote platform to `"linux"`:
 
 where `"lxslc7.ihep.ac.cn"` is the name of the host in your [SSH Config file](https://man7.org/linux/man-pages/man5/ssh_config.5.html).
 
-:::::{.callout-tip}
-
-VSCode Remote SSH installs some files into your home directory on the server, in a folder called `.vscode-server`. This will not work if you experience this (rather common) problem: @sec-read-write-access. It is therefore recommended that you move the `.vscode-server` folder to a directory where you always have read-write access and then create a symbolic link to that folder in your actual home folder. Do this as follows:
+::::{.callout-tip}
+VSCode Remote SSH installs some files into your home directory on the server, in a folder called `.vscode-server`. This will not work if you experience this (rather common) problem, see [here](troubleshooting.qmd#read-write-access). It is therefore recommended that you move the `.vscode-server` folder to a directory where you always have read-write access and then create a symbolic link to that folder in your actual home folder. Do this as follows:
 
 :::{.panel-tabset}
 
@@ -73,8 +82,6 @@ mkdir /besfs5/users/$USER/.vscode-server
 ln -s /besfs5/users/$USER/.vscode-server
 ```
 
-:::
-
 ## `.vscode-server` already exists
 
 ```bash
@@ -84,16 +91,15 @@ ln -s /besfs5/users/$USER/.vscode-server
 ```
 
 :::
-
-Another major advantage of this set-up is that you won't have problems with [data quota](../tutorials/getting-started/data-quota.md) when the `.vscode-server` grows over time.
-:::::
+Another major advantage of this set-up is that you won't have problems with [data quota](/tutorials/getting-started/data-quota.qmd) when the `.vscode-server` grows over time.
+::::
 
 ### Language navigation for BOSS
 
 It is highly recommended to install the [VS Code C++](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools) extension when you are developing BOSS packages. One of its killer features is [intellisense](https://code.visualstudio.com/docs/cpp/configure-intellisense-crosscompilation), which gives language navigation on C++ libraries. To get full language navigation for BOSS, create a `c_cpp_properties.json` file under the `.vscode` folder in your [workspace](https://code.visualstudio.com/docs/editor/workspaces) with the following content:
 
 :::{.callout-note}
-Please [comment](../contribute.md) here if you still see squiggle lines under `#include` statements in your source code. It could be that the list of include paths has to be updated.
+Please [comment](/contribute.qmd) here if you still see squiggle lines under `#include` statements in your source code. It could be that the list of include paths has to be updated.
 :::
 
 ```json
@@ -115,8 +121,7 @@ For BOSS language navigation locally, have a look at [BOSS_ExternalLibs](https:/
 For compiling outside ROOT (that is, _not_ using the ROOT interpreter), you will need to use a compiler like `g++`. The compiler needs to be told where the libraries for included ROOT header files are located. You can do this using flags that ROOT set during its installation. In case of `g++`, use: <!-- cspell:ignore evelibs glibs incdir -->
 
 ```bash
-g++ YourCode.C -I$(root-config --incdir) $(root-config --libs --evelibs
---glibs) -o YourBinaryOutput.o
+g++ YourCode.C -I$(root-config --incdir) $(root-config --libs --evelibs --glibs) -o YourBinaryOutput.o
 ```
 
 :::{.callout-tip title="Pro `bash` tip"}
@@ -155,6 +160,6 @@ Here, we give three examples of commands, one for compiling only (`rtcompile`), 
 
 Although it is highly recommended to on a Linux OS such as Ubuntu or CentOS, there are still -certain advantages of working on Windows. As a developer, that brings problems, however, if you want to start compiling your code.
 
-Since Windows 10, there exists an easy solution: [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install) (WSL). In the newest versions can be easily installed from the Windows Store (search for "Ubuntu"). After installing, search for "Ubuntu" in the start menu. This is a bash terminal that has full access to your windows system, but entirely through bash commands.
+Since Windows&nbsp;10, there exists an easy solution: [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install) (WSL). In the newest versions can be easily installed from the Windows Store (search for "Ubuntu"). After installing, search for "Ubuntu" in the start menu. This is a bash terminal that has full access to your windows system, but entirely through bash commands.
 
 As such, you have access to convenient commands like `apt install`, `vi`, and `g++`. Best of all is that you can use this to [install ROOT](https://root.cern/install/dependencies). If you are having trouble installing ROOT through bash, have a look [at this script](https://github.com/redeboer/NIKHEFProject2018/blob/master/docs/Install%20CERN%20ROOT6.sh) (ROOT6).
