@@ -31,7 +31,7 @@
   "git.rebaseWhenSync": true,
   "github-actions.workflows.pinned.workflows": [".github/workflows/ci.yml"],
   "gitlens.telemetry.enabled": false,
-  "livePreview.defaultPreviewPath": "docs/_build/html",
+  "livePreview.defaultPreviewPath": "_build/html",
   "multiDiffEditor.experimental.enabled": true,
   "prettier.documentSelectors": ["**/*.qmd"],
   "python.defaultInterpreterPath": ".venv/bin/python",

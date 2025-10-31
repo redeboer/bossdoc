@@ -50,11 +50,11 @@ sequence = [
 ]
 
 [tool.poe.tasks.doc]
-cmd = "quarto render docs --no-clean"
+cmd = "quarto render --no-clean"
 help = "Build website"
 
 [tool.poe.tasks.doclive]
-cmd = "quarto preview docs --no-clean"
+cmd = "quarto preview --no-clean"
 help = "Set up a server to directly preview changes to the HTML pages"
 
 [tool.poe.tasks.linkcheck]

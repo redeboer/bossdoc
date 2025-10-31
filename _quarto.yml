@@ -46,7 +46,6 @@ website:
     - edit
     - issue
     - source
-  repo-subdir: docs
   repo-url: https://github.com/redeboer/bossdoc
   sidebar:
     - id: index

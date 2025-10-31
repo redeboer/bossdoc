@@ -103,7 +103,7 @@ Please [comment](../contribute.md) here if you still see squiggle lines under `#
 This file can be downloaded [here](c_cpp_properties.json). On the server, you can quickly do this by navigating to your `.vscode` folder and running:
 
 ```bash
-wget https://raw.githubusercontent.com/redeboer/bossdoc/main/docs/appendices/c_cpp_properties.json
+wget https://raw.githubusercontent.com/redeboer/bossdoc/main/appendices/c_cpp_properties.json
 ```
 
 :::{.callout-tip}
