@@ -7,8 +7,7 @@
     "rewrap.wrappingColumn": 72
   },
   "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.wordWrap": "on"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -16,43 +15,27 @@
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[pip-requirements]": {
-    "editor.wordWrap": "off"
+  "[quarto]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[python]": {
-    "editor.codeActionsOnSave": {
-      "source.organizeImports": "explicit"
-    },
-    "editor.defaultFormatter": "charliermarsh.ruff",
-    "editor.rulers": [88]
+  "[snippets]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "cSpell.enabled": true,
-  "diffEditor.experimental.showMoves": true,
   "editor.formatOnSave": true,
   "git.rebaseWhenSync": true,
   "github-actions.workflows.pinned.workflows": [".github/workflows/ci.yml"],
   "gitlens.telemetry.enabled": false,
-  "livePreview.defaultPreviewPath": "docs/_build/html",
+  "livePreview.defaultPreviewPath": "_build/html",
   "multiDiffEditor.experimental.enabled": true,
-  "notebook.codeActionsOnSave": {
-    "notebook.source.organizeImports": "explicit"
-  },
-  "notebook.formatOnSave.enabled": true,
-  "python.defaultInterpreterPath": ".venv/bin/python",
-  "python.terminal.activateEnvironment": false,
-  "python.testing.pytestArgs": ["--color=no", "--no-cov"],
-  "python.testing.pytestEnabled": false,
-  "python.testing.unittestEnabled": false,
+  "prettier.documentSelectors": ["**/*.qmd"],
+  "quarto.path": ".venv/bin/quarto",
   "redhat.telemetry.enabled": false,
   "rewrap.wrappingColumn": 88,
-  "ruff.enable": true,
-  "ruff.importStrategy": "fromEnvironment",
-  "ruff.organizeImports": true,
   "search.exclude": {
-    "**/tests/**/__init__.py": true,
     "**/uv.lock": true
   },
   "telemetry.telemetryLevel": "off"

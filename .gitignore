@@ -1,49 +1,13 @@
-# Output files
-*.gv
-*.json
-*.npy
-*.pdf
-*.pickle
-*.png
-*.svg
-*.v2
-*.xml
-*.yaml
-*.yml
-
-# Build files
-*.egg-info/
-*build/
 .eggs/
 .fuse_*
-dist/
-version.py
-
-# Temporary files
-*.pyc
-.coverage
-.coverage.*
-.ipynb_checkpoints/
-.mypy*/
-.pytest_cache/
-__pycache__/
-htmlcov/
-prof/
-
-# Virtual environments
-*venv/
-pyvenv*/
-
-# Settings
 .idea/
+*.egg-info/
+*.html
 **.code-workspace
-
-# Exceptions
-!.cspell.json
-!.github/*.yml
-!.github/*/*.yml
-!.pre-commit-config.yaml
-!.readthedocs.yml
-!.vscode/*.json
-!codecov.yml
-!pyrightconfig.json
+**/*.quarto_ipynb
+*build/
+*build/
+*venv/
+/.quarto/
+pyvenv*/
+site_libs/

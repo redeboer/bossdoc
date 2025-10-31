@@ -1,16 +1,14 @@
 {
   "recommendations": [
-    "charliermarsh.ruff",
     "christian-kohler.path-intellisense",
     "eamodio.gitlens",
     "editorconfig.editorconfig",
     "esbenp.prettier-vscode",
-    "executablebookproject.myst-highlight",
     "github.vscode-github-actions",
     "github.vscode-pull-request-github",
     "mhutchie.git-graph",
-    "ms-python.python",
     "ms-vscode.live-server",
+    "quarto.quarto",
     "redhat.vscode-yaml",
     "soulcode.vscode-unwanted-extensions",
     "stkb.rewrap",
@@ -20,13 +18,17 @@
   ],
   "unwantedRecommendations": [
     "bungcip.better-toml",
+    "charliermarsh.ruff",
     "davidanson.vscode-markdownlint",
+    "executablebookproject.myst-highlight",
     "garaioag.garaio-vscode-unwanted-recommendations",
     "ms-python.black-formatter",
     "ms-python.flake8",
     "ms-python.isort",
     "ms-python.mypy-type-checker",
     "ms-python.pylint",
+    "ms-python.python",
+    "ms-toolsai.jupyter",
     "travisillig.vscode-json-stable-stringify",
     "tyriar.sort-lines"
   ]

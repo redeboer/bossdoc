@@ -1,13 +1,5 @@
-[build-system]
-build-backend = "setuptools.build_meta"
-requires = [
-    "setuptools>=61.2",
-    "setuptools_scm",
-]
-
 [project]
 description = "Documentation of the BESIII Offline Software System"
-dynamic = ["version"]
 keywords = [
     "BESIII",
     "HEP",
@@ -19,6 +11,7 @@ keywords = [
 license = {file = "LICENSE"}
 name = "bossdoc"
 requires-python = "~=3.13.0"
+version = "0.0.0"
 
 [project.readme]
 content-type = "text/markdown"
@@ -33,30 +26,9 @@ Tracker = "https://github.com/redeboer/bossdoc/issues"
 [dependency-groups]
 dev = [
     "poethepoet",
-    "ruff",
-    "sphinx-autobuild",
     {include-group = "doc"},
-    {include-group = "style"},
 ]
-doc = [
-    "myst-parser",
-    "sphinx",
-    "sphinx-api-relink",
-    "sphinx-book-theme",
-    "sphinx-comments",
-    "sphinx-copybutton",
-    "sphinx-design",
-    "sphinx-pybtex-etal-style",
-    "sphinx-togglebutton",
-    "sphinxcontrib-bibtex >=2",
-]
-style = ["sphinx-api-relink"]
-
-[tool.setuptools]
-include-package-data = false
-
-[tool.setuptools_scm]
-write_to = "version.py"
+doc = ["quarto-cli"]
 
 [tool.poe]
 executor.type = "uv"
@@ -71,161 +43,27 @@ sequence = [
 ]
 
 [tool.poe.tasks.doc]
-cmd = """
-sphinx-build \
-    --builder=html \
-    --fail-on-warning \
-    --keep-going \
-    --show-traceback \
-    docs/ \
-    docs/_build/html/
-"""
-env = {PYTHONWARNINGS = ""}
-help = "Build documentation and API"
+cmd = "quarto render --no-clean"
+help = "Build website"
 
 [tool.poe.tasks.doclive]
-cmd = """
-sphinx-autobuild \
-    --builder=html \
-    --port=0 \
-    --re-ignore=/__pycache__(/.*)?$ \
-    --re-ignore=/_build(/.*)?$ \
-    --re-ignore=/_images(/.*)?$ \
-    --re-ignore=/\\.cache(/.*)?$ \
-    --re-ignore=/\\.egg-info(/.*)?$ \
-    --re-ignore=/\\.ipynb_checkpoints(/.*)?$ \
-    --re-ignore=/\\.venv(/.*)?$ \
-    --re-ignore=/\\.virtual_documents(/.*)?$ \
-    --re-ignore=/api(/.*)?$ \
-    --re-ignore=/docs$ \
-    --re-ignore=/version\\.py$ \
-    --re-ignore=\\.csv$ \
-    --re-ignore=\\.egg-info(/.*)?$ \
-    --re-ignore=\\.gif$ \
-    --re-ignore=\\.gitignore$ \
-    --re-ignore=\\.gv$ \
-    --re-ignore=\\.inv$ \
-    --re-ignore=\\.json$ \
-    --re-ignore=\\.pickle$ \
-    --re-ignore=\\.pkl$ \
-    --re-ignore=\\.png$ \
-    --re-ignore=\\.root$ \
-    --re-ignore=\\.svg$ \
-    --re-ignore=\\.tmp$ \
-    --re-ignore=\\.ya?ml$ \
-    docs/ \
-    docs/_build/html/
-"""
+cmd = "quarto preview --no-clean"
 help = "Set up a server to directly preview changes to the HTML pages"
 
 [tool.poe.tasks.linkcheck]
 cmd = """
-sphinx-build \
-    --builder=linkcheck \
-    --show-traceback \
-    docs/ \
-    docs/_build/linkcheck/
+python -c 'print("Not yet implemented, see https://github.com/quarto-dev/quarto-cli/issues/1319")',
 """
-env = {PYTHONWARNINGS = ""}
 help = "Check external links in the documentation (requires internet connection)"
 
 [tool.poe.tasks.style]
 cmd = "uv run --group style --isolated --no-dev pre-commit run --all-files"
 help = "Perform all linting, formatting, and spelling checks"
 
-[tool.pyright]
-include = [
-    "docs/conf.py",
-    "src",
-    "tests",
-]
-reportGeneralTypeIssues = false
-reportMissingParameterType = false
-reportMissingTypeStubs = false
-reportUnboundVariable = false
-reportUnknownArgumentType = false
-reportUnknownMemberType = false
-reportUnknownParameterType = false
-reportUnknownVariableType = false
-reportUnusedClass = true
-reportUnusedFunction = true
-reportUnusedImport = true
-reportUnusedVariable = true
-typeCheckingMode = "strict"
-venv = ".venv"
-venvPath = "."
-
-[tool.ruff]
-extend-exclude = ["typings"]
-preview = true
-show-fixes = true
-
-[tool.ruff.format]
-docstring-code-format = true
-line-ending = "lf"
-
-[tool.ruff.lint]
-ignore = [
-    "ANN401",
-    "COM812",
-    "CPY001",
-    "D101",
-    "D102",
-    "D103",
-    "D105",
-    "D107",
-    "D203",
-    "D213",
-    "D407",
-    "D416",
-    "DOC",
-    "E501",
-    "FURB101",
-    "FURB103",
-    "FURB140",
-    "G004",
-    "ISC001",
-    "PLW1514",
-    "PT001",
-    "PTH",
-    "SIM108",
-    "UP036",
-]
-select = ["ALL"]
-task-tags = ["cspell"]
-
-[tool.ruff.lint.isort]
-split-on-trailing-comma = false
-
-[tool.ruff.lint.per-file-ignores]
-"docs/*" = [
-    "E402",
-    "INP001",
-    "S101",
-    "S113",
-    "T201",
-]
-"docs/conf.py" = [
-    "A00",
-    "B006",
-    "D100",
-    "PLC2701",
-    "PLR0913",
-]
-"setup.py" = ["D100"]
-
-[tool.ruff.lint.pydocstyle]
-convention = "google"
-
 [tool.tomlsort]
 all = false
 ignore_case = true
 in_place = true
-sort_first = [
-    "build-system",
-    "project",
-    "tool.setuptools",
-    "tool.setuptools_scm",
-]
+sort_first = ["project"]
 spaces_indent_inline_array = 4
 trailing_comma_inline_array = true

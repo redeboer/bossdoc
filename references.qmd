@@ -1,0 +1,12 @@
+---
+title: Bibliography
+nocite: "@*"
+sidebar: index
+---
+
+:::{.callout-tip}
+Download this bibliography as BibTeX [here](./bibliography.bib).
+:::
+
+:::{#refs}
+:::
