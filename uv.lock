@@ -139,7 +139,7 @@ css = [
 [[package]]
 name = "bossdoc"
 version = "0.0.0"
-source = { editable = "." }
+source = { virtual = "." }
 
 [package.dev-dependencies]
 dev = [
