@@ -44,7 +44,6 @@ repos:
     hooks:
       - id: toml-sort
         args: [--in-place]
-        exclude: (?x)^(labels.*\.toml)$
 
   - repo: https://github.com/streetsidesoftware/cspell-cli
     rev: v9.2.1

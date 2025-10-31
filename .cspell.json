@@ -32,7 +32,6 @@
     ".readthedocs.yml",
     ".taplo.toml",
     ".vscode/*",
-    "labels.toml",
     "pyproject.toml"
   ],
   "ignoreWords": [
