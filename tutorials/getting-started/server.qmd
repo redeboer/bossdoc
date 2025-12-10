@@ -53,3 +53,7 @@ These directories will be important later in this 'tutorial'.
 :::{.callout-note}
 For the latest data file locations, see [this page](https://docbes3.ihep.ac.cn/~offlinesoftware/index.php/Production).
 :::
+
+## Changing to your preferred shell
+
+By default, the shell for your user account is set to [`tcsh`](https://en.wikipedia.org/wiki/Tcsh). You can apply for other shells like `bash`, `csh`, and `zsh` through [ccsuser.ihep.ac.cn](https://ccsuser.ihep.ac.cn) and then clicking "Apply to change default shell". <!-- cspell:ignore ccsuser -->
