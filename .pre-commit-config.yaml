@@ -46,18 +46,18 @@ repos:
         args: [--in-place]
 
   - repo: https://github.com/streetsidesoftware/cspell-cli
-    rev: v9.2.1
+    rev: v9.4.0
     hooks:
       - id: cspell
 
   - repo: https://github.com/editorconfig-checker/editorconfig-checker.python
-    rev: 3.4.1
+    rev: 3.6.0
     hooks:
       - id: editorconfig-checker
         name: editorconfig
         alias: ec
 
   - repo: https://github.com/astral-sh/uv-pre-commit
-    rev: 0.9.7
+    rev: 0.9.21
     hooks:
       - id: uv-lock
