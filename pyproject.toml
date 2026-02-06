@@ -20,8 +20,8 @@ file = "README.md"
 [project.urls]
 Changelog = "https://github.com/redeboer/bossdoc/releases"
 Documentation = "https://bes3.rtfd.io"
+Issues = "https://github.com/redeboer/bossdoc/issues"
 Source = "https://github.com/redeboer/bossdoc"
-Tracker = "https://github.com/redeboer/bossdoc/issues"
 
 [dependency-groups]
 dev = [{include-group = "doc"}]
