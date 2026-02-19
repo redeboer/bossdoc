@@ -20,18 +20,17 @@ file = "README.md"
 [project.urls]
 Changelog = "https://github.com/redeboer/bossdoc/releases"
 Documentation = "https://bes3.rtfd.io"
+Issues = "https://github.com/redeboer/bossdoc/issues"
 Source = "https://github.com/redeboer/bossdoc"
-Tracker = "https://github.com/redeboer/bossdoc/issues"
 
 [dependency-groups]
-dev = [
-    "poethepoet",
-    {include-group = "doc"},
-]
+dev = [{include-group = "doc"}]
 doc = ["quarto-cli"]
 
-[tool.poe]
-executor.type = "uv"
+[tool.poe.executor]
+isolated = true
+no-group = "dev"
+type = "uv"
 
 [tool.poe.tasks.all]
 help = "Run all continuous integration (CI) tasks locally"
@@ -44,20 +43,23 @@ sequence = [
 
 [tool.poe.tasks.doc]
 cmd = "quarto render --no-clean"
+executor = {group = "doc"}
 help = "Build website"
 
 [tool.poe.tasks.doclive]
 cmd = "quarto preview --no-clean"
+executor = {group = "doc"}
 help = "Set up a server to directly preview changes to the HTML pages"
 
 [tool.poe.tasks.linkcheck]
 cmd = """
 python -c 'print("Not yet implemented, see https://github.com/quarto-dev/quarto-cli/issues/1319")',
 """
+executor = {group = "doc"}
 help = "Check external links in the documentation (requires internet connection)"
 
 [tool.poe.tasks.style]
-cmd = "uv run --group style --isolated --no-dev pre-commit run --all-files"
+cmd = "pre-commit run --all-files"
 help = "Perform all linting, formatting, and spelling checks"
 
 [tool.tomlsort]
