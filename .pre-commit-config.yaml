@@ -1,6 +1,7 @@
 ci:
   autofix_commit_msg: "MAINT: implement pre-commit autofixes"
   autoupdate_commit_msg: "MAINT: upgrade lock files"
+  autoupdate_schedule: quarterly
   skip:
     - uv-lock
 
@@ -11,7 +12,7 @@ repos:
       - id: check-useless-excludes
 
   - repo: https://github.com/ComPWA/policy
-    rev: 0.8.2
+    rev: 0.8.6
     hooks:
       - id: check-dev-files
         args:
@@ -65,6 +66,6 @@ repos:
         alias: ec
 
   - repo: https://github.com/astral-sh/uv-pre-commit
-    rev: 0.10.0
+    rev: 0.10.4
     hooks:
       - id: uv-lock
