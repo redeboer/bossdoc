@@ -6,12 +6,17 @@ Within BESIII, most analysis tasks are run on a server that is hosted by {{< glo
 
 ## Accessing the server
 
-The IHEP server runs on [Scientific Linux CERN](https://scientificlinux.org/) (SLC). The server offers several versions. Usually, people use either SLC5, SLC6, or SLC7. The domain names for these are `lxslc7.ihep.ac.cn`, where the `7` in this case refers to SLC7. If you are running on Linux or a Linux terminal, the server can be easily accessed using:
+The IHEP server runs on [AlmaLinux9](https://almalinux.org/) .
+
+<!-- According to the BOSS 8 Upgrade Documentation, the computing nodes got upgraded from CentOS7 to AlmaLinux9 so this should no longer be relevant. The server offers several versions. Usually, people use either SLC5, SLC6, or SLC7. The domain names for these are `lxslc7.ihep.ac.cn`, where the `7` in this case refers to SLC7. If you are running on Linux or a Linux terminal, the server can be easily accessed using: -->
 
 ```bash
-ssh -Y <your user name>@lxslc7.ihep.ac.cn
+ssh -Y <Your IHEP computing cluster account>@lxlogin.ihep.ac.cn
 ```
 
+:::{.callout-note}
+The computing cluster account is different from your IHEP account name. It can be found by logging in to [https://login.ihep.ac.cn/](https://login.ihep.ac.cn/) and clicking on your name. The account name is listed under "IHEP computing cluster account".
+:::
 Here, the option `-Y` ensures _X11 forwarding_, allowing you to open graphical applications from the server.
 
 :::{.callout-note}
@@ -21,13 +26,21 @@ If you don't like having to enter your password every time you log in, have a lo
 In Windows, there are some nice tools that allow you to access the server. First of all, to be able to use SSH, use will either have to use [PuTTY](https://www.putty.org/) or more extensive software like [Xmanager](https://www.netsarang.com/en/xmanager/). You can also just search for some Linux terminals for Windows. In addition, have a look at the (S)FTP client [WinSCP](https://winscp.net/eng/index.php). It allows you to easily navigate the file structure of the IHEP server and to quickly transfer―even synchronize―files up and down to your own computer. <!-- cspell:ignore Xmanager -->
 
 :::{.callout-note}
-Once in the server, you can switch to other versions of SLC using `hep_container`. So for instance, if you are in SLC7 (CentOS) and want to use SL6, you can use:
+Once in the server, you can switch to other versions of SLC using `hep_container`:
+In order to do this you need to add it to your `PATH` variable by running
 
 ```bash
-hep_container shell SL6
+export PATH=/cvmfs/container.ihep.ac.cn/bin/:$PATH
+```
+
+Once you have done this, you can switch to the SLC version of your choice by running
+
+```bash
+hep_container shell CentOS7
 ```
 
 where `shell` can be replaced with your shell of choice.
+The available SLC versions can be found by running `hep_container images`.
 :::
 
 ## Important data paths {#data-paths}
