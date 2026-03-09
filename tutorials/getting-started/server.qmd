@@ -15,6 +15,21 @@ ssh -Y <Your IHEP computing cluster account>@lxlogin.ihep.ac.cn
 ```
 
 :::{.callout-note}
+To simplify the login process, you can add the following lines to your `~/.ssh/config` file:
+
+```bash
+Host ihep
+  HostName lxlogin.ihep.ac.cn
+Match host beslogin.ihep.ac.cn,lxlogin.ihep.ac.cn
+  ControlMaster auto
+  ControlPath ~/.ssh/cm/%C.sock
+  ControlPersist 10m
+  PreferredAuthentications password
+  User USERNAME
+```
+
+:::
+:::{.callout-note}
 The computing cluster account is different from your IHEP account name. It can be found by logging in to [https://login.ihep.ac.cn/](https://login.ihep.ac.cn/) and clicking on your name. The account name is listed under "IHEP computing cluster account".
 :::
 Here, the option `-Y` ensures _X11 forwarding_, allowing you to open graphical applications from the server.
