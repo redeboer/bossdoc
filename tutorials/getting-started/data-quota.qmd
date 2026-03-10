@@ -18,3 +18,37 @@ If you do, the folder of which you are exceeding its quota will be locked by the
 :::
 
 Official information on the quota can be found [here](http://afsapply.ihep.ac.cn/cchelp/en/experiments/BES/#712-storage) (BESIII) and [here](https://afsapply.ihep.ac.cn/cchelp/en/appendix/storage-allocation-and-quota) (IHEP).
+
+<!-- cspell:ignore listquota -->
+
+::::{.callout-tip title="How to check your quota?"}
+As noted on [this page](https://afsapply.ihep.ac.cn/cchelp/en/appendix/storage-allocation-and-quota), you can check your quota by running the following commands:
+
+:::{.panel-tabset}
+
+## `/afs`
+
+```bash
+fs listquota /afs/ihep.ac.cn/users/${USER:0:1}/$USER
+```
+
+## `/besfs5`
+
+```bash
+lfs quota -u $USER /besfs5
+```
+
+## `/scratchfs`
+
+```bash
+lfs quota -u $USER /scratchfs
+```
+
+## `/workfs2`
+
+```bash
+lfs quota -u $USER /workfs2
+```
+
+:::
+::::
