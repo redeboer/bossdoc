@@ -20,7 +20,6 @@ As of April 1st, 2021, `workfs` has been renamed to `workfs2`.
 | `/home/bes/$USER`                         |     200 MB |            |                        |
 | `/afs/ihep.ac.cn/users/${USER:0:1}/$USER` |     500 MB |            | home (`~`)             |
 | `/besfs5/users/$USER`                     |      50 GB |    300,000 |                        |
-| `/ihepbatch/bes/$USER`                    |     200 MB |            |                        |
 | `/workfs2/bes/$USER`                      |       5 GB |     50,000 | no `hep_sub` available |
 | `/scratchfs/bes/$USER`                    |   (500 GB) |            | max. 2 weeks           |
 
