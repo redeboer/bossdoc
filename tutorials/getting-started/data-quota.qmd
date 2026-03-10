@@ -4,25 +4,24 @@ title: Data quota
 
 When you have logged into the server, you usually start in your home (`~`) folder. Move to the root of the server (`cd /`) and you'll see that is a large number of other directories. A few of these directories contain space that is assigned to your user account. Here is an overview:
 
-| Path                                      | Data quota | Max. files | Remark                 |
-| ----------------------------------------- | ---------: | ---------: | ---------------------- |
-| `/afs/ihep.ac.cn/users/${USER:0:1}/$USER` |     500 MB |            | home (`~`)             |
-| `/besfs5/users/$USER`                     |      50 GB |    300,000 |                        |
-| `/workfs2/bes/$USER`                      |       5 GB |     50,000 | no `hep_sub` available |
-| `/scratchfs/bes/$USER`                    |   (500 GB) |            | max. 2 weeks           |
+:::{.column-page-inset-right}
 
-In practice, files remain on this server indefinitely. In fact, `scratchfs` seems to follow a less strict policy then other folders.
+<!-- prettier-ignore-start -->
 
-:::{.callout-warning title="Do not exceed these quotas!"}
-If you do, the folder of which you are exceeding its quota will be locked by the Computing Center after a few weeks and it is quite a hassle to regain access.
+| Path                                      |            Data quota | Max. files | Note
+| ----------------------------------------- | --------------------: | ---------: | -------------------------- |
+| `/afs/ihep.ac.cn/users/${USER:0:1}/$USER` | <font color=red>500 MB</font> |    | home (`~`)
+| `/besfs5/users/$USER`                     | <font color=green>_no quota_</font> |  1,000,000 | fastest connection
+| `/scratchfs/bes/$USER`                    |                500 GB |    200,000 | large data files
+| `/workfs2/bes/$USER`                      |                  5 GB |     50,000 |
+
 :::
 
-Official information on the quota can be found [here](http://afsapply.ihep.ac.cn/cchelp/en/experiments/BES/#712-storage) (BESIII) and [here](https://afsapply.ihep.ac.cn/cchelp/en/appendix/storage-allocation-and-quota) (IHEP).
+<!-- prettier-ignore-end -->
+
+Official information on the quota can be found [here](http://afsapply.ihep.ac.cn/cchelp/en/experiments/BES/#712-storage) (BESIII) and [here](https://afsapply.ihep.ac.cn/cchelp/en/appendix/storage-allocation-and-quota) (IHEP). You can check your quota by running the following commands:
 
 <!-- cspell:ignore listquota -->
-
-::::{.callout-tip title="How to check your quota?"}
-As noted on [this page](https://afsapply.ihep.ac.cn/cchelp/en/appendix/storage-allocation-and-quota), you can check your quota by running the following commands:
 
 :::{.panel-tabset}
 
@@ -51,4 +50,12 @@ lfs quota -u $USER /workfs2
 ```
 
 :::
+
+::::{.callout-tip}
+The best setup is to use `/besfs5` for your code and small data files. You can use symbolic links to link from your home directory to `/besfs5` and avoid quota issues under `/afs`. Example:
+
+```bash
+ln -s /besfs5/users/$USER/.cache ~/.cache
+```
+
 ::::
