@@ -35,6 +35,7 @@
   "multiDiffEditor.experimental.enabled": true,
   "prettier.documentSelectors": ["**/*.qmd"],
   "quarto.path": ".venv/bin/quarto",
+  "quarto.render.renderOnSave": true,
   "redhat.telemetry.enabled": false,
   "rewrap.wrappingColumn": 88,
   "search.exclude": {
