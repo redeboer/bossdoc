@@ -12,7 +12,11 @@ The IHEP server runs on [AlmaLinux9](https://almalinux.org/) .
 ssh -Y <Your IHEP computing cluster account>@lxlogin.ihep.ac.cn
 ```
 
-:::{.callout-note}
+Here, the option `-Y` ensures _X11 forwarding_, allowing you to open graphical applications from the server.
+
+:::{.callout-warning}
+The computing cluster account is different from your IHEP account name. It can be found by logging in to [https://login.ihep.ac.cn/](https://login.ihep.ac.cn/) and clicking on your name. The account name is listed under "IHEP computing cluster account".
+:::
 
 To simplify the login process, you can first create the `~/.ssh/cm/` directory via
 
@@ -22,7 +26,7 @@ mkdir -p ~/.ssh/cm
 
 and then add the following lines to your `~/.ssh/config` file:
 
-````bash
+```bash
 Host ihep
   HostName lxlogin.ihep.ac.cn
 Match host beslogin.ihep.ac.cn,lxlogin.ihep.ac.cn
@@ -31,12 +35,7 @@ Match host beslogin.ihep.ac.cn,lxlogin.ihep.ac.cn
   ControlPersist 10m
   PreferredAuthentications password
   User USERNAME
-
-:::
-:::{.callout-warning}
-The computing cluster account is different from your IHEP account name. It can be found by logging in to [https://login.ihep.ac.cn/](https://login.ihep.ac.cn/) and clicking on your name. The account name is listed under "IHEP computing cluster account".
-:::
-Here, the option `-Y` ensures _X11 forwarding_, allowing you to open graphical applications from the server.
+```
 
 :::{.callout-note}
 If you don't like having to enter your password every time you log in, have a look at the section [Key generation for SSH](/appendices/tips.qmd#ssh-keygen).
@@ -50,16 +49,16 @@ In order to do this you need to add it to your `PATH` variable by running
 
 ```bash
 export PATH=/cvmfs/container.ihep.ac.cn/bin/:$PATH
-````
+```
 
-Once you have done this, you can switch to the SLC version of your choice by running
+Once you have done this, you can switch to the version of your choice by running
 
 ```bash
 hep_container shell CentOS7
 ```
 
 where `shell` can be replaced with your shell of choice.
-The available SLC versions can be found by running `hep_container images`.
+The available versions can be found by running `hep_container images`.
 :::
 
 ## Important data paths {#data-paths}
@@ -89,3 +88,7 @@ For the latest data file locations, see [this page](https://docbes3.ihep.ac.cn/~
 ## Changing to your preferred shell
 
 By default, the shell for your user account is set to [`tcsh`](https://en.wikipedia.org/wiki/Tcsh). You can apply for other shells like `bash`, `csh`, and `zsh` through [ccsuser.ihep.ac.cn](https://ccsuser.ihep.ac.cn) and then clicking "Apply to change default shell". <!-- cspell:ignore ccsuser -->
+
+```
+
+```

@@ -66,9 +66,7 @@ Option `-p` makes `mkdir` work on arbitrary depth and ignores existing directori
 ```bash
 mkdir -p "$BOSS_INSTALL/cmthome"
 cd "$BOSS_INSTALL/cmthome"
-#cp -Rf /cvmfs/bes3.ihep.ac.cn/bes3sw/cmthome/cmthome-$BOSS_VERSION/* .
 cp -Rf /cvmfs/bes3.ihep.ac.cn/bes3sw/cmthome/my/cmthome-$BOSS_VERSION/* .
-# The directories aside from /my in cmthome do not contain the required setup.sh, while the /my/... directories do. The /my directories seem to contain additional files, but the setup and test work.
 ```
 
 Note that we have omitted the version from the original folder name. You can choose to keep that number as well, but here we chose to use the convention that `cmthome` and `workarea` without a version number refers to the latest stable version of BOSS.
