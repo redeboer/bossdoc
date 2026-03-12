@@ -57,8 +57,8 @@ Once you have done this, you can switch to the version of your choice by running
 hep_container shell CentOS7
 ```
 
-where `shell` can be replaced with your shell of choice.
-The available SLC versions can be found by running
+where `shell` can be replaced with your shell of choice and `CentOS7` with your distribution of choice.
+The available distribution versions can be found by running:
 
 ```bash
 hep_container images
