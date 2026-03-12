@@ -59,7 +59,11 @@ hep_container shell CentOS7
 ```
 
 where `shell` can be replaced with your shell of choice.
-The available SLC versions can be found by running `hep_container images`.
+The available SLC versions can be found by running
+
+```bash
+hep_container images
+```
 :::
 
 ## Important data paths {#data-paths}
