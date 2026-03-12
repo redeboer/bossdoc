@@ -43,12 +43,12 @@ Why the quotation marks (`"..."`) and curly braces (`{...}`)? It's just a good h
 
 This variable points to the path that will contain your local 'install' of BOSS. You can change what is between the quotation marks by whatever folder you prefer, in case you want your local BOSS install to be placed in some other path, for instance by `/ihepbatch/bes/$USER`.
 
-At this stage, you'll have to decide which version of BOSS you have to use. For this example **version 7.1.3.b** is used, though it could be that for your analysis you have to use data sets that were reconstructed with older versions of BOSS. Here, we'll stick with `7.1.3.b`, but you can replace this number with whatever version you need.
+At this stage, you'll have to decide which version of BOSS you have to use. For this example **version 7.0.8** is used, though it could be that for your analysis you have to use data sets that were reconstructed with older versions of BOSS. Here, we'll stick with `7.0.8`, but you can replace this number with whatever version you need.
 
 For convenience, we'll again define the version number as a variable here.
 
 ```bash
-BOSS_VERSION="7.1.3.b"
+BOSS_VERSION="7.0.8"
 ```
 
 :::{.callout-tip}
@@ -203,7 +203,7 @@ These lines force the server to source your `.bashrc` run commands file when you
 
 ```{.bash filename=".bashrc"}
 export BOSS_INSTALL="/besfs5/users/${USER}/boss"
-export BOSS_VERSION="7.1.3.b"
+export BOSS_VERSION="7.0.8"
 CMTHOME="/cvmfs/bes3.ihep.ac.cn/bes3sw/cmthome/cmthome-${BOSS_VERSION}"
 
 source "${BOSS_INSTALL}/cmthome/setupCMT.sh"
@@ -226,7 +226,7 @@ The following summarizes all commands required to 'install' BOSS on `lxslc` on y
 
 ```bash
 BOSS_INSTALL=/besfs5/users/$USER/boss
-BOSS_VERSION=7.1.3.b
+BOSS_VERSION=7.0.8
 mkdir -p $BOSS_INSTALL/cmthome
 cd $BOSS_INSTALL/cmthome
 cp -Rf /cvmfs/bes3.ihep.ac.cn/bes3sw/cmthome/my/cmthome-$BOSS_VERSION/* .
