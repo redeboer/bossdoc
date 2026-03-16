@@ -1,5 +1,5 @@
 ---
-title: The IHEP server (`lxslc`)
+title: The IHEP server (`lxlogin`)
 ---
 
 Within BESIII, most analysis tasks are run on a server that is hosted by {{< glossary "IHEP" >}}. The server is also where you will use BOSS. You will need to [apply for an IHEP computing account](https://docbes3.ihep.ac.cn/~offlinesoftware/index.php/Lxslc_account_application) to be able to log in.

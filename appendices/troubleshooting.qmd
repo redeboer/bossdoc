@@ -101,7 +101,7 @@ it means the `LANG` environment variable has been set to a value that BOSS canno
 export LANG=C
 ```
 
-## I cannot use a graphical interface from `lxslc`
+## I cannot use a graphical interface from `lxlogin`
 
 If, for instance, you cannot view a `TBrowser` or cannot open the event display `besvis.exe`, but instead see <!-- cspell:ignore besvis -->
 
@@ -109,7 +109,7 @@ If, for instance, you cannot view a `TBrowser` or cannot open the event display 
 In case you run from a remote ssh session, reconnect with ssh -Y
 ```
 
-you probably logged in with an SSH key and even using `ssh -Y` won't help. If you really need the graphical interfaces from `lxslc`, you will need to remove your public key from the `~/.ssh/authorized_keys` file (just open and edit, it's just a text file) and log in again.
+you probably logged in with an SSH key and even using `ssh -Y` won't help. If you really need the graphical interfaces from `lxlogin`, you will need to remove your public key from the `~/.ssh/authorized_keys` file (just open and edit, it's just a text file) and log in again.
 
 ## My analysis BOSS packages end in a segmentation fault
 

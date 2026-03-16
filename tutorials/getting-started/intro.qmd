@@ -10,7 +10,7 @@ In this section, we will discuss the three most important components that form B
 - [CMT](#cmt), which is used to manage packages designed by different groups.
 - [CVS](#cvs), which is the version control system used to maintain BOSS.
 
-BOSS has been built on several other external libraries. The source files and binaries can be found here on the `lxslc` server:
+BOSS has been built on several other external libraries. The source files and binaries can be found here on the `lxlogin` server:
 
 ```default
 /cvmfs/bes3.ihep.ac.cn/bes3sw/ExternalLib/SLC6/ExternalLib

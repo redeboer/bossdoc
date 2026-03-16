@@ -36,9 +36,9 @@ Make sure you do not confuse the numbers when navigating these paths.
 
 ## Querying for data sets
 
-### On `lxslc`
+### On `lxlogin`
 
-You can find all information about the data sets through MySQL on `lxslc`. To open the database, type: <!-- cspell:ignore guestpass offlinedb -->
+You can find all information about the data sets through MySQL on `lxlogin`. To open the database, type: <!-- cspell:ignore guestpass offlinedb -->
 
 ```bash
 mysql --user=guest --password=guestpass -h bes3db2.ihep.ac.cn offlinedb

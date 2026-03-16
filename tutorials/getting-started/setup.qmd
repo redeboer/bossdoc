@@ -221,7 +221,7 @@ source ~/.bashrc`
 
 ## Summary of commands
 
-The following summarizes all commands required to 'install' BOSS on `lxslc` on your IHEP user account. If you don't know what you are doing, go through the sections above to understand what's going on here.
+The following summarizes all commands required to 'install' BOSS on `lxlogin` on your IHEP user account. If you don't know what you are doing, go through the sections above to understand what's going on here.
 
 ```bash
 BOSS_INSTALL=/besfs5/users/$USER/boss

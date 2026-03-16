@@ -62,7 +62,6 @@ VSCode also [recommends](https://code.visualstudio.com/docs/remote/troubleshooti
 VSCode Remote SSH installs some files into your home directory on the server, in a folder called `.vscode-server`. It is therefore recommended that you set the installation location for the `.vscode-server` folder to a directory where you always have read-write access. This can be done in VSCode by the setting:
 
 ```json
-
   "remote.SSH.serverInstallPath": {
     "ihep": "/besfs5/users/<USERNAME>"
   },
@@ -104,9 +103,11 @@ ln -s /besfs5/users/$USER/.vscode-server
 ```
 
 :::
+
 For the (rather common) problem of a permission error when trying to move the directory, see [here](troubleshooting.qmd#read-write-access).
 
 ::::
+
 Another major advantage of this set-up is that you won't have problems with [data quota](/tutorials/getting-started/data-quota.qmd) when the `.vscode-server` grows over time.
 
 ### Language navigation for BOSS
