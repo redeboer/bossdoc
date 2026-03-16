@@ -95,7 +95,7 @@ ln -s /besfs5/users/$USER/.vscode-server
 
 ## `.vscode-server` already exists
 
-An existing `.vscode-server` folder in your home directory can cause Visual Studio Code to get stuck at trying to download the server configuration. The solution is to move the existing `.vscode-server` folder to the new location.:
+An existing `.vscode-server` folder in your home directory can cause Visual Studio Code to get stuck at trying to download the server configuration. The solution is to move the existing `.vscode-server` folder to the new location:
 
 ```bash
 cd ~
@@ -103,7 +103,6 @@ mv -f .vscode-server /besfs5/users/$USER/
 ln -s /besfs5/users/$USER/.vscode-server
 ```
 
-::
 :::
 For the (rather common) problem of a permission error when trying to move the directory, see [here](troubleshooting.qmd#read-write-access).
 
