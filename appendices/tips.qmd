@@ -13,12 +13,12 @@ If you do not like to keep having to enter your password, have a look at generat
    ```
 3. Copy the public key to the server using:
    ```bash
-   ssh-copy-id -i ~/.ssh/id_rsa <your user name>@lxslc7.ihep.ac.cn
+   ssh-copy-id -i ~/.ssh/id_rsa.pub <your user name>@lxlogin.ihep.ac.cn
    ```
    You will be asked for your IHEP account password.
 4. Try to log in to the server with:
    ```bash
-   ssh -Y <your user name>@lxslc7.ihep.ac.cn
+   ssh -Y <your user name>@lxlogin.ihep.ac.cn
    ```
    If all went correctly, you don't have to enter your password anymore.
 
@@ -47,7 +47,7 @@ You will download around **1 GB** of source code.
 
 ### Remote SSH
 
-For working with VSCode on `lxslc`, you can use the [Remote - SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh) extension. This lets you with VSCode work on the server with full functionality, such as using the Source Control Manager and language navigation from any other VSCode extensions you installed. See [here](https://code.visualstudio.com/docs/remote/ssh-tutorial#_connect-using-ssh) for a tutorial on how to connect to a remote SSH server.
+For working with VSCode on `lxlogin`, you can use the [Remote - SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh) extension. This lets you with VSCode work on the server with full functionality, such as using the Source Control Manager and language navigation from any other VSCode extensions you installed. See [here](https://code.visualstudio.com/docs/remote/ssh-tutorial#_connect-using-ssh) for a tutorial on how to connect to a remote SSH server.
 
 There is one thing you need to change in your [VSCode settings](https://code.visualstudio.com/docs/getstarted/settings). Following [these instructions](https://code.visualstudio.com/docs/remote/ #\_troubleshooting-hanging-or-failing-connections), set the following option:
 
@@ -59,18 +59,28 @@ VSCode also [recommends](https://code.visualstudio.com/docs/remote/troubleshooti
   "remote.SSH.useLocalServer": false,
 ```
 
+VSCode Remote SSH installs some files into your home directory on the server, in a folder called `.vscode-server`. It is therefore recommended that you set the installation location for the `.vscode-server` folder to a directory where you always have read-write access. This can be done in VSCode by the setting:
+
+```json
+  "remote.SSH.serverInstallPath": {
+    "ihep": "/besfs5/users/<USERNAME>"
+  },
+```
+
+The `<USERNAME>` needs to be replaced with your clustering account name.
+
 In addition, you may need to set the remote platform to `"linux"`:
 
 ```json
   "remote.SSH.remotePlatform": {
-    "lxslc7.ihep.ac.cn": "linux"
+    "lxlogin.ihep.ac.cn": "linux"
   },
 ```
 
-where `"lxslc7.ihep.ac.cn"` is the name of the host in your [SSH Config file](https://man7.org/linux/man-pages/man5/ssh_config.5.html).
+where `"lxlogin.ihep.ac.cn"` is the name of the host in your [SSH Config file](https://man7.org/linux/man-pages/man5/ssh_config.5.html).
 
 ::::{.callout-tip}
-VSCode Remote SSH installs some files into your home directory on the server, in a folder called `.vscode-server`. This will not work if you experience this (rather common) problem, see [here](troubleshooting.qmd#read-write-access). It is therefore recommended that you move the `.vscode-server` folder to a directory where you always have read-write access and then create a symbolic link to that folder in your actual home folder. Do this as follows:
+As an alternative you can move the `.vscode`folder and create a symbolic link in your home directory. Do this as follows:
 
 :::{.panel-tabset}
 
@@ -84,6 +94,8 @@ ln -s /besfs5/users/$USER/.vscode-server
 
 ## `.vscode-server` already exists
 
+An existing `.vscode-server` folder in your home directory can cause Visual Studio Code to get stuck at trying to download the server configuration. The solution is to move the existing `.vscode-server` folder to the new location:
+
 ```bash
 cd ~
 mv -f .vscode-server /besfs5/users/$USER/
@@ -91,8 +103,12 @@ ln -s /besfs5/users/$USER/.vscode-server
 ```
 
 :::
-Another major advantage of this set-up is that you won't have problems with [data quota](/tutorials/getting-started/data-quota.qmd) when the `.vscode-server` grows over time.
+
+For the (rather common) problem of a permission error when trying to move the directory, see [here](troubleshooting.qmd#read-write-access).
+
 ::::
+
+Another major advantage of this set-up is that you won't have problems with [data quota](/tutorials/getting-started/data-quota.qmd) when the `.vscode-server` grows over time.
 
 ### Language navigation for BOSS
 
