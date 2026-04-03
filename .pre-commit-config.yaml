@@ -12,7 +12,7 @@ repos:
       - id: check-useless-excludes
 
   - repo: https://github.com/ComPWA/policy
-    rev: 0.8.6
+    rev: 0.8.8
     hooks:
       - id: check-dev-files
         args:
@@ -48,24 +48,24 @@ repos:
       - id: taplo-format
 
   - repo: https://github.com/pappasam/toml-sort
-    rev: v0.24.3
+    rev: v0.24.4
     hooks:
       - id: toml-sort
         args: [--in-place]
 
   - repo: https://github.com/streetsidesoftware/cspell-cli
-    rev: v9.6.0
+    rev: v9.7.0
     hooks:
       - id: cspell
 
   - repo: https://github.com/editorconfig-checker/editorconfig-checker.python
-    rev: 3.6.0
+    rev: 3.6.1
     hooks:
       - id: editorconfig-checker
         name: editorconfig
         alias: ec
 
   - repo: https://github.com/astral-sh/uv-pre-commit
-    rev: 0.10.4
+    rev: 0.11.3
     hooks:
       - id: uv-lock
