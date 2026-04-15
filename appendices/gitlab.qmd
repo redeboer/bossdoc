@@ -4,15 +4,9 @@ title: IHEP GitLab
 
 IHEP supplies a GitLab server, which allows you to put your analysis code in a `git` repository. You can then enjoy all the benefits of version control, different branches to collaborate as a team, a better overview through online access, etc. The IHEP GitLab server can be accessed through [code.ihep.ac.cn](https://code.ihep.ac.cn). Have a look [here](https://guides.github.com/introduction/git-handbook) at what `git` does, it's worth it!
 
-:::{.callout-note}
-Unfortunately, the IHEP GitLab server is only available on-campus through the LAN network. In theory, it is possible to connect through the IHEP VPN ([ssl.ihep.ac.cn](http://ssl.ihep.ac.cn)) using EasyConnect, though to set this up, you will first need to be in that LAN network. There are plans to make the server available through the standard SSO account.
-:::
-
 ## Preparing access to the server
 
-To be able to push files to a repository on the IHEP GitLab server, you will first need to apply for an IHEP GitLab account. You can do this by sending an email to [fanrh@ihep.ac.cn](mailto:fanrh@ihep.ac.cn).
-
-When you have received your login credentials, log in to [code.ihep.ac.cn](https://code.ihep.ac.cn/profile/keys/132) and have a look around. As you have probably noticed, there is a warning that you have to add an SSH key in order to pull and push to the server. The steps to create such a key are comparable to those for login in to the [IHEP server](tips.qmd#ssh-keygen).
+Using your IHEP SSO login credentials, log in to [code.ihep.ac.cn](https://code.ihep.ac.cn/) and have a look around. As you have probably noticed, there is a warning that you have to add an SSH key in order to pull and push to the server. The steps to create such a key are comparable to those for login in to the [IHEP server](tips.qmd#ssh-keygen).
 
 1. Generate an SSH key with the command `ssh-keygen`. You can choose to leave the password empty.
 2. Add the SSH key to the `ssh-agent` and create a corresponding _public key_ with the commands:
@@ -30,6 +24,14 @@ When you have received your login credentials, log in to [code.ihep.ac.cn](https
 See [here](https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) for more elaborate instructions.
 
 As a test, you can now create a new repository on the server. Just click ["New project"](https://code.ihep.ac.cn/projects/new) and follow the instructions. This is a nice way to start, as you will be immediately shown instructions on how to configure `git` locally (such as setting the user name).
+
+:::{.callout-note}
+As an alternative a ssh on from your local machine can be used.
+This can be done by adding the line
+`ForwardAgent yes`
+to your .ssh config file for the ihep server.
+This can be used to allow the usage of external servers e.g. GitHub as well.
+:::
 
 ## Pushing existing code to a new repository
 
