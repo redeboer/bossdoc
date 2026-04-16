@@ -91,6 +91,7 @@ website:
                 - packages/analysis/examples/RhopiAlg.qmd
                 - packages/analysis/examples/PipiJpsiAlg.qmd
             - packages/analysis/other.qmd
+            - packages/analysis/yapp.qmd
             - packages/analysis/FSFilter.qmd
             - packages/analysis/DDecayAlg.qmd
             - packages/analysis/BesDChain.qmd

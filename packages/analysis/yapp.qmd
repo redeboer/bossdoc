@@ -1,0 +1,7 @@
+---
+title: YAPP
+---
+
+[**YAPP**](https://gitlab.ep1.rub.de/Bes3/Yapp) is a plotting package for BES3 analysis developed by the RUB-EP1 group.
+
+For more information and source code, see <https://gitlab.ep1.rub.de/Bes3/Yapp>.
