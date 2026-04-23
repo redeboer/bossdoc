@@ -101,7 +101,8 @@
     "topoana",
     "venv",
     "workarea",
-    "workfs"
+    "workfs",
+    "yapp"
   ],
   "language": "en-US",
   "useGitignore": true,
