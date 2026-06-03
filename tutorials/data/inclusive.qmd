@@ -4,9 +4,11 @@ title: Inclusive Monte Carlo samples
 
 ## Reconstructed $J/\psi$ samples
 
-> [!WARNING]
-> The path is still listed on the production page, but is no longer available.
-> The latest $J/\psi$ samples have been reconstructed with **BOSS 6.6.4**. They are located here:
+:::{.callout-warning}
+The path is still listed on the production page, but is no longer available.
+:::
+
+The latest $J/\psi$ samples have been reconstructed with **BOSS 6.6.4**. They are located here:
 
 ```bash
 InclJpsi="/besfs3/offline/data/besfs2/offline/data/664-1/jpsi/"
@@ -23,7 +25,7 @@ InclJpsi="/besfs3/offline/data/besfs2/offline/data/664-1/jpsi/"
 
 See an indication of the number of $J/\psi$ events in [this presentation](https://indico.ihep.ac.cn/event/8795/session/3/contribution/9/material/slides/0.pdf) (requires login).
 
-The latest samples for BOSS version 7.0.8 according to the [production page (login required)](https://docbes3.ihep.ac.cn/~offlinesoftware/index.php/Data_production_with_version_V7.0.8#jpsi_data) are located here:
+The latest $J/\psi$ samples reconstructed with **BOSS 7.0.8**, according to the [production page](https://docbes3.ihep.ac.cn/~offlinesoftware/index.php/Data_production_with_version_V7.0.8#jpsi_data) (requires login) are located here :
 
 ```bash
 InclJpsi="/bes3fs/offline/data/708-1/jpsi/"
