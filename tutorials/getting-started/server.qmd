@@ -78,11 +78,12 @@ Some other important directories for the BESIII Collaboration are the following:
 - [Reconstructed data sets](https://docbes3.ihep.ac.cn/~offlinesoftware/index.php/Production)
   - `/besfs3/offline/data/`
   - `/besfs/offline/data/` (older versions)
-- [Reconstructed Monte Carlo sets](https://docbes3.ihep.ac.cn/~offlinesoftware/index.php/Jpsi_data) (latest version available is `6.6.4`):
-  - `/besfs2/offline/data/664-1/jpsi/09mc/dst` (2009; 225M)
-  - `/besfs2/offline/data/664-1/jpsi/12mc/dst` (2012; 200M)
-  - `/besfs2/offline/data/664-1/jpsi/12mc/grid/dst` (2012; 800M)
-  - (no reconstructed MC samples available yet for 2018)
+- [Reconstructed Monte Carlo sets](https://docbes3.ihep.ac.cn/~offlinesoftware/index.php/Jpsi_data)
+  - (latest version available is `7.0.8`):
+    - `/bes3fs/offline/data/708-1/jpsi/round02/mc/dst`(2009; 224M)
+    - `/bes3fs/offline/data/708-1/jpsi/round05/mc/dst`(2012; 1.087B)
+    - `/bes3fs/offline/data/708-1/jpsi/round11/mc/dst`(2018; 4.6B)
+    - `/bes3fs/offline/data/708-1/jpsi/round12/mc/dst`(2019; 4.1B)
 
 These directories will be important later in this 'tutorial'.
 
