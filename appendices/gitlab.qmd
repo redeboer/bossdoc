@@ -6,7 +6,7 @@ IHEP supplies a GitLab server, which allows you to put your analysis code in a `
 
 ## Preparing access to the server
 
-Using your IHEP SSO login credentials, log in to [code.ihep.ac.cn](https://code.ihep.ac.cn/) and have a look around. As you have probably noticed, there is a warning that you have to add an SSH key in order to pull and push to the server. The steps to create such a key are comparable to those for login in to the [IHEP server](tips.qmd#ssh-keygen).
+Using your IHEP SSO login credentials, log in to [code.ihep.ac.cn](https://code.ihep.ac.cn) and have a look around. As you have probably noticed, there is a warning that you have to add an SSH key in order to pull and push to the server. The steps to create such a key are comparable to those for login in to the [IHEP server](tips.qmd#ssh-keygen).
 
 1. Generate an SSH key with the command `ssh-keygen`. You can choose to leave the password empty.
 2. Add the SSH key to the `ssh-agent` and create a corresponding _public key_ with the commands:
