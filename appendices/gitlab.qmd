@@ -26,11 +26,13 @@ See [here](https://help.github.com/en/articles/generating-a-new-ssh-key-and-addi
 As a test, you can now create a new repository on the server. Just click ["New project"](https://code.ihep.ac.cn/projects/new) and follow the instructions. This is a nice way to start, as you will be immediately shown instructions on how to configure `git` locally (such as setting the user name).
 
 :::{.callout-note}
-As an alternative a ssh on from your local machine can be used.
-This can be done by adding the line
-`ForwardAgent yes`
-to your .ssh config file for the ihep server.
-This can be used to allow the usage of external servers e.g. GitHub as well.
+As an alternative, you can forward SSH credentials from your local machine. This can be done by adding the line
+
+```{.default filename="~/.ssh/config"}
+ForwardAgent yes
+```
+
+to your SSH config file for the IHEP server. This can be used to allow the usage of external servers e.g. GitHub as well.
 :::
 
 ## Pushing existing code to a new repository
