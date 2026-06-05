@@ -126,3 +126,8 @@ mccor = 0
     __boot()
     import sys, imp, os, os.path
 ```
+
+## VS Code source control is stuck at `Scanning folder for git repositories`
+
+Connect to the ihep server, press `Ctrl + Shift + P`and search for `Preferences: Open Settings`.
+Search for the `Git: path` setting on the remote server. Verify that the path is set e.g. `"git.path": "/usr/bin/git"` in the JSON file.
