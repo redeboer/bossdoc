@@ -43,6 +43,8 @@ The task of the CMT is to streamline and checkout different versions of these pa
 
 See for more information:
 
+- [An accessible introduction to CMT](https://llr.in2p3.fr/activites/physique/glast/workbook/pages/cmtMRvcmt/cmtIntroduction.htm)
+- [Official website of CMT](https://cmtsite.org)
 - [LHCb on CMT](https://lhcb-comp.web.cern.ch/lhcb-comp/support/CMT/cmt.htm) (historical page)
 
 ## Concurrent Versions System (CVS) {#cvs}
