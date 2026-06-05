@@ -75,14 +75,23 @@ Some other important directories for the BESIII Collaboration are the following:
 - [Raw data files](https://docbes3.ihep.ac.cn/~offlinesoftware/index.php/Raw_Data)
   - `/bes3fs/offline/data/raw`
   - `/besfs5/offline/data/randomtrg` (random trigger data) <!-- cspell:ignore randomtrg -->
-- [Reconstructed data sets](https://docbes3.ihep.ac.cn/~offlinesoftware/index.php/Production)
-  - `/besfs3/offline/data/`
-  - `/besfs/offline/data/` (older versions)
-- [Reconstructed Monte Carlo sets](https://docbes3.ihep.ac.cn/~offlinesoftware/index.php/Jpsi_data) (latest version available is `6.6.4`):
-  - `/besfs2/offline/data/664-1/jpsi/09mc/dst` (2009; 225M)
-  - `/besfs2/offline/data/664-1/jpsi/12mc/dst` (2012; 200M)
-  - `/besfs2/offline/data/664-1/jpsi/12mc/grid/dst` (2012; 800M)
-  - (no reconstructed MC samples available yet for 2018)
+- [Reconstructed data sets](https://docbes3.ihep.ac.cn/~offlinesoftware/index.php/Jpsi_data) (see also [Production](https://docbes3.ihep.ac.cn/~offlinesoftware/index.php/Production)) for different versions can be found with:
+
+  ```bash
+  ls /bes*/offline/data/
+  ```
+
+- [Reconstructed Monte Carlo sets](https://docbes3.ihep.ac.cn/~offlinesoftware/index.php/Production)
+  - For example, [for version `7.0.8`](https://docbes3.ihep.ac.cn/~offlinesoftware/index.php/Data_production_with_version_V7.0.8):
+    - `/bes3fs/offline/data/708-1/jpsi/round02/mc/dst`(2009; 224M)
+    - `/bes3fs/offline/data/708-1/jpsi/round05/mc/dst`(2012; 1.087B)
+    - `/bes3fs/offline/data/708-1/jpsi/round11/mc/dst`(2018; 4.6B)
+    - `/bes3fs/offline/data/708-1/jpsi/round12/mc/dst`(2019; 4.1B)
+  - A handy command to find the latest Monte Carlo data sets is:
+
+    ```bash
+    ls /bes*/offline/data/*/jpsi/*/mc/dst -d | sort
+    ```
 
 These directories will be important later in this 'tutorial'.
 
