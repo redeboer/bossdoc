@@ -14,14 +14,12 @@ The latest $J/\psi$ samples have been reconstructed with **BOSS 6.6.4**. They ar
 InclJpsi="/besfs3/offline/data/besfs2/offline/data/664-1/jpsi/"
 ```
 
-<!-- prettier-ignore-start -->
-| Year      | Round     | Inclusive **MC**  | Sub-folder                   |
-| :-------------|:------|----------------:|:-----------------------------|
-| 2009      | `round02` | $225 \times 10^6$ | `$InclJpsi/09mc/dst`
-| 2012      | `round05` | $1.0 \times 10^9$ | `$InclJpsi/12mc/dst`
-| 2017–2018 | `round11` | $0.3 \times 10^9$ | _hasn't been reconstructed yet_
-| 2018–2019 | `round12` | $10 \times 10^9$  | _hasn't been reconstructed yet_
-<!-- prettier-ignore-end -->
+| Year      | Round     |  Inclusive **MC** | Sub-folder                      |
+| :-------- | :-------- | ----------------: | :------------------------------ |
+| 2009      | `round02` | $225 \times 10^6$ | `$InclJpsi/09mc/dst`            |
+| 2012      | `round05` | $1.0 \times 10^9$ | `$InclJpsi/12mc/dst`            |
+| 2017–2018 | `round11` | $0.3 \times 10^9$ | _hasn't been reconstructed yet_ |
+| 2018–2019 | `round12` |  $10 \times 10^9$ | _hasn't been reconstructed yet_ |
 
 See an indication of the number of $J/\psi$ events in [this presentation](https://indico.ihep.ac.cn/event/8795/session/3/contribution/9/material/slides/0.pdf) (requires login).
 
@@ -31,11 +29,9 @@ The latest $J/\psi$ samples reconstructed with **BOSS 7.0.8**, according to the 
 InclJpsi="/bes3fs/offline/data/708-1/jpsi/"
 ```
 
-<!-- prettier-ignore-start -->
 | Year | Round     |    Inclusive **MC** | Sub-folder                                       |
 | :--- | :-------- | ------------------: | :----------------------------------------------- |
 | 2009 | `round02` |   $224 \times 10^6$ | `/bes3fs/offline/data/708-1/jpsi/round02/mc/dst` |
 | 2012 | `round05` | $1.087 \times 10^9$ | `/bes3fs/offline/data/708-1/jpsi/round05/mc/dst` |
 | 2018 | `round11` |   $4.6 \times 10^9$ | `/bes3fs/offline/data/708-1/jpsi/round11/mc/dst` |
 | 2019 | `round12` |   $4.1 \times 10^9$ | `/bes3fs/offline/data/708-1/jpsi/round12/mc/dst` |
-<!-- prettier-ignore-end -->
