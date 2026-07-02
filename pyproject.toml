@@ -25,8 +25,12 @@ Issues = "https://github.com/redeboer/bossdoc/issues"
 Source = "https://github.com/redeboer/bossdoc"
 
 [dependency-groups]
-dev = [{ include-group = "doc" }]
+dev = [
+    { include-group = "doc" },
+    { include-group = "linkcheck" },
+]
 doc = ["quarto-cli"]
+linkcheck = ["linkchecker"]
 
 [tool.compwa.policy.github]
 no-cd = true
@@ -53,11 +57,9 @@ executor = { group = "doc" }
 help = "Set up a server to directly preview changes to the HTML pages"
 
 [tool.poe.groups.doc.tasks.linkcheck]
-cmd = """
-python -c 'print("Not yet implemented, see https://github.com/quarto-dev/quarto-cli/issues/1319")',
-"""
-executor = { group = "doc" }
-help = "Check external links in the documentation (requires internet connection)"
+cmd = "linkchecker --config .linkcheckerrc _build/html/index.html"
+executor = { group = "linkcheck" }
+help = "Check external links in the rendered documentation (requires a prior `poe doc` build and an internet connection)"
 
 [tool.poe.tasks.all]
 help = "Run all continuous integration (CI) tasks locally"

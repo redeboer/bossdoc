@@ -1,0 +1,30 @@
+# Configuration for the `linkcheck` task defined in pyproject.toml.
+# See https://linkchecker.github.io/linkchecker/man/linkcheckerrc.html
+# cspell:ignore checkextern ignorewarnings pyproject sslverify
+[checking]
+threads=10
+timeout=30
+# Reference links point to sites with expired or self-signed certificates.
+# This mirrors the `tls_verify = False` setting of the former Sphinx build.
+sslverify=0
+
+[filtering]
+checkextern=1
+# Redirects (e.g. http to https) are not broken links, just outdated targets.
+ignorewarnings=http-redirected
+# URLs that are unreachable from outside the IHEP network, are known to be
+# flaky, or are repo-action links that Quarto generates on every page (and that
+# trigger GitHub rate limiting). Each line is a regular expression matched
+# against the URL.
+ignore=
+  http://polywww\.in2p3\.fr
+  http://www\.cmtsite\.net
+  https://dev\.mysql\.com
+  https://www\.gnu\.org
+  https://www\.sciencedirect\.com/science/article/pii/S0168900209023870
+  http://[A-Za-z0-9]+\.ihep\.ac\.cn
+  http://[A-Za-z0-9]+\.ihep\.cas\.cn
+  http://[A-Za-z0-9]+\.ucas\.ac\.cn
+  https://[A-Za-z0-9]+\.ihep\.ac\.cn
+  https://github\.com/redeboer/bossdoc/(blob|edit)/
+  https://github\.com/redeboer/bossdoc/issues/new
