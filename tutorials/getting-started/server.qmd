@@ -64,6 +64,7 @@ where `shell` can be replaced with your shell of choice and `CentOS7` with your 
 hep_container images
 ```
 
+For BOSS version 7.0.8, you will need to use `CentOS7`.
 :::
 
 ## Important data paths {#data-paths}
