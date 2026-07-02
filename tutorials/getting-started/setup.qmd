@@ -7,7 +7,7 @@ In it's current version, this tutorial assumes you use a `bash` terminal. It sho
 :::
 
 :::{.callout-warning}
-For BOSS version 7.0.8, you need to use ` hep_container shell CentOS7`, otherwise you will encounter compatibility issues when trying to run the `cmt`or `boss.exe` commands.
+For BOSS version 7.0.8, you need to use `hep_container shell CentOS7`, otherwise you will encounter compatibility issues when trying to run the `cmt`or `boss.exe` commands.
 :::
 
 :::{.callout-tip}
