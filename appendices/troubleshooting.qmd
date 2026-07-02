@@ -131,3 +131,8 @@ mccor = 0
 
 Connect to the ihep server, press `Ctrl + Shift + P`and search for `Preferences: Open Settings`.
 Search for the `Git: path` setting on the remote server. Verify that the path is set e.g. `"git.path": "/usr/bin/git"` in the JSON file.
+
+## During the BOSS environment setup a compatibility error (e.g. with Python) occurs
+
+For BOSS version 7.0.8, you will need to use ` hep_container shell CentOS7`, otherwise you will encounter compatibility issues when trying to run the `cmt`or `boss.exe` commands.
+Depending on the version of BOSS you are using, you may need to use a different container.
