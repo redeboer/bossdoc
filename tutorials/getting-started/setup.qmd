@@ -6,6 +6,10 @@ title: Set up your BOSS environment
 In it's current version, this tutorial assumes you use a `bash` terminal. It should work for TC-shell as well, but if you experience problems, please visit [Help developing](/contribute.qmd) or click the edit or issue buttons above!
 :::
 
+:::{.callout-warning}
+For BOSS version 7.0.8, you need to use `hep_container shell CentOS7`, otherwise you will encounter compatibility issues when trying to run the `cmt`or `boss.exe` commands.
+:::
+
 :::{.callout-tip}
 See [last section of this page](#summary-of-commands) for an overview of all commands. If you are in a very lazy mood, you can also checkout the [BOSS Starter Kit](https://code.ihep.ac.cn/bes3/BOSS_StarterKit), which this whole set-up for you.
 :::
