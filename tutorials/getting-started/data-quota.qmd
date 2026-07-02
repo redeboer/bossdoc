@@ -12,13 +12,15 @@ When you have logged into the server, you usually start in your home (`~`) folde
 | ----------------------------------------- | --------------------: | ---------: | -------------------------- |
 | `/afs/ihep.ac.cn/users/${USER:0:1}/$USER` | <font color=red>500 MB</font> |    | home (`~`)
 | `/besfs5/users/$USER`                     | <font color=green>_no quota_</font> |  1,000,000 | fastest connection
-| `/scratchfs2/bes/$USER`                   |                500 GB |    200,000 | large data files <br> <font color=red>retired by 31.07.2026 </font>
-| `/scratchfs/bes/$USER`                    |                500 GB |    200,000 | large data files
+| `/scratchfs2/bes/$USER`                   |                500 GB |    200,000 | large data files
 | `/workfs2/bes/$USER`                      |                  5 GB |     50,000 |
-
 :::
 
 <!-- prettier-ignore-end -->
+
+::: {.callout-warning}
+Previously existing `/scratchfs` is retired by 31.07.2026 and replaced by `/scratchfs2`.
+:::
 
 Official information on the quota can be found [here](http://afsapply.ihep.ac.cn/cchelp/en/experiments/BES/#712-storage) (BESIII) and [here](https://afsapply.ihep.ac.cn/cchelp/en/appendix/storage-allocation-and-quota) (IHEP). You can check your quota by running the following commands:
 
@@ -36,12 +38,6 @@ fs listquota /afs/ihep.ac.cn/users/${USER:0:1}/$USER
 
 ```bash
 lfs quota -u $USER /besfs5
-```
-
-## `/scratchfs`
-
-```bash
-lfs quota -u $USER /scratchfs
 ```
 
 ## `/scratchfs2`
