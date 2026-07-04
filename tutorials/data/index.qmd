@@ -21,9 +21,9 @@ Inventories of the latest file locations are found on the Offline Software pages
 - [Raw data](https://docbes3.ihep.ac.cn/~offlinesoftware/index.php/Raw_Data)
 - [Reconstructed data](https://docbes3.ihep.ac.cn/~offlinesoftware/index.php/Production)
 
-In general, all data files are located on the BESIII file system (`besfs5`) folders on the [IHEP Server](/tutorials/getting-started/server.qmd). There are a few different folders, because the files have been distributed to different servers.
+In general, all data files are located on the BESIII file system (`besfs10`) folders on the [IHEP Server](/tutorials/getting-started/server.qmd). There are a few different folders, because the files have been distributed to different servers.
 
-- `besfs5`: contains user files only
+- `besfs10`: contains user files only
 - `besfs2`: a symbolic link that points to `/besfs3/offline/data/besfs2`. Contains inclusive Monte Carlo samples.
 - `besfs3`: file system that contains files of the runs before 2018
 - `bes3fs`: a newer file system that contains for instance 2018 data

@@ -63,7 +63,7 @@ VSCode Remote SSH installs some files into your home directory on the server, in
 
 ```json
   "remote.SSH.serverInstallPath": {
-    "ihep": "/besfs5/users/<USERNAME>"
+    "ihep": "/besfs10/users/<USERNAME>"
   },
 ```
 
@@ -88,8 +88,8 @@ As an alternative you can move the `.vscode`folder and create a symbolic link in
 
 ```bash
 cd ~
-mkdir /besfs5/users/$USER/.vscode-server
-ln -s /besfs5/users/$USER/.vscode-server
+mkdir /besfs10/users/$USER/.vscode-server
+ln -s /besfs10/users/$USER/.vscode-server
 ```
 
 ## `.vscode-server` already exists
@@ -98,8 +98,8 @@ An existing `.vscode-server` folder in your home directory can cause Visual Stud
 
 ```bash
 cd ~
-mv -f .vscode-server /besfs5/users/$USER/
-ln -s /besfs5/users/$USER/.vscode-server
+mv -f .vscode-server /besfs10/users/$USER/
+ln -s /besfs10/users/$USER/.vscode-server
 ```
 
 :::

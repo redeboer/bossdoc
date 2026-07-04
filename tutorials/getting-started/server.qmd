@@ -75,7 +75,7 @@ Some other important directories for the BESIII Collaboration are the following:
   - `/cvmfs/bes3.ihep.ac.cn/bes3sw/Boss` (also referred to with `$BesArea`)
 - [Raw data files](https://docbes3.ihep.ac.cn/~offlinesoftware/index.php/Raw_Data)
   - `/bes3fs/offline/data/raw`
-  - `/besfs5/offline/data/randomtrg` (random trigger data) <!-- cspell:ignore randomtrg -->
+  - `/besfs10/offline/data/randomtrg` (random trigger data) <!-- cspell:ignore randomtrg -->
 - [Reconstructed data sets](https://docbes3.ihep.ac.cn/~offlinesoftware/index.php/Jpsi_data) (see also [Production](https://docbes3.ihep.ac.cn/~offlinesoftware/index.php/Production)) for different versions can be found with:
 
   ```bash

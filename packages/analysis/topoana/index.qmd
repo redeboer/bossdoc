@@ -16,7 +16,7 @@ The problem with inclusive samples, however, is that they can include thousands 
 All versions of the package can be found here on [the IHEP server](/tutorials/getting-started/server.qmd#accessing-the-server): <!-- cspell:ignore zhouxy -->
 
 ```default
-/besfs5/users/zhouxy/tools/topoana
+/besfs10/users/zhouxy/tools/topoana
 ```
 
 ## Preparing initial event selection
@@ -53,7 +53,7 @@ See also [decayFromGenerator](https://bes3.to.infn.it/Boss/7.0.2/html/classEvent
 All versions of `MctruthForTopo` can be found here on the IHEP server:
 
 ```bash
-/besfs5/users/zhouxy/workarea/workarea-6.6.5/Analysis/Physics/MctruthForTopoAnaAlg
+/besfs10/users/zhouxy/workarea/workarea-6.6.5/Analysis/Physics/MctruthForTopoAnaAlg
 ```
 
 You may choose a different version of BOSS than `6.6.5`, the one used above. If you have sourced one of these versions (using `bash cmt/setup`), you can run it by adding the following lines to your job options:

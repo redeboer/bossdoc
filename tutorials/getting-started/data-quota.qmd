@@ -9,16 +9,21 @@ When you have logged into the server, you usually start in your home (`~`) folde
 <!-- prettier-ignore-start -->
 | Path                                      |            Data quota | Max. files | Note
 | ----------------------------------------- | --------------------: | ---------: | -------------------------- |
-| `/afs/ihep.ac.cn/users/${USER:0:1}/$USER` | <font color=red>500 MB</font> |    | home (`~`)
-| `/besfs5/users/$USER`                     | <font color=green>_no quota_</font> |  1,000,000 | fastest connection
-| `/scratchfs2/bes/$USER`                   |                500 GB |    200,000 | large data files
-| `/workfs2/bes/$USER`                      |                  5 GB |     50,000 |
+| `/afs/ihep.ac.cn/users/${USER:0:1}/$USER` | <font color=red>500 MB</font> |     | home (`~`)
+| ~~`/besfs5/users/$USER`~~                 | ~~_no quota_~~                      |  ~~1,000,000~~ | <font color=red>deprecated</font>
+| `/besfs10/users/$USER`                    | <font color=green>_no quota_</font> | <font color=green>_no quota_</font> | newer, faster storage
+| `/scratchfs2/bes/$USER`                   |                500 GB |     200,000 | large data files
+| `/workfs2/bes/$USER`                      |                  5 GB |      50,000 |
 <!-- prettier-ignore-end -->
 
 :::
 
 ::: {.callout-warning}
 Previously existing `/scratchfs` is retired by July 31<sup>st</sup>, 2026 and replaced by `/scratchfs2`.
+:::
+
+::: {.callout-warning}
+`/besfs5` will no longer be available from 2027. Please migrate to `/besfs10` instead.
 :::
 
 Official information on the quota can be found [here](http://afsapply.ihep.ac.cn/cchelp/en/experiments/BES/#712-storage) (BESIII) and [here](https://afsapply.ihep.ac.cn/cchelp/en/appendix/storage-allocation-and-quota) (IHEP). You can check your quota by running the following commands:
@@ -33,10 +38,10 @@ Official information on the quota can be found [here](http://afsapply.ihep.ac.cn
 fs listquota /afs/ihep.ac.cn/users/${USER:0:1}/$USER
 ```
 
-## `/besfs5`
+## `/besfs10`
 
 ```bash
-lfs quota -u $USER /besfs5
+lfs quota -u $USER /besfs10
 ```
 
 ## `/scratchfs2`
@@ -54,10 +59,10 @@ lfs quota -u $USER /workfs2
 :::
 
 ::::{.callout-tip}
-The best setup is to use `/besfs5` for your code and small data files. You can use symbolic links to link from your home directory to `/besfs5` and avoid quota issues under `/afs`. Example:
+The best setup is to use `/besfs10` for your code and small data files. You can use symbolic links to link from your home directory to `/besfs10` and avoid quota issues under `/afs`. Example:
 
 ```bash
-ln -s /besfs5/users/$USER/.cache ~/.cache
+ln -s /besfs10/users/$USER/.cache ~/.cache
 ```
 
 ::::
