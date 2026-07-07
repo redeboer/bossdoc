@@ -27,6 +27,12 @@ Source = "https://github.com/redeboer/bossdoc"
 dev = [{include-group = "doc"}]
 doc = ["quarto-cli"]
 
+[tool.compwa.policy.github]
+no-cd = true
+
+[tool.compwa.policy.repo]
+keep-issue-templates = true
+
 [tool.poe.executor]
 isolated = true
 no-group = "dev"
