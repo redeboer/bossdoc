@@ -1,5 +1,10 @@
 [project]
+name = "bossdoc"
+version = "0.0.0"
 description = "Documentation of the BESIII Offline Software System"
+requires-python = "~=3.13.0"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
 keywords = [
     "BESIII",
     "HEP",
@@ -8,14 +13,10 @@ keywords = [
     "particles",
     "physics",
 ]
-license = {file = "LICENSE"}
-name = "bossdoc"
-requires-python = "~=3.13.0"
-version = "0.0.0"
 
 [project.readme]
-content-type = "text/markdown"
 file = "README.md"
+content-type = "text/markdown"
 
 [project.urls]
 Changelog = "https://github.com/redeboer/bossdoc/releases"
@@ -24,7 +25,7 @@ Issues = "https://github.com/redeboer/bossdoc/issues"
 Source = "https://github.com/redeboer/bossdoc"
 
 [dependency-groups]
-dev = [{include-group = "doc"}]
+dev = [{ include-group = "doc" }]
 doc = ["quarto-cli"]
 
 [tool.compwa.policy.github]
@@ -43,19 +44,19 @@ heading = "Documentation"
 
 [tool.poe.groups.doc.tasks.doc]
 cmd = "quarto render --no-clean"
-executor = {group = "doc"}
+executor = { group = "doc" }
 help = "Build website"
 
 [tool.poe.groups.doc.tasks.doclive]
 cmd = "quarto preview --no-clean"
-executor = {group = "doc"}
+executor = { group = "doc" }
 help = "Set up a server to directly preview changes to the HTML pages"
 
 [tool.poe.groups.doc.tasks.linkcheck]
 cmd = """
 python -c 'print("Not yet implemented, see https://github.com/quarto-dev/quarto-cli/issues/1319")',
 """
-executor = {group = "doc"}
+executor = { group = "doc" }
 help = "Check external links in the documentation (requires internet connection)"
 
 [tool.poe.tasks.all]
@@ -72,17 +73,29 @@ cmd = "pre-commit run --all-files"
 help = "Perform all linting, formatting, and spelling checks"
 
 [tool.poe.tasks.upgrade]
-executor = {type = "simple"}
+executor = { type = "simple" }
 help = "Upgrade lock files"
-parallel = [
-    {cmd = "pre-commit autoupdate -j8"},
-    {cmd = "uv lock --upgrade"},
-]
+parallel = ["_upgrade-precommit", "_upgrade-uv"]
 
-[tool.tomlsort]
-all = false
-ignore_case = true
-in_place = true
-sort_first = ["project"]
-spaces_indent_inline_array = 4
-trailing_comma_inline_array = true
+[tool.poe.tasks._upgrade-precommit]
+cmd = "pre-commit autoupdate -j8"
+executor = { type = "simple" }
+
+[tool.poe.tasks._upgrade-uv]
+cmd = "uv lock --upgrade"
+executor = { type = "simple" }
+
+[tool.tombi.files]
+exclude = ["**/uv.lock"]
+
+[tool.tombi.format.rules]
+indent-width = 4
+line-width = 88
+
+[tool.tombi.lint.rules]
+key-empty = "off"
+
+[[tool.tombi.schemas]]
+root = "tool.compwa.policy"
+path = "https://raw.githubusercontent.com/ComPWA/policy/b1a4216872b0e6539e0b70a051a6d3aaed874356/compwa-policy.schema.json"
+include = ["pyproject.toml"]
