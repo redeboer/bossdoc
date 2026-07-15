@@ -14,7 +14,7 @@ repos:
       - id: check-useless-excludes
 
   - repo: https://github.com/ComPWA/policy
-    rev: b1a4216872b0e6539e0b70a051a6d3aaed874356
+    rev: 0.9.0
     hooks:
       - id: check-dev-files
 
@@ -62,6 +62,6 @@ repos:
         alias: ec
 
   - repo: https://github.com/astral-sh/uv-pre-commit
-    rev: 0.11.27
+    rev: 0.11.28
     hooks:
       - id: uv-lock
