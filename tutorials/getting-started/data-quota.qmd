@@ -9,14 +9,14 @@ When you have logged into the server, you usually start in your home (`~`) folde
 <!-- cspell:ignore homebes -->
 
 <!-- prettier-ignore-start -->
-| Path                                      |            Data quota | Max. files | Note
-| ----------------------------------------- | --------------------: | ---------: | -------------------------- |
-| `/afs/ihep.ac.cn/users/${USER:0:1}/$USER` | <font color=red>500 MB</font> |     | home (`~`)
-| ~~`/besfs5/users/$USER`~~                 | ~~_no quota_~~                      |  ~~1,000,000~~ | <font color=red>deprecated</font>
-| `/besfs10/users/$USER`                    | <font color=red>50 GB</font> _(per directory!)_ | _not documented_ | newer, faster storage
-| `/home/bes/$USER`                         | same as `/besfs10`                  | same as `/besfs10`                  | symlink to `/besfs10/homebes`
-| `/scratchfs2/bes/$USER`                   |                500 GB |     200,000 | large data files
-| `/workfs2/bes/$USER`                      |                  5 GB |      50,000 |
+| Path                                      | Data quota | Max. files | Backup | Note
+| ----------------------------------------- | ----------: | ---------: | :----: | ---------------------------- |
+| `/afs/ihep.ac.cn/users/${USER:0:1}/$USER` | <font color=red>500 MB</font> |  | <font color=green>yes</font> | home (`~`)
+| ~~`/besfs5/users/$USER`~~                 | ~~_no quota_~~ | ~~1,000,000~~ | <font color=red>no</font> | <font color=red>deprecated</font>
+| `/besfs10/users/$USER`                    | <font color=red>50 GB</font> _(per directory!)_ | _not documented_ | <font color=red>no</font> | newer, faster storage
+| `/home/bes/$USER`                         | same as `/besfs10` | same as `/besfs10` | <font color=green>yes</font> | symlink to `/besfs10/homebes`
+| `/scratchfs2/bes/$USER`                   | 500 GB | 200,000 | <font color=red>no</font> | large data files
+| `/workfs2/bes/$USER`                      | 5 GB | 50,000 | <font color=green>yes</font> |
 <!-- prettier-ignore-end -->
 
 :::
@@ -44,6 +44,16 @@ If you need more space, write your output to `/scratchfs2/bes/$USER` instead.
 
 ::: {.callout-note}
 `/home/bes/$USER` is not a file system of its own: it is a symbolic link to `/besfs10/homebes/$USER`. IHEP recommends referring to your files through `/home/bes`, because that path is expected to keep working when the underlying file system is migrated again (as happened with `/besfs5`&nbsp;→&nbsp;`/besfs10`).
+:::
+
+::: {.callout-important title="Not every file system is backed up"}
+Only `/afs`, `/workfs2`, and `/home/bes` provide backup protection (see the [IHEP Lustre page](http://afsapply.ihep.ac.cn/cchelp/en/local-cluster/storage/Lustre/)). Note that `/home/bes` is backed up even though it points into `/besfs10`, which is not.
+
+Two consequences:
+
+- Anything that you cannot easily reproduce and that is **not under version control** should live on a backed-up file system. For your BOSS packages, the better protection is to keep your `workarea` in a Git repository and push it to a remote such as [GitHub](https://github.com) or [`code.ihep.ac.cn`](https://code.ihep.ac.cn).
+- Conversely, keep caches, build output, and large data files **off** the backed-up file systems: there is no point in backing those up, and they fill up the small quota of `/afs` and `/workfs2` quickly.
+
 :::
 
 Official information on the quota can be found [here](http://afsapply.ihep.ac.cn/cchelp/en/experiments/BES/#712-storage) (BESIII) and [here](https://afsapply.ihep.ac.cn/cchelp/en/appendix/storage-allocation-and-quota) (IHEP). You can check your quota by running the following commands:

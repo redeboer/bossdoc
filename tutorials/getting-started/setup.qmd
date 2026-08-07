@@ -47,6 +47,10 @@ Why the quotation marks (`"..."`) and curly braces (`{...}`)? It's just a good h
 
 This variable points to the path that will contain your local 'install' of BOSS. You can change what is between the quotation marks by whatever folder you prefer, in case you want your local BOSS install to be placed in some other path, for instance by `/home/bes/$USER`, `/workfs2/bes/$USER`, or `/ihepbatch/bes/$USER`. Note that `/home/bes` is a symbolic link to `/besfs10/homebes`, so it points at the same storage as the path used here. See [Data quota](data-quota.qmd) for the quota of each of these paths. <!-- cspell:ignore homebes -->
 
+:::{.callout-warning}
+`/besfs10` is **not backed up**. Keep the packages you develop in your `workarea` in a Git repository and push them to a remote such as [GitHub](https://github.com) or [`code.ihep.ac.cn`](https://code.ihep.ac.cn), so that your analysis code does not only exist on the server. See [Data quota](data-quota.qmd) for which file systems do provide backup protection.
+:::
+
 At this stage, you'll have to decide which version of BOSS you have to use. For this example **version 7.0.8** is used, though it could be that for your analysis you have to use data sets that were reconstructed with older versions of BOSS. Here, we'll stick with `7.0.8`, but you can replace this number with whatever version you need.
 
 For convenience, we'll again define the version number as a variable here.
