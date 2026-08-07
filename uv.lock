@@ -156,11 +156,11 @@ linkcheck = [
 
 [package.metadata.requires-dev]
 dev = [
-    { name = "lychee-bin" },
+    { name = "lychee-bin", specifier = ">=0.24.0" },
     { name = "quarto-cli" },
 ]
 doc = [{ name = "quarto-cli" }]
-linkcheck = [{ name = "lychee-bin" }]
+linkcheck = [{ name = "lychee-bin", specifier = ">=0.24.0" }]
 
 [[package]]
 name = "certifi"

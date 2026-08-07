@@ -30,13 +30,41 @@ dev = [
     { include-group = "linkcheck" },
 ]
 doc = ["quarto-cli"]
-linkcheck = ["lychee-bin"]
+linkcheck = ["lychee-bin >=0.24.0"]  # pyproject.toml config support
 
 [tool.compwa.policy.github]
 no-cd = true
 
 [tool.compwa.policy.repo]
 keep-issue-templates = true
+
+[tool.lychee]
+exclude = [
+    "http://[A-Za-z0-9]+\\.ihep\\.cas\\.cn",
+    "http://[A-Za-z0-9]+\\.ucas\\.ac\\.cn",
+    "http://polywww\\.in2p3\\.fr",
+    "http://www\\.cmtsite\\.net",
+    "https://dev\\.mysql\\.com",
+    "https://doi\\.org/10\\.1146/",
+    "https://github\\.com/join",
+    "https://www\\.gnu\\.org",
+    "https://www\\.sciencedirect\\.com/science/article/pii/S0168900209023870",
+    "https?://[A-Za-z0-9]+\\.ihep\\.ac\\.cn",
+]
+exclude_path = [
+    "_extensions",
+]
+extensions = [
+    "bib",
+    "md",
+    "qmd",
+    "yml",
+]
+insecure = true
+max_concurrency = 10
+max_retries = 3
+timeout = 60
+user_agent = "Mozilla/5.0 (compatible; lychee)"
 
 [tool.poe.executor]
 isolated = true
