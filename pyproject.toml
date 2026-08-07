@@ -39,6 +39,7 @@ no-cd = true
 keep-issue-templates = true
 
 [tool.lychee]
+accept_timeouts = true  # slow hosts should not fail CI
 exclude = [
     "http://[A-Za-z0-9]+\\.ihep\\.cas\\.cn",
     "http://polywww\\.in2p3\\.fr",
