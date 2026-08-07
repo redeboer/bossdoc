@@ -22,6 +22,14 @@ If you do not like to keep having to enter your password, have a look at generat
    ```
    If all went correctly, you don't have to enter your password anymore.
 
+:::{.callout-warning}
+Logging in with an SSH key comes with two trade-offs on `lxlogin`: <!-- cspell:ignore aklog besvis kinit -->
+
+- You do not obtain an [AFS access token](troubleshooting.qmd#read-write-access) automatically, so you have no read-write access to your home folder and your `~/.bashrc` is not executed. Run `kinit $USER && aklog -d` after logging in.
+- [Graphical interfaces](troubleshooting.qmd#i-cannot-use-a-graphical-interface-from-lxlogin) such as `TBrowser` and `besvis.exe` do not work, even with `ssh -Y`.
+
+:::
+
 ## Installing ROOT
 
 The BOSS Starter Kit comes with a [handy bash script](https://code.ihep.ac.cn/bes3/BOSS_StarterKit/-/tree/master/utilities/InstallCernRoot.sh) to download and install CERN ROOT6 on a Ubuntu platform. It requires you to have `sudo` (admin) rights. The script can be run in one go using:
