@@ -21,8 +21,6 @@ There are two common reasons why you do not have a token:
 
 You can check whether you currently hold a token with:
 
-<!-- cspell:ignore tokens -->
-
 ```bash
 tokens
 ```
