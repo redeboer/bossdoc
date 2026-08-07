@@ -2,7 +2,7 @@
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 [![Documentation build status](https://readthedocs.org/projects/bes3/badge)](https://bes3.readthedocs.io)
-[![Open in Visual Studio Code](https://img.shields.io/badge/vscode-open-blue?logo=visualstudiocode)](https://open.vscode.dev/redeboer/bossdoc)
+[![Open in Visual Studio Code](https://img.shields.io/badge/vscode-open-blue?logo=visualstudiocode)](https://vscode.dev/github/redeboer/bossdoc)
 [![CI](https://github.com/redeboer/bossdoc/actions/workflows/ci.yml/badge.svg)](https://github.com/redeboer/bossdoc/actions/workflows/ci.yml)
 [![pre-commit](https://results.pre-commit.ci/badge/github/redeboer/bossdoc/main.svg)](https://results.pre-commit.ci/latest/github/redeboer/bossdoc/main)
 [![Spelling checked](https://img.shields.io/badge/cspell-checked-brightgreen.svg)](https://github.com/streetsidesoftware/cspell/tree/main/packages/cspell)
