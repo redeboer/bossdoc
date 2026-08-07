@@ -25,14 +25,44 @@ Issues = "https://github.com/redeboer/bossdoc/issues"
 Source = "https://github.com/redeboer/bossdoc"
 
 [dependency-groups]
-dev = [{ include-group = "doc" }]
+dev = [
+    { include-group = "doc" },
+    { include-group = "linkcheck" },
+]
 doc = ["quarto-cli"]
+linkcheck = ["lychee-bin>=0.24.0"]  # pyproject.toml config support
 
 [tool.compwa.policy.github]
 no-cd = true
 
 [tool.compwa.policy.repo]
 keep-issue-templates = true
+
+[tool.lychee]
+exclude = [
+    "http://[A-Za-z0-9]+\\.ihep\\.cas\\.cn",
+    "http://polywww\\.in2p3\\.fr",
+    "http://www\\.cmtsite\\.net",
+    "https://dev\\.mysql\\.com",
+    "https://github\\.com/join",
+    "https://www\\.gnu\\.org",
+    "https://www\\.sciencedirect\\.com/science/article/pii/S0168900209023870",
+    "https?://[A-Za-z0-9]+\\.ihep\\.ac\\.cn",
+]
+exclude_path = [
+    "_extensions",
+]
+extensions = [
+    "bib",
+    "md",
+    "qmd",
+    "yml",
+]
+insecure = true
+max_concurrency = 10
+max_retries = 3
+timeout = 60
+user_agent = "Mozilla/5.0 (compatible; lychee)"
 
 [tool.poe.executor]
 isolated = true
@@ -53,11 +83,9 @@ executor = { group = "doc" }
 help = "Set up a server to directly preview changes to the HTML pages"
 
 [tool.poe.groups.doc.tasks.linkcheck]
-cmd = """
-python -c 'print("Not yet implemented, see https://github.com/quarto-dev/quarto-cli/issues/1319")',
-"""
-executor = { group = "doc" }
-help = "Check external links in the documentation (requires internet connection)"
+cmd = "lychee ."
+executor = { group = "linkcheck" }
+help = "Check external links in the source files (requires an internet connection)"
 
 [tool.poe.tasks.all]
 help = "Run all continuous integration (CI) tasks locally"
