@@ -22,5 +22,5 @@ extensions = [
 insecure = true
 max_concurrency = 10
 max_retries = 3
-timeout = 30
+timeout = 60
 user_agent = "Mozilla/5.0 (compatible; lychee)"
