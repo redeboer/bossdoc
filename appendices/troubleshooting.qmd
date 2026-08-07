@@ -4,7 +4,7 @@ title: Troubleshooting
 
 ## I lost read-write access in my `afs` home folder {#read-write-access}
 
-Formerly, this problem could be solved using the `klog` command. Since August 2019, this command has become: <!-- cspell:ignore aklog kinit klog -->
+Read-write access to your `afs` home folder requires an _AFS access token_. Formerly, such a token could be obtained using the `klog` command. Since August 2019, this command has become: <!-- cspell:ignore aklog kinit klog -->
 
 ```bash
 kinit $USER
@@ -12,6 +12,26 @@ aklog -d
 ```
 
 You should now be able to read-write in _all_ your sessions.
+
+:::{.callout-warning title="Why you keep losing the token"}
+There are two common reasons why you do not have a token:
+
+- **You logged in with an SSH key.** Since the IHEP permission update, logging in with an [SSH key](tips.qmd#ssh-keygen) no longer obtains an AFS token automatically, whereas logging in with your password does. You then have to run `kinit`&nbsp;/&nbsp;`aklog` by hand after each login.
+- **The token expired.** Tokens are only valid for a limited period of time, so a long-running session loses read-write access even if you had a token when you logged in. Run the two commands again to renew it.
+
+You can check whether you currently hold a token with:
+
+```bash
+tokens
+```
+
+:::
+
+:::{.callout-important title="Without a token, `~/.bashrc` is not executed"}
+The missing token does not only block you from writing in your home folder: files in your home folder cannot be _read_ either, so `~/.bash_profile` and `~/.bashrc` are not executed when you log in. Everything you set up there — in particular [the BOSS environment](/tutorials/getting-started/setup.qmd#step-8) — is then silently missing, which makes this look like a broken BOSS installation rather than an AFS problem.
+
+If commands such as `boss.exe` are suddenly "not found" right after logging in, run `kinit $USER && aklog -d` first and then `source ~/.bashrc`.
+:::
 
 ## I'm sure my job is set up correctly, but it keeps resulting this error
 

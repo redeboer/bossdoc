@@ -192,6 +192,10 @@ If not, something went wrong and you should carefully recheck what you did in th
 Loading the setup script automatically needs to be done in the container!
 :::
 
+:::{.callout-warning}
+Your `.bash_profile` and `.bashrc` live in your `afs` home folder, which can only be read if you hold an AFS access token. If you log in with an SSH key, you do not get such a token automatically, so these files are not executed and the BOSS environment set up below is silently not loaded. See [I lost read-write access in my `afs` home folder](/appendices/troubleshooting.qmd#read-write-access).
+:::
+
 In order to have the references to BOSS loaded automatically every time you log in on the server, we can add some of the steps we did above to your `bash` profile (`.bash_profile`) and _run commands_ file (`.bashrc`).
 
 :::{.column-margin}
