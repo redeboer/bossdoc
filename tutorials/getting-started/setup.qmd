@@ -45,7 +45,7 @@ BOSS_INSTALL=/besfs10/users/$USER/boss
 Why the quotation marks (`"..."`) and curly braces (`{...}`)? It's just a good habit in `bash` scripting to avoid bugs and improve readability. The quotation marks ensure that we are storing a string here and allow you to use spaces, while the curly braces clarify the extend of the variable name (`USER` in this case).
 :::
 
-This variable points to the path that will contain your local 'install' of BOSS. You can change what is between the quotation marks by whatever folder you prefer, in case you want your local BOSS install to be placed in some other path, for instance by `/ihepbatch/bes/$USER`.
+This variable points to the path that will contain your local 'install' of BOSS. You can change what is between the quotation marks by whatever folder you prefer, in case you want your local BOSS install to be placed in some other path, for instance by `/home/bes/$USER`, `/workfs2/bes/$USER`, or `/ihepbatch/bes/$USER`. Note that `/home/bes` is a symbolic link to `/besfs10/homebes`, so it points at the same storage as the path used here. See [Data quota](data-quota.qmd) for the quota of each of these paths. <!-- cspell:ignore homebes -->
 
 At this stage, you'll have to decide which version of BOSS you have to use. For this example **version 7.0.8** is used, though it could be that for your analysis you have to use data sets that were reconstructed with older versions of BOSS. Here, we'll stick with `7.0.8`, but you can replace this number with whatever version you need.
 

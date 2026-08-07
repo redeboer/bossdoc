@@ -6,12 +6,15 @@ When you have logged into the server, you usually start in your home (`~`) folde
 
 :::{.column-page-inset-right}
 
+<!-- cspell:ignore homebes -->
+
 <!-- prettier-ignore-start -->
 | Path                                      |            Data quota | Max. files | Note
 | ----------------------------------------- | --------------------: | ---------: | -------------------------- |
 | `/afs/ihep.ac.cn/users/${USER:0:1}/$USER` | <font color=red>500 MB</font> |     | home (`~`)
 | ~~`/besfs5/users/$USER`~~                 | ~~_no quota_~~                      |  ~~1,000,000~~ | <font color=red>deprecated</font>
 | `/besfs10/users/$USER`                    | <font color=green>_no quota_</font> | <font color=green>_no quota_</font> | newer, faster storage
+| `/home/bes/$USER`                         | same as `/besfs10`                  | same as `/besfs10`                  | symlink to `/besfs10/homebes`
 | `/scratchfs2/bes/$USER`                   |                500 GB |     200,000 | large data files
 | `/workfs2/bes/$USER`                      |                  5 GB |      50,000 |
 <!-- prettier-ignore-end -->
@@ -24,6 +27,10 @@ Previously existing `/scratchfs` is retired by July 31<sup>st</sup>, 2026 and re
 
 ::: {.callout-warning}
 `/besfs5` will no longer be available from 2027. Please migrate to `/besfs10` instead.
+:::
+
+::: {.callout-note}
+`/home/bes/$USER` is not a file system of its own: it is a symbolic link to `/besfs10/homebes/$USER`. IHEP recommends referring to your files through `/home/bes`, because that path is expected to keep working when the underlying file system is migrated again (as happened with `/besfs5`&nbsp;→&nbsp;`/besfs10`).
 :::
 
 Official information on the quota can be found [here](http://afsapply.ihep.ac.cn/cchelp/en/experiments/BES/#712-storage) (BESIII) and [here](https://afsapply.ihep.ac.cn/cchelp/en/appendix/storage-allocation-and-quota) (IHEP). You can check your quota by running the following commands:
