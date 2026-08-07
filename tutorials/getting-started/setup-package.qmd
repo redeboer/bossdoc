@@ -214,5 +214,5 @@ Physics related example packages are described [here](/packages/analysis/example
 :::{.callout-tip}
 BOSS Tutorials are under development and can be found in the [BOSS_Tutorials repository](https://code.ihep.ac.cn/bes3/BOSS_Tutorials).
 
-[`RhopiAlg`](/packages/analysis/examples/RhopiAlg)
+[`RhopiAlg`](/packages/analysis/examples/RhopiAlg.qmd)
 :::
