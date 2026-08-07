@@ -57,7 +57,7 @@ You will download around **1 GB** of source code.
 
 For working with VSCode on `lxlogin`, you can use the [Remote - SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh) extension. This lets you with VSCode work on the server with full functionality, such as using the Source Control Manager and language navigation from any other VSCode extensions you installed. See [here](https://code.visualstudio.com/docs/remote/ssh-tutorial#_connect-using-ssh) for a tutorial on how to connect to a remote SSH server.
 
-There is one thing you need to change in your [VSCode settings](https://code.visualstudio.com/docs/getstarted/settings). Following [these instructions](https://code.visualstudio.com/docs/remote/ #\_troubleshooting-hanging-or-failing-connections), set the following option:
+There is one thing you need to change in your [VSCode settings](https://code.visualstudio.com/docs/getstarted/settings). Following [these instructions](https://code.visualstudio.com/docs/remote/troubleshooting#_troubleshooting-hanging-or-failing-connections), set the following option:
 
 :::{.column-margin}
 VSCode also [recommends](https://code.visualstudio.com/docs/remote/troubleshooting#_troubleshooting-hanging-or-failing-connections) settings `"remote.SSH.showLoginTerminal": true`, but this seems not to be required to get VSCode to run on the IHEP server.
