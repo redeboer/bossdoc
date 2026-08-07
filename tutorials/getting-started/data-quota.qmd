@@ -6,19 +6,54 @@ When you have logged into the server, you usually start in your home (`~`) folde
 
 :::{.column-page-inset-right}
 
+<!-- cspell:ignore homebes -->
+
 <!-- prettier-ignore-start -->
-| Path                                      |            Data quota | Max. files | Note
-| ----------------------------------------- | --------------------: | ---------: | -------------------------- |
-| `/afs/ihep.ac.cn/users/${USER:0:1}/$USER` | <font color=red>500 MB</font> |    | home (`~`)
-| `/besfs5/users/$USER`                     | <font color=green>_no quota_</font> |  1,000,000 | fastest connection
-| `/scratchfs2/bes/$USER`                   |                500 GB |    200,000 | large data files
-| `/workfs2/bes/$USER`                      |                  5 GB |     50,000 |
+| Path                                      | Data quota | Max. files | Backup | Note
+| ----------------------------------------- | ----------: | ---------: | :----: | ---------------------------- |
+| `/afs/ihep.ac.cn/users/${USER:0:1}/$USER` | <font color=red>500 MB</font> |  | <font color=green>yes</font> | home (`~`)
+| ~~`/besfs5/users/$USER`~~                 | ~~_no quota_~~ | ~~1,000,000~~ | <font color=red>no</font> | <font color=red>deprecated</font>
+| `/besfs10/users/$USER`                    | <font color=red>50 GB</font> _(per directory!)_ | _not documented_ | <font color=red>no</font> | newer, faster storage
+| `/home/bes/$USER`                         | same as `/besfs10` | same as `/besfs10` | <font color=green>yes</font> | symlink to `/besfs10/homebes`
+| `/scratchfs2/bes/$USER`                   | 500 GB | 200,000 | <font color=red>no</font> | large data files
+| `/workfs2/bes/$USER`                      | 5 GB | 50,000 | <font color=green>yes</font> |
 <!-- prettier-ignore-end -->
 
 :::
 
 ::: {.callout-warning}
 Previously existing `/scratchfs` is retired by July 31<sup>st</sup>, 2026 and replaced by `/scratchfs2`.
+:::
+
+::: {.callout-warning}
+`/besfs5` will no longer be available from 2027. Please migrate to `/besfs10` instead.
+:::
+
+:::: {.callout-warning title="The `/besfs10` quota is applied per directory"}
+On `/besfs10`, the quota is set on the **directory**, not on your user account. As a result, `lfs quota -u $USER /besfs10` reports no limit, while writing to `/besfs10/users/$USER` still fails once you exceed 50&nbsp;GB. Use `lfs_dir` instead (see below) to see the limit that actually applies to you.
+
+Since there is no warning by email (as there is for `/afs`), you typically notice this only when jobs start to die halfway through with messages like: <!-- cspell:ignore rtraw -->
+
+```default
+cat: write error: Disk quota exceeded
+SysError in <TFile::WriteBuffer>: error writing to file /besfs10/users/$USER/....rtraw (-1) (Disk quota exceeded)
+```
+
+If you need more space, write your output to `/scratchfs2/bes/$USER` instead.
+::::
+
+::: {.callout-note}
+`/home/bes/$USER` is not a file system of its own: it is a symbolic link to `/besfs10/homebes/$USER`. IHEP recommends referring to your files through `/home/bes`, because that path is expected to keep working when the underlying file system is migrated again (as happened with `/besfs5`&nbsp;→&nbsp;`/besfs10`).
+:::
+
+::: {.callout-important title="Not every file system is backed up"}
+Only `/afs`, `/workfs2`, and `/home/bes` provide backup protection (see the [IHEP Lustre page](http://afsapply.ihep.ac.cn/cchelp/en/local-cluster/storage/Lustre/)). Note that `/home/bes` is backed up even though it points into `/besfs10`, which is not.
+
+Two consequences:
+
+- Anything that you cannot easily reproduce and that is **not under version control** should live on a backed-up file system. For your BOSS packages, the better protection is to keep your `workarea` in a Git repository and push it to a remote such as [GitHub](https://github.com) or [`code.ihep.ac.cn`](https://code.ihep.ac.cn).
+- Conversely, keep caches, build output, and large data files **off** the backed-up file systems: there is no point in backing those up, and they fill up the small quota of `/afs` and `/workfs2` quickly.
+
 :::
 
 Official information on the quota can be found [here](http://afsapply.ihep.ac.cn/cchelp/en/experiments/BES/#712-storage) (BESIII) and [here](https://afsapply.ihep.ac.cn/cchelp/en/appendix/storage-allocation-and-quota) (IHEP). You can check your quota by running the following commands:
@@ -33,11 +68,21 @@ Official information on the quota can be found [here](http://afsapply.ihep.ac.cn
 fs listquota /afs/ihep.ac.cn/users/${USER:0:1}/$USER
 ```
 
-## `/besfs5`
+## `/besfs10`
+
+<!-- cspell:ignore lfs_dir -->
 
 ```bash
-lfs quota -u $USER /besfs5
+lfs_dir /besfs10/users/$USER
 ```
+
+The quota on `/besfs10` is set per directory, so this is the command that shows the limit you actually run into. The user-based query,
+
+```bash
+lfs quota -u $USER /besfs10
+```
+
+reports no limit and is therefore misleading.
 
 ## `/scratchfs2`
 
@@ -54,10 +99,10 @@ lfs quota -u $USER /workfs2
 :::
 
 ::::{.callout-tip}
-The best setup is to use `/besfs5` for your code and small data files. You can use symbolic links to link from your home directory to `/besfs5` and avoid quota issues under `/afs`. Example:
+The best setup is to use `/besfs10` for your code and small data files. You can use symbolic links to link from your home directory to `/besfs10` and avoid quota issues under `/afs`. Example:
 
 ```bash
-ln -s /besfs5/users/$USER/.cache ~/.cache
+ln -s /besfs10/users/$USER/.cache ~/.cache
 ```
 
 ::::
