@@ -2,7 +2,7 @@
 name = "bossdoc"
 version = "0.0.0"
 description = "Documentation of the BESIII Offline Software System"
-requires-python = "~=3.13.0"
+requires-python = "~=3.14.0"
 license = "Apache-2.0"
 license-files = ["LICENSE"]
 keywords = [
