@@ -14,7 +14,7 @@ repos:
       - id: check-useless-excludes
 
   - repo: https://github.com/ComPWA/policy
-    rev: 0.9.3
+    rev: 0.10.0
     hooks:
       - id: check-dev-files
 
@@ -37,7 +37,7 @@ repos:
       - id: trailing-whitespace
 
   - repo: https://github.com/tombi-toml/tombi-pre-commit
-    rev: v1.2.7
+    rev: v1.7.3
     hooks:
       - id: tombi-format
       - id: tombi-lint
@@ -49,18 +49,18 @@ repos:
       - id: prettier
 
   - repo: https://github.com/streetsidesoftware/cspell-cli
-    rev: v10.0.1
+    rev: v10.3.0
     hooks:
       - id: cspell
 
   - repo: https://github.com/editorconfig-checker/editorconfig-checker.python
-    rev: 3.8.0
+    rev: 3.11.1
     hooks:
       - id: editorconfig-checker
         name: editorconfig
         alias: ec
 
   - repo: https://github.com/astral-sh/uv-pre-commit
-    rev: 0.12.2
+    rev: "0.13.0"
     hooks:
       - id: uv-lock
