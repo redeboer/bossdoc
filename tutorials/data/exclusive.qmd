@@ -29,8 +29,20 @@ End
 Due to a small bug in BOSS, **a decay card has to end in with an empty white line**, otherwise the simulation job will crash.
 :::
 
-If you do not specify the decay channels of a certain particle, the decay card called `DECAY.dec` in the `BesEvtGen` package will be used. This file essentially follows the PDG listings. In addition, definitions of particles (including their physical widths) can be found in the file `pdt.table`. Both files are located here (in the case of BOSS 7.0.4):
+If you do not specify the decay channels of a certain particle, the decay card called `DECAY.DEC` in the `BesEvtGen` package will be used. This file essentially follows the PDG listings. In addition, definitions of particles (including their physical widths) can be found in the file `pdt.table`. Both files are located in the `share` directory of the `BesEvtGen` package, which depends on the BOSS version:
+
+:::{.panel-tabset}
+
+## BOSS 7.0.8
+
+```default
+/cvmfs/bes3.ihep.ac.cn/bes3sw/Boss/7.0.8/Generator/BesEvtGen/BesEvtGen-00-04-08/share
+```
+
+## BOSS 7.0.4
 
 ```default
 /cvmfs/bes3.ihep.ac.cn/bes3sw/Boss/7.0.4/Generator/BesEvtGen/BesEvtGen-00-03-98/share
 ```
+
+:::
