@@ -1,0 +1,462 @@
+---
+title: Remote shifts
+description: How to book a BESIII remote shift, access the Remote Monitor, and what to check during the shift.
+---
+
+<!-- cspell:ignore BEPC BEPCII colwidths ncol Wenzel -->
+
+## The idea of this guide
+
+The idea of this guide is to provide the information that BESIII members need for remote shifts. It is based on official BESIII documents, on an internal guide for shifters of the Ruhr University Bochum written by Christopher Wenzel, and on the experience of former shifters. This guide is especially intended to be useful for inexperienced shifters who can use it as a tutorial or shift training in advance of their first shift.
+
+However, experienced shifters also find useful information for shift booking, necessary links and additional materials, all summarized in this guide.
+
+## General information about BESIII shifts and shift booking
+
+The BESIII experiment is located at the BEPCII accelerator at the Institute of High Energy Physics (IHEP) in Beijing, China. The BESIII collaboration started data taking in 2008, which is still ongoing. The data taking is split into different run periods named after the year followed by an ascending letter, for example 21&nbsp;c for the run period that was ongoing in March 2022.
+
+During the run period the accelerator and the detector are running 24 hours a day, 7 days a week and are under permanent surveillance. Therefore each day is divided into three shifts, eight hours each, which are done by shifters who have the task to check the operational status and to act on any error that occurs.
+
+Three different types of shifters exist. The ordinary shifter and the shift chief work together for one shift. The ordinary shifter observes the accelerator and the detector status and informs the shift chief if an error occurs. The shift chief then reacts and discusses necessary steps to solve the problem with other Chinese colleagues. For this reason the shift chief has to be able to speak Chinese. For each week an additional weekly shifter is assigned, who works on call and summarizes the operational status of the week.
+
+It is expected that all institutes which are part of the BESIII collaboration contribute to the manpower necessary to operate and observe the accelerator and the detector. Hence institute members can take over a shift as an ordinary shifter or as a shift chief (Chinese language required). The weekly shifter is always a member of IHEP.
+
+### Shift booking
+
+The enrollment for a shift is done via the [BESIII shift booking system](https://docbes3.ihep.ac.cn/~alexey/bes3shift) (IHEP SSO account required to log in). To get an SSO account, register for a unified IHEP authentication account at <https://login.ihep.ac.cn/>.
+
+Please be sure to select _BES3 group_ to get the authorization to access the remote shift web page. To check if the registration and the assignment to the BESIII group was successful, sign in to your SSO account. Then go to "Profile" → "Group information". The field "Collaboration" should contain BES3 with the "Status" _accept_ and an expiration date that has not yet passed, as shown in @fig-ihep-group-information.
+
+:::{#fig-ihep-group-information}
+![](images/remote-shift/ihep-group-information.png)
+
+Example of the IHEP SSO group information with a valid BESIII membership.
+:::
+
+When accessing the shift booking system, two different views are offered.
+
+The "round" view offers an overview of the whole run period, as shown in @fig-booking-system-overview. For each day the fraction of booked shifts is indicated by color. However, even if the color indicates that some of the shifts are not booked yet, this mostly results from shift chiefs who have not enrolled. The indicator can also be wrong sometimes. Therefore it is recommended to use the second, monthly view (@fig-booking-system-monthly) for more detailed and reliable information.
+
+::::{.column-page-inset-right}
+:::{#fig-booking-system layout-ncol=2 layout-valign=bottom}
+![Overview of run period](images/remote-shift/booking-system-overview.png){#fig-booking-system-overview}
+
+![Monthly view with enrollment of shifts (names removed)](images/remote-shift/booking-system-monthly.png){#fig-booking-system-monthly}
+
+BESIII shift booking system.
+:::
+::::
+
+The individual shifts have a color code for an easier overview. @tbl-shift-types gives a summary of the most important information given by the color code.
+
+| Shift type    | Color Indicator                     | Beijing Time | CET         | CEST        |
+| :------------ | ----------------------------------- | ------------ | ----------- | ----------- |
+| Night shift   | [**purple**]{style="color: purple"} | 00:00–08:00  | 17:00–01:00 | 18:00–02:00 |
+| Day shift     | [**blue**]{style="color: #00008b"}  | 08:00–16:00  | 01:00–09:00 | 02:00–10:00 |
+| Evening shift | [**red**]{style="color: #ff3300"}   | 16:00–24:00  | 09:00–17:00 | 10:00–18:00 |
+
+: Information about different shift types. {#tbl-shift-types tbl-colwidths="[15,15,15,15,15]"}
+
+::: {.callout-important}
+In European time, a night shift starts on the evening of the _previous_ calendar day. For example, the night shift of 10 March in Beijing runs from 9 March, 17:00 CET, until 10 March, 01:00 CET. Keep this in mind when booking shifts.
+:::
+
+The number of shifts each institute has to take is measured with a point system. The number of necessary points is defined by the number of their authors on the BESIII author list. The points per shift are counted according to the table in @tbl-points-per-shift.
+
+| Shift type                             | Points                |
+| :------------------------------------- | :-------------------- |
+| Chief day or evening shifts            | 1.2&nbsp;/&nbsp;shift |
+| Ordinary day or evening shifts         | 0.8&nbsp;/&nbsp;shift |
+| Chief night shift                      | 1.8&nbsp;/&nbsp;shift |
+| Ordinary night shift                   | 1.2&nbsp;/&nbsp;shift |
+| Holiday chief day or evening shifts    | 1.8&nbsp;/&nbsp;shift |
+| Holiday ordinary day or evening shifts | 1.2&nbsp;/&nbsp;shift |
+| Holiday chief night shift              | 2.4&nbsp;/&nbsp;shift |
+| Holiday ordinary night shift           | 1.6&nbsp;/&nbsp;shift |
+| Weekly run coordinator                 | 1.0&nbsp;/&nbsp;day   |
+
+: Accounting of shift points. {#tbl-points-per-shift}
+
+The point score of the current run period can be checked in the [shift booking system](https://docbes3.ihep.ac.cn/~alexey/bes3shift) by clicking on _stats_. @fig-points-score shows the layout of this statistics page for run period 21&nbsp;c. It lists the required and scored points of each institute.
+
+::::{.column-page-inset-right}
+:::{#fig-points-score}
+![](images/remote-shift/points-score.png)
+
+Statistics page of the shift booking system for run period 21&nbsp;c (March 2022). Institute names and numbers are removed.
+:::
+::::
+
+<!-- cspell:ignore alexey BTOF docbes3 ETOF -->
+
+If it is necessary to score points, shifts have to be booked. The shift booking works as follows.
+
+The start of the shift booking is announced by e-mail in advance of each round. In general, the institutes have the intention to book as many shifts as possible in order to score all necessary points for the corresponding round. Because the point score varies for different shift types, night shifts are the most wanted ones.
+
+Shifts can only be booked in blocks of four or three days. A four-day shift block corresponds to workdays from Monday until Thursday while the three-day shift block lasts from Friday until Sunday. A shift can be booked by selecting a specific shift in the monthly view with a left click and then by pressing the button "Book" in the opened "Shift Editor" window.
+
+Normally, shifters who booked a shift are sent to Beijing to stay there during their shift periods. To minimize the time and cost effort, it is advisable to book a period of consecutive days. When shifters arrive, they get an introduction on what to do.
+
+In 2020, the COVID-19 pandemic made it impossible to travel to China. The BESIII collaboration therefore introduced remote shifts, so that colleagues from abroad could still contribute and score their points. The collaboration still encourages on-site shifts. Remote shifts are only open to ordinary shifters who have difficulty traveling to Beijing. Ordinary shifters who can travel, and all shift chiefs, have to book on-site shifts.
+
+For the shift booking of remote shifts one has to check the check box "remote" in the "Shift Editor" before clicking on "Book".
+
+## Information about remote shifts
+
+Remote shifts give the possibility to contribute as an ordinary shifter to BESIII shifts from all over the world. The remote shifter has the task to observe the status of the accelerator and the detector, note if any error occurs and record the information of the current run, such as the run number, when the run was started and when the run was stopped. For that, a "Remote Monitor" is available.
+
+In addition, for each shift the remote shifter has to join a Zoom meeting to be able to communicate with the shift chief on site.
+
+The Zoom room is also used for the handover between the ordinary shifters. Therefore one should join the Zoom room five or ten minutes before the shift starts. During an eight-hour shift one has to be reachable over the Zoom meeting via audio or the chat. During the shift the shifter has to note their observations and the run information in the _Check Record_.
+
+### Access the Zoom meeting
+
+The Zoom room can be accessed with the following meeting information:
+
+- Meeting ID: `4508676615`
+- Passcode: `123456`
+- [Direct link](https://zoom.com.cn/j/4508676615)
+
+Install the Zoom client before your first shift. Keep the meeting open for the whole shift, so that the shift chief can reach you at any time.
+
+### Access the Remote Monitor
+
+The Remote Monitor at `http://bes3run.ihep.ac.cn` can only be accessed from within the IHEP network. From outside, you can reach it through a SOCKS5 proxy that is tunneled over SSH to an IHEP login node. The `ssh` command below is available on Linux, macOS, and Windows 10 or later.
+
+:::{.callout-note title="Why not the IHEP VPN?"}
+The [BESIII Remote Shift Guide](https://english.ihep.cas.cn/bes/op/do/202109/P020250212598664920714.pdf) recommends the IHEP VPN at <http://ssl.ihep.ac.cn>, which only needs your IHEP SSO account. However, the VPN requires installing the EasyConnect client on your computer. The SSH tunnel described here needs no additional software and only routes the traffic of one browser through IHEP.
+:::
+
+1. Open a terminal and start the tunnel: <!-- cspell:ignore lxlogin -->
+
+   ```bash
+   ssh -N -D 8080 -o ServerAliveInterval=60 <username>@lxlogin.ihep.ac.cn
+   ```
+
+   Here, `<username>` is the user name of your IHEP computing account. Note that this account is not the same as the IHEP SSO account that you use for the shift booking system: it has to be requested separately, so make sure you have it well before your first shift.
+
+   Log in with the password of your IHEP computing account. The `-N` flag opens no remote shell, so the command appears to hang. This is expected: the proxy is active as long as the command runs, so leave this terminal open during your shift. The `ServerAliveInterval` option keeps the connection from timing out.
+
+   To stop the proxy after your shift, press {{< kbd Ctrl-C >}} in this terminal. If a previous proxy is still running, for instance in a terminal you no longer have access to, a new tunnel prints `bind [127.0.0.1]:8080: Address already in use`. Stop the process that is listening on port 8080 first:
+
+   ```bash
+   kill $(lsof -t -iTCP:8080 -sTCP:LISTEN)
+   ```
+
+   :::{.callout-tip collapse="true" title="Shortcut with an SSH config entry"}
+   Add the following to your SSH config (`~/.ssh/config`):
+
+   ```ini
+   Host ihep-proxy
+       HostName lxlogin.ihep.ac.cn
+       User <username>
+       DynamicForward 8080
+       ServerAliveInterval 60
+   ```
+
+   The tunnel can then be started with `ssh -N ihep-proxy`.
+   :::
+
+2. Start a web browser that sends its traffic through the proxy on `localhost:8080`:
+
+   ::: {.panel-tabset group="browser"}
+
+   #### Chromium
+
+   Chromium ignores the `--proxy-server` flag if an instance of the browser is already running. Starting it with a separate profile directory avoids this, so you do not have to close your other browser windows and your normal browsing does not go through IHEP:
+
+   ```bash
+   chromium-browser \
+     --proxy-server="socks5://localhost:8080" \
+     --user-data-dir="$HOME/.config/chromium-bes3"
+   ```
+
+   Depending on the Linux distribution, the command is called `chromium-browser` (for instance Fedora) or `chromium` (for instance Debian, Ubuntu, and Arch). The same flags work for Google Chrome (`google-chrome`). Any empty directory works for `--user-data-dir`. It is created if it does not exist. Chromium resolves host names through a SOCKS5 proxy automatically.
+
+   The command above is for Linux. On macOS or Windows, the Firefox settings are easier to set up, because they do not require command-line flags.
+
+   #### Firefox
+
+   Open _Settings_ → _Network Settings_ → _Settings…_ and configure:
+   - _Manual proxy configuration_
+   - _SOCKS Host_: `localhost`, _Port_: `8080`, and select _SOCKS v5_
+   - Check _Proxy DNS when using SOCKS v5_. This is required, because the host name `bes3run.ihep.ac.cn` may not resolve outside of IHEP.
+
+   Note that this sends all Firefox traffic through IHEP. To proxy only the IHEP pages, use a separate Firefox profile (`firefox -P`) or a proxy extension like [FoxyProxy](https://getfoxyproxy.org) with a pattern for `*.ihep.ac.cn`.
+
+   :::
+
+3. Open the Remote Monitor in the browser that uses the proxy:
+
+   ```default
+   http://bes3run.ihep.ac.cn
+   ```
+
+The Remote Monitor has several tabs. @fig-remote-monitor-tabs shows the four that are used most during a shift, from top to bottom: the BESIII Overview, the BEPCII Status, the BESIII GCS, and the Check Record. They are described in more detail in the following sections.
+
+:::{#fig-remote-monitor-tabs}
+![](images/remote-shift/remote-monitor-tabs.png){width=70%}
+
+Overview of the BESIII Remote Monitor tabs. E-mail addresses in the check record are hidden.
+:::
+
+### The check record
+
+The check record is the last tab of the Remote Monitor and is used to note the run information and alarm messages as well as the detector and accelerator status. The status information can be determined using other tabs of the Remote Monitor.
+
+The user interface of the check record is shown in @fig-check-record.
+
+::::{.column-page-inset-right}
+:::{#fig-check-record}
+![](images/remote-shift/check-record.jpg)
+
+Example of the check record. E-mail addresses are hidden.
+:::
+::::
+
+The check record basically contains the following information:
+
+- E-mail address of the ordinary shifter
+- Names of abnormal histograms
+- Notes with run information and the detector and accelerator status
+- Time stamp of check record submission
+
+One can insert the information using the fields in the top part of the page. Abnormal histograms can be marked after clicking on the _Detailed Information_ button. Then a new window opens showing all histograms. On the right, a small check box has to be checked if the histogram is abnormal. After checking all histograms one can click _Confirm_ and thereby submit the check record entry.
+
+Fill in the check record every half hour. In addition, the following events should trigger a check record entry:
+
+- Start of a new run
+- End of a run
+- Alarm in one of the detector subsystems
+- Error in the accelerator (lost beam)
+
+::: {.callout-warning}
+Before one makes a check record entry and before one analyzes the histograms, the web page has to be reloaded!
+:::
+
+### Obtaining general status information for the notes section
+
+#### BESIII Overview {.unnumbered}
+
+To obtain general information about the BESIII data taking status, three different tabs of the Remote Monitor can be used. The first tab contains the BESIII Overview. See @fig-bes3-overview. It shows the online filter luminosity, the integrated luminosity, the cross section, the status of the DAQ, the status of the superconducting solenoid magnet (SSM), and the status of the high voltage (HV) of each sub-detector. From this monitor mainly the run number can be extracted. The example below shows the running data acquisition with run number 69708. Between two runs the acquisition is stopped for a short time. The periods of running and stopped data acquisition can be easily identified by looking at the graph of the online luminosity. When the data taking is stopped, the luminosity drops to zero.
+
+:::{#fig-bes3-overview}
+![](images/remote-shift/bes3-overview.png)
+
+BESIII overview with running data acquisition for run 69708.
+:::
+
+When the data acquisition is stopped and the accelerator is refilled with positrons and electrons, the BESIII overview looks as shown in @fig-bes3-overview-refill.
+
+::::{.column-page-inset-right}
+:::{#fig-bes3-overview-refill layout-ncol=2 layout-valign=bottom}
+![Ramping of high voltages](images/remote-shift/bes3-overview-hv-ramping.png)
+
+![High voltages off](images/remote-shift/bes3-overview-hv-off.png)
+
+BESIII Overview with data acquisition stopped.
+:::
+::::
+
+#### BEPCII Status {.unnumbered}
+
+The BEPCII monitor gives information about the status of the BEPCII accelerator. Given are values like the beam currents, beam energies and the lifetimes of the electron and positron bunches, as well as the injection rate and the injection state. While the accelerator is injecting beam, the TCB1 light turns green. The BEPCII status should be checked at least once for each check record entry. In general, when the accelerator works fine, no information from this monitor has to be used for a check record entry. Only if an error in the accelerator operation occurs, for example if the beam currents drop drastically as shown in the orange window in @fig-bepc-status, a corresponding note should be made in the entry.
+
+:::{#fig-bepc-status layout-valign=bottom}
+![](images/remote-shift/bepc-status.png)
+
+BEPCII Status
+:::
+
+#### GCS {.unnumbered}
+
+The BESIII GCS monitor gives an overview of the BESIII detector status. The squares in the upper part of the monitor indicate the status of the sub-detectors (MDC, BTOF, EMC, MUC, ETOF) and of other systems (gas ratio, beam pipe, SSM, gas, utility). Green squares indicate that everything is fine, as shown in @fig-gcs. The monitor also shows details such as the HV, LV, and VME crates of the sub-detectors and the HV of the ZDD and the small-angle luminosity detector.
+
+:::{#fig-gcs layout-valign=bottom}
+![](images/remote-shift/bes3-cgs.png)
+
+BESIII GCS
+:::
+
+When an error in one of the subsystems occurs, the corresponding square turns red and an error message will be displayed in the Alarm Window in the bottom part of the monitor. See @fig-gcs-alarm. Sometimes the square can also be yellow. If this happens a corresponding check record entry should be written immediately containing the displayed error message. To be able to react to errors quickly, the BESIII GCS should be open and observed during the whole shift. Next to the Alarm Window is an Error Window, which shows problems of the monitoring software itself rather than of the detector.
+
+::::{.column-page-inset-right}
+:::{#fig-gcs-alarm layout-ncol=2 layout-valign=bottom}
+![](images/remote-shift/gcs-alarm-left.png)
+
+![](images/remote-shift/gcs-alarm-right.png)
+
+Example of an alarm message in the BESIII GCS monitor.
+:::
+::::
+
+When the data taking is stopped, the round indicators of the BESIII GCS monitor change their color. See @fig-gcs-stopped. They indicate the status of the subsystems' supply voltages with yellow indicating a ramping voltage and red indicating a turned off voltage. This is normal behavior. Do not mix this up with real detector errors where one of the squares turns red or yellow.
+
+:::{#fig-gcs-stopped layout-valign=bottom}
+![](images/remote-shift/cgs-stopped.png)
+
+GCS monitor for stopped data acquisition.
+:::
+
+### Check abnormal histograms
+
+In order to check if the detector and the DAQ work correctly, one has to check whether the online histograms look fine or show an abnormal distribution. There are more than 100 of them, and any abnormal histogram should be reported to the shift chief. The [tabs below](#example-histograms) give an overview of the histograms to be checked, with one tab per detector subsystem.
+
+::::: {#example-histograms .column-page-inset-right}
+:::: {.panel-tabset}
+
+#### Size
+
+:::{#fig-histograms-size}
+![](images/remote-shift/histograms-size.png)
+
+Example Size histograms.
+:::
+
+#### MDC
+
+:::{#fig-histograms-mdc}
+![](images/remote-shift/histograms-mdc.png)
+
+Example MDC histograms.
+:::
+
+#### TOF
+
+:::{#fig-histograms-tof-q}
+![](images/remote-shift/histograms-tof-q.jpg)
+
+Example TOF Q histograms.
+:::
+
+:::{#fig-histograms-tof-t}
+![](images/remote-shift/histograms-tof-t.jpg)
+
+Example TOF T histograms.
+:::
+
+:::{#fig-histograms-etf}
+![](images/remote-shift/histograms-etf.jpg)
+
+Example ETF histograms.
+:::
+
+#### EMC
+
+:::{#fig-histograms-emc-b}
+![](images/remote-shift/histograms-emc-b.jpg)
+
+Example EMC B histograms.
+:::
+
+:::{#fig-histograms-emc-e}
+![](images/remote-shift/histograms-emc-e.png)
+
+Example EMC E histograms.
+:::
+
+:::{#fig-histograms-emc-tq}
+![](images/remote-shift/histograms-emc-tq.jpg)
+
+Example EMC TQ histograms.
+:::
+
+:::{#fig-histograms-emc-de}
+![](images/remote-shift/histograms-emc-de.png)
+
+Example EMC DE histograms.
+:::
+
+#### MUC
+
+:::{#fig-histograms-muc-bs}
+![](images/remote-shift/histograms-muc-bs.jpg)
+
+Example MUC BS histograms.
+:::
+
+:::{#fig-histograms-muc-bl}
+![](images/remote-shift/histograms-muc-bl.jpg)
+
+Example MUC BL histograms.
+:::
+
+:::{#fig-histograms-muc-es}
+![](images/remote-shift/histograms-muc-es.jpg)
+
+Example MUC ES histograms.
+:::
+
+:::{#fig-histograms-muc-eel}
+![](images/remote-shift/histograms-muc-eel.jpg)
+
+Example MUC EEL histograms.
+:::
+
+:::{#fig-histograms-muc-ewl}
+![](images/remote-shift/histograms-muc-ewl.jpg)
+
+Example MUC EWL histograms.
+:::
+
+#### TRG
+
+:::{#fig-histograms-trg1}
+![](images/remote-shift/histograms-trg1.jpg)
+
+Example TRG1 histograms.
+:::
+
+:::{#fig-histograms-trg2}
+![](images/remote-shift/histograms-trg2.jpg)
+
+Example TRG2 histograms.
+:::
+
+:::{#fig-histograms-topup}
+![](images/remote-shift/histograms-topup.jpg)
+
+Example TOPUP histograms.
+:::
+
+#### EF
+
+:::{#fig-histograms-ef}
+![](images/remote-shift/histograms-ef.jpg)
+
+Example EF histograms.
+:::
+
+#### LUM
+
+:::{#fig-histograms-lum}
+![](images/remote-shift/histograms-lum.png)
+
+Example LUM histograms.
+:::
+
+::::
+:::::
+
+<!-- cspell:ignore TOPUP -->
+
+To be able to decide if a histogram is normal or abnormal, red reference distributions should be present in each histogram that can be compared with the current distribution shown in black. Sometimes both distributions agree quite well. However, for some histograms the reference and current distributions differ more or less. It is therefore difficult to decide when the difference between both distributions is big enough so that the histogram has to be checked as abnormal.
+
+The [example histograms](#example-histograms) above give an orientation aid. They correspond to run 72229 and were confirmed by the shift chief as examples for still normal histograms.
+
+See also the descriptions below the histograms that can help to decide if a histogram is normal or abnormal.
+
+However, it is important to take into account that the distributions can change over time, so that the given examples may not be a good reference for future runs. If you are unsure, please contact the shift chief to ask which histograms are considered as OK and which are not.
+
+## Additional information
+
+For additional information about BESIII remote shifts, see:
+
+- [BESIII shift documents](https://english.ihep.cas.cn/bes/op/do/202109/t20210923_283983.html), the public IHEP page with the latest shift guides and manuals
+- [BESIII Remote Shift Guide](https://english.ihep.cas.cn/bes/op/do/202109/P020250212598664920714.pdf) (February 2025)
+- [BESIII Shift Policy](https://docbes3.ihep.ac.cn/~alexey/bes3shift/texts/BESIII_ShiftPolicy_Feb2021.pdf)
+- [BESIII web page](http://bes3.ihep.ac.cn)
+
+:::{.callout-note title="Feedback welcome!"}
+If information about BESIII shifts, particularly remote shifts, is missing or outdated, please improve this guide with the [_Edit this page_](https://github.com/redeboer/bossdoc/edit/main/appendices/remote-shift.qmd) link or describe the problem with the [_Report an issue_](https://github.com/redeboer/bossdoc/issues/new) link.
+:::
