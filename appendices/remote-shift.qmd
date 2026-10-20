@@ -173,7 +173,11 @@ The [BESIII Remote Shift Guide](https://english.ihep.cas.cn/bes/op/do/202109/P02
 
    Depending on the Linux distribution, the command is called `chromium-browser` (for instance Fedora) or `chromium` (for instance Debian, Ubuntu, and Arch). The same flags work for Google Chrome (`google-chrome`). Any empty directory works for `--user-data-dir`. It is created if it does not exist. Chromium resolves host names through a SOCKS5 proxy automatically.
 
-   The command above is for Linux. On macOS or Windows, the Firefox settings are easier to set up, because they do not require command-line flags.
+   These flags work on Linux and macOS. On macOS, start the browser with `open -na "Chromium" --args` (or `open -na "Google Chrome" --args`) followed by the same flags.
+
+   ::: {.callout-warning title="Windows"}
+   On Windows, use the Firefox instructions instead.
+   :::
 
    #### Firefox
 
