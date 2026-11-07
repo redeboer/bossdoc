@@ -22,7 +22,7 @@ Let's take the $K_{S}^{0} \pi^+ \pi^-$ decay, which `DTagTool` assigns the decay
 EvtRecDTag * stag = dtagTool.findSTag(100);
 ```
 
-This `stag` object now has the information relating to the candidate decay $D\to K *S^0 \pi^+ \pi^-$ such as $\Delta E = E* \text{beam} - E_D$:
+This `stag` object now has the information relating to the candidate decay $D\to K _S^0 \pi^+ \pi^-$ such as $\Delta E = E_ \text{beam} - E_D$:
 
 ```default
 deltaE = stag->deltaE();

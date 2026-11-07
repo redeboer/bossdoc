@@ -22,5 +22,5 @@ The latest $J/\psi$ samples are located here according to the [production page](
 See [this page](../getting-started/server.qmd#data-paths) for the latest data file locations.
 
 :::{.callout-tip}
-See an indication of the number of $J/\psi$ events in [this presentation](https://indico.ihep.ac.cn/event/8795/session/3/contribution/9/material/slides/0.pdf) (requires login).
+See an indication of the number of $J/\psi$ events in [this presentation](https://indico.ihep.ac.cn/event/8795/contributions/104340/attachments/55835/64270/hunan.pdf) (requires login).
 :::

@@ -9,6 +9,7 @@
 *build/
 *venv/
 /.luarc.json
+/.lycheecache
 /.quarto/
 pyvenv*/
 site_libs/
