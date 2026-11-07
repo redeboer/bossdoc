@@ -35,7 +35,6 @@
   "github-actions.workflows.pinned.workflows": [".github/workflows/ci.yml"],
   "gitlens.telemetry.enabled": false,
   "livePreview.defaultPreviewPath": "_build/html",
-  "multiDiffEditor.experimental.enabled": true,
   "prettier.documentSelectors": ["**/*.qmd"],
   "quarto.path": ".venv/bin/quarto",
   "quarto.render.renderOnSave": true,
