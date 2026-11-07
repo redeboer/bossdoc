@@ -23,7 +23,7 @@ What goes for all of the above is that, whatever your background or level, **you
 So if you read this and like the idea, have a look at the [Help developing](contribute.qmd)! Contributions from all levels is highly appreciated.
 
 :::{.callout-tip}
-If you do not have an IHEP networking account, it is better to check out the official [Offline Software page](http://english.ihep.cas.cn/bes/doc/2247.html) of BESIII. For this, you in turn need to be a BESIII member and have an SSO account, which can be done [here](http://afsapply.ihep.ac.cn/cchelp/en/accounts/#21-user-account-application).
+If you do not have an IHEP networking account, it is better to check out the official [Offline Software page](https://english.ihep.cas.cn/bes/re/os/) of BESIII. For this, you in turn need to be a BESIII member and have an SSO account, which can be done [here](https://cchelp.ihep.ac.cn/en/account/accountapplication/#41-user-account-application).
 
 BOSS can only be of use if you are a member of the BESIII collaboration and if you have access to the software of this collaboration. You can also have a look at the links in the [Bibliography](appendices/references.qmd).
 :::

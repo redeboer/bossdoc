@@ -39,7 +39,7 @@ For up to date tutorials about Gaudi, see [this GitBook by the LHCb collaboratio
 
 The BOSS analysis framework is organized according to the so-called "package-oriented principle". The underlying idea is that in a software framework that is developed by several people is best split up into several packages that are each developed independently or in subgroups.
 
-The task of the CMT is to streamline and checkout different versions of these packages, that is, [to name them automatically](http://polywww.in2p3.fr/activites/physique/glast/workbook/pages/cmtMRvcmt/defCMTpackage.htm) based on content and modifications and to connect the packages to each other (to manage dependencies). This is done in conjunction with CVS ([see below](#cvs)). CMT additionally allows users to ascribe properties to the packages and their constituents.
+The task of the CMT is to streamline and checkout different versions of these packages, that is, [to name them automatically](https://web.archive.org/web/20200217020001/http://polywww.in2p3.fr:80/activites/physique/glast/workbook/pages/cmtMRvcmt/defCMTpackage.htm) based on content and modifications and to connect the packages to each other (to manage dependencies). This is done in conjunction with CVS ([see below](#cvs)). CMT additionally allows users to ascribe properties to the packages and their constituents.
 
 See for more information:
 

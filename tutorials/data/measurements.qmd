@@ -12,4 +12,4 @@ title: BESIII measurements
 | 2018–2019 |  `12` |            $4.1 \times 10^3$ |  ($0.53\%$) | `/bes3fs/offline/data/708-1/jpsi/round12/dst` |
 
 - See "Determination of the number of $J/\psi$ events with inclusive $J/\psi$ decays"&nbsp;[@BESIII:2016kpv] for the calculation of the number of $J/\psi$ events in the 2009 and 2012 data samples. The total number for both is $N_{J/\psi} = (1310.6\pm7.0) \times 10^6$, which is $0.53\%$ systematic uncertainty.
-- See an indication of the number of $J/\psi$ events in [this presentation](https://indico.ihep.ac.cn/event/8795/session/3/contribution/9/material/slides/0.pdf) (requires login). Systematic uncertainty is not yet determined, but could be comparable.
+- See an indication of the number of $J/\psi$ events in [this presentation](https://indico.ihep.ac.cn/event/8795/contributions/104340/attachments/55835/64270/hunan.pdf) (requires login). Systematic uncertainty is not yet determined, but could be comparable.
