@@ -78,6 +78,11 @@ max_cache_age = "7d"
 max_concurrency = 10
 user_agent = "Mozilla/5.0 (compatible; lychee)"
 
+[tool.lychee.hosts."www.gnu.org"]
+# GNU rate-limits parallel requests from GitHub Actions.
+concurrency = 1
+request_interval = "2s"
+
 [tool.poe.executor]
 isolated = true
 no-group = "dev"
