@@ -40,35 +40,32 @@ keep-issue-templates = true
 
 [tool.lychee]
 cache = true
+cache_exclude_status = "400.."
+# [:] keeps Lychee from extracting regex patterns as URLs.
 exclude = [
     '^http://bes3db\.ihep\.ac\.cn/online/webserver/runinfo/runparams\.php$',  # Only reachable from the IHEP network
     '^http://bes3run\.ihep\.ac\.cn/?$',  # Only reachable from the IHEP network
     '^http://koala\.ihep\.ac\.cn/cgi-bin/viewcvs\.cgi/BossCvs$',  # Only reachable from the IHEP network
     '^http://twiki\.ihep\.ac\.cn/twiki/view/BES/BOSS/WebHome$',  # Only reachable from the IHEP network
     '^http://web\.ihep\.ac\.cn/?$',  # Only reachable from the IHEP network
-    '^http[:]//english\.ucas\.ac\.cn/$',  # University website rejects automated requests with 401
     '^http[:]//link\.springer\.com/10\.1140/epjc/s10052-014-3026-9$',  # Publisher redirects automated requests through a cookie challenge
-    '^https://bes3\.to\.infn\.it/Boss/7\.0\.2/html/',  # Legacy documentation has an untrusted TLS certificate
-    '^https://boss\.ihep\.ac\.cn/~offlinesoftware/',  # Requires IHEP single sign-on
-    '^https://ccsuser\.ihep\.ac\.cn/?$',  # Requires authentication
-    '^https://code\.ihep\.ac\.cn/',  # Every page redirects anonymous requests to the sign-in page
-    '^https://code\.visualstudio\.com/$',  # Homepage redirects to a per-request experiment
-    '^https://dayabay\.bnl\.gov/dox/GaudiKernel/html/',  # Legacy documentation has an untrusted TLS certificate
-    '^https://dev\.mysql\.com/doc/refman/8\.0/en/$',  # Rejects automated requests with 403
-    '^https://docbes3\.ihep\.ac\.cn/(~|cgi-bin/DocDB/|viewvc/)',  # Requires IHEP single sign-on
-    '^https://github\.com/redeboer/bossdoc/assets/29308176/71ae5632-3aa9-4756-b4bb-8af397c62951$',  # Redirects to an expiring signed download
-    '^https://github\.com/redeboer/bossdoc/edit/main/appendices/remote-shift\.qmd$',  # Requires authentication
-    '^https://github\.com/redeboer/bossdoc/issues/new$',  # Requires authentication
-    '^https://github\.com/signup$',  # Rejects automated requests with 403
-    '^https://gitlab\.ep1\.rub\.de/Bes3/Yapp$',  # Requires authentication
-    '^https://hnbes3\.ihep\.ac\.cn//HyperNews/get/software\.html$',  # Requires IHEP single sign-on
-    '^https://indico\.ihep\.ac\.cn/event/8795/contributions/104340/attachments/55835/64270/hunan\.pdf$',  # Requires authentication
-    '^https://lhcb-comp\.web\.cern\.ch/lhcb-comp/support/CMT/cmt\.htm$',  # Requires authentication
-    '^https://login\.ihep\.ac\.cn/?$',  # Redirects to the sign-in form
-    '^https://twiki\.cern\.ch/twiki/bin/view/LHCb/GaudiAlgorithm$',  # Requires authentication
-    '^https://web\.archive\.org/web/20200217020001/http://polywww\.in2p3\.fr:80/activites/physique/glast/workbook/pages/cmtMRvcmt/defCMTpackage\.htm$',  # Rate limits automated requests with 429
-    '^https://www\.gnu\.org/software/',  # Resets connections from some networks
-    '^https://www\.sciencedirect\.com/science/article/pii/S0168900209023870$',  # Rejects automated requests with 403
+    '^https[:]//bes3\.to\.infn\.it/Boss/7\.0\.2/html/',  # Legacy documentation has an untrusted TLS certificate
+    '^https[:]//boss\.ihep\.ac\.cn/~offlinesoftware/',  # Requires IHEP single sign-on
+    '^https[:]//ccsuser\.ihep\.ac\.cn/?$',  # Requires authentication
+    '^https[:]//code\.ihep\.ac\.cn/',  # Every page redirects anonymous requests to the sign-in page
+    '^https[:]//dayabay\.bnl\.gov/dox/GaudiKernel/html/',  # Legacy documentation has an untrusted TLS certificate
+    '^https[:]//dev\.mysql\.com/doc/refman/8\.0/en/$',  # Rejects automated requests with 403
+    '^https[:]//docbes3\.ihep\.ac\.cn/(~|cgi-bin/DocDB/|viewvc/)',  # Requires IHEP single sign-on
+    '^https[:]//github\.com/redeboer/bossdoc/edit/main/appendices/remote-shift\.qmd$',  # Requires authentication
+    '^https[:]//github\.com/redeboer/bossdoc/issues/new$',  # Requires authentication
+    '^https[:]//github\.com/signup$',  # Rejects automated requests with 403
+    '^https[:]//gitlab\.ep1\.rub\.de/Bes3/Yapp$',  # Requires authentication
+    '^https[:]//hnbes3\.ihep\.ac\.cn//HyperNews/get/software\.html$',  # Requires IHEP single sign-on
+    '^https[:]//indico\.ihep\.ac\.cn/event/8795/contributions/104340/attachments/55835/64270/hunan\.pdf$',  # Requires authentication
+    '^https[:]//lhcb-comp\.web\.cern\.ch/lhcb-comp/support/CMT/cmt\.htm$',  # Requires authentication
+    '^https[:]//login\.ihep\.ac\.cn/?$',  # Redirects to the sign-in form
+    '^https[:]//twiki\.cern\.ch/twiki/bin/view/LHCb/GaudiAlgorithm$',  # Requires authentication
+    '^https[:]//www\.gnu\.org/software/trans-coord/manual/cvs/html_node/CVS-commands\.html$',  # Resets connections from some networks
 ]
 exclude_path = [
     "_extensions",
@@ -77,39 +74,8 @@ extensions = ["bib", "md", "qmd", "yml"]
 hidden = true  # Include the workflows under .github/
 include_fragments = "anchor-only"
 include_verbatim = true
-max_cache_age = "2d"
+max_cache_age = "7d"
 max_concurrency = 10
-max_redirects = 0
-max_retries = 3
-remap = [
-    '^http[:]//quarto\.org/$ https://quarto.org/',
-    '^http[:]//www\.doxygen\.nl/manual/index\.html$ https://www.doxygen.nl/manual/index.html',
-    '^https://code\.visualstudio\.com/docs/editor/workspaces$ https://code.visualstudio.com/docs/editing/workspaces/workspaces',
-    '^https://code\.visualstudio\.com/docs/getstarted/settings$ https://code.visualstudio.com/docs/configure/settings',
-    '^https://docs\.astral\.sh/uv/concepts/projects/\#project-lockfile$ https://docs.astral.sh/uv/concepts/projects/layout/#the-lockfile',  # The lockfile section moved
-    '^https://docs\.astral\.sh/uv/getting-started/installation$ https://docs.astral.sh/uv/getting-started/installation/',
-    '^https://docs\.astral\.sh/uv/pip/environments$ https://docs.astral.sh/uv/pip/environments/',
-    '^https://docs\.astral\.sh/uv$ https://docs.astral.sh/uv/',
-    '^https://docs\.microsoft\.com/en-us/windows/wsl/install$ https://learn.microsoft.com/en-us/windows/wsl/install',
-    '^https://guides\.github\.com/introduction/flow$ https://docs.github.com/en/get-started/using-github/github-flow',
-    '^https://guides\.github\.com/introduction/git-handbook$ https://docs.github.com/en/get-started/using-git/about-git',
-    '^https://help\.github\.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent$ https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent',
-    '^https://help\.github\.com/en/articles/ignoring-files$ https://docs.github.com/en/get-started/git-basics/ignoring-files',
-    '^https://hypothes\.is/$ https://web.hypothes.is/',
-    '^https://insights\.stackoverflow\.com/survey/2021\#section-most-popular-technologies-integrated-development-environment$ https://survey.stackoverflow.co/2021/#section-most-popular-technologies-integrated-development-environment',
-    '^https://pixi\.sh/install\.sh$ https://pixi.prefix.dev/install.sh',
-    '^https://readthedocs\.org/projects/bes3/badge$ https://app.readthedocs.org/projects/bes3/badge/',
-    '^https://realpython\.com/python-virtual-environments-a-primer$ https://realpython.com/python-virtual-environments-a-primer/',
-    '^https://results\.pre-commit\.ci/latest/github/redeboer/bossdoc/main$ https://results.pre-commit.ci/repo/github/298609954',
-    '^https://root\.cern/install/build_from_source$ https://root.cern/install/build_from_source/',
-    '^https://root\.cern/install/dependencies$ https://root.cern/install/dependencies/',
-    '^https://root\.cern\.ch/downloading-root$ https://root.cern/install/',
-    '^https://root\.cern\.ch/root/html/tutorials/roofit/index\.html$ https://root.cern/doc/master/group__tutorial__roofit.html',
-    '^https://www\.ssh\.com/ssh/keygen$ https://www.ssh.com/academy/ssh/keygen',
-    '^https://www\.tldp\.org/LDP/abs/html/awk\.html$ https://tldp.org/LDP/abs/html/awk.html',
-]
-retry_wait_time = 5
-timeout = 30
 user_agent = "Mozilla/5.0 (compatible; lychee)"
 
 [tool.poe.executor]

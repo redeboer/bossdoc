@@ -12,4 +12,4 @@ Some useful documents:
 - Physics Accomplishments and Future Prospects of the BES Experiments at the BEPC Collider (2016) [[here]](https://arxiv.org/abs/1603.09431)
 - [Physics at BESIII](https://arxiv.org/abs/0809.1869) (2009)
 - [BESIII White Paper](https://docbes3.ihep.ac.cn/cgi-bin/DocDB/ShowDocument?docid=759) (requires login, not yet published)
-- ["Design and construction of the BESIII detector"](https://www.sciencedirect.com/science/article/pii/S0168900209023870), _Nucl. Instrum. Meth._ A 614, 345 (2010) <!-- cspell:ignore Instrum Nucl -->
+- ["Design and construction of the BESIII detector"](https://arxiv.org/abs/0911.4960), _Nucl. Instrum. Meth._ A 614, 345 (2010) <!-- cspell:ignore Instrum Nucl -->
