@@ -105,9 +105,9 @@ help = "Check external links in the source files (requires an internet connectio
 help = "Run all continuous integration (CI) tasks locally"
 ignore_fail = "return_non_zero"
 sequence = [
-    "doc",
-    "linkcheck",
     "style",
+    "linkcheck",
+    "doc",
 ]
 
 [tool.poe.tasks.style]
