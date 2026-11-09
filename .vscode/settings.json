@@ -7,26 +7,13 @@
     "rewrap.wrappingColumn": 72
   },
   "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.wordWrap": "on"
   },
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[markdown]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[quarto]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[snippets]": {
+  "[json][jsonc][markdown][quarto][snippets][yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[toml]": {
     "editor.defaultFormatter": "tombi-toml.tombi"
-  },
-  "[yaml]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "cSpell.enabled": true,
   "diffEditor.experimental.showMoves": true,
