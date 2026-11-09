@@ -53,6 +53,6 @@ Packages and source code of BOSS are monitored and maintained by CVS. This is a 
 
 More information:
 
-- [An accessible introduction to CVS](https://www.gnu.org/software/trans-coord/manual/cvs/html_node/index.html)
-- [Commonly used CVS commands](https://www.gnu.org/software/trans-coord/manual/cvs/html_node/CVS-commands.html)
+- [An accessible introduction to CVS](https://cvs.nongnu.org/)
+- [CVS command reference](https://man.archlinux.org/man/cvs.1.en)
 - [Wikipedia on CVS](https://en.wikipedia.org/wiki/Concurrent_Versions_System)

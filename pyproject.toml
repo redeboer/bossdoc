@@ -65,7 +65,6 @@ exclude = [
     '^https[:]//lhcb-comp\.web\.cern\.ch/lhcb-comp/support/CMT/cmt\.htm$',  # Requires authentication
     '^https[:]//login\.ihep\.ac\.cn/?$',  # Redirects to the sign-in form
     '^https[:]//twiki\.cern\.ch/twiki/bin/view/LHCb/GaudiAlgorithm$',  # Requires authentication
-    '^https[:]//www\.gnu\.org/software/trans-coord/manual/cvs/html_node/CVS-commands\.html$',  # Resets connections from some networks
 ]
 exclude_path = [
     "_extensions",
@@ -77,11 +76,6 @@ include_verbatim = true
 max_cache_age = "7d"
 max_concurrency = 10
 user_agent = "Mozilla/5.0 (compatible; lychee)"
-
-[tool.lychee.hosts."www.gnu.org"]
-# GNU rate-limits parallel requests from GitHub Actions.
-concurrency = 1
-request_interval = "10s"
 
 [tool.poe.executor]
 isolated = true
