@@ -33,6 +33,7 @@ doc = ["quarto-cli"]
 linkcheck = ["lychee-bin>=0.24.0"]  # pyproject.toml config support
 
 [tool.compwa.policy.github]
+dependabot-assignees = ["redeboer"]
 no-cd = true
 
 [tool.compwa.policy.repo]
