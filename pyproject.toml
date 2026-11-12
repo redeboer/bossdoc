@@ -33,36 +33,49 @@ doc = ["quarto-cli"]
 linkcheck = ["lychee-bin>=0.24.0"]  # pyproject.toml config support
 
 [tool.compwa.policy.github]
+dependabot-assignees = ["redeboer"]
 no-cd = true
 
 [tool.compwa.policy.repo]
 keep-issue-templates = true
 
 [tool.lychee]
-accept_timeouts = true  # slow hosts should not fail CI
+cache = true
+cache_exclude_status = "400.."
+# [:] keeps Lychee from extracting regex patterns as URLs.
 exclude = [
-    "http://[A-Za-z0-9]+\\.ihep\\.cas\\.cn",
-    "http://polywww\\.in2p3\\.fr",
-    "http://www\\.cmtsite\\.net",
-    "https://dev\\.mysql\\.com",
-    "https://github\\.com/join",
-    "https://www\\.gnu\\.org",
-    "https://www\\.sciencedirect\\.com/science/article/pii/S0168900209023870",
-    "https?://[A-Za-z0-9]+\\.ihep\\.ac\\.cn",
+    '^http://bes3db\.ihep\.ac\.cn/online/webserver/runinfo/runparams\.php$',  # Only reachable from the IHEP network
+    '^http://bes3run\.ihep\.ac\.cn/?$',  # Only reachable from the IHEP network
+    '^http://koala\.ihep\.ac\.cn/cgi-bin/viewcvs\.cgi/BossCvs$',  # Only reachable from the IHEP network
+    '^http://twiki\.ihep\.ac\.cn/twiki/view/BES/BOSS/WebHome$',  # Only reachable from the IHEP network
+    '^http://web\.ihep\.ac\.cn/?$',  # Only reachable from the IHEP network
+    '^http[:]//link\.springer\.com/10\.1140/epjc/s10052-014-3026-9$',  # Publisher redirects automated requests through a cookie challenge
+    '^https[:]//bes3\.to\.infn\.it/Boss/7\.0\.2/html/',  # Legacy documentation has an untrusted TLS certificate
+    '^https[:]//boss\.ihep\.ac\.cn/~offlinesoftware/',  # Requires IHEP single sign-on
+    '^https[:]//ccsuser\.ihep\.ac\.cn/?$',  # Requires authentication
+    '^https[:]//code\.ihep\.ac\.cn/',  # Every page redirects anonymous requests to the sign-in page
+    '^https[:]//dayabay\.bnl\.gov/dox/GaudiKernel/html/',  # Legacy documentation has an untrusted TLS certificate
+    '^https[:]//dev\.mysql\.com/doc/refman/8\.0/en/$',  # Rejects automated requests with 403
+    '^https[:]//docbes3\.ihep\.ac\.cn/(~|cgi-bin/DocDB/|viewvc/)',  # Requires IHEP single sign-on
+    '^https[:]//github\.com/redeboer/bossdoc/edit/main/appendices/remote-shift\.qmd$',  # Requires authentication
+    '^https[:]//github\.com/redeboer/bossdoc/issues/new$',  # Requires authentication
+    '^https[:]//github\.com/signup$',  # Rejects automated requests with 403
+    '^https[:]//gitlab\.ep1\.rub\.de/Bes3/Yapp$',  # Requires authentication
+    '^https[:]//hnbes3\.ihep\.ac\.cn//HyperNews/get/software\.html$',  # Requires IHEP single sign-on
+    '^https[:]//indico\.ihep\.ac\.cn/event/8795/contributions/104340/attachments/55835/64270/hunan\.pdf$',  # Requires authentication
+    '^https[:]//lhcb-comp\.web\.cern\.ch/lhcb-comp/support/CMT/cmt\.htm$',  # Requires authentication
+    '^https[:]//login\.ihep\.ac\.cn/?$',  # Redirects to the sign-in form
+    '^https[:]//twiki\.cern\.ch/twiki/bin/view/LHCb/GaudiAlgorithm$',  # Requires authentication
 ]
 exclude_path = [
     "_extensions",
 ]
-extensions = [
-    "bib",
-    "md",
-    "qmd",
-    "yml",
-]
-insecure = true
+extensions = ["bib", "md", "qmd", "yml"]
+hidden = true  # Include the workflows under .github/
+include_fragments = "anchor-only"
+include_verbatim = true
+max_cache_age = "7d"
 max_concurrency = 10
-max_retries = 3
-timeout = 60
 user_agent = "Mozilla/5.0 (compatible; lychee)"
 
 [tool.poe.executor]
@@ -92,9 +105,9 @@ help = "Check external links in the source files (requires an internet connectio
 help = "Run all continuous integration (CI) tasks locally"
 ignore_fail = "return_non_zero"
 sequence = [
-    "doc",
-    "linkcheck",
     "style",
+    "linkcheck",
+    "doc",
 ]
 
 [tool.poe.tasks.style]
@@ -129,5 +142,5 @@ key-empty = "off"
 
 [[tool.tombi.schemas]]
 root = "tool.compwa.policy"
-path = "https://raw.githubusercontent.com/ComPWA/policy/0.10.1/compwa-policy.schema.json"
+path = "https://raw.githubusercontent.com/ComPWA/policy/0.10.7/compwa-policy.schema.json"
 include = ["pyproject.toml"]

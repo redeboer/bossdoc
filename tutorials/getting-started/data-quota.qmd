@@ -47,7 +47,7 @@ If you need more space, write your output to `/scratchfs2/bes/$USER` instead.
 :::
 
 ::: {.callout-important title="Not every file system is backed up"}
-Only `/afs`, `/workfs2`, and `/home/bes` provide backup protection (see the [IHEP Lustre page](http://afsapply.ihep.ac.cn/cchelp/en/local-cluster/storage/Lustre/)). Note that `/home/bes` is backed up even though it points into `/besfs10`, which is not.
+Only `/afs`, `/workfs2`, and `/home/bes` provide backup protection (see the [IHEP Lustre page](https://cchelp.ihep.ac.cn/en/storage/lustre/)). Note that `/home/bes` is backed up even though it points into `/besfs10`, which is not.
 
 Two consequences:
 
@@ -56,7 +56,7 @@ Two consequences:
 
 :::
 
-Official information on the quota can be found [here](http://afsapply.ihep.ac.cn/cchelp/en/experiments/BES/#712-storage) (BESIII) and [here](https://afsapply.ihep.ac.cn/cchelp/en/appendix/storage-allocation-and-quota) (IHEP). You can check your quota by running the following commands:
+Official information on the quota can be found [here](https://cchelp.ihep.ac.cn/en/experiments/BES/#1212-storage) (BESIII) and [here](https://cchelp.ihep.ac.cn/en/storage/lustre/#check-user-resource-quota) (IHEP). You can check your quota by running the following commands:
 
 :::{.panel-tabset}
 
